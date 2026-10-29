@@ -13,3 +13,10 @@
   illustrated casebook with native downloads and printable sources.
 - Integrity-checked sources and offline edition installation, with source-cache
   recovery and protection against late page responses.
+- Three counterexample exercises with premise checks, a fixed submitted case,
+  source citations and a learner's explanation retained in version 2 files,
+  shared links and printable casebooks; version 1 files remain readable.
+- Cancelable casebook preparation, bounded source requests, visible facts in
+  standalone diagrams and distinct accessible descriptions for each case.
+- Explicit failed-installation feedback, verification before serving cached
+  files, and separate development/preview origins.

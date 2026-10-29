@@ -1,11 +1,18 @@
-import type { Case, Lesson, Years } from "./model";
+import { type ArgumentDraft, claimIds, MAX_NOTE_LENGTH } from "./argument";
+import { type Case, type Lesson, ruleIds, type Years } from "./model";
 
-export type RecordFile = {
+type LegacyRecord = {
   format: "traditio-case";
   version: 1;
   current: Case;
   pinned: Case | null;
 };
+export type RecordFile =
+  | LegacyRecord
+  | (Omit<LegacyRecord, "version"> & {
+      version: 2;
+      argument: ArgumentDraft;
+    });
 
 export const MAX_RECORD_BYTES = 16_384;
 
@@ -21,7 +28,7 @@ function keys(value: Record<string, unknown>, expected: string[]): void {
     Object.keys(value).length !== expected.length ||
     expected.some((key) => !Object.hasOwn(value, key))
   ) {
-    throw new Error("This case has missing or unrecognized fields. Use a Traditio version 1 case.");
+    throw new Error("This case has missing or unrecognized fields. Use a case saved by Traditio.");
   }
 }
 
@@ -65,6 +72,30 @@ export function readCase(value: unknown): Case {
   };
 }
 
+export function readArgument(value: unknown): ArgumentDraft {
+  const input = object(value);
+  keys(input, ["claim", "witness", "citations", "note"]);
+  const claim = member(input.claim, claimIds, "argument claim");
+  if (!Array.isArray(input.citations) || input.citations.length > ruleIds.length) {
+    throw new Error("The argument must cite a list of retained passages.");
+  }
+  const citations = input.citations.map((id) => member(id, ruleIds, "cited passage"));
+  if (new Set(citations).size !== citations.length) {
+    throw new Error("Each passage can be cited only once in an argument.");
+  }
+  if (typeof input.note !== "string" || input.note.length > MAX_NOTE_LENGTH) {
+    throw new Error(
+      `The written explanation must be text of at most ${MAX_NOTE_LENGTH} characters.`,
+    );
+  }
+  return {
+    claim,
+    witness: input.witness === null ? null : readCase(input.witness),
+    citations,
+    note: input.note,
+  };
+}
+
 export function readRecord(text: string): RecordFile {
   if (new TextEncoder().encode(text).byteLength > MAX_RECORD_BYTES) {
     throw new Error("This file is too large. Traditio cases must be smaller than 16 KiB.");
@@ -76,31 +107,50 @@ export function readRecord(text: string): RecordFile {
     throw new Error("This is not valid JSON. Open a case saved by Traditio.");
   }
   const record = object(parsed);
-  keys(record, ["format", "version", "current", "pinned"]);
-  if (record.format !== "traditio-case" || record.version !== 1) {
+  if (record.format !== "traditio-case" || (record.version !== 1 && record.version !== 2)) {
     throw new Error(
-      "This is not a supported Traditio case. Expected format traditio-case, version 1.",
+      "This is not a supported Traditio case. Expected format traditio-case, version 1 or 2.",
     );
   }
-  return {
+  keys(
+    record,
+    record.version === 1
+      ? ["format", "version", "current", "pinned"]
+      : ["format", "version", "current", "pinned", "argument"],
+  );
+  const cases: LegacyRecord = {
     format: "traditio-case",
     version: 1,
     current: readCase(record.current),
     pinned: record.pinned === null ? null : readCase(record.pinned),
   };
+  return record.version === 1
+    ? cases
+    : { ...cases, version: 2, argument: readArgument(record.argument) };
 }
 
-export function writeRecord(current: Case, pinned: Case | null): string {
+export function writeRecord(
+  current: Case,
+  pinned: Case | null,
+  argument: ArgumentDraft | null = null,
+): string {
   return JSON.stringify(
-    { format: "traditio-case", version: 1, current, pinned } satisfies RecordFile,
+    (argument
+      ? { format: "traditio-case", version: 2, current, pinned, argument }
+      : { format: "traditio-case", version: 1, current, pinned }) satisfies RecordFile,
     null,
     2,
   );
 }
 
-export function shareUrl(base: string, current: Case, pinned: Case | null): string {
+export function shareUrl(
+  base: string,
+  current: Case,
+  pinned: Case | null,
+  argument: ArgumentDraft | null = null,
+): string {
   const url = new URL(base);
-  url.hash = `case=${encodeURIComponent(writeRecord(current, pinned))}`;
+  url.hash = `case=${encodeURIComponent(writeRecord(current, pinned, argument))}`;
   return url.href;
 }
 

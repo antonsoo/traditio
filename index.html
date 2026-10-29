@@ -93,6 +93,32 @@
           <div class="button-row"><button type="button" id="restore">Restore pinned case</button><button type="button" id="repin">Replace pin with current case</button></div>
         </section>
       </section>
+      <section id="argument" class="argument" aria-labelledby="argument-title">
+        <div class="section-heading"><div><p class="source-ref">A counterexample is a case, not a slogan</p><h2 id="argument-title">Try to break this rule.</h2></div><p class="small">An optional exercise in reading an exception.<br />The claims below are deliberately too broad.</p></div>
+        <label for="claim-select">Choose a claim to challenge</label><select id="claim-select"><option value="">Choose a claim…</option></select>
+        <div id="argument-work" class="argument-grid" hidden>
+          <div>
+            <blockquote id="claim-statement"></blockquote><p id="claim-premise" class="small"></p>
+            <p>Set up a case above. Its facts must satisfy the claim's premises while its result contradicts the claim.</p>
+            <div class="button-row"><button id="check-argument" type="button">Submit current case</button><a class="text-button" href="#workshop">Change the case</a></div>
+            <p id="argument-status" role="status" class="small">No case submitted yet.</p>
+            <div id="argument-witness" class="argument-witness" hidden>
+              <h3>Submitted case</h3><p id="witness-story"></p><dl id="witness-facts"></dl>
+              <p id="witness-title" class="witness-title"></p>
+              <div id="argument-assessment"><h3 id="assessment-title">Check of the submitted facts</h3><p id="assessment-explanation"></p></div>
+              <button id="restore-witness" type="button" class="text-button">Restore submitted case to the controls</button>
+            </div>
+          </div>
+          <div class="argument-evidence">
+            <h3>Support the exception with the text.</h3><p>Use <a href="#reader">the Latin reader</a> below, then choose “Cite this passage.” Keep the premise and the exception distinct.</p>
+            <ul id="argument-citations" class="argument-citations"></ul><p id="citation-status" class="small"></p>
+            <label for="argument-note">Your explanation <span class="small">(optional)</span></label><textarea id="argument-note" rows="5" maxlength="1000" aria-describedby="note-help" placeholder="Which premise holds? Which promised result fails? What words in the passage explain the exception?"></textarea>
+            <p id="note-help" class="small"><span id="note-count">0</span> / 1,000 characters. Your explanation is retained as written, not graded. The checks concern the modeled facts and the passages cited.</p>
+            <p class="small">Save the editable case or illustrated casebook to keep this argument. A copied case link includes your explanation too.</p>
+            <button id="clear-argument" type="button" class="text-button">Clear this argument and its notes</button>
+          </div>
+        </div>
+      </section>
       <section id="reader" class="reader" aria-labelledby="reader-title">
         <div class="section-heading"><div><p class="source-ref">The words behind the cases</p><h2 id="reader-title">Read Gaius with the page beside you.</h2></div><p class="small">Select an underlined phrase for its meaning<br />and the work it does in the argument.</p></div>
         <div class="reader-grid"><div class="reading-text">
@@ -101,6 +127,7 @@
           <div id="word-note" class="word-note" role="status"><p>Select a phrase in the Latin to read it closely.</p></div>
           <details id="translation" open><summary>Close English translation</summary><p id="reading-english"></p></details>
           <p id="reading-note" class="editorial"></p>
+          <button type="button" id="cite-reading" disabled>Cite this passage</button><p id="cite-help" class="small">Choose a claim in the <a href="#argument">counterexample exercise</a> to collect evidence.</p>
           <p class="small">Transcribed from the 1904 edition. <span lang="la">⟨…⟩</span> = editorial supply; […] = our omission. <a href="#source-details">Edition and text policy.</a></p>
         </div><div class="source-page">
           <div class="scan-toolbar"><label for="page-select">Printed page</label><select id="page-select"></select><button type="button" id="zoom" aria-pressed="false">Enlarge page</button></div>
@@ -111,9 +138,10 @@
         </div></div>
         <details id="source-details"><summary>About this edition and the retained evidence</summary><p id="edition-description"></p><p id="editorial-policy"></p><p>The book is a modern printed edition of an ancient text, not an ancient manuscript facsimile. Its notes and English are editorial evidence. <a href="https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm">Compare the Roman Law Library's Poste transcription.</a></p><p><a href="./sources/manifest.json" download>Source-file checksums and provenance</a> · <a href="./sources/NOTICE.txt">Source notice</a></p></details>
       </section>
-      <section id="keep" class="keep" aria-labelledby="keep-title"><div><h2 id="keep-title">Take the argument with you.</h2><p>Keep the current case and your comparison. A casebook includes every reading and its scanned pages, and opens without a connection.</p></div><div>
+      <section id="keep" class="keep" aria-labelledby="keep-title"><div><h2 id="keep-title">Take the argument with you.</h2><p>Keep the current case, your comparison, and any counterexample argument. A casebook includes every reading and its scanned pages, and opens without a connection.</p></div><div>
         <div class="button-row"><button type="button" id="save-sheet" class="primary">Save illustrated casebook</button><button type="button" id="save-case">Save editable case</button><button type="button" id="save-svg">Save diagram</button><button type="button" id="copy-link">Copy case link</button></div>
         <label for="open-case" class="file-label">Reopen a saved case <input type="file" id="open-case" accept=".json,application/json" /></label>
+        <button type="button" id="cancel-export" hidden>Cancel casebook preparation</button>
         <p id="file-status" role="status" class="small">Files stay in your browser. Nothing is uploaded.</p>
         <div id="share-fallback" hidden><label for="share-text">Copy this case link</label><input id="share-text" type="text" readonly /></div>
       </div></section>

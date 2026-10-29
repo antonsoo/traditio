@@ -35,19 +35,27 @@ await writeFile(
 const EDITION = ${JSON.stringify(edition)};
 const CACHE = 'traditio-' + EDITION;
 const FILES = ${JSON.stringify(files)};
-const allowed = new Set(FILES.map(file => new URL(file.url, self.location.origin).href));
+const allowed = new Map(FILES.map(file => [new URL(file.url, self.location.origin).href, file]));
 const digest = async bytes => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), b => b.toString(16).padStart(2, '0')).join('');
 async function matches(response, file) {
   if (!response || !response.ok) return false;
   const bytes = await response.arrayBuffer();
   return bytes.byteLength === file.bytes && await digest(bytes) === file.hash;
 }
+async function fetchEdition(file) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const response = await fetch(file.url, {cache:'reload', signal:controller.signal});
+    if (!await matches(response.clone(), file)) throw new Error('Edition mismatch: ' + file.url);
+    return response;
+  } finally {clearTimeout(timeout);}
+}
 self.addEventListener('install', event => event.waitUntil((async () => {
   const cache = await caches.open(CACHE);
   try {
     for (const file of FILES) {
-      const response = await fetch(file.url, {cache:'reload'});
-      if (!await matches(response.clone(), file)) throw new Error('Edition mismatch: ' + file.url);
+      const response = await fetchEdition(file);
       await cache.put(file.url, response);
     }
   } catch (error) { await caches.delete(CACHE); throw error; }
@@ -62,10 +70,19 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
   if (url.pathname === '${base}') url.pathname += 'index.html';
   url.search = ''; url.hash = '';
-  if (!allowed.has(url.href)) return;
+  const file = allowed.get(url.href);
+  if (!file) return;
   event.respondWith((async () => {
     const saved = await caches.match(url.href, {cacheName:CACHE});
-    return saved || fetch(event.request);
+    if (saved && await matches(saved.clone(), file)) return saved;
+    try {
+      const response = await fetchEdition(file);
+      try {await (await caches.open(CACHE)).put(file.url, response.clone());}
+      catch {} // A connected read can succeed without claiming offline retention.
+      return response;
+    } catch {
+      return new Response('This file is unavailable for the current Traditio edition. Reconnect and reopen the workshop.', {status:503, headers:{'Content-Type':'text/plain;charset=utf-8'}});
+    }
   })());
 });
 self.addEventListener('message', event => {
@@ -75,8 +92,7 @@ self.addEventListener('message', event => {
     for (const file of FILES) {
       if (!await matches(await caches.match(file.url, {cacheName:CACHE}), file)) {
         if (event.data.repair !== true) {complete = false; break;}
-        const response = await fetch(file.url, {cache:'reload'});
-        if (!await matches(response.clone(), file)) {complete = false; break;}
+        const response = await fetchEdition(file);
         await (await caches.open(CACHE)).put(file.url, response);
       }
     }

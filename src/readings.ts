@@ -337,7 +337,7 @@ export function reading(id: RuleId): Reading {
 }
 
 export const scope = [
-  "These are invented cases within Gaius's second-century account. The people are independent adult Roman citizens with the relevant legal capacity. The object is ordinary private property; the sale, price arrangements and intended delivery are valid. The seller in the first investigation is owner and authorized to convey.",
+  "These are invented cases within Gaius's second-century account. The people are independent adult Roman citizens with the relevant legal capacity. Cases within the modeled acquisition route concern ordinary private property; provincial land is marked outside that route. The sale, price arrangements and intended delivery are valid. The seller in the first investigation is owner and authorized to convey.",
   "The buyer keeps uninterrupted possession. Time steps mean completed years, not modern anniversary calculations. There is no further sale, recovery by the former owner, interruption, inheritance of the buyer's possession or change in the buyer's belief being modeled.",
   "The in bonis track illustrates the owner's informal conveyance in 2.41. The workshop does not settle every juristic use of in bonis, possessory interdicts, the actio Publiciana, competing claims or the outcome of litigation. 'Not the 2.41 route' makes no claim that an innocent possessor has no protection.",
   "Gaius also discusses exceptions and other acquisition routes, including usucapio pro herede and usureceptio. They are outside these ordinary sale cases. Provincial holdings are a stated boundary. Justinian's later rules are not mixed into Gaius's periods.",

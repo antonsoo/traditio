@@ -10,15 +10,40 @@ export function asset(path: string): Asset {
 }
 
 export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
-  const response = await fetch(`${import.meta.env.BASE_URL}${item.path}`, {
-    cache: "no-store",
-    ...(signal ? { signal } : {}),
-  });
+  const controller = new AbortController();
+  const cancel = () => controller.abort(signal?.reason);
+  if (signal?.aborted) cancel();
+  else signal?.addEventListener("abort", cancel, { once: true });
+  const timer = setTimeout(
+    () => controller.abort(new DOMException("Source request timed out", "TimeoutError")),
+    20_000,
+  );
+  let response: Response;
+  let bytes: ArrayBuffer;
+  try {
+    response = await fetch(`${import.meta.env.BASE_URL}${item.path}`, {
+      cache: "no-store",
+      signal: controller.signal,
+    });
+    bytes = await response.arrayBuffer();
+  } catch (error) {
+    if (
+      controller.signal.reason instanceof DOMException &&
+      controller.signal.reason.name === "TimeoutError"
+    ) {
+      throw new Error(
+        `Loading ${item.path} took too long. Check the connection and try again; your case has been kept.`,
+      );
+    }
+    throw error;
+  } finally {
+    clearTimeout(timer);
+    signal?.removeEventListener("abort", cancel);
+  }
   if (!response.ok)
     throw new Error(
       `Could not load ${item.path} (HTTP ${response.status}). Try again when the file is available.`,
     );
-  const bytes = await response.arrayBuffer();
   if (bytes.byteLength !== item.bytes)
     throw new Error(
       `The downloaded ${item.path} does not match this edition. Reload the page before trying again.`,
@@ -33,8 +58,8 @@ export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<
   return bytes;
 }
 
-export async function dataUrl(item: Asset): Promise<string> {
-  const bytes = new Uint8Array(await verifiedBytes(item));
+export async function dataUrl(item: Asset, signal?: AbortSignal): Promise<string> {
+  const bytes = new Uint8Array(await verifiedBytes(item, signal));
   let binary = "";
   for (let i = 0; i < bytes.length; i += 16_384)
     binary += String.fromCharCode(...bytes.subarray(i, i + 16_384));

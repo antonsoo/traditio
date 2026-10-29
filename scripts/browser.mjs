@@ -6,6 +6,7 @@ import { extname, resolve } from "node:path";
 import { gzipSync } from "node:zlib";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { argumentJourney, offlineArgument } from "./argument-journey.mjs";
 
 const root = resolve("dist");
 const output = resolve(process.env.REVIEW_OUTPUT || "docs/assets");
@@ -376,9 +377,19 @@ try {
         assert.deepEqual(JSON.parse(nested.bytes), original);
         await standalone.close();
 
+        const argumentReview = await argumentJourney({
+          context,
+          base,
+          name,
+          width,
+          output,
+          scratch,
+        });
+
         // Refuse all origin connections, then perform an actual document reload.
         // Browser offline emulation can intercept Firefox fetches before its worker.
         serverUnavailable = true;
+        await offlineArgument(argumentReview);
         await page.goto(shared);
         await page.reload({ waitUntil: "domcontentloaded" });
         await content(page, "#offline-status", "This edition is available offline");
@@ -441,6 +452,7 @@ try {
           cacheState,
           axeViolations: 0,
           errors,
+          argument: { ...argumentReview.receipt, offlineIdenticalBook: true },
         });
         console.log(
           `${name} ${width}: cases, comparison, Latin, nine source images, downloads, standalone casebook, offline reload passed.`,
@@ -533,14 +545,25 @@ try {
         await route.continue();
       });
       const waitingDownload = page.waitForEvent("download");
+      await page.locator("#claim-select").selectOption("delivery-title");
+      await page.locator("#check-argument").click();
+      await page.locator("#reading-select").selectOption("division");
+      await page.locator("#cite-reading").click();
+      await page.locator("#argument-note").fill("Click-time explanation");
       await page.locator("#save-sheet").click();
       await exportArrival;
       await page.locator('[data-years="3"]').click();
       await content(page, "#title-holder", "Aulus");
+      await page.locator("#check-argument").click();
+      await page.locator("#argument-note").fill("Later explanation");
+      await page.locator('[data-remove-citation="division"]').click();
       releaseExport();
       const capturedDownload = await waitingDownload;
       const captured = checkSheet(await readFile(await capturedDownload.path()));
       assert.equal(captured.record.current.years, 0);
+      assert.equal(captured.record.argument.witness.years, 0);
+      assert.equal(captured.record.argument.note, "Click-time explanation");
+      assert.deepEqual(captured.record.argument.citations, ["division"]);
       report.faults.push({
         browser: name,
         sameLengthCorruptImageRejected: true,
@@ -549,6 +572,7 @@ try {
         latePageCannotReplaceCurrentPage: true,
         zoomPreservedDuringLateResponse: true,
         exportCapturesClickTimeFacts: true,
+        exportCapturesArgumentWitnessCitationsAndNote: true,
       });
       console.log(
         `${name}: corrupt source, refused export, recovery, late source response and export snapshot passed.`,

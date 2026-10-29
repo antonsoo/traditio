@@ -24,7 +24,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 4367 --strictPort",
+    "dev": "vite --host 127.0.0.1 --port 4368 --strictPort",
     "build": "tsc --noEmit && vite build && node scripts/offline.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 4367 --strictPort",
     "lint": "biome check .",
@@ -33,7 +33,8 @@
     "test": "node --import tsx --test tests/*.test.ts",
     "check": "npm run lint && npm run typecheck && npm test && npm run verify:sources && npm run build",
     "verify:sources": "node scripts/verify-sources.mjs",
-    "test:browser": "node scripts/browser.mjs"
+    "test:browser": "node scripts/browser.mjs",
+    "test:audit": "node scripts/audit-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

@@ -22,18 +22,20 @@ export type LandCase = {
 };
 export type Case = DeliveryCase | GoodFaithCase | LandCase;
 export type Lesson = Case["lesson"];
-export type RuleId =
-  | "classification"
-  | "delivery"
-  | "form"
-  | "division"
-  | "time"
-  | "belief"
-  | "taint"
-  | "province"
-  | "innocent"
-  | "heir"
-  | "land";
+export const ruleIds = [
+  "classification",
+  "delivery",
+  "form",
+  "division",
+  "time",
+  "belief",
+  "taint",
+  "province",
+  "innocent",
+  "heir",
+  "land",
+] as const;
+export type RuleId = (typeof ruleIds)[number];
 export type Condition = {
   label: string;
   state: "met" | "blocked" | "waiting" | "outside";

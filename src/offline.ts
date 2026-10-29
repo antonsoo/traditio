@@ -50,11 +50,23 @@ export function installOffline(status: HTMLElement): void {
   void navigator.serviceWorker
     .register(`${import.meta.env.BASE_URL}sw.js`, { scope: import.meta.env.BASE_URL })
     .then((registration) => {
-      registration.addEventListener("updatefound", () => {
-        registration.installing?.addEventListener("statechange", () => {
-          void inspect();
+      const watched = new WeakSet<ServiceWorker>();
+      function watch(worker: ServiceWorker | null): void {
+        if (!worker || watched.has(worker)) return;
+        watched.add(worker);
+        worker.addEventListener("statechange", () => {
+          if (worker.state === "redundant" && !navigator.serviceWorker.controller) {
+            ++request;
+            status.textContent =
+              "Offline installation did not complete. Reconnect and reload to try again, or save a casebook.";
+          } else void inspect();
         });
+      }
+      registration.addEventListener("updatefound", () => {
+        watch(registration.installing);
       });
+      // The first updatefound event can precede register() resolving.
+      watch(registration.installing);
       return inspect();
     })
     .catch(() => {

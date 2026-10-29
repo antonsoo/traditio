@@ -1,10 +1,19 @@
 import "./style.css";
 import { asset, assets, verifiedBytes } from "./assets";
 import {
+  type ArgumentDraft,
+  assessCitations,
+  assessClaim,
+  claimFor,
+  claims,
+  copyArgument,
+} from "./core/argument";
+import {
   type Case,
   defaults,
   differences,
   evaluate,
+  facts,
   type Lesson,
   lessonNames,
   type RuleId,
@@ -33,6 +42,7 @@ function element<T extends HTMLElement = HTMLElement>(id: string): T {
 
 let current: Case = { ...defaults.delivery };
 let pinned: Case | null = null;
+let argument: ArgumentDraft | null = null;
 let selectedReading: RuleId = "division";
 let selectedPage = 147;
 let scanRequest = 0;
@@ -40,6 +50,7 @@ let scanController: AbortController | undefined;
 let imageUrl: string | undefined;
 let announcementTimeout = 0;
 let importRequest = 0;
+let exportController: AbortController | undefined;
 const fileStatus = element("file-status");
 
 function announce(message: string): void {
@@ -143,6 +154,59 @@ function update(): void {
         ? `Only ${diff[0]?.fact.toLowerCase()} changed. The other stated premises remain the same.`
         : "For a one-fact comparison, pin a case and change just one control. The highlighted rows identify changed premises.";
   }
+  updateArgument();
+}
+
+function updateArgument(): void {
+  element<HTMLSelectElement>("claim-select").value = argument?.claim ?? "";
+  element("argument-work").hidden = !argument;
+  element<HTMLButtonElement>("cite-reading").disabled =
+    !argument || argument.citations.includes(selectedReading);
+  element("cite-help").innerHTML = argument
+    ? argument.citations.includes(selectedReading)
+      ? 'This passage is already in <a href="#argument">your argument</a>.'
+      : 'Add the selected passage to <a href="#argument">your argument</a>.'
+    : 'Choose a claim in the <a href="#argument">counterexample exercise</a> to collect evidence.';
+  if (!argument) return;
+  const claim = claimFor(argument.claim);
+  element("claim-statement").textContent = claim.statement;
+  element("claim-premise").textContent = claim.premise;
+  element("argument-witness").hidden = !argument.witness;
+  element("check-argument").textContent = argument.witness
+    ? "Replace submission with current case"
+    : "Submit current case";
+  const witness = argument.witness;
+  if (witness) {
+    const assessment = assessClaim(argument.claim, witness);
+    const changed = current.lesson !== witness.lesson || differences(witness, current).length > 0;
+    element("argument-status").textContent = changed
+      ? "The live case has changed. Your submitted case below stays fixed."
+      : "The submitted facts match the current controls. Further edits will not change this submission.";
+    element("witness-story").textContent = story(witness);
+    element("witness-facts").innerHTML = facts(witness)
+      .map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`)
+      .join("");
+    element("witness-title").textContent =
+      `Civil title in the submitted case: ${evaluate(witness).title}`;
+    element("argument-assessment").dataset.kind = assessment.kind;
+    element("assessment-title").textContent = assessment.headline;
+    element("assessment-explanation").textContent = assessment.explanation;
+  } else {
+    element("argument-status").textContent =
+      "No case submitted yet. Choose facts above, then submit them here.";
+  }
+  element("argument-citations").innerHTML = argument.citations
+    .map((id) => {
+      const item = reading(id);
+      return `<li><button type="button" class="text-button" data-read="${id}">Gaius ${escapeHtml(item.reference)} · ${escapeHtml(item.title)}</button><button type="button" class="remove-citation" data-remove-citation="${id}" aria-label="Remove citation: Gaius ${escapeHtml(item.reference)}">Remove</button></li>`;
+    })
+    .join("");
+  const sources = assessCitations(argument);
+  element("citation-status").textContent = sources.complete
+    ? "The passages needed for this refutation are cited. Their presence does not grade your explanation or turn an unsuitable case into a counterexample."
+    : `Still needed: ${sources.missing.map((group) => `${group.label} (Gaius ${group.anyOf.map((id) => reading(id).reference).join(" or ")})`).join("; ")}.`;
+  element<HTMLTextAreaElement>("argument-note").value = argument.note;
+  element("note-count").textContent = String(argument.note.length);
 }
 
 async function loadScan(page: number): Promise<void> {
@@ -190,6 +254,7 @@ async function loadScan(page: number): Promise<void> {
 
 function setReading(id: RuleId, scroll = false): void {
   selectedReading = id;
+  updateArgument();
   const item = reading(id);
   element<HTMLSelectElement>("reading-select").value = id;
   element("reading-title").textContent = item.title;
@@ -304,6 +369,74 @@ element("reset").addEventListener("click", () => {
   update();
   announce("Investigation reset. Your pinned case is still available.");
 });
+for (const claim of claims) {
+  const option = document.createElement("option");
+  option.value = claim.id;
+  option.textContent = claim.label;
+  element<HTMLSelectElement>("claim-select").append(option);
+}
+element("claim-select").addEventListener("change", () => {
+  const value = element<HTMLSelectElement>("claim-select").value;
+  const claim = claims.find((item) => item.id === value);
+  if (!claim) {
+    // The placeholder must not silently discard an existing explanation.
+    updateArgument();
+    return;
+  }
+  argument = argument
+    ? { ...argument, claim: claim.id }
+    : { claim: claim.id, witness: null, citations: [], note: "" };
+  updateArgument();
+  announce(
+    "Claim selected. Any submitted facts, citations and written explanation have been kept.",
+  );
+});
+element("check-argument").addEventListener("click", () => {
+  if (!argument) return;
+  argument.witness = { ...current };
+  updateArgument();
+  announce(assessClaim(argument.claim, argument.witness).headline);
+});
+element("restore-witness").addEventListener("click", () => {
+  if (!argument?.witness) return;
+  current = { ...argument.witness };
+  update();
+  element("workshop").scrollIntoView({ block: "start" });
+  document
+    .querySelector<HTMLButtonElement>(`[data-lesson="${current.lesson}"]`)
+    ?.focus({ preventScroll: true });
+  announce("Submitted case restored to the controls. Your argument has been kept.");
+});
+element("argument-note").addEventListener("input", () => {
+  if (!argument) return;
+  argument.note = element<HTMLTextAreaElement>("argument-note").value;
+  element("note-count").textContent = String(argument.note.length);
+});
+element("cite-reading").addEventListener("click", () => {
+  if (!argument || argument.citations.includes(selectedReading)) return;
+  argument.citations.push(selectedReading);
+  updateArgument();
+  announce(`Gaius ${reading(selectedReading).reference} added to your argument.`);
+});
+element("argument-citations").addEventListener("click", (event) => {
+  const button =
+    event.target instanceof Element
+      ? event.target.closest<HTMLButtonElement>("[data-remove-citation]")
+      : null;
+  if (!button || !argument) return;
+  argument.citations = argument.citations.filter((id) => id !== button.dataset.removeCitation);
+  updateArgument();
+  element<HTMLTextAreaElement>("argument-note").focus();
+  announce("Citation removed. Your submitted case and explanation have been kept.");
+});
+element("clear-argument").addEventListener("click", () => {
+  argument = null;
+  updateArgument();
+  element("claim-select").focus();
+  announce(
+    "Argument, submitted case, citations and written explanation cleared. Current and pinned cases are unchanged.",
+  );
+});
 element("focus-read").addEventListener("click", () => {
   setReading(evaluate(current).focus, true);
 });
@@ -334,8 +467,9 @@ element("zoom").addEventListener("click", () => {
   if (enlarged) element("scan-viewport").focus();
 });
 element("save-case").addEventListener("click", () => {
-  saveFile("traditio-case.json", writeRecord(current, pinned), "application/json");
-  fileStatus.textContent = "Editable case saved, including the pinned comparison when present.";
+  saveFile("traditio-case.json", writeRecord(current, pinned, argument), "application/json");
+  fileStatus.textContent =
+    "Editable case saved, including any pinned comparison and counterexample argument.";
 });
 element("save-svg").addEventListener("click", () => {
   saveFile("traditio-diagram.svg", diagramSvg(current), "image/svg+xml");
@@ -346,22 +480,42 @@ element("save-sheet").addEventListener("click", async () => {
   const button = element<HTMLButtonElement>("save-sheet");
   const captured = { ...current };
   const capturedPin = pinned ? { ...pinned } : null;
+  const capturedArgument = copyArgument(argument);
+  exportController = new AbortController();
+  const signal = exportController.signal;
+  element("cancel-export").hidden = false;
   button.disabled = true;
+  fileStatus.textContent = "Preparing the casebook: checking its source pages, fonts and licenses…";
   try {
-    const html = await studySheet(captured, capturedPin, (message) => {
-      fileStatus.textContent = message;
-    });
+    const html = await studySheet(
+      captured,
+      capturedPin,
+      (message) => {
+        fileStatus.textContent = message;
+      },
+      signal,
+      capturedArgument,
+    );
+    signal.throwIfAborted();
     saveFile("traditio-casebook.html", html, "text/html;charset=utf-8");
     fileStatus.textContent =
       "Casebook saved with the cases as they were when you clicked, all readings, complete source pages and fonts. Open it on its own; use Print for a PDF.";
   } catch (error) {
-    fileStatus.textContent =
-      error instanceof Error
+    fileStatus.textContent = signal.aborted
+      ? "Casebook preparation canceled. Your current and pinned cases have been kept."
+      : error instanceof Error
         ? error.message
         : "The casebook could not be saved. Try again when all source files are available.";
   } finally {
+    const returnFocus = document.activeElement === element("cancel-export");
     button.disabled = false;
+    element("cancel-export").hidden = true;
+    exportController = undefined;
+    if (returnFocus) button.focus();
   }
+});
+element("cancel-export").addEventListener("click", () => {
+  exportController?.abort();
 });
 element("open-case").addEventListener("change", async () => {
   const input = element<HTMLInputElement>("open-case");
@@ -375,9 +529,10 @@ element("open-case").addEventListener("change", async () => {
     if (id !== importRequest) return;
     current = result.current;
     pinned = result.pinned;
+    argument = result.version === 2 ? result.argument : null;
     update();
     fileStatus.textContent =
-      "Saved case reopened. Current and pinned facts are restored; outcomes are recomputed from those facts.";
+      "Saved case reopened. Cases and any argument are restored; outcomes and argument checks are recomputed from the facts.";
     announce("Saved case reopened.");
   } catch (error) {
     if (id === importRequest)
@@ -387,12 +542,12 @@ element("open-case").addEventListener("change", async () => {
   }
 });
 element("copy-link").addEventListener("click", async () => {
-  const url = shareUrl(location.href, current, pinned);
+  const url = shareUrl(location.href, current, pinned, argument);
   try {
     await navigator.clipboard.writeText(url);
     element("share-fallback").hidden = true;
     fileStatus.textContent =
-      "Case link copied. It includes the current and pinned facts. Editing the case does not change the address bar.";
+      "Case link copied. It includes the cases and any argument, including your written explanation. Editing does not change the address bar.";
   } catch {
     element("share-fallback").hidden = false;
     const input = element<HTMLInputElement>("share-text");
@@ -408,6 +563,7 @@ function restoreHash(): void {
     if (record) {
       current = record.current;
       pinned = record.pinned;
+      argument = record.version === 2 ? record.argument : null;
       fileStatus.textContent = "Shared case opened. Outcomes are recomputed from its saved facts.";
       update();
     }

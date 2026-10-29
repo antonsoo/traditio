@@ -112,3 +112,42 @@ Case files save facts, never a trusted answer. Opening a JSON file or shared lin
 validates its format, version, keys, enum values and bounded time, then recomputes
 the result. A comparison between different investigations is explicitly labeled
 as such; it is never described as the effect of one changed fact.
+
+## Counterexamples and their premises
+
+The three argument prompts are modern, deliberately overbroad hypotheses.
+They are not quotations from Gaius. A successful submission must instantiate
+the hypothesis's premises and contradict its conclusion within the bounded
+model above. Cases outside that model remain unresolved.
+
+| Hypothesis to challenge                                                      | Required premises                                                                            | Refuting case                                                                          | Source coverage for the refutation |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------- |
+| Every owner's sale and delivery passes civil title at once                   | Owner conveyance, inspected at year 0                                                        | Informal delivery of the mule or Italian field leaves civil title with Lucius          | 2.40-41                            |
+| Good faith and the completed period suffice for a non-owner's buyer          | Non-owner sale; good faith at receipt; at least one year for the cup or two for Italian land | Theft or force still prevents acquisition                                              | 2.42 and either 2.45 or 2.49       |
+| A seller's knowledge of non-ownership prevents every later buyer's usucapion | Seller knows the thing is not his                                                            | Peaceful vacant Italian possession passes to an innocent buyer who completes two years | 2.42 and 2.51                      |
+
+The second prompt rejects a bad-faith buyer or an unfinished period as a failed
+premise, not a refutation. The third rejects the honestly mistaken heir for the
+same reason: he does not know. An agreeing case does not prove a universal claim.
+The first prompt asks for year 0 so the recorded case actually inspects receipt;
+it does not infer earlier title from a later time step.
+
+`src/core/argument.ts` checks the captured case using the same bounded title
+model and an explicit premise check. Citation coverage is a separate result:
+including the expected passages cannot make unsuitable facts a counterexample,
+and cannot establish that the written explanation interprets those passages
+correctly. The explanation is retained verbatim as learner-authored text and
+is never graded. All output escapes it as text.
+
+The submitted case is separate from the live case and comparison pin. It changes
+only when the learner submits again, changes the saved argument, or clears it.
+Changing the selected claim keeps the submitted facts, citations and note and
+recomputes their relationship to the new claim. Saving captures all of these
+inputs before fetching casebook resources.
+
+Version 1 files retain their original four fields. Version 2 adds an `argument`
+object with `claim`, nullable `witness`, unique retained-reading `citations`, and
+a `note` limited to 1,000 UTF-16 code units (the textarea's character limit).
+Both versions are limited to 16 KiB and reject unknown fields and unsupported
+facts. No saved verdict is accepted. Reopening a version 1 case clears any
+previous argument, so facts from unrelated documents are not silently combined.

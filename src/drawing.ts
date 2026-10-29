@@ -46,8 +46,28 @@ export function objectSvg(input: Case): string {
   return `<svg viewBox="0 0 240 170" role="img" aria-label="Schematic ${escapeHtml(thingName(input))}" xmlns="http://www.w3.org/2000/svg">${objectDrawing(thingOf(input))}</svg>`;
 }
 
-export function diagramSvg(input: Case): string {
+function textLines(text: string, width = 80): string[] {
+  const lines: string[] = [];
+  let line = "";
+  for (const word of text.split(" ")) {
+    if (line && `${line} ${word}`.length > width) {
+      lines.push(line);
+      line = word;
+    } else line += `${line ? " " : ""}${word}`;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+export function diagramSvg(
+  input: Case,
+  options: { id?: string; fullFacts?: boolean } = {},
+): string {
   const result = evaluate(input);
+  const id = (options.id ?? "diagram").replace(/[^a-z0-9_-]/gi, "-");
+  const lines = options.fullFacts === false ? [] : textLines(story(input));
+  const footerY = lines.length ? 450 + lines.length * 22 : 415;
+  const height = footerY + 35;
   const references = [
     ...new Set(result.conditions.map((condition) => reading(condition.rule).reference)),
   ].join("; ");
@@ -56,10 +76,10 @@ export function diagramSvg(input: Case): string {
     ["Civil title", result.title, "#705181"],
     ["In bonis (2.41)", result.bonitary, "#276457"],
   ];
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="svg-title svg-desc">
-    <title id="svg-title">${escapeHtml(thingName(input))}: ${input.years} completed years</title>
-    <desc id="svg-desc">${escapeHtml(story(input))} ${escapeHtml(result.headline)} ${escapeHtml(result.explanation)} Gaius ${escapeHtml(references)}. This case assumes capable citizens, a valid sale and uninterrupted possession.</desc>
-    <rect width="800" height="450" fill="#edf2f6"/>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="${height}" viewBox="0 0 800 ${height}" role="img" aria-labelledby="${id}-title" aria-describedby="${id}-desc">
+    <title id="${id}-title">${escapeHtml(thingName(input))}: ${input.years} completed ${input.years === 1 ? "year" : "years"}</title>
+    <desc id="${id}-desc">${escapeHtml(story(input))} ${escapeHtml(result.headline)} ${escapeHtml(result.explanation)} Gaius ${escapeHtml(references)}. This case assumes capable citizens, a valid sale and uninterrupted possession.</desc>
+    <rect width="800" height="${height}" fill="#edf2f6"/>
     <g font-family="Georgia,serif" fill="#172b43"><text x="30" y="38" font-size="25">Traditio · ${escapeHtml(thingName(input))}</text><text x="30" y="65" font-size="16">${input.years} completed ${input.years === 1 ? "year" : "years"} · Gaius, Institutes</text></g>
     <g transform="translate(280 64)" color="#172b43">${objectDrawing(thingOf(input))}</g>
     <g font-family="sans-serif" font-size="18">${rows
@@ -68,7 +88,8 @@ export function diagramSvg(input: Case): string {
         return `<text x="30" y="${y + 6}" fill="#172b43">${label}</text><path d="M204 ${y} H760" stroke="${color}" opacity=".2" stroke-width="6"/><rect x="${value === "Lucius" ? 208 : 450}" y="${y - 18}" width="${value === "Lucius" ? 120 : 310}" height="36" rx="18" fill="${color}"/><text x="${value === "Lucius" ? 268 : 605}" y="${y + 6}" fill="white" text-anchor="middle">${value}</text>`;
       })
       .join("")}</g>
-    <text x="30" y="415" font-family="sans-serif" font-size="15" fill="#172b43">Gaius ${escapeHtml(references)}. Valid sale and uninterrupted possession assumed.</text>
-    <text x="30" y="438" font-family="sans-serif" font-size="13" fill="#526478">Schematic teaching case; full facts are in the image description. Read the casebook for scope and source pages.</text>
+    ${lines.length ? `<text x="30" y="419" font-family="sans-serif" font-size="14" font-weight="bold" fill="#172b43">The case facts</text><text font-family="sans-serif" font-size="16" fill="#172b43">${lines.map((line, index) => `<tspan x="30" y="${445 + index * 22}">${escapeHtml(line)}</tspan>`).join("")}</text>` : ""}
+    <text x="30" y="${footerY}" font-family="sans-serif" font-size="15" fill="#172b43">Gaius ${escapeHtml(references)}. Valid sale and uninterrupted possession assumed.</text>
+    <text x="30" y="${footerY + 23}" font-family="sans-serif" font-size="13" fill="#526478">Modern teaching diagram. The casebook includes the complete sources and the limits of this model.</text>
   </svg>`;
 }
