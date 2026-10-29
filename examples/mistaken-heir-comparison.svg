@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="svg-title svg-desc">
+    <title id="svg-title">silver cup: 1 completed years</title>
+    <desc id="svg-desc">Lucius owns a silver cup. Marcus steals it. Marcus sells and delivers the cup to Aulus, who believes Marcus owns it when he receives it. Time cannot cure this defect. A stolen cup cannot be acquired by this usucapion, even by an innocent buyer. The source blocks the route; it does not merely ask for a longer wait. Gaius 2.43; 2.45; 2.42. This case assumes capable citizens, a valid sale and uninterrupted possession.</desc>
+    <rect width="800" height="450" fill="#edf2f6"/>
+    <g font-family="Georgia,serif" fill="#172b43"><text x="30" y="38" font-size="25">Traditio · silver cup</text><text x="30" y="65" font-size="16">1 completed year · Gaius, Institutes</text></g>
+    <g transform="translate(280 64)" color="#172b43"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round">
+    <ellipse cx="120" cy="44" rx="53" ry="10" fill="#dce5eb"/>
+    <path d="M67 44 Q68 111 112 117 L112 140 L92 147 L148 147 L128 140 L128 117 Q172 111 173 44" fill="#edf2f6"/>
+    <path d="M68 52 C25 34 35 101 78 93 M172 52 C215 34 205 101 162 93 M75 60 Q120 75 165 60 M83 88 Q120 100 157 88 M111 116 Q120 119 129 116"/>
+    <path d="M91 73 L97 82 L103 73 M112 76 L118 85 L124 76 M133 75 L139 84 L145 75" stroke-width="1.5"/>
+    <path d="M84 55 Q83 77 89 89 M100 107 Q110 112 120 112" stroke="#fff" stroke-width="4"/>
+    </g></g>
+    <g font-family="sans-serif" font-size="18"><text x="30" y="271" fill="#172b43">Possession</text><path d="M204 265 H760" stroke="#286491" opacity=".2" stroke-width="6"/><rect x="450" y="247" width="310" height="36" rx="18" fill="#286491"/><text x="605" y="271" fill="white" text-anchor="middle">Aulus</text><text x="30" y="324" fill="#172b43">Civil title</text><path d="M204 318 H760" stroke="#705181" opacity=".2" stroke-width="6"/><rect x="208" y="300" width="120" height="36" rx="18" fill="#705181"/><text x="268" y="324" fill="white" text-anchor="middle">Lucius</text><text x="30" y="377" fill="#172b43">In bonis (2.41)</text><path d="M204 371 H760" stroke="#276457" opacity=".2" stroke-width="6"/><rect x="450" y="353" width="310" height="36" rx="18" fill="#276457"/><text x="605" y="377" fill="white" text-anchor="middle">Not the 2.41 route</text></g>
+    <text x="30" y="415" font-family="sans-serif" font-size="15" fill="#172b43">Gaius 2.43; 2.45; 2.42. Valid sale and uninterrupted possession assumed.</text>
+    <text x="30" y="438" font-family="sans-serif" font-size="13" fill="#526478">Schematic teaching case; full facts are in the image description. Read the casebook for scope and source pages.</text>
+  </svg>

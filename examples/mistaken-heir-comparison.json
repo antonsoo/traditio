@@ -1,0 +1,16 @@
+{
+  "format": "traditio-case",
+  "version": 1,
+  "current": {
+    "lesson": "good-faith",
+    "seller": "thief",
+    "belief": "good",
+    "years": 1
+  },
+  "pinned": {
+    "lesson": "good-faith",
+    "seller": "heir",
+    "belief": "good",
+    "years": 1
+  }
+}
