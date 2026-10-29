@@ -63,3 +63,16 @@ workflows remain present for future execution.
 Historical interpretation still has the boundaries stated in the
 [source mapping](model-and-sources.md). Publication does not turn the workshop
 into a Roman litigation engine or establish independent scholarly peer review.
+
+## Discovery through Officina
+
+The published catalogue finds the activity through Roman-law terms and its
+Latin: [try the shared quamvis search](https://antonsoo.github.io/officina/?q=quamvis&audience=Ancient+world#catalogue).
+Four public browser/size journeys followed that catalogue into the actual pinned
+review and lesson, submitted a counterexample, read the page-149 scan, and
+downloaded and reopened the argument. The
+[catalogue review](https://github.com/antonsoo/officina/blob/dea631c36bfe25cdce500a4d3181ae0fafbb4c7a/docs/traditio-discovery-2026-10-29.md)
+retains the source, images, fresh build and public navigation evidence.
+
+After those journeys, [a further canonical comparison](../studies/publication/after-catalogue-files.json)
+confirmed the root, explicit index and all 22 lesson build files still matched.
