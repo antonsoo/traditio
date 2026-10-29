@@ -1,8 +1,8 @@
 {
-  "reviewedAt": "2026-10-29T21:44:34.514902+00:00",
-  "applicationCommit": "f020e54952ab5e583daf42d409d023e3f31b70c9",
+  "reviewedAt": "2026-10-29T23:22:32.523637+00:00",
+  "applicationCommit": "e016ae30a6be62fdc28f6bc047aae481a3a6adfb",
   "cleanBuild": {
-    "method": "Git archive into a new directory; no existing node_modules or dist",
+    "method": "Git archive into an empty directory, npm ci with no preexisting node_modules or dist",
     "node": "v24.22.1",
     "npm": "11.19.1",
     "platform": "Linux x64",
@@ -14,36 +14,24 @@
       {
         "command": "npm run check",
         "exitCode": 0
-      },
-      {
-        "command": "npm run dev",
-        "result": "README URL and case controls operated in Chromium; no worker installed; stopped after review"
-      },
-      {
-        "command": "npm run build",
-        "exitCode": 0
-      },
-      {
-        "command": "npm run preview",
-        "result": "README URL and case controls operated in Chromium; full offline edition ready; stopped after review"
-      },
-      {
-        "command": "gzip -dk examples/mistaken-heir-comparison.html.gz",
-        "result": "Reconstructed the exact browser-reviewed standalone HTML",
-        "scope": "Retained artifact checkout"
       }
     ],
     "productionFilesByteIdentical": 22,
     "productionFiles": [
       {
-        "path": "assets/index-Bo10euJ3.css",
-        "bytes": 14924,
-        "sha256": "9dbb2934c069bbbc2e17b0a3fe756a3e8dd5a0b15273506445156a68bd1ddaec"
+        "path": "LICENSE.txt",
+        "bytes": 1071,
+        "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
       },
       {
-        "path": "assets/index-DCAKnZcr.js",
-        "bytes": 54766,
-        "sha256": "6cc85d5e3efcb96a672659f1b55796ff32ad4b38cc5232b3626eb5a48afb3518"
+        "path": "assets/index-5zBzINvE.js",
+        "bytes": 67393,
+        "sha256": "3f623041c5d900bd6de5b0d4bb09394c71619ff6d15e607c889414ba88dc8d3e"
+      },
+      {
+        "path": "assets/index-B6D61xFC.css",
+        "bytes": 16505,
+        "sha256": "e0a45e9985c4dadf50d85e16a40e8db6988c4b2c3ce50b5db6e72c0f1b457aca"
       },
       {
         "path": "favicon.svg",
@@ -77,23 +65,18 @@
       },
       {
         "path": "index.html",
-        "bytes": 13827,
-        "sha256": "ad2c963b78098410bcb5c133df16d8c334e7e53d3943b2aaaa2942a6e54abee6"
-      },
-      {
-        "path": "LICENSE.txt",
-        "bytes": 1071,
-        "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
-      },
-      {
-        "path": "sources/manifest.json",
-        "bytes": 4021,
-        "sha256": "b1c26edcf261120656ebb570764a74e87d1f5e602832ff5123138c73b89f5b77"
+        "bytes": 16971,
+        "sha256": "975305ca2609b005eb4a7ac4586710dc7748ceb5513380215a8c42e22e2f0144"
       },
       {
         "path": "sources/NOTICE.txt",
         "bytes": 2156,
         "sha256": "028ff49992051f00f2e1299035f155b5d19813a1cbf3f88bcfbf2a5560f43c19"
+      },
+      {
+        "path": "sources/manifest.json",
+        "bytes": 4021,
+        "sha256": "b1c26edcf261120656ebb570764a74e87d1f5e602832ff5123138c73b89f5b77"
       },
       {
         "path": "sources/poste-1904-p133.jpg",
@@ -142,187 +125,157 @@
       },
       {
         "path": "sw.js",
-        "bytes": 5260,
-        "sha256": "db3bbc54107b65c0a62a7f085e735308d144650d288c5ea03965688074bcd963"
+        "bytes": 5956,
+        "sha256": "0b241769358207c0bbca2a5b454d157b473c7b07a269033c78a2332b2383a993"
       }
     ]
-  },
-  "visualReview": {
-    "method": "Opened every retained screenshot and inspected layout, wording, wrapping and source display",
-    "screenshots": [
-      {
-        "path": "docs/assets/comparison-chromium-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 79738,
-        "sha256": "259b6e12e907336828780959f37830a83d698ad394608a0c384ebe0c808b8293"
-      },
-      {
-        "path": "docs/assets/comparison-chromium-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 50853,
-        "sha256": "1f777a88bc34a8cf1e5bcfaa39a87e93097c819379fbdba3e5de0da7a921b160"
-      },
-      {
-        "path": "docs/assets/comparison-firefox-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 132044,
-        "sha256": "82bc3d5edb47c81c747eea12b1be63f28635944c28f22e8ee361e96fe1bfb20a"
-      },
-      {
-        "path": "docs/assets/comparison-firefox-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 80033,
-        "sha256": "8dc950f4f0a40f9193f6830dbb2d45bccf5b22e856a1a161a36d96f395e6aff7"
-      },
-      {
-        "path": "docs/assets/reading-chromium-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 755903,
-        "sha256": "5117efdc86967f39fb1925e254fd5365179eab8a22ec65adca62d028bf5b7467"
-      },
-      {
-        "path": "docs/assets/reading-chromium-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 64420,
-        "sha256": "42710c3c2741cbdc42b5e8ce12c057372ddcc34fa087b5620afdd0cc0046348a"
-      },
-      {
-        "path": "docs/assets/reading-firefox-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 963975,
-        "sha256": "8b22ec882d2a792d63b818de837cf92b9bd4593f8e0b094863ddc0ab7ffd640d"
-      },
-      {
-        "path": "docs/assets/reading-firefox-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 103020,
-        "sha256": "b1d682996215b0182e23e4deaf0b1614c43cbaa965fc07ea586155500843594f"
-      },
-      {
-        "path": "docs/assets/study-sheet.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 85216,
-        "sha256": "04cede12ec9ad9b560f7828e019517d79ce7ba539f6c1dbf28ec1dbb6ccf669c"
-      },
-      {
-        "path": "docs/assets/workshop-chromium-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 129822,
-        "sha256": "916ae6f7126267bdc534dc47fef38344ae09c4714d7da8b1154e75b17d6404f9"
-      },
-      {
-        "path": "docs/assets/workshop-chromium-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 64535,
-        "sha256": "902ccb7de2229bcc591efe3f6fc037508845eacf333af2a374019744dfae56e7"
-      },
-      {
-        "path": "docs/assets/workshop-firefox-1440.png",
-        "width": 1440,
-        "height": 1000,
-        "bytes": 177539,
-        "sha256": "bb75fd87817a1f50f147f239287bcdfb540ff9755772861dc6c4a00ec1ca75d2"
-      },
-      {
-        "path": "docs/assets/workshop-firefox-375.png",
-        "width": 375,
-        "height": 1000,
-        "bytes": 91241,
-        "sha256": "ac7a14511aed7e72fd46ae37eea63db3a39837a4a201a5788af64ebe830dd937"
-      }
-    ],
-    "pdfRenderedPagesInspected": [1, 2, 3, 15, 16, 24]
   },
   "artifacts": [
     {
-      "path": "examples/mistaken-heir-comparison.html.gz",
-      "bytes": 6935627,
-      "sha256": "750669f3cbc28b6647d0e990a176bc83c7f625d08634e7d8eeb8f8bee10bdd87"
+      "name": "mistaken-heir-comparison",
+      "caseVersion": 1,
+      "htmlBytes": 9397765,
+      "htmlSha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
+      "gzipSha256": "1ab716e2f1512941b9fd5f94ec688acd8a2f072c84c91925631a36b672ec6d96",
+      "pdfBytes": 6987463,
+      "pdfSha256": "d7c50fcba16ca29dbd17aef28dcea353ca967651e29a3210c3c0dabffd4ab28c",
+      "pdfPages": 32,
+      "tagged": true,
+      "javascript": false,
+      "nativeJSONMatches": true
     },
     {
-      "path": "examples/mistaken-heir-comparison.json",
-      "bytes": 261,
-      "sha256": "0fb8e77336a405809792643266ffd71ae1c4d426b1e19e7c6e61bcb3a2256fd3"
-    },
-    {
-      "path": "examples/mistaken-heir-comparison.pdf",
-      "bytes": 6987510,
-      "sha256": "1f49017a7a79a4599adaf812ba1913eaac18838cce755532de6320d62b6deb0b"
-    },
-    {
-      "path": "examples/mistaken-heir-comparison.svg",
-      "bytes": 2795,
-      "sha256": "9350821d4616521190ad9ba281d0fec8d5e45f7d72def9764b9caa3a07d6a2a2"
+      "name": "knowing-seller-argument",
+      "caseVersion": 2,
+      "htmlBytes": 9406290,
+      "htmlSha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355",
+      "gzipSha256": "8cce59da422c9db84cf93bc6ccf8c1c08e75f39493ec04ba9d9b522c0eae46f6",
+      "pdfBytes": 7015152,
+      "pdfSha256": "929a9c4989f47c74e36fef1b955b6de91fd37ca2209a663241985f52b7905462",
+      "pdfPages": 34,
+      "tagged": true,
+      "javascript": false,
+      "nativeJSONMatches": true
     }
   ],
-  "pdf": {
-    "pages": 32,
-    "tagged": true,
-    "javascript": false,
-    "method": "Chromium PDF from the native standalone HTML; pdfinfo, pdftotext, pdftoppm and extracted JPEG SHA-256 comparison",
-    "sourceImages": [
-      {
-        "printedPage": 133,
-        "bytes": 695670,
-        "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
-      },
-      {
-        "printedPage": 134,
-        "bytes": 766313,
-        "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
-      },
-      {
-        "printedPage": 135,
-        "bytes": 606314,
-        "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
-      },
-      {
-        "printedPage": 146,
-        "bytes": 714508,
-        "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
-      },
-      {
-        "printedPage": 147,
-        "bytes": 726668,
-        "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
-      },
-      {
-        "printedPage": 148,
-        "bytes": 739943,
-        "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
-      },
-      {
-        "printedPage": 149,
-        "bytes": 724335,
-        "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
-      },
-      {
-        "printedPage": 74,
-        "bytes": 702149,
-        "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
-      },
-      {
-        "printedPage": 75,
-        "bytes": 761383,
-        "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
-      }
-    ]
+  "argumentPDF": {
+    "extractedJPEGsIdenticalToRetainedSources": 9,
+    "visuallyReviewedPages": [3, 4, 5, 24]
   },
-  "boundaries": {
-    "githubCiExecuted": false,
-    "published": false,
-    "hostedBytesChecked": false,
-    "independentHistoricalPeerReview": false
-  }
+  "screenshots": [
+    {
+      "path": "docs/assets/argument-casebook.png",
+      "bytes": 98391,
+      "sha256": "59560e88dec5b6a86f7b8cb4929ce6f733fc7690ea906f65bd2dc48f9ade6b43"
+    },
+    {
+      "path": "docs/assets/argument-chromium-1440.png",
+      "bytes": 164964,
+      "sha256": "0e94164facc13ecc802acbe59d3e6d04ed4799d9ae2647896441b874de7b76f5"
+    },
+    {
+      "path": "docs/assets/argument-chromium-375.png",
+      "bytes": 63969,
+      "sha256": "5b1764cca5ace8f4721bdfdbf474f4f2d2cfb439bdc88eb6e27bc19bef2df2c9"
+    },
+    {
+      "path": "docs/assets/argument-evidence-chromium-375.png",
+      "bytes": 65291,
+      "sha256": "374183558ec849cdad2da6f8b4706dfc219f670c488251969dba81328cef1843"
+    },
+    {
+      "path": "docs/assets/argument-evidence-firefox-375.png",
+      "bytes": 105204,
+      "sha256": "6e1e3c3e7c9a6ebfd058919c54469d61c0e4dc40b0ca90cb84119f6bfaf4c547"
+    },
+    {
+      "path": "docs/assets/argument-firefox-1440.png",
+      "bytes": 260082,
+      "sha256": "32f6e6c4a4ea05d0990b0e350521d079796df56964e12dda336c7af9e8003da0"
+    },
+    {
+      "path": "docs/assets/argument-firefox-375.png",
+      "bytes": 100892,
+      "sha256": "db29ba8e982cef40d8f6145c0cd9b5f90e35fdb81dd2694e8bc6fd3b01613542"
+    },
+    {
+      "path": "docs/assets/comparison-chromium-1440.png",
+      "bytes": 81502,
+      "sha256": "e8a0a417de4692ffcdeb89bd61213343f89b553824504c9d83a4664f4e17d41d"
+    },
+    {
+      "path": "docs/assets/comparison-chromium-375.png",
+      "bytes": 50853,
+      "sha256": "1f777a88bc34a8cf1e5bcfaa39a87e93097c819379fbdba3e5de0da7a921b160"
+    },
+    {
+      "path": "docs/assets/comparison-firefox-1440.png",
+      "bytes": 134121,
+      "sha256": "64c75d1addcac1dbe098fccf7f0c7212fa9c37accc637dc16945cad93e546923"
+    },
+    {
+      "path": "docs/assets/comparison-firefox-375.png",
+      "bytes": 80033,
+      "sha256": "8dc950f4f0a40f9193f6830dbb2d45bccf5b22e856a1a161a36d96f395e6aff7"
+    },
+    {
+      "path": "docs/assets/diagram-facts-chromium.png",
+      "bytes": 60573,
+      "sha256": "f864aedceb38b5baf661c7418e79a3b1332e99089b5a5121c4c6726cd697670e"
+    },
+    {
+      "path": "docs/assets/diagram-facts-firefox.png",
+      "bytes": 70410,
+      "sha256": "70bcf37e789eae35c46faa19b07504c8023a314db68793bd79444e68374e80dd"
+    },
+    {
+      "path": "docs/assets/reading-chromium-1440.png",
+      "bytes": 761468,
+      "sha256": "1c7cf199d7532d889308d994d9c492555d0d7e62daba34ee0d9981846805d730"
+    },
+    {
+      "path": "docs/assets/reading-chromium-375.png",
+      "bytes": 64584,
+      "sha256": "fb70a8da17cb2aa03f5345ab40f104f817a0fec74437eccbf6024ff30b0a9ddb"
+    },
+    {
+      "path": "docs/assets/reading-firefox-1440.png",
+      "bytes": 972493,
+      "sha256": "8323a0675fd0eb9278508fd5b06e5abe320bd2267dad0d92d197eb06eaaedab3"
+    },
+    {
+      "path": "docs/assets/reading-firefox-375.png",
+      "bytes": 102970,
+      "sha256": "2dc4709897dcf9da60f42103b2ce57ecba3ace661734ec03a8d503d516e4d806"
+    },
+    {
+      "path": "docs/assets/study-sheet.png",
+      "bytes": 85216,
+      "sha256": "04cede12ec9ad9b560f7828e019517d79ce7ba539f6c1dbf28ec1dbb6ccf669c"
+    },
+    {
+      "path": "docs/assets/workshop-chromium-1440.png",
+      "bytes": 129822,
+      "sha256": "916ae6f7126267bdc534dc47fef38344ae09c4714d7da8b1154e75b17d6404f9"
+    },
+    {
+      "path": "docs/assets/workshop-chromium-375.png",
+      "bytes": 64535,
+      "sha256": "902ccb7de2229bcc591efe3f6fc037508845eacf333af2a374019744dfae56e7"
+    },
+    {
+      "path": "docs/assets/workshop-firefox-1440.png",
+      "bytes": 177539,
+      "sha256": "bb75fd87817a1f50f147f239287bcdfb540ff9755772861dc6c4a00ec1ca75d2"
+    },
+    {
+      "path": "docs/assets/workshop-firefox-375.png",
+      "bytes": 91241,
+      "sha256": "ac7a14511aed7e72fd46ae37eea63db3a39837a4a201a5788af64ebe830dd937"
+    }
+  ],
+  "boundaries": [
+    "Historical interpretation is the author's bounded reading, not independent legal peer review.",
+    "Local build and browser evidence do not establish public delivery; publication has its own receipt."
+  ]
 }

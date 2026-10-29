@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-29T23:14:25.932Z",
+  "commands": ["npm run preview", "npm run dev"],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "development": {
+        "controlled": false,
+        "registrations": 0,
+        "scripts": ["/traditio/@vite/client", "/traditio/src/main.ts"]
+      },
+      "productionStillControlled": true,
+      "developmentControlsOperated": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "development": {
+        "controlled": false,
+        "registrations": 0,
+        "scripts": ["/traditio/@vite/client", "/traditio/src/main.ts"]
+      },
+      "productionStillControlled": true,
+      "developmentControlsOperated": true
+    }
+  ]
+}

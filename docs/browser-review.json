@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T21:36:47.924Z",
+  "date": "2026-10-29T23:16:47.256Z",
   "runtime": {
     "node": "v26.7.0",
     "platform": "linux",
@@ -7,14 +7,14 @@
   },
   "productionFiles": [
     {
-      "path": "assets/index-Bo10euJ3.css",
-      "bytes": 14924,
-      "sha256": "9dbb2934c069bbbc2e17b0a3fe756a3e8dd5a0b15273506445156a68bd1ddaec"
+      "path": "assets/index-5zBzINvE.js",
+      "bytes": 67393,
+      "sha256": "3f623041c5d900bd6de5b0d4bb09394c71619ff6d15e607c889414ba88dc8d3e"
     },
     {
-      "path": "assets/index-DCAKnZcr.js",
-      "bytes": 54766,
-      "sha256": "6cc85d5e3efcb96a672659f1b55796ff32ad4b38cc5232b3626eb5a48afb3518"
+      "path": "assets/index-B6D61xFC.css",
+      "bytes": 16505,
+      "sha256": "e0a45e9985c4dadf50d85e16a40e8db6988c4b2c3ce50b5db6e72c0f1b457aca"
     },
     {
       "path": "favicon.svg",
@@ -48,8 +48,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 13827,
-      "sha256": "ad2c963b78098410bcb5c133df16d8c334e7e53d3943b2aaaa2942a6e54abee6"
+      "bytes": 16971,
+      "sha256": "975305ca2609b005eb4a7ac4586710dc7748ceb5513380215a8c42e22e2f0144"
     },
     {
       "path": "LICENSE.txt",
@@ -113,8 +113,8 @@
     },
     {
       "path": "sw.js",
-      "bytes": 5260,
-      "sha256": "db3bbc54107b65c0a62a7f085e735308d144650d288c5ea03965688074bcd963"
+      "bytes": 5956,
+      "sha256": "0b241769358207c0bbca2a5b454d157b473c7b07a269033c78a2332b2383a993"
     }
   ],
   "journeys": [
@@ -171,8 +171,8 @@
         },
         {
           "name": "traditio-diagram.svg",
-          "bytes": 2795,
-          "sha256": "9350821d4616521190ad9ba281d0fec8d5e45f7d72def9764b9caa3a07d6a2a2"
+          "bytes": 3199,
+          "sha256": "185d2aad410435536215ba6261744aea37919d447f5fee083ea1bca28e311d72"
         }
       ],
       "studySheet": {
@@ -194,20 +194,42 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "0ff715523306b8ce8d983f8b67895323d63ac00a35257c743517596bbad3ccd8",
-        "bytes": 9396848
+        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
+        "bytes": 9397765
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-66b23fb2da8e34ecf52c",
+        "name": "traditio-e9b21d2df854b7b3c9b4",
         "files": 21,
         "controlled": true
       },
       "axeViolations": 0,
-      "errors": []
+      "errors": [],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9406290,
+          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+        },
+        "offlineIdenticalBook": true
+      }
     },
     {
       "browser": "chromium",
@@ -262,8 +284,8 @@
         },
         {
           "name": "traditio-diagram.svg",
-          "bytes": 2795,
-          "sha256": "9350821d4616521190ad9ba281d0fec8d5e45f7d72def9764b9caa3a07d6a2a2"
+          "bytes": 3199,
+          "sha256": "185d2aad410435536215ba6261744aea37919d447f5fee083ea1bca28e311d72"
         }
       ],
       "studySheet": {
@@ -285,20 +307,42 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "0ff715523306b8ce8d983f8b67895323d63ac00a35257c743517596bbad3ccd8",
-        "bytes": 9396848
+        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
+        "bytes": 9397765
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-66b23fb2da8e34ecf52c",
+        "name": "traditio-e9b21d2df854b7b3c9b4",
         "files": 21,
         "controlled": true
       },
       "axeViolations": 0,
-      "errors": []
+      "errors": [],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9406290,
+          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+        },
+        "offlineIdenticalBook": true
+      }
     },
     {
       "browser": "firefox",
@@ -353,8 +397,8 @@
         },
         {
           "name": "traditio-diagram.svg",
-          "bytes": 2795,
-          "sha256": "9350821d4616521190ad9ba281d0fec8d5e45f7d72def9764b9caa3a07d6a2a2"
+          "bytes": 3199,
+          "sha256": "185d2aad410435536215ba6261744aea37919d447f5fee083ea1bca28e311d72"
         }
       ],
       "studySheet": {
@@ -376,20 +420,42 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "0ff715523306b8ce8d983f8b67895323d63ac00a35257c743517596bbad3ccd8",
-        "bytes": 9396848
+        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
+        "bytes": 9397765
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-66b23fb2da8e34ecf52c",
+        "name": "traditio-e9b21d2df854b7b3c9b4",
         "files": 21,
         "controlled": true
       },
       "axeViolations": 0,
-      "errors": []
+      "errors": [],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9406290,
+          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+        },
+        "offlineIdenticalBook": true
+      }
     },
     {
       "browser": "firefox",
@@ -444,8 +510,8 @@
         },
         {
           "name": "traditio-diagram.svg",
-          "bytes": 2795,
-          "sha256": "9350821d4616521190ad9ba281d0fec8d5e45f7d72def9764b9caa3a07d6a2a2"
+          "bytes": 3199,
+          "sha256": "185d2aad410435536215ba6261744aea37919d447f5fee083ea1bca28e311d72"
         }
       ],
       "studySheet": {
@@ -467,20 +533,42 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "0ff715523306b8ce8d983f8b67895323d63ac00a35257c743517596bbad3ccd8",
-        "bytes": 9396848
+        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
+        "bytes": 9397765
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-66b23fb2da8e34ecf52c",
+        "name": "traditio-e9b21d2df854b7b3c9b4",
         "files": 21,
         "controlled": true
       },
       "axeViolations": 0,
-      "errors": []
+      "errors": [],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9406290,
+          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+        },
+        "offlineIdenticalBook": true
+      }
     }
   ],
   "faults": [
@@ -491,7 +579,8 @@
       "retryRestoredExactPage": true,
       "latePageCannotReplaceCurrentPage": true,
       "zoomPreservedDuringLateResponse": true,
-      "exportCapturesClickTimeFacts": true
+      "exportCapturesClickTimeFacts": true,
+      "exportCapturesArgumentWitnessCitationsAndNote": true
     },
     {
       "browser": "firefox",
@@ -500,7 +589,8 @@
       "retryRestoredExactPage": true,
       "latePageCannotReplaceCurrentPage": true,
       "zoomPreservedDuringLateResponse": true,
-      "exportCapturesClickTimeFacts": true
+      "exportCapturesClickTimeFacts": true,
+      "exportCapturesArgumentWitnessCitationsAndNote": true
     }
   ]
 }

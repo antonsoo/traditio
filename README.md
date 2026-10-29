@@ -13,11 +13,6 @@ history changes the result. Gaius makes that distinction in _Institutes_
 2.43–50. Traditio lets an English-speaking learner change one premise, see
 which legal position changes, and inspect the Latin that does the work.
 
-This checkout is ready for local use. It has not been published by this work.
-The configured repository and Pages destinations are
-`https://github.com/antonsoo/traditio` and
-`https://antonsoo.github.io/traditio/`; neither is asserted to be live.
-
 ## Try three investigations
 
 | Investigation         | Change to make                                                                  | What to watch                                                                                             |

@@ -64,8 +64,15 @@ const server = createServer(async (request, response) => {
 await new Promise((done) => server.listen(0, "127.0.0.1", done));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const base = `${origin}/traditio/`;
-const report = { date: new Date().toISOString(), browsers: [] };
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
+const report = {
+  date: new Date().toISOString(),
+  build: {
+    indexSha256: hash(await readFile("dist/index.html")),
+    workerSha256: hash(await readFile("dist/sw.js")),
+  },
+  browsers: [],
+};
 async function says(page, selector, expected) {
   await page.waitForFunction(
     ({ selector, expected }) => document.querySelector(selector)?.textContent.includes(expected),

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29T22:48:54.127Z",
+  "reproduction": "Open the native two-case HTML and resolve the actual SVG ARIA references",
+  "duplicates": ["svg-title", "svg-desc"],
+  "results": [
+    {
+      "ownDescription": "Lucius owns a silver cup. Marcus steals it. Marcus sells and delivers the cup to Aulus, who believes Marcus owns it when he receives it. Time cannot cure this defect. A stolen cup cannot be acquired by this usucapion, even by an innocent buyer. The source blocks the route; it does not merely ask for a longer wait. Gaius 2.43; 2.45; 2.42. This case assumes capable citizens, a valid sale and uninterrupted possession.",
+      "referencedDescription": "Lucius owns a silver cup. Marcus steals it. Marcus sells and delivers the cup to Aulus, who believes Marcus owns it when he receives it. Time cannot cure this defect. A stolen cup cannot be acquired by this usucapion, even by an innocent buyer. The source blocks the route; it does not merely ask for a longer wait. Gaius 2.43; 2.45; 2.42. This case assumes capable citizens, a valid sale and uninterrupted possession."
+    },
+    {
+      "ownDescription": "Lucius lent a silver cup to Marcus's father. The father dies. Marcus honestly mistakes the borrowed cup for an inherited possession. Marcus sells and delivers the cup to Aulus, who believes Marcus owns it when he receives it. Aulus acquires title from a non-owner's sale. The heir was not the owner, so delivery alone did not transfer title. But his honest mistake avoided theft; Aulus's good faith and completed year allow usucapion. Gaius 2.43; 2.50; 2.42. This case assumes capable citizens, a valid sale and uninterrupted possession.",
+      "referencedDescription": "Lucius owns a silver cup. Marcus steals it. Marcus sells and delivers the cup to Aulus, who believes Marcus owns it when he receives it. Time cannot cure this defect. A stolen cup cannot be acquired by this usucapion, even by an innocent buyer. The source blocks the route; it does not merely ask for a longer wait. Gaius 2.43; 2.45; 2.42. This case assumes capable citizens, a valid sale and uninterrupted possession."
+    }
+  ]
+}

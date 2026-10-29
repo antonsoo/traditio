@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29T22:47:35.744Z",
+  "reproduction": "Hold one source request after starting a casebook export",
+  "actual": {
+    "saveDisabled": true,
+    "cancelControls": 0,
+    "status": "Files stay in your browser. Nothing is uploaded."
+  }
+}

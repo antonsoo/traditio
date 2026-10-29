@@ -1,0 +1,33 @@
+{
+  "format": "traditio-case",
+  "version": 2,
+  "current": {
+    "lesson": "land",
+    "entry": "violent",
+    "location": "italy",
+    "belief": "good",
+    "years": 2
+  },
+  "pinned": {
+    "lesson": "land",
+    "entry": "peaceful",
+    "location": "italy",
+    "belief": "good",
+    "years": 2
+  },
+  "argument": {
+    "claim": "knowing-seller",
+    "witness": {
+      "lesson": "land",
+      "entry": "peaceful",
+      "location": "italy",
+      "belief": "good",
+      "years": 2
+    },
+    "citations": [
+      "time",
+      "land"
+    ],
+    "note": "Marcus knows the field is not his, but Aulus receives it in good faith. In 2.51, quamvis concedes Marcus's knowledge; tamen nihil hoc ... nocet says it does no harm to the later possessor's usucapion. The peaceful entry (sine vi) matters. Two completed years supply the period in 2.42. This refutes the claim about every later buyer, within the stated Italian-land case."
+  }
+}

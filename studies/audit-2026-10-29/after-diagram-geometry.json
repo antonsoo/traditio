@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-29T23:14:27.664Z",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "supportedDiagrams": 68,
+      "visibleTextWithinViewBox": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "supportedDiagrams": 68,
+      "visibleTextWithinViewBox": true
+    }
+  ]
+}

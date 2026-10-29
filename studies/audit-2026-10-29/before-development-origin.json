@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29T22:47:18.253Z",
+  "reproduction": "Install preview worker, replace preview with development server on the same origin, reload the existing tab",
+  "actual": {
+    "status": "Checking offline availability…",
+    "scripts": ["/traditio/assets/index-DCAKnZcr.js"],
+    "controlled": true
+  }
+}

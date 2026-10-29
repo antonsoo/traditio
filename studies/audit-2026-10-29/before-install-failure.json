@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29T22:53:46.667Z",
+  "reproduction": "Corrupt one retained source during the first worker installation; wait for that request and for the failed worker to become redundant",
+  "corruptedRequests": 1,
+  "actual": {
+    "status": "Preparing this edition for offline reading…",
+    "controlled": false
+  }
+}

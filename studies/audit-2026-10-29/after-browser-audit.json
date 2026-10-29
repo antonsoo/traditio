@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-29T23:25:30.924Z",
+  "build": {
+    "indexSha256": "975305ca2609b005eb4a7ac4586710dc7748ceb5513380215a8c42e22e2f0144",
+    "workerSha256": "0b241769358207c0bbca2a5b454d157b473c7b07a269033c78a2332b2383a993"
+  },
+  "browsers": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "failedInstallationReported": true,
+      "failedInstallationRecovered": true,
+      "corruptCacheAndServerRefused": true,
+      "exactCacheRecovery": true,
+      "oldReaderKeepsEdition": true,
+      "newEditionActivatesAfterReaderCloses": true,
+      "cancellationPreservesCasesAndFocus": true,
+      "stalledExportTimesOut": true,
+      "noCanceledOrTimedOutDownload": true,
+      "retryProducesCasebook": true,
+      "diagramDescriptionsResolveWithinTheirOwnFigure": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "failedInstallationReported": true,
+      "failedInstallationRecovered": true,
+      "corruptCacheAndServerRefused": true,
+      "exactCacheRecovery": true,
+      "oldReaderKeepsEdition": true,
+      "newEditionActivatesAfterReaderCloses": true,
+      "cancellationPreservesCasesAndFocus": true,
+      "stalledExportTimesOut": true,
+      "noCanceledOrTimedOutDownload": true,
+      "retryProducesCasebook": true,
+      "diagramDescriptionsResolveWithinTheirOwnFigure": true
+    }
+  ]
+}
