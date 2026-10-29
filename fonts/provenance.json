@@ -1,0 +1,14 @@
+[
+  {
+    "file": "literata.woff2",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/literata/Literata%5Bopsz,wght%5D.ttf",
+    "originalSha256": "b41138c9373112f32abb589cc22e8674b06ed4048b0c513be922bdd26f274440",
+    "conversion": "fontTools TTFont, WOFF2 container conversion; no subsetting"
+  },
+  {
+    "file": "sourcesans3.woff2",
+    "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/release/WOFF2/VF/SourceSans3VF-Upright.ttf.woff2",
+    "originalSha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+    "conversion": "None; unmodified upstream WOFF2 release file"
+  }
+]
