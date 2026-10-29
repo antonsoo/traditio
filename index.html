@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172b43" />
+    <meta name="description" content="Change a fact in a Roman ownership case. Trace possession and title, read Gaius's Latin, and compare the source pages." />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; worker-src 'self'" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Traditio — who owns the thing?</title>
+  </head>
+  <body>
+    <a href="#workshop" class="skip">Skip to the case</a>
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="Traditio home"><span class="mark" aria-hidden="true">t</span>traditio</a>
+      <span class="masthead-note">A Roman law workshop</span>
+      <nav aria-label="Page"><a href="#reader">Read Gaius</a><a href="#scope">Scope</a><a href="#keep">Keep a case</a></nav>
+    </header>
+    <main>
+      <div class="opening">
+        <h1>Having it.<br /> Owning it.</h1>
+        <div><p class="intro">A mule changes hands. Its civil title stays behind.<br class="desktop-break" /> Change the facts and follow the difference.</p><p class="context">Gaius, <i>Institutes</i> · Second century CE<br />Latin, explained through three ownership cases.</p></div>
+      </div>
+      <section id="workshop" aria-labelledby="case-title">
+        <fieldset class="investigations" aria-label="Choose an investigation">
+          <button type="button" data-lesson="delivery" aria-pressed="true"><span>The missing formality</span><small>A cup, a mule, a field</small></button>
+          <button type="button" data-lesson="good-faith" aria-pressed="false"><span>The innocent buyer</span><small>Same belief, different history</small></button>
+          <button type="button" data-lesson="land" aria-pressed="false"><span>The empty field</span><small>Who knew what?</small></button>
+        </fieldset>
+        <div class="workbench">
+          <div class="fact-sheet">
+            <h2 id="case-title">Who owns the mule?</h2>
+            <p id="story" class="story"></p>
+            <div id="controls">
+              <fieldset data-for="delivery"><legend>The thing</legend><div class="options objects">
+                <label><input type="radio" name="thing" value="cup" /><span>Silver cup</span></label>
+                <label><input type="radio" name="thing" value="mule" checked /><span>Trained mule</span></label>
+                <label><input type="radio" name="thing" value="field" /><span>Italian field</span></label>
+              </div></fieldset>
+              <fieldset data-for="delivery" id="form-controls"><legend>How Lucius conveys it</legend><div class="options">
+                <label><input type="radio" name="form" value="delivery" checked /><span>Delivery alone<small lang="la">traditio</small></span></label>
+                <label><input type="radio" name="form" value="mancipation" /><span>With valid mancipation<small>Plus delivery of possession</small></span></label>
+              </div><p id="cup-note" class="small" hidden>The cup uses delivery alone. Read 2.19–20 for why it is enough.</p></fieldset>
+              <fieldset data-for="good-faith" hidden><legend>How Marcus got the cup</legend><div class="options">
+                <label><input type="radio" name="seller" value="heir" checked /><span>Honest inheritance mistake<small>His father had borrowed it</small></span></label>
+                <label><input type="radio" name="seller" value="thief" /><span>He stole it<small>From Lucius, its owner</small></span></label>
+              </div></fieldset>
+              <fieldset data-for="land" hidden><legend>Marcus's entry into the field</legend><div class="options">
+                <label><input type="radio" name="entry" value="peaceful" checked /><span>Vacant possession, without force</span></label>
+                <label><input type="radio" name="entry" value="violent" /><span>Possession taken by force</span></label>
+              </div></fieldset>
+              <fieldset data-for="land" hidden><legend>Where the field lies</legend><div class="options inline-options">
+                <label><input type="radio" name="location" value="italy" checked /><span>Italy</span></label>
+                <label><input type="radio" name="location" value="province" /><span>A province</span></label>
+              </div></fieldset>
+              <fieldset data-for="good-faith land" hidden><legend>Aulus's belief at receipt</legend><div class="options">
+                <label><input type="radio" name="belief" value="good" checked /><span>Believes Marcus owns it<small lang="la">bona fide</small></span></label>
+                <label><input type="radio" name="belief" value="bad" /><span>Knows Marcus does not own it</span></label>
+              </div></fieldset>
+            </div>
+            <p class="premise">A valid sale, capable citizens, uninterrupted possession. <a href="#scope">Read the assumptions.</a></p>
+          </div>
+          <div class="case-visual">
+            <figure class="plate" aria-labelledby="plate-caption">
+              <div class="transfer"><div><strong id="transfer-from">Lucius</strong><span id="transfer-role">Owner and seller</span></div><div id="object-picture"></div><div><strong>Aulus</strong><span>Buyer and possessor</span></div></div>
+              <div class="tracks">
+                <div class="track possession"><span>Possession<small>Who possesses it?</small></span><div class="rail"><span class="holder right">Aulus</span></div></div>
+                <div class="track title"><span>Civil title<small lang="la">ex iure Quiritium</small></span><div class="rail"><span id="title-holder" class="holder left">Lucius</span></div></div>
+                <div class="track bonitary"><span>Bonitary position<small lang="la">in bonis · 2.41</small></span><div class="rail"><span id="bonitary-holder" class="holder right">Aulus</span></div></div>
+              </div>
+              <figcaption id="plate-caption">One thing; distinct legal positions. The drawing is schematic.</figcaption>
+            </figure>
+            <div class="time-controls"><h3>Let possession continue</h3><fieldset class="year-steps" aria-label="Completed years of uninterrupted possession">
+              <button type="button" data-years="0" aria-pressed="true"><span>At transfer</span><small>0 years</small></button>
+              <button type="button" data-years="1" aria-pressed="false"><span>1 year</span><small>completed</small></button>
+              <button type="button" data-years="2" aria-pressed="false"><span>2 years</span><small>completed</small></button>
+              <button type="button" data-years="3" aria-pressed="false"><span>3 years</span><small>completed</small></button>
+            </fieldset></div>
+            <div id="outcome" class="outcome"><h3 id="outcome-title">Aulus has the thing. Lucius retains civil title.</h3><p id="outcome-explanation"></p></div>
+            <div class="case-actions"><button type="button" id="pin" class="primary">Pin this case to compare</button><a id="comparison-jump" href="#comparison" hidden>View comparison</a><button type="button" id="reset" class="text-button">Reset investigation</button></div>
+            <p id="prompt" class="prompt"></p>
+          </div>
+        </div>
+        <div class="reasoning">
+          <section aria-labelledby="conditions-title"><h2 id="conditions-title">What makes the difference?</h2><ol id="conditions" class="conditions"></ol></section>
+          <section class="source-focus" aria-labelledby="focus-title"><p class="source-ref" id="focus-reference"></p><h2 id="focus-title">Two legal positions in one thing</h2><p id="focus-latin" class="latin" lang="la"></p><p id="focus-english"></p><button type="button" id="focus-read" class="text-button">Read the passage and its words</button></section>
+        </div>
+        <section id="comparison" class="comparison" aria-labelledby="comparison-title" hidden>
+          <div class="section-heading"><div><h2 id="comparison-title">Change one fact. Compare the consequences.</h2><p id="comparison-count"></p></div><button type="button" id="unpin" class="text-button">Clear pinned case</button></div>
+          <!-- biome-ignore lint/a11y/noNoninteractiveTabindex: the comparison region must support keyboard scrolling -->
+          <section class="table-scroll" tabindex="0" aria-label="Pinned and current case comparison"><table id="comparison-table"></table></section>
+          <p id="comparison-note" class="small"></p>
+          <div class="button-row"><button type="button" id="restore">Restore pinned case</button><button type="button" id="repin">Replace pin with current case</button></div>
+        </section>
+      </section>
+      <section id="reader" class="reader" aria-labelledby="reader-title">
+        <div class="section-heading"><div><p class="source-ref">The words behind the cases</p><h2 id="reader-title">Read Gaius with the page beside you.</h2></div><p class="small">Select an underlined phrase for its meaning<br />and the work it does in the argument.</p></div>
+        <div class="reader-grid"><div class="reading-text">
+          <label for="reading-select">Passage</label><select id="reading-select"></select>
+          <h3 id="reading-title">Two legal positions in one thing</h3><p id="reading-latin" class="latin" lang="la"></p>
+          <div id="word-note" class="word-note" role="status"><p>Select a phrase in the Latin to read it closely.</p></div>
+          <details id="translation" open><summary>Close English translation</summary><p id="reading-english"></p></details>
+          <p id="reading-note" class="editorial"></p>
+          <p class="small">Transcribed from the 1904 edition. <span lang="la">⟨…⟩</span> = editorial supply; […] = our omission. <a href="#source-details">Edition and text policy.</a></p>
+        </div><div class="source-page">
+          <div class="scan-toolbar"><label for="page-select">Printed page</label><select id="page-select"></select><button type="button" id="zoom" aria-pressed="false">Enlarge page</button></div>
+          <p id="scan-status" class="small" role="status">Choose a passage to inspect its page.</p>
+          <!-- biome-ignore lint/a11y/noNoninteractiveTabindex: the enlarged scan requires keyboard panning -->
+          <section id="scan-viewport" class="scan-viewport" tabindex="0" aria-label="Scanned page; use arrow keys to pan when enlarged"><img id="scan" alt="" hidden /></section>
+          <p class="small"><a id="archive-page" href="https://archive.org/details/gaiinstitutiones00gaiuuoft">Open this page at Internet Archive</a> · <button type="button" id="retry-scan" class="text-button">Reload scan</button></p>
+        </div></div>
+        <details id="source-details"><summary>About this edition and the retained evidence</summary><p id="edition-description"></p><p id="editorial-policy"></p><p>The book is a modern printed edition of an ancient text, not an ancient manuscript facsimile. Its notes and English are editorial evidence. <a href="https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm">Compare the Roman Law Library's Poste transcription.</a></p><p><a href="./sources/manifest.json" download>Source-file checksums and provenance</a> · <a href="./sources/NOTICE.txt">Source notice</a></p></details>
+      </section>
+      <section id="keep" class="keep" aria-labelledby="keep-title"><div><h2 id="keep-title">Take the argument with you.</h2><p>Keep the current case and your comparison. A casebook includes every reading and its scanned pages, and opens without a connection.</p></div><div>
+        <div class="button-row"><button type="button" id="save-sheet" class="primary">Save illustrated casebook</button><button type="button" id="save-case">Save editable case</button><button type="button" id="save-svg">Save diagram</button><button type="button" id="copy-link">Copy case link</button></div>
+        <label for="open-case" class="file-label">Reopen a saved case <input type="file" id="open-case" accept=".json,application/json" /></label>
+        <p id="file-status" role="status" class="small">Files stay in your browser. Nothing is uploaded.</p>
+        <div id="share-fallback" hidden><label for="share-text">Copy this case link</label><input id="share-text" type="text" readonly /></div>
+      </div></section>
+      <section id="scope" class="scope" aria-labelledby="scope-title"><h2 id="scope-title">A reading experiment, with boundaries.</h2><div id="scope-text"></div></section>
+      <p class="visually-hidden" id="announcement" role="status" aria-live="polite"></p>
+    </main>
+    <footer><div><span class="footer-name">Traditio</span><p>By Anthony Mercer · <a href="./LICENSE.txt">MIT license</a></p></div><p id="offline-status" role="status">Checking offline availability…</p><p>Source texts and page images: public domain.<br /><a href="./fonts/literata-OFL.txt">Literata</a> and <a href="./fonts/sourcesans3-OFL.txt">Source Sans 3</a>: SIL Open Font License.</p></footer>
+    <noscript><p class="noscript">The interactive cases need JavaScript. The <a href="./sources/manifest.json">retained source manifest</a> and <a href="https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm">Gaius text</a> remain available.</p></noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
