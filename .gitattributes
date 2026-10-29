@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Preserve the exact retained bytes, including upstream license line endings.
+public/fonts/* -text
+public/fonts/*-OFL.txt -whitespace
+public/sources/*.jpg -text

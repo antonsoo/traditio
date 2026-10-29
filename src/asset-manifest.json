@@ -1,0 +1,122 @@
+[
+  {
+    "path": "LICENSE.txt",
+    "bytes": 1071,
+    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+    "mime": "text/plain",
+    "printedPage": null,
+    "source": "Traditio project"
+  },
+  {
+    "path": "fonts/literata-OFL.txt",
+    "bytes": 4389,
+    "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+    "mime": "text/plain",
+    "printedPage": null,
+    "source": "fonts/provenance.json"
+  },
+  {
+    "path": "fonts/literata.woff2",
+    "bytes": 396664,
+    "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+    "mime": "font/woff2",
+    "printedPage": null,
+    "source": "fonts/provenance.json"
+  },
+  {
+    "path": "fonts/sourcesans3-OFL.txt",
+    "bytes": 4579,
+    "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "mime": "text/plain",
+    "printedPage": null,
+    "source": "fonts/provenance.json"
+  },
+  {
+    "path": "fonts/sourcesans3.woff2",
+    "bytes": 170188,
+    "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+    "mime": "font/woff2",
+    "printedPage": null,
+    "source": "fonts/provenance.json"
+  },
+  {
+    "path": "sources/NOTICE.txt",
+    "bytes": 2156,
+    "sha256": "028ff49992051f00f2e1299035f155b5d19813a1cbf3f88bcfbf2a5560f43c19",
+    "mime": "text/plain",
+    "printedPage": null,
+    "source": "Traditio project"
+  },
+  {
+    "path": "sources/poste-1904-p133.jpg",
+    "bytes": 695670,
+    "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281",
+    "mime": "image/jpeg",
+    "printedPage": 133,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n196.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p134.jpg",
+    "bytes": 766313,
+    "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+    "mime": "image/jpeg",
+    "printedPage": 134,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n197.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p135.jpg",
+    "bytes": 606314,
+    "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+    "mime": "image/jpeg",
+    "printedPage": 135,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n198.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p146.jpg",
+    "bytes": 714508,
+    "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4",
+    "mime": "image/jpeg",
+    "printedPage": 146,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n209.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p147.jpg",
+    "bytes": 726668,
+    "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd",
+    "mime": "image/jpeg",
+    "printedPage": 147,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n210.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p148.jpg",
+    "bytes": 739943,
+    "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0",
+    "mime": "image/jpeg",
+    "printedPage": 148,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n211.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p149.jpg",
+    "bytes": 724335,
+    "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810",
+    "mime": "image/jpeg",
+    "printedPage": 149,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n212.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p74.jpg",
+    "bytes": 702149,
+    "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+    "mime": "image/jpeg",
+    "printedPage": 74,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n137.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p75.jpg",
+    "bytes": 761383,
+    "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+    "mime": "image/jpeg",
+    "printedPage": 75,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n138.jpg"
+  }
+]
