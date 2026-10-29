@@ -1,0 +1,78 @@
+{
+  "reviewedAt": "2026-10-29T23:32:23.162503+00:00",
+  "sourceCommit": "a6447b6e7647d3c28c721dceb20bac559d9b906c",
+  "sourceFiles": [
+    {
+      "path": "docs/review.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/a6447b6e7647d3c28c721dceb20bac559d9b906c/docs/review.md",
+      "bytes": 9948,
+      "sha256": "98dbbc078529a7129031a78892639cd01b8c77239ce4e0a6e5257ef9cf148ad7"
+    },
+    {
+      "path": "docs/assets/argument-chromium-1440.png",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/a6447b6e7647d3c28c721dceb20bac559d9b906c/docs/assets/argument-chromium-1440.png",
+      "bytes": 164964,
+      "sha256": "0e94164facc13ecc802acbe59d3e6d04ed4799d9ae2647896441b874de7b76f5"
+    },
+    {
+      "path": "examples/knowing-seller-argument.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/a6447b6e7647d3c28c721dceb20bac559d9b906c/examples/knowing-seller-argument.json",
+      "bytes": 936,
+      "sha256": "7f6b7f45a8c3483a240dc01de135244562d93210b249b9dbe14fb148bfd7bb8a"
+    },
+    {
+      "path": "examples/knowing-seller-argument.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/a6447b6e7647d3c28c721dceb20bac559d9b906c/examples/knowing-seller-argument.html.gz",
+      "bytes": 6937053,
+      "sha256": "8cce59da422c9db84cf93bc6ccf8c1c08e75f39493ec04ba9d9b522c0eae46f6"
+    },
+    {
+      "path": "examples/knowing-seller-argument.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/a6447b6e7647d3c28c721dceb20bac559d9b906c/examples/knowing-seller-argument.pdf",
+      "bytes": 7015152,
+      "sha256": "929a9c4989f47c74e36fef1b955b6de91fd37ca2209a663241985f52b7905462"
+    }
+  ],
+  "pages": {
+    "html_url": "https://antonsoo.github.io/traditio/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "status": "built"
+  },
+  "deployment": {
+    "status": "built",
+    "commit": "0a0142e9c4556a481b848fef93c6fe1d7c239e64",
+    "updated_at": "2026-10-29T23:27:29Z"
+  },
+  "workflowRuns": [
+    {
+      "run": 40973180432,
+      "url": "https://github.com/antonsoo/traditio/actions/runs/40973180432",
+      "jobs": [
+        {
+          "id": 123794695715,
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "run": 40973180274,
+      "url": "https://github.com/antonsoo/traditio/actions/runs/40973180274",
+      "jobs": [
+        {
+          "id": 123794696068,
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    }
+  ]
+}

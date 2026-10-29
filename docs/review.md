@@ -3,7 +3,7 @@
 Reviewed on 2026-10-29. Application commit
 `e016ae30a6be62fdc28f6bc047aae481a3a6adfb` was built from a fresh archive and
 operated in both browsers. This page records the local audit and learner work;
-public delivery is a separate review, not implied by a successful build.
+public delivery is a [separate review](publication.md), not implied by a successful build.
 
 ## Try the actual work
 

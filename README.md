@@ -3,6 +3,7 @@
 **Change a fact in a Roman ownership case. Follow the title, then read the Latin.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-172b43)](LICENSE)
+[![Live workshop](https://img.shields.io/badge/live-workshop-286491)](https://antonsoo.github.io/traditio/)
 
 ![A mule is in Aulus's possession and in bonis, while Lucius retains civil title](docs/assets/workshop-chromium-1440.png)
 
@@ -167,6 +168,11 @@ responses and saving while the live case, submitted argument, citations and note
 The audit driver adds cancellation, stalled requests, failed installation,
 damaged-cache refusal/recovery and the transition between two editions. Screenshots and evidence
 are retained in [the review](docs/review.md).
+
+The [publication review](docs/publication.md) separately checks the actual
+hosted edition, all 22 canonical file identities, public source artifacts and
+the four browser journeys, including offline argument export. To repeat that
+comparison with a matching local build, run `npm run test:public`.
 
 These are invented cases within Gaius's second-century account. They assume
 capable Roman citizens, valid transactions and uninterrupted possession.

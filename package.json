@@ -34,7 +34,8 @@
     "check": "npm run lint && npm run typecheck && npm test && npm run verify:sources && npm run build",
     "verify:sources": "node scripts/verify-sources.mjs",
     "test:browser": "node scripts/browser.mjs",
-    "test:audit": "node scripts/audit-browser.mjs"
+    "test:audit": "node scripts/audit-browser.mjs",
+    "test:public": "node scripts/public-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
