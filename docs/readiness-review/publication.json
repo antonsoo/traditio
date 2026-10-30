@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-30T07:17:44.152Z",
+  "sourceCommit": "b06f9872ed8701150ba45adc02bbf4d015ac832f",
+  "sourceCleanAndSynchronizedAtCapture": true,
+  "deploymentCommit": "c2a48813c345518d958846945bffb2ddd8deb141",
+  "deploymentParent": "5d0fe8068ef978e3d3651e1dfa12b81e73a61763",
+  "forcePush": false,
+  "edition": "b4ed162cc324456b713a",
+  "publicFileCount": 26,
+  "publicBrowserJourneys": 8,
+  "driver": "https://github.com/antonsoo/officina/blob/9ba6675870823710ab584197423e3bfba5fdf0e5/scripts/readiness-public.mjs",
+  "pages": {
+    "httpStatus": 200,
+    "buildType": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "status": "built"
+  },
+  "latestBuild": {
+    "httpStatus": 200,
+    "status": "built",
+    "commit": "c2a48813c345518d958846945bffb2ddd8deb141"
+  },
+  "workflows": [
+    {
+      "id": 41018402539,
+      "name": "pages build and deployment",
+      "commit": "c2a48813c345518d958846945bffb2ddd8deb141",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/antonsoo/traditio/actions/runs/41018402539",
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41018058263,
+      "name": "CI",
+      "commit": "b06f9872ed8701150ba45adc02bbf4d015ac832f",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/traditio/actions/runs/41018058263",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41018058176,
+      "name": "Pages",
+      "commit": "b06f9872ed8701150ba45adc02bbf4d015ac832f",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/traditio/actions/runs/41018058176",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41005391161,
+      "name": "CI",
+      "commit": "4222fed51ceb6d0dea91dea11eef33518054b8fe",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/traditio/actions/runs/41005391161",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/README.md",
+      "bytes": 13558,
+      "sha256": "667dbdb38eb55a954edfa5a62d89e2069e7baade32a5440abe239be80072afe8"
+    },
+    {
+      "path": "docs/readiness-audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-audit.md",
+      "bytes": 3892,
+      "sha256": "6d31aa82b51c2de23122ec640c347818723c7aeed5de8daa66a77fdd0c4df04a"
+    },
+    {
+      "path": "src/assets.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/src/assets.ts",
+      "bytes": 3028,
+      "sha256": "d2f14c31bb461e7d1b66de945a1add1f6da58816b25bcd4784b3975abc4e595a"
+    },
+    {
+      "path": "src/offline.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/src/offline.ts",
+      "bytes": 3662,
+      "sha256": "31e036874a697e5b1f0bf4f6084cb35d17c1ecc22846350661efbb8e950502c7"
+    },
+    {
+      "path": "scripts/offline.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/scripts/offline.mjs",
+      "bytes": 5886,
+      "sha256": "1efca6740a1a29b2cd864776daaac47085d7051f85469840d96ab74501710356"
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/scripts/browser.mjs",
+      "bytes": 25754,
+      "sha256": "6e47164e0f2a4c9deb5dd9ee0f829fcb510365e07a9e77b301f8e12c82c0de34"
+    },
+    {
+      "path": "scripts/audit-browser.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/scripts/audit-browser.mjs",
+      "bytes": 10718,
+      "sha256": "6e42ca2d2de51bba3fc093a3c6c4e768a2aa570205d148f63708e13bf86fdd7d"
+    },
+    {
+      "path": "scripts/readiness-audit.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/scripts/readiness-audit.mjs",
+      "bytes": 10595,
+      "sha256": "276cf6c9247cfd18f000bd9a8cd5128f6fe95e4b62eed55fcb91ce4d08330e94"
+    },
+    {
+      "path": "docs/readiness-review/clean-build.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-review/clean-build.json",
+      "bytes": 1184,
+      "sha256": "f86a9455b570e39d23ad8dd73681af0f2b94bbd11edee530b9c6daf3c16c74e6"
+    },
+    {
+      "path": "docs/readiness-review/local-browser.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-review/local-browser.json",
+      "bytes": 19470,
+      "sha256": "d1928b540a070bcf9103848e3c79e1c92bdc556862a34f463c674d4956c8c4d0"
+    },
+    {
+      "path": "docs/readiness-review/local-readiness.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-review/local-readiness.json",
+      "bytes": 2827,
+      "sha256": "dc8ad96b3e83fec674da7585928f45426f08f0b72f5f5b5ef31b5bd15e18152e"
+    },
+    {
+      "path": "docs/readiness-review/local-ceremony.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-review/local-ceremony.json",
+      "bytes": 9601,
+      "sha256": "e28f1d87315de1f59519e2be3cb9804a5bd4dfada90c488ba6d75dc71a75aeb0"
+    },
+    {
+      "path": "docs/readiness-review/local-installation-audit.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/b06f9872ed8701150ba45adc02bbf4d015ac832f/docs/readiness-review/local-installation-audit.json",
+      "bytes": 1594,
+      "sha256": "1b6b0ef3be6dae579156dbda94cb60f8a372f1849a92e50ceb605d7cebbd8922"
+    }
+  ]
+}

@@ -67,3 +67,37 @@ separately covers failed install, recovery, waiting editions, cancellation and
 an actual stalled-export timeout. The [ceremony regression](readiness-review/local-ceremony.json)
 repeats all four browser/viewport journeys and both fault suites, including
 source races, a frozen export and its offline illustrated rehearsal.
+
+
+## Published edition
+
+| Boundary                    | Recorded identity                               |
+| --------------------------- | ----------------------------------------------- |
+| Reviewed source             | `b06f9872ed8701150ba45adc02bbf4d015ac832f`      |
+| Published `gh-pages` commit | `c2a48813c345518d958846945bffb2ddd8deb141`      |
+| Worker edition              | `b4ed162cc324456b713a`                          |
+| Canonical hosted build      | 26 files, every byte matched                    |
+| Public browser matrix       | 8 journeys, Chromium/Firefox at 1440/375 pixels |
+
+The [public-file receipt](readiness-review/public-files.json) independently compares
+all hosted files with the reviewed build. The [public-browser receipt](readiness-review/public-browser.json)
+records two open pages in every journey. It first checks emulated-offline source
+behavior, then closes real TLS tunnels and refuses new connections to the
+actual public origin. No response is substituted and no production request is
+redirected. A fresh worker-free browser fails; `navigator.onLine` remains true.
+
+The installed app reloads while that transport is unavailable, reopens its
+actual downloaded JSON, and produces illustrated HTML identical to its connected
+export. A native image request discovering corrupted retention withdraws both
+pages' readiness. Reconnecting and repairing the complete inventory restores
+both. The recovered native record is identical; displayed source bytes and
+embedded source/font bytes match their retained identities. The warning's
+[375px screenshot](readiness-review/offline-warning-375.png) was visually inspected,
+as were all public footer screenshots.
+
+The [source and publication receipt](readiness-review/publication.json) pins the driver,
+source documents and byte comparisons, and records the preserved deployment
+parent. GitHub's branch-based Pages build completed successfully. The source
+CI/Pages workflows returned failure with empty step lists; they are not passing
+source CI. Local build identity, successful Pages deployment and actual hosted
+browser behavior remain independent evidence.
