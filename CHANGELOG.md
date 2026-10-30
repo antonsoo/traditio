@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-30
+
+- Withdraw offline readiness when sources or ordinary image requests discover
+  damaged retention; notify all open pages and recheck after verified repair.
+- Coalesce damage notifications and verify real outages, two-page recovery and
+  edition transitions without a synthetic visibility event.
+
 ## Unreleased
 
 - Rehearse mancipation and surrender before a magistrate with distinct actors,

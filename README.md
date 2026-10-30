@@ -177,6 +177,11 @@ An already open edition stays together while a later worker waits to activate.
 [Retained-file manifest](public/sources/manifest.json) ·
 [Font provenance](public/fonts/provenance.json).
 
+The [offline-readiness audit](docs/readiness-audit.md) reproduces and repairs
+stale availability claims after source loss, including another open page.
+Both failure and verified recovery update every controlled page. Run
+`npm run test:readiness` for the independent real-origin audit.
+
 ## Verification and limits
 
 `npm run check` runs lint, strict type checking, sixteen tests, retained-file

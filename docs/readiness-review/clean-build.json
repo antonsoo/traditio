@@ -1,0 +1,35 @@
+{
+  "sourceCommit": "078f5ebe27c354654efff32a74801268086322e6",
+  "node": "24.22.2",
+  "freshArchive": true,
+  "commands": [
+    "npm ci",
+    "npm run check",
+    "npm run test:browser",
+    "REVIEW_OUTPUT=test-results/regression-audit npm run test:audit",
+    "npm run test:readiness",
+    "node scripts/ceremony-review.mjs http://127.0.0.1:4367/traditio/ test-results/ceremony-regression"
+  ],
+  "focusedTests": 16,
+  "completeBuildFiles": 26,
+  "completeBuildBytes": 7174552,
+  "buildManifestSha256": "61ddfa93a7cb079b7f6a06397c3a039267592414f407243108b0cebe47292709",
+  "byteIdenticalToReviewedNode26Build": true,
+  "unchangedActualNativeExamples": [
+    {
+      "path": "examples/mistaken-heir-comparison.json",
+      "bytes": 261,
+      "sha256": "0fb8e77336a405809792643266ffd71ae1c4d426b1e19e7c6e61bcb3a2256fd3"
+    },
+    {
+      "path": "examples/mistaken-heir-comparison.svg",
+      "bytes": 3199,
+      "sha256": "185d2aad410435536215ba6261744aea37919d447f5fee083ea1bca28e311d72"
+    },
+    {
+      "path": "examples/mistaken-heir-comparison.html.gz",
+      "bytes": 6935943,
+      "sha256": "ef1b74eb63635003bcac1be0b5d0cf754605ff0179409dae06aca5b223ad150e"
+    }
+  ]
+}
