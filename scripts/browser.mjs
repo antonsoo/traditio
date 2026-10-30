@@ -187,10 +187,20 @@ try {
         const page = await context.newPage();
         page.setDefaultTimeout(15_000);
         const errors = [];
+        const expectedResourceErrors = [];
+        let missingPageExpected = false;
+        const missingPageUrl = new URL("sources/poste-1904-p148.jpg", base).href;
         const externals = new Set();
         page.on("pageerror", (error) => errors.push(error.message));
         page.on("console", (message) => {
-          if (message.type() === "error") errors.push(message.text());
+          if (message.type() !== "error") return;
+          if (
+            missingPageExpected &&
+            message.location().url === missingPageUrl &&
+            /\b503\b/.test(message.text())
+          ) {
+            expectedResourceErrors.push({ text: message.text(), url: message.location().url });
+          } else errors.push(message.text());
         });
         page.on("request", (request) => {
           if (request.url().startsWith("http") && !request.url().startsWith(base))
@@ -418,13 +428,19 @@ try {
             new URL("sources/poste-1904-p148.jpg", location.href).href,
           );
         });
+        missingPageExpected = true;
+        const refusedSource = page.waitForResponse(
+          (response) => response.url() === missingPageUrl && response.status() === 503,
+        );
         await page.locator("#page-select").selectOption("148");
+        await refusedSource;
         await content(page, "#scan-status", "Could not load");
         await content(page, "#offline-status", "not fully available offline");
         serverUnavailable = false;
         await page.locator("#retry-scan").click();
         await content(page, "#scan-status", "Printed page 148 · complete page");
         await content(page, "#offline-status", "This edition is available offline,");
+        missingPageExpected = false;
         assert.equal(
           await scanHash(page),
           manifest.find((item) => item.printedPage === 148).sha256,
@@ -436,6 +452,7 @@ try {
           browserVersion: browser.version(),
           width,
           keyboard: true,
+          expectedResourceErrors,
           oneFactComparison: true,
           latinPhrase: "quamquam",
           scannedPages,
