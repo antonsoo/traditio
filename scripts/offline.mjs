@@ -44,6 +44,27 @@ const CACHE = 'traditio-' + EDITION;
 const FILES = ${JSON.stringify(files)};
 const allowed = new Map(FILES.map(file => [new URL(file.url, self.location.origin).href, file]));
 const digest = async bytes => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), b => b.toString(16).padStart(2, '0')).join('');
+let invalidationSent = false;
+async function notifyClients(type) {
+  const pages = await self.clients.matchAll({type:'window'});
+  for (const page of pages) page.postMessage({type,edition:EDITION});
+}
+async function invalidateClients() {
+  if (invalidationSent) return;
+  invalidationSent = true;
+  await notifyClients('inventory-invalidated');
+}
+async function restoreClients() {
+  if (!invalidationSent) return;
+  invalidationSent = false;
+  await notifyClients('inventory-restored');
+}
+async function storedInventoryComplete() {
+  for (const file of FILES) {
+    if (!await matches(await caches.match(file.url, {cacheName:CACHE}), file)) return false;
+  }
+  return true;
+}
 async function matches(response, file) {
   if (!response || !response.ok) return false;
   const bytes = await response.arrayBuffer();
@@ -82,9 +103,13 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const saved = await caches.match(url.href, {cacheName:CACHE});
     if (saved && await matches(saved.clone(), file)) return saved;
+    await invalidateClients();
     try {
       const response = await fetchEdition(file);
-      try {await (await caches.open(CACHE)).put(file.url, response.clone());}
+      try {
+        await (await caches.open(CACHE)).put(file.url, response.clone());
+        if (invalidationSent && await storedInventoryComplete()) await restoreClients();
+      }
       catch {} // A connected read can succeed without claiming offline retention.
       return response;
     } catch {
@@ -98,13 +123,18 @@ self.addEventListener('message', event => {
     let complete = true;
     for (const file of FILES) {
       if (!await matches(await caches.match(file.url, {cacheName:CACHE}), file)) {
+        await invalidateClients();
         if (event.data.repair !== true) {complete = false; break;}
         const response = await fetchEdition(file);
         await (await caches.open(CACHE)).put(file.url, response);
       }
     }
+    if (complete) await restoreClients();
     event.ports[0].postMessage({edition:EDITION, complete, files:FILES.length});
-  })().catch(() => event.ports[0].postMessage({edition:EDITION,complete:false})));
+  })().catch(async () => {
+    await invalidateClients();
+    event.ports[0].postMessage({edition:EDITION,complete:false});
+  }));
 });
 `,
 );

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-30T06:42:02.929Z",
+  "results": [
+    {
+      "browser": "chromium",
+      "url": "https://antonsoo.github.io/traditio/",
+      "before": "This edition is available offline, including every source page.",
+      "source": "Could not load sources/poste-1904-p133.jpg (HTTP 503). Try again when the file is available.",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": true,
+      "contradiction": true
+    },
+    {
+      "browser": "chromium",
+      "url": "https://antonsoo.github.io/traditio/ceremony.html",
+      "before": "This edition is available offline, including every source page.",
+      "source": "Could not load sources/poste-1904-p74.jpg (HTTP 503). Try again when the file is available.",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": true,
+      "contradiction": true
+    },
+    {
+      "browser": "firefox",
+      "url": "https://antonsoo.github.io/traditio/",
+      "before": "This edition is available offline, including every source page.",
+      "source": "Printed page 133 \u00b7 complete page \u00b7 source bytes checked",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": false,
+      "contradiction": false
+    },
+    {
+      "browser": "firefox",
+      "url": "https://antonsoo.github.io/traditio/ceremony.html",
+      "before": "This edition is available offline, including every source page.",
+      "source": "Printed page 74. Complete image checked against the retained edition.",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": false,
+      "contradiction": false
+    }
+  ]
+}

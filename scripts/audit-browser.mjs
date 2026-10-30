@@ -115,6 +115,7 @@ try {
       });
       assert.equal(refused.status, 503);
       assert.ok(refused.body.includes("current Traditio edition"));
+      await says(page, "#offline-status", "not fully available offline");
       corrupt = false;
       const restored = await page.evaluate(async () => {
         const response = await fetch(new URL("sources/poste-1904-p133.jpg", location.href));
@@ -128,6 +129,7 @@ try {
       });
       assert.equal(restored.status, 200);
       assert.equal(restored.hash, hash(await readFile("public/sources/poste-1904-p133.jpg")));
+      await ready(page);
 
       // An installed later edition waits for existing readers to leave.
       activeRoot = resolve(newRoot, "dist");
@@ -235,6 +237,7 @@ try {
         failedInstallationReported: true,
         failedInstallationRecovered: true,
         corruptCacheAndServerRefused: true,
+        discoveredFailureAutomaticallyWithdrawsReadiness: true,
         exactCacheRecovery: true,
         oldReaderKeepsEdition: true,
         newEditionActivatesAfterReaderCloses: true,

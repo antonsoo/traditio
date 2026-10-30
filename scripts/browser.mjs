@@ -417,14 +417,14 @@ try {
           await (await caches.open(name)).delete(
             new URL("sources/poste-1904-p148.jpg", location.href).href,
           );
-          document.dispatchEvent(new Event("visibilitychange"));
         });
+        await page.locator("#page-select").selectOption("148");
+        await content(page, "#scan-status", "Could not load");
         await content(page, "#offline-status", "not fully available offline");
         serverUnavailable = false;
-        await page.evaluate(() => window.dispatchEvent(new Event("online")));
-        await content(page, "#offline-status", "This edition is available offline");
-        await page.locator("#page-select").selectOption("148");
+        await page.locator("#retry-scan").click();
         await content(page, "#scan-status", "Printed page 148 · complete page");
+        await content(page, "#offline-status", "This edition is available offline,");
         assert.equal(
           await scanHash(page),
           manifest.find((item) => item.printedPage === 148).sha256,

@@ -10,6 +10,17 @@ export function asset(path: string): Asset {
 }
 
 export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
+  try {
+    return await readVerifiedBytes(item, signal);
+  } catch (error) {
+    // Some browser reads bypass the worker. Discovered failures must also
+    // invalidate the page's previous offline-readiness claim.
+    if (!signal?.aborted) window.dispatchEvent(new Event("traditio:asset-failure"));
+    throw error;
+  }
+}
+
+async function readVerifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
   const controller = new AbortController();
   const cancel = () => controller.abort(signal?.reason);
   if (signal?.aborted) cancel();
