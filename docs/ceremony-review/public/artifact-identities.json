@@ -1,0 +1,107 @@
+[
+  {
+    "capture": "public/portable-chromium-1440.html",
+    "identicalTo": "local/rehearsal.html.gz (decompressed)",
+    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+  },
+  {
+    "capture": "public/portable-chromium-375.html",
+    "identicalTo": "local/rehearsal.html.gz (decompressed)",
+    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+  },
+  {
+    "capture": "public/portable-firefox-1440.html",
+    "identicalTo": "local/rehearsal.html.gz (decompressed)",
+    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+  },
+  {
+    "capture": "public/portable-firefox-375.html",
+    "identicalTo": "local/rehearsal.html.gz (decompressed)",
+    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+  },
+  {
+    "capture": "public/chromium-375-rehearsal.png",
+    "identicalTo": "local/chromium-375-rehearsal.png",
+    "sha256": "f9a9e342a92d7238d21f26fce20441e41d742cf7ce504d149f027e3cf9d6b904"
+  },
+  {
+    "capture": "public/field.json",
+    "identicalTo": "local/field.json",
+    "sha256": "5707141403b7b7e6682fc81e6d9a0b9ec9406b0407c34001d6996afbccda8d94"
+  },
+  {
+    "capture": "public/firefox-1440-reader.png",
+    "identicalTo": "local/firefox-1440-reader.png",
+    "sha256": "bd5df4ddfc8a6f93ab75f5caa3f0d03755464a57f95391b577a8e34ecb41b0e8"
+  },
+  {
+    "capture": "public/portable-reading.png",
+    "identicalTo": "local/portable-reading.png",
+    "sha256": "70366546e6601c365e50fa9684bc362aad0bc3cbe5124630ce15d2e64900935c"
+  },
+  {
+    "capture": "public/rehearsal.html.gz",
+    "identicalTo": "local/rehearsal.html.gz",
+    "sha256": "06fbef6b4238b2d5187eef0471371fd5aa55db57fe1ab077f98bb7a687dab3ce"
+  },
+  {
+    "capture": "public/firefox-375-rehearsal.png",
+    "identicalTo": "local/firefox-375-rehearsal.png",
+    "sha256": "2439502f799665f5d9a0fe0f0dba62cb266848b614e38a58f8666217c455ae8d"
+  },
+  {
+    "capture": "public/chromium-375-reader.png",
+    "identicalTo": "local/chromium-375-reader.png",
+    "sha256": "7e01b471aee1976f5ef094b542edaabb2bde17b37c49c2876373cf677b2cd7ed"
+  },
+  {
+    "capture": "public/chromium-1440-rehearsal.png",
+    "identicalTo": "local/chromium-1440-rehearsal.png",
+    "sha256": "2f36a50e6a094b6f80efc0549205bb3336a5fc28492ea5cdd16d47dc1f11aafa"
+  },
+  {
+    "capture": "public/firefox-375-reader.png",
+    "identicalTo": "local/firefox-375-reader.png",
+    "sha256": "cd665cbe0e765bd893d5dadcd3e76183612c0ea645e17fc41a4071764e63be77"
+  },
+  {
+    "capture": "public/rehearsal.json",
+    "identicalTo": "local/rehearsal.json",
+    "sha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8"
+  },
+  {
+    "capture": "public/chromium-1440-reader.png",
+    "identicalTo": "local/chromium-1440-reader.png",
+    "sha256": "c26d4fee625133ef6dabfa19d0dde7e95c45eeeea4132a73c070af2a16527e28"
+  },
+  {
+    "capture": "public/firefox-1440-rehearsal.png",
+    "identicalTo": "local/firefox-1440-rehearsal.png",
+    "sha256": "0a0a64774cbdd62ab92e7f9285593dcd02d9bd61e580935a0969ff3dd4cc4aef"
+  },
+  {
+    "capture": "public-transport/argument-firefox-375.png",
+    "identicalTo": "docs/ceremony-review/existing/argument-firefox-375.png",
+    "sha256": "ba0956be6da43941b54b236c93209461838ce3a9da8798f64106dc75b0b244f8"
+  },
+  {
+    "capture": "public-transport/argument-chromium-375.png",
+    "identicalTo": "docs/ceremony-review/existing/argument-chromium-375.png",
+    "sha256": "92fe83758a579353f1792496c5f7ad5a4caf33af79210cc8e3a77b550ace5d07"
+  },
+  {
+    "capture": "public-transport/argument-chromium-1440.png",
+    "identicalTo": "docs/assets/argument-chromium-1440.png",
+    "sha256": "0e94164facc13ecc802acbe59d3e6d04ed4799d9ae2647896441b874de7b76f5"
+  },
+  {
+    "capture": "public-transport/argument-evidence-firefox-375.png",
+    "identicalTo": "docs/ceremony-review/existing/argument-evidence-firefox-375.png",
+    "sha256": "30468a6b6eb621ab65fc6cad53e9e33f12ad5e5bee98bbe9b81c2ebb37fde3cb"
+  },
+  {
+    "capture": "public-transport/argument-evidence-chromium-375.png",
+    "identicalTo": "docs/ceremony-review/existing/argument-evidence-chromium-375.png",
+    "sha256": "778c16e9bcc5d50935a0e1b124a8b03cbe7ef2670dd5bb2635b63b41f7473fd7"
+  }
+]

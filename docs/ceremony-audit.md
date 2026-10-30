@@ -127,3 +127,45 @@ Run `npm run check`, `npm run test:ceremony`, `npm run test:browser` and
 `npm run test:audit` from a matching checkout. The browser checks are bounded
 observations, not scholarly peer review or a guarantee about future storage eviction.
 Public build, source and hosted-browser evidence is recorded separately below.
+
+## Public publication and transport
+
+Runtime source `6d7fa829d2579a20e4776f59a59907070b34c16e` was rebuilt from a
+fresh Git archive using Node 24.22.1, `npm ci` and all required checks. All 26
+canonical files were identical to the working build. Deployment
+`5d0fe8068ef978e3d3651e1dfa12b81e73a61763` serves that build. Every canonical file,
+plus the root entry before and after, matched the clean bytes around the public review.
+
+All four public ceremony journeys passed the same operations, actual source-image
+hashes and native artifact checks as the local review. Both public state reviews
+also retained newer notes through delayed imports, honored a later explicit shared
+record, restored history with Back and kept work when an invalid record was opened.
+
+A separate four-context review relayed the real site's TLS traffic through a
+CONNECT proxy, then closed existing tunnels and refused new connections. A fresh
+worker-free context could no longer open the site. The already loaded ceremony
+and original ownership lessons still reloaded, displayed retained sources and
+exported their identical dossiers/casebooks. This is independent of the browser
+offline-emulation check. The current worker had all 25 inventory files and the
+matching HTML identity in both routes.
+
+Six immutable source/review/artifact files were fetched from the public Git blob
+at the runtime commit and matched the local blobs. The catalogue entry screenshot
+is an actual 1440 by 1100 public capture after the acquirer's first act: five
+witnesses, another balance holder and title still with Lucius. Exact duplicate
+public artifacts reuse the retained local bytes; distinct captures remain public.
+
+The generated Pages build/deploy run **41004970614 succeeded with 11 steps**.
+Source CI **41004845691** and the source Pages workflow **41004845650** failed
+with zero job steps. There is no source-CI success claim. Clean checks, generated
+Pages deployment, canonical bytes and browser operation are separate evidence.
+No package or tag release was made.
+- [Clean Node 24 build](ceremony-review/clean-build.json)
+- [Public bytes before](ceremony-review/public-bytes-before.json) and [after](ceremony-review/public-bytes-after.json)
+- [Public ceremony operation](ceremony-review/public/review.json)
+- [Public import/history operation](ceremony-review/public/state-review.json)
+- [Actual TLS transport outage, both lessons](ceremony-review/public-transport/public-review.json)
+- [Pinned public Git blobs](ceremony-review/public-source.json)
+- [Public artifact identities](ceremony-review/public/artifact-identities.json)
+- [Actual public entry screenshot](ceremony-review/public/entry.png)
+- [Deployment and workflow state](ceremony-review/publication-state.json)

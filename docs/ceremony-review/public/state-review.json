@@ -1,0 +1,23 @@
+{
+  "base": "https://antonsoo.github.io/traditio/",
+  "rows": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "newRehearsalEditsSurviveDelayedImport": true,
+      "sharedRecordSupersedesPendingImport": true,
+      "hashChangesAndBackRestoreFactsAndNotes": true,
+      "invalidRecordKeepsWork": true,
+      "oldCaseSharedRecordSupersedesPendingImport": true
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "newRehearsalEditsSurviveDelayedImport": true,
+      "sharedRecordSupersedesPendingImport": true,
+      "hashChangesAndBackRestoreFactsAndNotes": true,
+      "invalidRecordKeepsWork": true,
+      "oldCaseSharedRecordSupersedesPendingImport": true
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "observedAt": "2026-10-30T04:51:54.507928+00:00",
+  "runtimeSource": "6d7fa829d2579a20e4776f59a59907070b34c16e",
+  "deployment": "5d0fe8068ef978e3d3651e1dfa12b81e73a61763",
+  "pages": {
+    "url": "https://api.github.com/repos/antonsoo/traditio/pages",
+    "status": "built",
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://antonsoo.github.io/traditio/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "runs": [
+    {
+      "id": 41004845691,
+      "name": "CI",
+      "html_url": "https://github.com/antonsoo/traditio/actions/runs/41004845691",
+      "head_sha": "6d7fa829d2579a20e4776f59a59907070b34c16e",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-30T04:47:32Z",
+      "updated_at": "2026-10-30T04:47:36Z",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41004845650,
+      "name": "Pages",
+      "html_url": "https://github.com/antonsoo/traditio/actions/runs/41004845650",
+      "head_sha": "6d7fa829d2579a20e4776f59a59907070b34c16e",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-30T04:47:32Z",
+      "updated_at": "2026-10-30T04:47:35Z",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41004970614,
+      "name": "pages build and deployment",
+      "html_url": "https://github.com/antonsoo/traditio/actions/runs/41004970614",
+      "head_sha": "5d0fe8068ef978e3d3651e1dfa12b81e73a61763",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-30T04:48:55Z",
+      "updated_at": "2026-10-30T04:49:22Z",
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T04:49:00Z",
+              "completed_at": "2026-10-30T04:49:01Z"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T04:49:01Z",
+              "completed_at": "2026-10-30T04:49:03Z"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T04:49:03Z",
+              "completed_at": "2026-10-30T04:49:05Z"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-10-30T04:49:05Z",
+              "completed_at": "2026-10-30T04:49:06Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-10-30T04:49:06Z",
+              "completed_at": "2026-10-30T04:49:06Z"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T04:49:11Z",
+              "completed_at": "2026-10-30T04:49:11Z"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T04:49:12Z",
+              "completed_at": "2026-10-30T04:49:13Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T04:49:13Z",
+              "completed_at": "2026-10-30T04:49:13Z"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T04:49:12Z",
+              "completed_at": "2026-10-30T04:49:12Z"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T04:49:12Z",
+              "completed_at": "2026-10-30T04:49:20Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T04:49:20Z",
+              "completed_at": "2026-10-30T04:49:20Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

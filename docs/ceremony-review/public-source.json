@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-30T04:50:51.630447+00:00",
+  "source": "6d7fa829d2579a20e4776f59a59907070b34c16e",
+  "files": [
+    {
+      "path": "docs/ceremony-audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/docs/ceremony-audit.md",
+      "bytes": 8834,
+      "sha256": "90d404a8923180cecfa17b2cfb9c9649935ba2ad07e0e2f44be502e0ef2bbac3",
+      "matchesGitBlob": true
+    },
+    {
+      "path": "src/core/ceremony.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/src/core/ceremony.ts",
+      "bytes": 9722,
+      "sha256": "8ad48ee80d164f386561172d2740c02edd4c3b4b0278b729098fa152b7dd74d1",
+      "matchesGitBlob": true
+    },
+    {
+      "path": "src/ceremony-content.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/src/ceremony-content.ts",
+      "bytes": 9444,
+      "sha256": "f3bc49ccc38b5804aafffae878e1e9a5e54955b92de4e6653e18794f1196ee27",
+      "matchesGitBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/rehearsal.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/docs/ceremony-review/local/rehearsal.html.gz",
+      "bytes": 3378018,
+      "sha256": "06fbef6b4238b2d5187eef0471371fd5aa55db57fe1ab077f98bb7a687dab3ce",
+      "matchesGitBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/rehearsal.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/docs/ceremony-review/local/rehearsal.json",
+      "bytes": 387,
+      "sha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
+      "matchesGitBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/rehearsal.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/traditio/6d7fa829d2579a20e4776f59a59907070b34c16e/docs/ceremony-review/local/rehearsal.pdf",
+      "bytes": 3211110,
+      "sha256": "62caa0f515e2603838a84918d14b11bb0990b516be379558058f6e4eff979651",
+      "matchesGitBlob": true
+    }
+  ]
+}
