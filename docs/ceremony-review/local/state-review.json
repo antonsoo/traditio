@@ -1,0 +1,23 @@
+{
+  "base": "http://127.0.0.1:4488/traditio/",
+  "rows": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "newRehearsalEditsSurviveDelayedImport": true,
+      "sharedRecordSupersedesPendingImport": true,
+      "hashChangesAndBackRestoreFactsAndNotes": true,
+      "invalidRecordKeepsWork": true,
+      "oldCaseSharedRecordSupersedesPendingImport": true
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "newRehearsalEditsSurviveDelayedImport": true,
+      "sharedRecordSupersedesPendingImport": true,
+      "hashChangesAndBackRestoreFactsAndNotes": true,
+      "invalidRecordKeepsWork": true,
+      "oldCaseSharedRecordSupersedesPendingImport": true
+    }
+  ]
+}

@@ -5,11 +5,12 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { connect } from "node:net";
 import { resolve } from "node:path";
+import { gunzipSync } from "node:zlib";
 import { chromium, firefox } from "playwright";
 import { argumentJourney, offlineArgument } from "./argument-journey.mjs";
 
 const base = "https://antonsoo.github.io/traditio/";
-const output = resolve("studies/publication");
+const output = resolve(process.env.REVIEW_OUTPUT || "studies/publication");
 const scratch = resolve("test-results/public");
 await mkdir(output, { recursive: true });
 await mkdir(scratch, { recursive: true });
@@ -189,8 +190,37 @@ try {
             files: (await (await caches.open(name)).keys()).length,
           };
         });
-        assert.equal(cache.files, 21);
+        assert.equal(
+          cache.files,
+          (await paths(resolve("dist"))).filter((path) => path !== "sw.js").length,
+        );
         assert.equal(cache.controlled, true);
+        const ceremony = await context.newPage();
+        ceremony.on("pageerror", (error) => errors.push(error.message));
+        await ceremony.goto(`${base}ceremony.html`);
+        await says(ceremony, "#offline-status", "This edition is available offline");
+        const rehearsal = await readFile("docs/ceremony-review/local/rehearsal.json");
+        const openRehearsal = async () => {
+          await ceremony.setInputFiles("#open-rehearsal", {
+            name: "rehearsal.json",
+            mimeType: "application/json",
+            buffer: rehearsal,
+          });
+          await says(ceremony, "#dossier-status", "Rehearsal reopened");
+        };
+        const downloadRehearsal = async () => {
+          const pending = ceremony.waitForEvent("download");
+          await ceremony.locator("#save-dossier").click();
+          const downloaded = await pending;
+          assert.equal(await downloaded.failure(), null);
+          return readFile(await downloaded.path());
+        };
+        await openRehearsal();
+        const ceremonyHtml = await downloadRehearsal();
+        assert.deepEqual(
+          ceremonyHtml,
+          gunzipSync(await readFile("docs/ceremony-review/local/rehearsal.html.gz")),
+        );
         unavailable = true;
         for (const socket of sockets) socket.destroy();
         const before = refused;
@@ -209,6 +239,12 @@ try {
         );
         assert.ok(refused > before, "The transport actually refused fresh connections");
         await probeContext.close();
+        await ceremony.reload({ waitUntil: "domcontentloaded" });
+        await says(ceremony, "#offline-status", "This edition is available offline");
+        await says(ceremony, "#ceremony-scan-status", "Printed page 74.");
+        await openRehearsal();
+        assert.deepEqual(await downloadRehearsal(), ceremonyHtml);
+        await ceremony.close();
         await offlineArgument(argument);
         await page.reload({ waitUntil: "domcontentloaded" });
         await says(page, "#offline-status", "This edition is available offline");
@@ -228,6 +264,11 @@ try {
           offlineTransport:
             "Real origin through unchanged TLS CONNECT; existing tunnels closed and new connections refused; fresh worker-free context fails",
           cache,
+          ceremony: {
+            offlineIdenticalDossier: true,
+            bytes: ceremonyHtml.length,
+            sha256: hash(ceremonyHtml),
+          },
           errors,
           externalRequests: [...requests],
         });

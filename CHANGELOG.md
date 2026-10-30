@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+- Rehearse mancipation and surrender before a magistrate with distinct actors,
+  minimum witnesses plus a separate balance holder, an absent-land exception,
+  ordered acts, and an unresolved boundary when the transferor counterclaims.
+- Five source readings and four complete scanned pages; editable and shared
+  rehearsal records, an attempt history, and a standalone illustrated dossier.
+- Preserve newer case facts and written explanations when a delayed import returns.
+- Correct the editorial-supply boundary across Gaius 2.22–23 in the existing reader.
+- Permit hash-verified cached source reads in Firefox offline mode; stamp every
+  HTML entry with the same complete offline edition identity.
+
 ## 0.1.0 — 2026-10-29
 
 - Three connected investigations of Gaius's ownership rules: an owner's

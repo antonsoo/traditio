@@ -1,0 +1,47 @@
+[
+  {
+    "capture": "study-sheet.png",
+    "identicalTo": "../../assets/study-sheet.png",
+    "sha256": "04cede12ec9ad9b560f7828e019517d79ce7ba539f6c1dbf28ec1dbb6ccf669c"
+  },
+  {
+    "capture": "argument-casebook.png",
+    "identicalTo": "../../assets/argument-casebook.png",
+    "sha256": "59560e88dec5b6a86f7b8cb4929ce6f733fc7690ea906f65bd2dc48f9ade6b43"
+  },
+  {
+    "capture": "workshop-chromium-1440.png",
+    "identicalTo": "../../assets/workshop-chromium-1440.png",
+    "sha256": "916ae6f7126267bdc534dc47fef38344ae09c4714d7da8b1154e75b17d6404f9"
+  },
+  {
+    "capture": "reading-firefox-1440.png",
+    "identicalTo": "../../assets/reading-firefox-1440.png",
+    "sha256": "8323a0675fd0eb9278508fd5b06e5abe320bd2267dad0d92d197eb06eaaedab3"
+  },
+  {
+    "capture": "argument-chromium-1440.png",
+    "identicalTo": "../../assets/argument-chromium-1440.png",
+    "sha256": "0e94164facc13ecc802acbe59d3e6d04ed4799d9ae2647896441b874de7b76f5"
+  },
+  {
+    "capture": "comparison-chromium-1440.png",
+    "identicalTo": "../../assets/comparison-chromium-1440.png",
+    "sha256": "e8a0a417de4692ffcdeb89bd61213343f89b553824504c9d83a4664f4e17d41d"
+  },
+  {
+    "capture": "comparison-firefox-1440.png",
+    "identicalTo": "../../assets/comparison-firefox-1440.png",
+    "sha256": "64c75d1addcac1dbe098fccf7f0c7212fa9c37accc637dc16945cad93e546923"
+  },
+  {
+    "capture": "argument-firefox-1440.png",
+    "identicalTo": "../../assets/argument-firefox-1440.png",
+    "sha256": "32f6e6c4a4ea05d0990b0e350521d079796df56964e12dda336c7af9e8003da0"
+  },
+  {
+    "capture": "workshop-firefox-1440.png",
+    "identicalTo": "../../assets/workshop-firefox-1440.png",
+    "sha256": "bb75fd87817a1f50f147f239287bcdfb540ff9755772861dc6c4a00ec1ca75d2"
+  }
+]

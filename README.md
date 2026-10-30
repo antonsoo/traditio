@@ -52,6 +52,37 @@ _quamquam_ to see why "even though" matters. Nine complete scanned pages from
 the 1904 Poste–Whittuck edition retain the printed context, editorial supplies,
 textual gaps and old translation. Enlarge a page and pan with the keyboard.
 
+## Rehearse the missing formality
+
+[Who speaks? Who transfers?](https://antonsoo.github.io/traditio/ceremony.html)
+opens the assumption behind the first case. Gaius gives acts to particular people:
+
+```text
+Mancipation:   acquirer speaks -> strikes balance -> gives that bronze
+Before praetor: acquirer claims -> praetor asks -> no counterclaim -> praetor awards
+```
+
+Start with four witnesses and a separate balance holder. Try the acquirer's claim,
+then add the fifth witness. Count the holder among those five and the arrangement
+again misses the text: _praeterea alio_ means another person in addition. Six
+witnesses also meet the minimum. An absent mule fails the presence condition;
+an absent Italian field is expressly allowed in 1.121.
+
+Before the magistrate, try silence before the question, or an award before the
+reply. After a timely silence or disclaimer, title still awaits the award.
+A counterclaim leaves the described unopposed procedure; no winner is invented.
+The scene shows civil title under stated assumptions and does not assign possession.
+
+Five close readings, phrase notes and four complete pages explain every branch.
+The editable record and explicit link retain arrangement, attempts and explanation.
+A script-free illustrated rehearsal embeds those facts, the sources, fonts and
+licenses, with a native JSON download and printable pages. Undo removes an attempt;
+changing the arrangement starts a new sequence while preserving the explanation.
+
+[Source mapping and audit](docs/ceremony-audit.md) ·
+[Actual illustrated rehearsal, gzip](docs/ceremony-review/local/rehearsal.html.gz) ·
+[Tagged PDF](docs/ceremony-review/local/rehearsal.pdf)
+
 ## Run locally
 
 From this checkout, with Node **24 or later**:
@@ -94,7 +125,9 @@ even with the correct filename and HTTP status, prevents that export.
 The HTML contains no JavaScript and makes no asset request when opened.
 Preparation can be canceled without losing the work. A source request that
 stalls for 20 seconds stops with an error and leaves the case available to retry.
-Version 1 case files still reopen; version 2 adds the optional argument.
+Version 1 case files still reopen; version 2 adds the optional argument. A delayed
+import cannot overwrite cases or notes changed while its file was being read.
+Ceremony records use their own format and are reopened on the ceremony page.
 
 Actual browser-generated examples:
 - [Editable innocent-buyer comparison](examples/mistaken-heir-comparison.json)
@@ -146,7 +179,7 @@ An already open edition stays together while a later worker waits to activate.
 
 ## Verification and limits
 
-`npm run check` runs lint, strict type checking, twelve tests, retained-file
+`npm run check` runs lint, strict type checking, sixteen tests, retained-file
 verification and the production build. The tests include all 68 supported
 configurations against a manually transcribed source-concordance table, record
 round trips, counterexamples, invalid premises and distinct legal positions. This checks the code
@@ -157,6 +190,7 @@ With Playwright's Chromium and Firefox available:
 ```sh
 npm run test:browser
 npm run test:audit
+npm run test:ceremony
 ```
 
 The browser review operates the built site at desktop and 375px, including
@@ -169,9 +203,9 @@ The audit driver adds cancellation, stalled requests, failed installation,
 damaged-cache refusal/recovery and the transition between two editions. Screenshots and evidence
 are retained in [the review](docs/review.md).
 
-The [publication review](docs/publication.md) separately checks the actual
-hosted edition, all 22 canonical file identities, public source artifacts and
-the four browser journeys, including offline argument export. To repeat that
+The [original publication review](docs/publication.md) records its historical
+22-file edition. The [ceremony audit](docs/ceremony-audit.md) records the current
+companion lesson, corrected reading, actual artifacts and publication checks. To repeat that
 comparison with a matching local build, run `npm run test:public`.
 
 These are invented cases within Gaius's second-century account. They assume

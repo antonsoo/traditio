@@ -35,7 +35,8 @@
     "verify:sources": "node scripts/verify-sources.mjs",
     "test:browser": "node scripts/browser.mjs",
     "test:audit": "node scripts/audit-browser.mjs",
-    "test:public": "node scripts/public-browser.mjs"
+    "test:public": "node scripts/public-browser.mjs",
+    "test:ceremony": "node scripts/ceremony-review.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

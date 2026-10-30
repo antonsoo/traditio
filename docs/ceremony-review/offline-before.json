@@ -1,0 +1,30 @@
+{
+  "browser": "Firefox 155.0 via Playwright 1.63",
+  "method": "Complete worker inventory confirmed, browser context set offline, actual page reload, then fetch the same retained page with four cache modes",
+  "page": "sources/poste-1904-p74.jpg",
+  "controller": "sw.js",
+  "navigatorOnLine": false,
+  "results": [
+    {
+      "cache": "default",
+      "status": 200,
+      "bytes": 702149
+    },
+    {
+      "cache": "no-store",
+      "error": "NetworkError when attempting to fetch resource."
+    },
+    {
+      "cache": "reload",
+      "error": "NetworkError when attempting to fetch resource."
+    },
+    {
+      "cache": "force-cache",
+      "status": 200,
+      "bytes": 702149
+    }
+  ],
+  "boundary": "This reproduction used browser offline emulation. The separate origin-connection-refusal test passed before this change. The experiment establishes a cache-mode-specific failure in this tested offline mode, not every real-world network outage.",
+  "baselineCommit": "85dd424e7d57d2bfa60e77207e1f24c45fb8da3a",
+  "runtime": "Uncommitted ceremony lesson using the baseline verifiedBytes no-store fetch. Existing source-reader cache behavior was unchanged during this reproduction."
+}

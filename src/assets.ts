@@ -22,7 +22,10 @@ export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<
   let bytes: ArrayBuffer;
   try {
     response = await fetch(`${import.meta.env.BASE_URL}${item.path}`, {
-      cache: "no-store",
+      // Firefox offline reads can reject no-store/reload despite a complete worker
+      // cache. Cached bytes are safe here: length and SHA-256 below identify
+      // the exact retained edition independently of HTTP cache freshness.
+      cache: "default",
       signal: controller.signal,
     });
     bytes = await response.arrayBuffer();

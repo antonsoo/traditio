@@ -1,0 +1,18 @@
+{
+  "format": "traditio-ceremony",
+  "version": 1,
+  "arrangement": {
+    "route": "magistrate",
+    "thing": "mule",
+    "witnesses": 6,
+    "holder": "separate",
+    "present": true
+  },
+  "events": [
+    "buyer-claim",
+    "ask",
+    "disclaim",
+    "award"
+  ],
+  "note": "Negante denies making a counterclaim. Silence still needs the award. Literal <script>text</script> & notes."
+}

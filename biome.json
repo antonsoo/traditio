@@ -5,6 +5,7 @@
       "**",
       "!dist",
       "!docs/assets",
+      "!docs/ceremony-review",
       "!public",
       "!package-lock.json",
       "!examples",

@@ -87,13 +87,13 @@ export const readings: Reading[] = [
   {
     id: "form",
     title: "A civil form of transfer",
-    reference: "2.22; compare 1.119",
+    reference: "2.22–23; compare 1.119",
     pages: [134, 74, 75],
     latin:
-      "Mancipi vero res sunt quae per mancipationem ad alium transferuntur; unde etiam mancipi res sunt dictae. quod autem valet ⟨mancipatio, idem valet et in iure cessio⟩.",
+      "Mancipi vero res sunt quae per mancipationem ad alium transferuntur; unde etiam mancipi res sunt dictae. quod autem valet ⟨mancipatio, idem valet et in iure cessio. Et⟩ mancipatio quidem quemadmodum fiat, superiore commentario tradidimus.",
     english:
-      "Res mancipi, however, are things transferred to another through mancipation; hence they are called res mancipi. What mancipation accomplishes, surrender before a magistrate accomplishes as well.",
-    note: "The end of 2.22 is supplied text in the retained edition. The control assumes a valid mancipation, including the formalities described in 1.119. In iure cessio is another form named by Gaius; the workshop does not reenact either ceremony.",
+      "Res mancipi, however, are things transferred to another through mancipation; hence they are called res mancipi. What mancipation accomplishes, surrender before a magistrate accomplishes as well. We explained in the preceding book how mancipation is carried out.",
+    note: "Complete 2.22–23. The edition supplies text from mancipatio in 2.22 through Et at the start of 2.23; the brackets preserve that boundary. The control assumes a valid mancipation, including the formalities described in 1.119. In iure cessio is another form named by Gaius; this case control assumes the form rather than checking its acts. The separate ceremony lesson rehearses the two described sequences.",
     words: [
       {
         latin: "mancipationem",

@@ -1,0 +1,17 @@
+{
+  "format": "traditio-ceremony",
+  "version": 1,
+  "arrangement": {
+    "route": "bronze",
+    "thing": "field",
+    "witnesses": 6,
+    "holder": "separate",
+    "present": false
+  },
+  "events": [
+    "buyer-claim",
+    "strike",
+    "give"
+  ],
+  "note": "An absent field is allowed here. The buyer speaks; the owner receives the bronze."
+}

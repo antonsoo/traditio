@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { extname, resolve } from "node:path";
 import { chromium, firefox } from "playwright";
 
-const output = resolve("studies/audit-2026-10-29");
+const output = resolve(process.env.REVIEW_OUTPUT || "studies/audit-2026-10-29");
 await mkdir(output, { recursive: true });
 const scratch = await mkdtemp(resolve(process.env.TMPDIR || tmpdir(), "traditio-audit-"));
 const oldRoot = resolve(scratch, "old");
@@ -155,6 +155,9 @@ try {
         ),
         1,
       );
+      await outside.goto(`${base}ceremony.html`);
+      await ready(outside);
+      assert.equal(await outside.locator('meta[name="traditio-edition"]').count(), 1);
       await initial.close();
 
       activeRoot = resolve(oldRoot, "dist");
@@ -235,6 +238,7 @@ try {
         exactCacheRecovery: true,
         oldReaderKeepsEdition: true,
         newEditionActivatesAfterReaderCloses: true,
+        companionPageHasCurrentEditionIdentity: true,
         cancellationPreservesCasesAndFocus: true,
         stalledExportTimesOut: true,
         noCanceledOrTimedOutDownload: true,

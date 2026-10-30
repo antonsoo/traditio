@@ -1,0 +1,286 @@
+{
+  "base": "http://127.0.0.1:4488/traditio/",
+  "date": "2026-10-30T04:39:30.110Z",
+  "journeys": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "sourceHashes": [
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        }
+      ],
+      "html": {
+        "bytes": 4571494,
+        "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+      },
+      "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
+      "embedded": [
+        {
+          "path": "fonts/literata.woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+          "bytes": 396664
+        },
+        {
+          "path": "fonts/sourcesans3.woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+          "bytes": 170188
+        },
+        {
+          "path": "sources/poste-1904-p74.jpg",
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+          "bytes": 702149
+        },
+        {
+          "path": "sources/poste-1904-p75.jpg",
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+          "bytes": 761383
+        },
+        {
+          "path": "sources/poste-1904-p134.jpg",
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+          "bytes": 766313
+        },
+        {
+          "path": "sources/poste-1904-p135.jpg",
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+          "bytes": 606314
+        }
+      ],
+      "offlineIdentical": true,
+      "offlineTransport": "Browser offline mode after verified service-worker takeover; cached bytes independently hashed",
+      "standaloneNetworkRequests": [],
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "sourceHashes": [
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        }
+      ],
+      "html": {
+        "bytes": 4571494,
+        "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+      },
+      "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
+      "embedded": [
+        {
+          "path": "fonts/literata.woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+          "bytes": 396664
+        },
+        {
+          "path": "fonts/sourcesans3.woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+          "bytes": 170188
+        },
+        {
+          "path": "sources/poste-1904-p74.jpg",
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+          "bytes": 702149
+        },
+        {
+          "path": "sources/poste-1904-p75.jpg",
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+          "bytes": 761383
+        },
+        {
+          "path": "sources/poste-1904-p134.jpg",
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+          "bytes": 766313
+        },
+        {
+          "path": "sources/poste-1904-p135.jpg",
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+          "bytes": 606314
+        }
+      ],
+      "offlineIdentical": true,
+      "offlineTransport": "Browser offline mode after verified service-worker takeover; cached bytes independently hashed",
+      "standaloneNetworkRequests": [],
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "sourceHashes": [
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        }
+      ],
+      "html": {
+        "bytes": 4571494,
+        "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+      },
+      "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
+      "embedded": [
+        {
+          "path": "fonts/literata.woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+          "bytes": 396664
+        },
+        {
+          "path": "fonts/sourcesans3.woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+          "bytes": 170188
+        },
+        {
+          "path": "sources/poste-1904-p74.jpg",
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+          "bytes": 702149
+        },
+        {
+          "path": "sources/poste-1904-p75.jpg",
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+          "bytes": 761383
+        },
+        {
+          "path": "sources/poste-1904-p134.jpg",
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+          "bytes": 766313
+        },
+        {
+          "path": "sources/poste-1904-p135.jpg",
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+          "bytes": 606314
+        }
+      ],
+      "offlineIdentical": true,
+      "offlineTransport": "Browser offline mode after verified service-worker takeover; cached bytes independently hashed",
+      "standaloneNetworkRequests": [],
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "sourceHashes": [
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        }
+      ],
+      "html": {
+        "bytes": 4571494,
+        "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+      },
+      "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
+      "embedded": [
+        {
+          "path": "fonts/literata.woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+          "bytes": 396664
+        },
+        {
+          "path": "fonts/sourcesans3.woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+          "bytes": 170188
+        },
+        {
+          "path": "sources/poste-1904-p74.jpg",
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+          "bytes": 702149
+        },
+        {
+          "path": "sources/poste-1904-p75.jpg",
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+          "bytes": 761383
+        },
+        {
+          "path": "sources/poste-1904-p134.jpg",
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+          "bytes": 766313
+        },
+        {
+          "path": "sources/poste-1904-p135.jpg",
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+          "bytes": 606314
+        }
+      ],
+      "offlineIdentical": true,
+      "offlineTransport": "Browser offline mode after verified service-worker takeover; cached bytes independently hashed",
+      "standaloneNetworkRequests": [],
+      "axeViolations": 0,
+      "errors": []
+    }
+  ],
+  "faults": [
+    {
+      "engine": "chromium",
+      "oldCaseDelayedImportPreservesNotes": true,
+      "lateSourceCannotReplaceNewerPage": true,
+      "exportSnapshotFrozen": true,
+      "corruptSourceHidden": true,
+      "corruptExportRefused": true,
+      "cancellationNoDownload": true
+    },
+    {
+      "engine": "firefox",
+      "oldCaseDelayedImportPreservesNotes": true,
+      "lateSourceCannotReplaceNewerPage": true,
+      "exportSnapshotFrozen": true,
+      "corruptSourceHidden": true,
+      "corruptExportRefused": true,
+      "cancellationNoDownload": true
+    }
+  ]
+}

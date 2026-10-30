@@ -41,7 +41,9 @@ no invented private Quiritary owner. The UI still reports physical possession.
 The delivery investigation fixes an authorized owner, capable parties, a valid
 sale and actual delivery of possession. Choosing mancipation assumes that the
 formal act is valid; it does not test witness qualifications or ritual speech.
-The cup case only offers informal delivery. The trained mule avoids the school
+The companion [ceremony lesson](ceremony-audit.md) separately exposes the
+participants and acts of 1.119–121 and 2.24–25, without treating them as a complete
+validity checker. The cup case only offers informal delivery. The trained mule avoids the school
 disagreement about newborn animals in 2.15. The field in this investigation is
 always Italian land.
 

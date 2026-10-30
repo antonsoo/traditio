@@ -1,0 +1,33 @@
+{
+  "observedAt": "2026-10-30T04:36:49.574777+00:00",
+  "pages": [
+    {
+      "printedPage": 134,
+      "url": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n197.jpg",
+      "bytes": 766313,
+      "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+      "identicalToRetained": true
+    },
+    {
+      "printedPage": 135,
+      "url": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n198.jpg",
+      "bytes": 606314,
+      "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+      "identicalToRetained": true
+    },
+    {
+      "printedPage": 74,
+      "url": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n137.jpg",
+      "bytes": 702149,
+      "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+      "identicalToRetained": true
+    },
+    {
+      "printedPage": 75,
+      "url": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n138.jpg",
+      "bytes": 761383,
+      "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+      "identicalToRetained": true
+    }
+  ]
+}

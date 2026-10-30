@@ -1,0 +1,10 @@
+{
+  "source": "before edits",
+  "expected": "newly written explanation remains available",
+  "observed": {
+    "argumentHidden": true,
+    "caseTitle": "Who owns the silver cup?",
+    "saved": "Saved case reopened. Cases and any argument are restored; outcomes and argument checks are recomputed from the facts."
+  },
+  "sourceCommit": "85dd424e7d57d2bfa60e77207e1f24c45fb8da3a"
+}

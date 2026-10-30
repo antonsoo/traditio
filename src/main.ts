@@ -50,6 +50,7 @@ let scanController: AbortController | undefined;
 let imageUrl: string | undefined;
 let announcementTimeout = 0;
 let importRequest = 0;
+let recordRevision = 0;
 let exportController: AbortController | undefined;
 const fileStatus = element("file-status");
 
@@ -62,6 +63,7 @@ function announce(message: string): void {
 }
 
 function update(): void {
+  ++recordRevision;
   const result = evaluate(current);
   element("case-title").textContent = `Who owns the ${thingName(current)}?`;
   element("story").textContent = story(current);
@@ -158,6 +160,7 @@ function update(): void {
 }
 
 function updateArgument(): void {
+  ++recordRevision;
   element<HTMLSelectElement>("claim-select").value = argument?.claim ?? "";
   element("argument-work").hidden = !argument;
   element<HTMLButtonElement>("cite-reading").disabled =
@@ -409,6 +412,7 @@ element("restore-witness").addEventListener("click", () => {
 });
 element("argument-note").addEventListener("input", () => {
   if (!argument) return;
+  ++recordRevision;
   argument.note = element<HTMLTextAreaElement>("argument-note").value;
   element("note-count").textContent = String(argument.note.length);
 });
@@ -521,12 +525,18 @@ element("open-case").addEventListener("change", async () => {
   const input = element<HTMLInputElement>("open-case");
   const file = input.files?.[0];
   const id = ++importRequest;
+  const capturedRevision = recordRevision;
   if (!file) return;
   try {
     if (file.size > MAX_RECORD_BYTES)
       throw new Error("This file is too large. Traditio cases must be smaller than 16 KiB.");
     const result = readRecord(await file.text());
     if (id !== importRequest) return;
+    if (capturedRevision !== recordRevision) {
+      fileStatus.textContent =
+        "The saved file finished reading after you changed this case or argument. Your newer work has been kept. Select the file again to replace it.";
+      return;
+    }
     current = result.current;
     pinned = result.pinned;
     argument = result.version === 2 ? result.argument : null;
@@ -558,6 +568,7 @@ element("copy-link").addEventListener("click", async () => {
   }
 });
 function restoreHash(): void {
+  if (location.hash.startsWith("#case=")) ++importRequest;
   try {
     const record = fromHash(location.hash);
     if (record) {

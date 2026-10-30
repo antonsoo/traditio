@@ -1,3 +1,6 @@
 import { defineConfig } from "vite";
 
-export default defineConfig({ base: "/traditio/" });
+export default defineConfig({
+  base: "/traditio/",
+  build: { rollupOptions: { input: ["index.html", "ceremony.html"] } },
+});
