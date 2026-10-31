@@ -954,6 +954,20 @@ footer p {
 #offline-status {
   max-width: 17rem;
 }
+.edition-notice {
+  margin-block: 1rem 2rem;
+  padding: 1.3rem;
+  border: 1px solid var(--brass);
+  border-left-width: 4px;
+  background: #f0eadc;
+}
+.edition-notice h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.edition-notice p {
+  max-width: 58rem;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;

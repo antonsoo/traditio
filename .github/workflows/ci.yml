@@ -20,5 +20,6 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: npm run test:browser
       - run: npm run test:river
+      - run: npm run test:upgrade
       - run: npm run test:readiness
       - run: npm run test:audit

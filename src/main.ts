@@ -591,4 +591,4 @@ element("scope-text").innerHTML = scope
 restoreHash();
 update();
 setReading(evaluate(current).focus);
-installOffline(element("offline-status"));
+installOffline(element("offline-status"), element("save-case"));

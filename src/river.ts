@@ -414,4 +414,4 @@ el("river-scope-text").innerHTML = riverScope.map((p) => `<p>${esc(p)}</p>`).joi
 restoreLink();
 update();
 showReading("g-parcel");
-installOffline(el("offline-status"));
+installOffline(el("offline-status"), el("river-save-record"));

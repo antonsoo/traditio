@@ -1,4 +1,4 @@
-export function installOffline(status: HTMLElement): void {
+export function installOffline(status: HTMLElement, saveEditable: HTMLElement): void {
   if (import.meta.env.DEV) {
     status.textContent = "Offline installation is available in the production build.";
     return;
@@ -11,11 +11,41 @@ export function installOffline(status: HTMLElement): void {
   const expected = document.querySelector<HTMLMetaElement>(
     'meta[name="traditio-edition"]',
   )?.content;
+  let editionNotice: HTMLElement | undefined;
+  function showEditionNotice(mismatch: boolean): void {
+    if (!mismatch) {
+      editionNotice?.remove();
+      editionNotice = undefined;
+      return;
+    }
+    if (editionNotice) return;
+    editionNotice = document.createElement("aside");
+    editionNotice.className = "edition-notice";
+    editionNotice.setAttribute("aria-labelledby", "edition-notice-title");
+    const title = document.createElement("h2");
+    title.id = "edition-notice-title";
+    title.textContent = "Two editions are open.";
+    const explanation = document.createElement("p");
+    explanation.textContent =
+      "Save editable work in each open lesson, close every Traditio tab, then reopen while connected. Reopen your saved records to continue. Illustrated readings may be unavailable until then.";
+    const save = document.createElement("button");
+    save.type = "button";
+    save.textContent = "Save editable work from this lesson";
+    save.addEventListener("click", () => saveEditable.click());
+    editionNotice.append(title, explanation, save);
+    document.querySelector("main")?.prepend(editionNotice);
+  }
   let request = 0;
   async function inspect(): Promise<void> {
     const id = ++request;
     const controller = navigator.serviceWorker.controller;
-    if (!controller) {
+    // A newly introduced route can remain uncontrolled while the new worker
+    // waits for older tabs. Ask the active worker which edition is saved too.
+    const worker =
+      controller ||
+      (await navigator.serviceWorker.getRegistration(import.meta.env.BASE_URL))?.active;
+    if (id !== request || controller !== navigator.serviceWorker.controller) return;
+    if (!worker) {
       status.textContent = "Preparing this edition for offline reading…";
       return;
     }
@@ -32,12 +62,17 @@ export function installOffline(status: HTMLElement): void {
       channel.port1.close();
       if (id !== request || controller !== navigator.serviceWorker.controller) return;
       const value = event.data as { edition?: unknown; complete?: unknown; files?: unknown } | null;
-      status.textContent =
-        value?.edition === expected && value?.complete === true
-          ? "This edition is available offline, including every source page."
-          : "This edition is not fully available offline. Connect and reload, or save a casebook.";
+      const mismatch = typeof value?.edition === "string" && value.edition !== expected;
+      showEditionNotice(mismatch);
+      status.textContent = mismatch
+        ? "This page and the saved edition differ. Save editable work in each lesson, close every Traditio tab, then reopen while connected."
+        : value?.edition === expected && value?.complete === true && !controller
+          ? "This edition’s files are saved. Save editable work before reloading to use them offline."
+          : value?.edition === expected && value?.complete === true
+            ? "This edition is available offline, including every source page."
+            : "This edition is not fully available offline. Connect and reload, or save a casebook.";
     };
-    controller.postMessage({ type: "inventory", repair: navigator.onLine }, [channel.port2]);
+    worker.postMessage({ type: "inventory", repair: navigator.onLine }, [channel.port2]);
   }
   navigator.serviceWorker.addEventListener("controllerchange", () => {
     void inspect();

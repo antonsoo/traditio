@@ -38,7 +38,8 @@
     "test:public": "node scripts/public-browser.mjs",
     "test:ceremony": "node scripts/ceremony-review.mjs",
     "test:readiness": "node scripts/readiness-audit.mjs",
-    "test:river": "node scripts/river-review.mjs"
+    "test:river": "node scripts/river-review.mjs",
+    "test:upgrade": "node scripts/upgrade-review.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

@@ -64,7 +64,7 @@ async function readVerifiedBytes(item: Asset, signal?: AbortSignal): Promise<Arr
     );
   if (bytes.byteLength !== item.bytes)
     throw new Error(
-      `The downloaded ${item.path} does not match this edition. Reload the page before trying again.`,
+      `The downloaded ${item.path} does not match this edition. Your editable work can still be saved.`,
     );
   const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)), (byte) =>
     byte.toString(16).padStart(2, "0"),

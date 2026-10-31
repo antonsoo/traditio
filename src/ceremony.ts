@@ -326,4 +326,4 @@ el("ceremony-scope-text").innerHTML = ceremonyScope.map((s) => `<p>${esc(s)}</p>
 restoreLink();
 update();
 showReading("assembly");
-installOffline(el("offline-status"));
+installOffline(el("offline-status"), el("save-rehearsal"));
