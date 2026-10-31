@@ -20,6 +20,10 @@ Both existing lessons link to it in this build.
    attachment conditions. Establish long attachment: the model now reports Aulus.
    Select point 1 in the history: ownership returns to Lucius while the later
    facts remain recorded. The original arrival is not retroactively relabelled.
+   Choose **Keep original ending and branch here**, then establish long attachment
+   without new roots. The original ending remains pinned with Aulus; the new
+   continuation remains Lucius's. The comparison identifies rooting as the only
+   established fact that differs under the same selected passage.
 3. Choose imperceptible accretion and establish the addition. The same outlined
    footprint now belongs to Aulus through a different material history. The
    comparison identifies the different investigation, rather than calling this
@@ -102,7 +106,12 @@ Rooting or attachment attempted before arrival cannot be banked for later.
 Moving the inspected point applies only that prefix; appending adds at the end.
 Undo removes one attempt. Changing investigation starts a new history while
 keeping the pinned history and explanation. Changing the reading changes no
-physical fact.
+physical fact. **Keep original ending and branch here** pins the original
+ending and starts the current history with the inspected prefix, including any
+refused attempts. It explicitly replaces the comparison and keeps the explanation.
+Both histories remain ordinary editable records; no fork metadata or stored ruling
+is trusted. Comparison prose separates a changed material history, changed evidence,
+and different attempt counts that establish the same physical facts.
 
 The full current and pinned histories, their inspected points and the explanation
 are the portable record. No verdict is trusted on import. Native files and
@@ -131,6 +140,47 @@ labelled them all as Poste–Whittuck pages. They now use the explicit ownership
 source set in `src/source-sets.json`. This retains the original nine-page reader
 and prevents the new Digest images from acquiring false captions or filenames.
 
+## Defects found by the second audit
+
+The earlier review did not check the standalone document's phone width or the
+introduction of an entirely new route beside older open lessons. It therefore
+missed two learner-facing failures.
+
+| Actual reproduction                                                       | Before correction                                                                                                              | After correction                                                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Script-disabled native reading at 375px, Chromium                         | Document width 482px; source fingerprints ran beyond the page                                                                  | 375px; complete fingerprints wrap                                                                                  |
+| Same reading, Firefox                                                     | Document width 477px                                                                                                           | 375px; all content remains within the page                                                                         |
+| New river lesson while the previous public edition remains open, Chromium | Illustrated export correctly refused the old source notice, but the generic reload advice could not resolve the mixed editions | Visible recovery notice offers the current editable record; closing all tabs releases the old edition              |
+| Same upgrade, Firefox                                                     | The new route could remain uncontrolled with “Preparing” indefinitely                                                          | The active saved edition is inspected even before the new page receives a controller; the same recovery path works |
+
+The [before phone measurements](river-review/deep-audit/native-overflow-before.json)
+and [upgrade reproduction](river-review/deep-audit/upgrade-before.json) retain the
+failures. [After measurements](river-review/deep-audit/native-after.json) cover
+320, 375, 768 and 1440px in both browsers. The normal river review also checks
+320/375px standalone widths, after font loading, with scripts disabled.
+The wrap protection applies to all three portable reading formats.
+
+The historical upgrade used the actual `gh-pages` tree
+`c2a48813c345518d958846945bffb2ddd8deb141`, saved edition
+`b4ed162cc324456b713a`, without changing its files. The new driver can also
+generate a two-page fixture for a repeatable CI check:
+
+```sh
+npm run test:upgrade
+UPGRADE_FROM=test-results/deep-audit/old-pages node scripts/upgrade-review.mjs test-results/actual-upgrade
+```
+
+The second command requires extracting that earlier publication into the supplied
+directory first. The recovery notice never replaces a live lesson or forces a
+worker takeover. Its download delegates to the current lesson's native record,
+including edits made after the notice appeared. Closing the pages retains the
+browser profile; all three saved records are explicitly reopened afterward.
+
+Four fresh requests to the retained image origins were independently compared
+with the local bytes; all matched. The [origin receipt](river-review/deep-audit/source-origin.json)
+includes final image URLs, byte lengths and SHA-256 identities. The source clauses
+were compared again with the Latin transcriptions linked above.
+
 ## Direct verification
 
 Run from the repository with Node 24+, Python 3/Poppler for PDF inspection, and
@@ -141,6 +191,7 @@ npm ci
 npm run check
 npm run test:river
 npm run test:readiness
+npm run test:upgrade
 npm run test:browser
 node scripts/ceremony-review.mjs http://127.0.0.1:4367/traditio/ test-results/ceremony
 ```
@@ -148,19 +199,20 @@ node scripts/ceremony-review.mjs http://127.0.0.1:4367/traditio/ test-results/ce
 The ceremony command requires a production preview on its supplied origin.
 The other browser drivers start their own ephemeral origin. These commands
 exercise controls and genuine downloads; test counts alone are not a delivery
-claim. The six new core tests include an 18-row, manually transcribed concordance
+claim. The seven new core tests include an 18-row, manually transcribed concordance
 under both readings, rejected fact sequences, earlier-point replay, hostile
 records and portable data. This is agreement with that concordance, not external
 expert review of Roman law.
 
-| Evidence                                                       | Observed boundary                                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [River browser receipt](river-review/local/report.json)        | Chromium and Firefox, 1440px and 375px; all four page identities and all 23 phrases; keyboard facts and timeline; comparison; JSON/CSV/SVG/HTML; script-disabled standalone reopening; explicit link and file round trips; no runtime errors or axe violations in the reviewed state |
-| Same receipt, faults                                           | A same-length substituted JPEG is refused for display and export; verified retry succeeds; edits during export cannot change the captured record; cancellation and delayed-import preservation work                                                                                  |
-| [Readiness receipt](river-review/readiness.json)               | All three lessons in both browsers; real stopped-origin failures, refusal of a matching source from another edition, automatic invalidation/recovery in another open lesson, coalesced notices, and held/activated edition transitions                                               |
-| [Ownership regression](river-review/ownership-regression.json) | Both browsers and sizes still operate the original ownership cases, nine-page reader, arguments, native exports and offline reload                                                                                                                                                   |
-| [Ceremony regression](river-review/ceremony-regression.json)   | Both browsers and sizes still operate the formal acts, source reader, portable rehearsal and offline reload; race and failure cases remain covered                                                                                                                                   |
-| [Artifact receipt](river-review/artifacts.json)                | Native file byte counts and hashes; the tagged PDF has 26 pages and 5,112 extracted words, with no extracted word outside a 35-point inset                                                                                                                                           |
+| Evidence                                                                   | Observed boundary                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [River browser receipt](river-review/local/report.json)                    | Chromium and Firefox, 1440px and 375px; all four page identities and all 23 phrases; keyboard facts and timeline; comparison; JSON/CSV/SVG/HTML; script-disabled standalone reopening; explicit link and file round trips; no runtime errors or axe violations in the reviewed state |
+| Same receipt, faults                                                       | A same-length substituted JPEG is refused for display and export; verified retry succeeds; edits during export cannot change the captured record; cancellation and delayed-import preservation work                                                                                  |
+| [Upgrade recovery](river-review/deep-audit/published-upgrade/receipt.json) | Actual earlier two-page publication to the current three-page edition; both browsers at 375px; an actionable notice, current editable downloads, coherent older tabs, all three records reopened, and reading export after a real origin outage                                      |
+| [Readiness receipt](river-review/readiness.json)                           | All three lessons in both browsers; real stopped-origin failures, refusal of a matching source from another edition, automatic invalidation/recovery in another open lesson, coalesced notices, and held/activated edition transitions                                               |
+| [Ownership regression](river-review/ownership-regression.json)             | Both browsers and sizes still operate the original ownership cases, nine-page reader, arguments, native exports and offline reload                                                                                                                                                   |
+| [Ceremony regression](river-review/ceremony-regression.json)               | Both browsers and sizes still operate the formal acts, source reader, portable rehearsal and offline reload; race and failure cases remain covered                                                                                                                                   |
+| [Artifact receipt](river-review/artifacts.json)                            | Native file byte counts and hashes; the tagged PDF has 26 pages and 5,104 extracted words, with no extracted word outside a 35-point inset                                                                                                                                           |
 
 ![The receiving-soil roots and result at 375px](river-review/local/chromium-375.png)
 

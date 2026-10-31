@@ -52,6 +52,13 @@
   padding: 0.45rem 0.6rem;
   font-weight: 450;
 }
+.river-branch {
+  margin-block: 1rem;
+}
+.river-branch p {
+  max-width: 48rem;
+  margin-top: 0.5rem;
+}
 .river-stage {
   background: var(--board);
   padding: 1rem 1.5rem;

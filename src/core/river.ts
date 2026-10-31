@@ -74,6 +74,41 @@ export function makeRiverCase(route: RiverRoute = "parcel"): RiverCase {
 export function makeRiverRecord(): RiverRecord {
   return { format: "traditio-river", version: 1, current: makeRiverCase(), pinned: null, note: "" };
 }
+/** Preserve the original ending, then try a different continuation of the inspected past. */
+export function branchRiver(c: RiverCase): { pinned: RiverCase; current: RiverCase } {
+  return {
+    pinned: { ...c, events: [...c.events], at: c.events.length },
+    current: { ...c, events: c.events.slice(0, c.at) },
+  };
+}
+export function compareRiverEvidence(a: RiverCase, b: RiverCase): string {
+  if (a.route !== b.route)
+    return "These are different investigations. A shared outline or receiving bank does not make a carried piece, diffuse addition and transplanted tree the same object or the same facts.";
+  const left = evaluateRiver(a).state;
+  const right = evaluateRiver(b).state;
+  const names: Record<keyof RiverState, string> = {
+    arrived:
+      a.route === "parcel"
+        ? "arrival of the carried piece"
+        : a.route === "plant"
+          ? "planting in the receiving soil"
+          : "the imperceptible addition",
+    rooted: "rooting in the receiving soil",
+    longAttached: "long attachment",
+    flooded: "flooding",
+    receded: "recession of the water",
+  };
+  const differences = (Object.keys(names) as (keyof RiverState)[]).filter(
+    (key) => left[key] !== right[key],
+  );
+  if (a.lens !== b.lens)
+    return `${differences.length ? "Both the physical facts and the selected passages differ." : "These points establish the same physical facts; the selected passages differ."} ‘Not settled here’ reports a limit of those passages, not a demonstrated historical change in law.`;
+  if (!differences.length)
+    return "These points establish the same physical facts under the same passages. Different attempt counts, or refused attempts, do not supply an additional condition.";
+  return differences.length === 1
+    ? `Only ${names[differences[0] as keyof RiverState]} differs at these inspected points. The investigation and selected passages are the same.`
+    : `The facts that differ at these inspected points are ${differences.map((key) => names[key]).join(", ")}. The investigation and selected passages are the same.`;
+}
 export function replayRiver(c: RiverCase): RiverStep[] {
   const s: RiverState = {
     arrived: false,

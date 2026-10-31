@@ -2,6 +2,13 @@
 
 ## Unreleased — 2026-10-31
 
+- Keep an original ending while branching from an earlier point, and identify
+  which established facts differ under the same passages.
+- Offer editable-work recovery when a new lesson opens alongside an older saved
+  edition; verify the actual previous two-page publication in both browsers.
+- Wrap source identities in portable readings so they remain readable at phone
+  widths, including with scripts disabled.
+
 - Follow river deposits, a torn parcel, a transplanted tree and a flooded field
   through replayable histories, with pinned comparisons and explicit source limits.
 - Read eight Latin passages beside four complete pages from the 1904 Gaius and

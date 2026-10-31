@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-31T09:08:13.551Z",
+  "previous": "Retained earlier public edition",
+  "previousWorker": "e59e2ef614964a1e0b778d1a5caf7f7e62457f4b8faad19df2eba11ed56f6324",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 375,
+      "oldEdition": "b4ed162cc324456b713a",
+      "newEdition": "4306c92e70096d986156",
+      "controllerAtOpen": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allThreeRecordsRestored": true,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6490156
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "oldEdition": "b4ed162cc324456b713a",
+      "newEdition": "4306c92e70096d986156",
+      "controllerAtOpen": false,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allThreeRecordsRestored": true,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6490156
+    }
+  ]
+}

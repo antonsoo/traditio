@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-31T09:12:11.237Z",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 1440
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 375
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 320
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 1440
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 375
+    },
+    {
+      "browser": "firefox",
+      "width": 320,
+      "owner": "Lucius",
+      "originalEnding": "Aulus",
+      "onlyDifferingFact": "Rooting in receiving soil",
+      "documentWidth": 320
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:4491/traditio/",
-  "date": "2026-10-31T08:27:59.837Z",
+  "date": "2026-10-31T09:08:13.639Z",
   "journeys": [
     {
       "engine": "chromium",
@@ -25,8 +25,8 @@
         }
       ],
       "html": {
-        "bytes": 4573018,
-        "sha256": "4f569163e115872643ce9ca125c66536cc7c83a623cf1f2afd39ba832ac00d86"
+        "bytes": 4573041,
+        "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
       },
       "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
       "embedded": [
@@ -90,8 +90,8 @@
         }
       ],
       "html": {
-        "bytes": 4573018,
-        "sha256": "4f569163e115872643ce9ca125c66536cc7c83a623cf1f2afd39ba832ac00d86"
+        "bytes": 4573041,
+        "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
       },
       "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
       "embedded": [
@@ -155,8 +155,8 @@
         }
       ],
       "html": {
-        "bytes": 4573018,
-        "sha256": "4f569163e115872643ce9ca125c66536cc7c83a623cf1f2afd39ba832ac00d86"
+        "bytes": 4573041,
+        "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
       },
       "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
       "embedded": [
@@ -220,8 +220,8 @@
         }
       ],
       "html": {
-        "bytes": 4573018,
-        "sha256": "4f569163e115872643ce9ca125c66536cc7c83a623cf1f2afd39ba832ac00d86"
+        "bytes": 4573041,
+        "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
       },
       "jsonSha256": "77ff58fa642775f25a2a0ad94d014245110ecd23fe508081ca934ed7c24ed0e8",
       "embedded": [

@@ -2,6 +2,8 @@ import "./style.css";
 import "./river.css";
 import { asset, verifiedBytes } from "./assets";
 import {
+  branchRiver,
+  compareRiverEvidence,
   evaluateRiver,
   events,
   type Lens,
@@ -97,6 +99,7 @@ function update(): void {
   el<HTMLButtonElement>("river-undo").disabled = c.events.length === 0;
   el<HTMLButtonElement>("river-back").disabled = c.at === 0;
   el<HTMLButtonElement>("river-next").disabled = c.at === c.events.length;
+  el<HTMLButtonElement>("river-branch").disabled = c.at === c.events.length;
   const steps = replayRiver(c);
   el("river-timeline").innerHTML =
     `<li><button type="button" data-river-at="0"${c.at === 0 ? ' aria-current="step"' : ""}><strong>Start</strong>Stipulated ownership</button></li>${steps.map((s, i) => `<li><button type="button" data-river-at="${i + 1}"${c.at === i + 1 ? ' aria-current="step"' : ""}${s.accepted ? "" : ' class="refused"'}><strong>${i + 1} · ${s.accepted ? "Fact added" : "Not added"}</strong>${esc(shortEvent[s.event])}</button></li>`).join("")}`;
@@ -115,12 +118,7 @@ function update(): void {
     el("river-pinned-scene").innerHTML = riverSvg(record.pinned, "pinned");
     el("river-current-small").innerHTML = riverSvg(c, "comparison-current");
     el("river-table").innerHTML = riverComparison(record.pinned, c);
-    el("river-comparison-note").textContent =
-      record.pinned.route === c.route
-        ? record.pinned.lens === c.lens
-          ? "Compare the recorded facts and selected points. Later facts in a history are not applied to an earlier point."
-          : "The source selection differs. ‘Not settled here’ reports a limit of those passages; it does not assert that the historical law changed."
-        : "These are different investigations. A shared outline or receiving bank does not make a carried piece, diffuse addition and transplanted tree the same object or the same facts.";
+    el("river-comparison-note").textContent = compareRiverEvidence(record.pinned, c);
   }
 }
 function changed(message: string): void {
@@ -176,6 +174,16 @@ el("river-undo").addEventListener("click", () => {
   record.current.events.pop();
   record.current.at = Math.min(record.current.at, record.current.events.length);
   changed("The last attempt was removed; earlier facts were replayed.");
+});
+el("river-branch").addEventListener("click", () => {
+  if (record.current.at === record.current.events.length) return;
+  const branched = branchRiver(record.current);
+  record.pinned = branched.pinned;
+  record.current = branched.current;
+  changed(
+    `The original ending is pinned at point ${record.pinned.at}. Your current history branches at point ${record.current.at}. Add different later facts to compare the results. Your explanation has been kept.`,
+  );
+  el("river-actions").querySelector<HTMLButtonElement>("button")?.focus();
 });
 el("river-reset").addEventListener("click", () => {
   record.current.events = [];

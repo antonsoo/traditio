@@ -1,0 +1,22 @@
+[
+  {
+    "browser": "chromium",
+    "oldEdition": "b4ed162cc324456b713a",
+    "newEdition": "078e4efae6893a8c2325",
+    "controllerAtOpen": true,
+    "status": "Checking this edition’s offline files…",
+    "fault": "The downloaded sources/NOTICE.txt does not match this edition. Reload the page before trying again.",
+    "editableDownloadPreserved": true,
+    "olderTabPreserved": true
+  },
+  {
+    "browser": "firefox",
+    "oldEdition": "b4ed162cc324456b713a",
+    "newEdition": "078e4efae6893a8c2325",
+    "controllerAtOpen": false,
+    "status": "Preparing this edition for offline reading…",
+    "fault": "Both histories, their selected points and your explanation have been saved.",
+    "editableDownloadPreserved": true,
+    "olderTabPreserved": true
+  }
+]

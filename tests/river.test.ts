@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  branchRiver,
+  compareRiverEvidence,
   evaluateRiver,
   makeRiverCase,
   makeRiverRecord,
@@ -84,6 +86,35 @@ test("inspecting the past never applies later roots or changes the saved future"
   assert.equal(evaluateRiver({ ...current, at: 3 }).owner, "Aulus");
   assert.equal(evaluateRiver({ ...current, at: 0 }).state.arrived, false);
   assert.deepEqual(current, original);
+});
+test("a different continuation preserves the original ending and changes one actual fact", () => {
+  const original: RiverCase = {
+    ...c("parcel", ["root", "carry", "root", "attach"], 2),
+    lens: "digest",
+  };
+  const snapshot = structuredClone(original);
+  const { current, pinned } = branchRiver(original);
+  current.events.push("attach");
+  current.at++;
+  assert.deepEqual(original, snapshot);
+  assert.deepEqual(pinned.events, ["root", "carry", "root", "attach"]);
+  assert.equal(pinned.at, 4);
+  assert.deepEqual(current.events, ["root", "carry", "attach"]);
+  assert.equal(evaluateRiver(pinned).owner, "Aulus");
+  assert.equal(evaluateRiver(current).owner, "Lucius");
+  assert.match(compareRiverEvidence(pinned, current), /Only rooting in the receiving soil differs/);
+  current.events.push("attach");
+  current.at++;
+  assert.match(compareRiverEvidence(current, { ...current, at: 3 }), /same physical facts/);
+  assert.match(
+    compareRiverEvidence(pinned, { ...current, lens: "institutes" }),
+    /Both the physical facts/,
+  );
+  assert.match(
+    compareRiverEvidence(pinned, { ...pinned, lens: "institutes" }),
+    /same physical facts; the selected passages differ/,
+  );
+  assert.match(compareRiverEvidence(pinned, c("silt", ["deposit"])), /different investigations/);
 });
 test("records retain pinned histories and selected points, ignore supplied outcomes, reject foreign records", () => {
   const r = makeRiverRecord();

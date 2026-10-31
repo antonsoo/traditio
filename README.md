@@ -88,7 +88,9 @@ changing the arrangement starts a new sequence while preserving the explanation.
 The local build also includes the **`river.html`** workshop.
 This companion follows land, a tree and ownership through a history. Pin the torn
 piece at arrival, add roots and long attachment, then return to arrival: later
-facts must not rewrite the earlier result. Compare that history with diffuse
+facts must not rewrite the earlier result. Keep the original ending and branch
+from arrival to test waiting without roots; the comparison names the single
+fact that differs. Compare that history with diffuse
 alluvion, a tree planted directly in another person's soil, or a flooded field.
 
 | Investigation | What the reader must distinguish                                     |
@@ -145,6 +147,11 @@ Open `http://127.0.0.1:4367/traditio/` for the production preview.
 The production edition installs its files for offline reading; the footer
 reports readiness after the controlling worker and complete inventory match.
 Development mode does not install an offline edition.
+
+If a newly opened lesson differs from the saved edition, a notice offers an
+editable download. Save work in each open lesson, close every Traditio tab, and
+reopen while connected; import the saved records to continue. This releases the
+older edition without forcing a reload that discards unsaved explanations.
 
 ## Keep a casebook
 

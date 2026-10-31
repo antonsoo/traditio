@@ -225,6 +225,21 @@ try {
         assert.equal(await standalone.locator(".reading").count(), 8);
         assert.equal(await standalone.locator("script").count(), 0);
         assert.equal(await standalone.locator("b").count(), 0);
+        await standalone.waitForFunction(() => document.fonts.status === "loaded", null, {
+          timeout: 10000,
+          polling: 100,
+        });
+        const nativeWidths = [];
+        for (const phoneWidth of width === 375 ? [320, 375] : [width]) {
+          await standalone.setViewportSize({ width: phoneWidth, height: 1000 });
+          const measured = await standalone.evaluate(() => ({
+            viewport: window.innerWidth,
+            document: document.documentElement.scrollWidth,
+          }));
+          assert.equal(measured.document, measured.viewport, "Standalone reading overflows screen");
+          nativeWidths.push(measured);
+        }
+        reading.widths = nativeWidths;
         const nativeDownload = standalone.waitForEvent("download");
         await standalone
           .getByRole("link", { name: "Download editable histories", exact: true })
@@ -282,6 +297,25 @@ try {
           await standalone.screenshot({ path: resolve(output, "standalone.png") });
         }
         await nativeContext.close();
+        // Keep the original ending, then test a continuation lacking new roots.
+        await p.locator('[data-river-at="1"]').click();
+        await p.locator("#river-branch").focus();
+        await p.keyboard.press("Enter");
+        assert.equal(await owner(p), "Lucius");
+        await fact(p, "attach");
+        assert.equal(await owner(p), "Lucius");
+        await says(p, "river-comparison-note", "Only rooting in the receiving soil differs");
+        const branched = JSON.parse((await download(p, "river-save-record")).toString());
+        assert.deepEqual(branched.pinned.events, ["carry", "root", "attach"]);
+        assert.equal(branched.pinned.at, 3);
+        assert.deepEqual(branched.current.events, ["carry", "attach"]);
+        assert.equal(branched.current.at, 2);
+        assert.equal(branched.note, saved.note);
+        const branchedReading = await download(p, "river-save-reading");
+        checkReading(branchedReading, branched);
+        assert.ok(
+          branchedReading.toString().includes("Only rooting in the receiving soil differs"),
+        );
         // File reopen, foreign-file rejection, and explicit links preserve the two timelines.
         await p.selectOption("#river-route", "silt");
         await fact(p, "deposit");
@@ -343,10 +377,14 @@ try {
           reachedFromBothExistingLessons: true,
           originalAddressKept: true,
           nativeScriptFreeReopen: true,
+          differentContinuationPreservesOriginalEnding: true,
           realOriginOfflineReloadAndExport: true,
           axeViolations: axe.violations.length,
           runtimeErrors: errors,
         });
+        console.log(
+          `${name} ${width}: river facts, native reading, phone widths, and real outage passed`,
+        );
         await context.close();
       }
       // Refuse a substituted page of the correct length; do not download it in a reading.

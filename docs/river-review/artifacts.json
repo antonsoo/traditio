@@ -17,18 +17,18 @@
     },
     {
       "path": "reading.html.gz",
-      "bytes": 4829840,
-      "sha256": "89ab900a02b5d473e0d43b47f3aadcb3db4be2e55eb17c23a5d715d3f02dec5f"
+      "bytes": 4829806,
+      "sha256": "663e4e3e0340a58ec09a1861876bd756c6c9887cda26f0ef9dad664e2b957c91"
     },
     {
       "path": "reading.pdf",
-      "bytes": 4721020,
-      "sha256": "7ff7d7a2672647ceeb05be014b4c261c4c86f450b408ba543460cb7c67e1a6fa"
+      "bytes": 4720940,
+      "sha256": "56fd90a1178bd43a2a9be796b510247bab63287c4d71db9ff3ac571efc84b229"
     }
   ],
   "pdf": {
     "pages": 26,
-    "words": 5112,
+    "words": 5104,
     "wordsOutside35PointMargins": 0,
     "tagged": true
   }

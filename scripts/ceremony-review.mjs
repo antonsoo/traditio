@@ -256,6 +256,18 @@ for (const [name, engine] of [
     await doc.goto(`file://${file}`);
     assert.equal(await doc.locator("img").count(), 4);
     assert.equal(await doc.locator("script").count(), 0);
+    await doc.waitForFunction(() => document.fonts.status === "loaded", null, {
+      timeout: 10000,
+      polling: 100,
+    });
+    for (const phoneWidth of width === 375 ? [320, 375] : [width]) {
+      await doc.setViewportSize({ width: phoneWidth, height: 1000 });
+      assert.equal(
+        await doc.evaluate(() => document.documentElement.scrollWidth),
+        phoneWidth,
+        "Standalone rehearsal overflows screen",
+      );
+    }
     assert.deepEqual(requests, []);
     if (name === "chromium" && width === 1440) {
       await doc.pdf({

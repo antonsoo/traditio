@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-29T23:25:30.924Z",
+  "date": "2026-10-31T09:10:41.874Z",
   "build": {
-    "indexSha256": "975305ca2609b005eb4a7ac4586710dc7748ceb5513380215a8c42e22e2f0144",
-    "workerSha256": "0b241769358207c0bbca2a5b454d157b473c7b07a269033c78a2332b2383a993"
+    "indexSha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+    "workerSha256": "86354842bb472cade3ee6d1648ecaef854cbca49cbc802b96893f70e21ecae65"
   },
   "browsers": [
     {
@@ -11,9 +11,11 @@
       "failedInstallationReported": true,
       "failedInstallationRecovered": true,
       "corruptCacheAndServerRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
       "exactCacheRecovery": true,
       "oldReaderKeepsEdition": true,
       "newEditionActivatesAfterReaderCloses": true,
+      "companionPageHasCurrentEditionIdentity": true,
       "cancellationPreservesCasesAndFocus": true,
       "stalledExportTimesOut": true,
       "noCanceledOrTimedOutDownload": true,
@@ -26,9 +28,11 @@
       "failedInstallationReported": true,
       "failedInstallationRecovered": true,
       "corruptCacheAndServerRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
       "exactCacheRecovery": true,
       "oldReaderKeepsEdition": true,
       "newEditionActivatesAfterReaderCloses": true,
+      "companionPageHasCurrentEditionIdentity": true,
       "cancellationPreservesCasesAndFocus": true,
       "stalledExportTimesOut": true,
       "noCanceledOrTimedOutDownload": true,

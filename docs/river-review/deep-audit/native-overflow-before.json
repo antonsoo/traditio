@@ -1,0 +1,178 @@
+[
+  {
+    "browser": "chromium",
+    "width": 375,
+    "documentWidth": 482,
+    "issues": [
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f.",
+        "client": 339,
+        "scroll": 464
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e.",
+        "client": 339,
+        "scroll": 453
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad.",
+        "client": 339,
+        "scroll": 461
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35.",
+        "client": 339,
+        "scroll": 457
+      }
+    ]
+  },
+  {
+    "browser": "firefox",
+    "width": 375,
+    "documentWidth": 477,
+    "issues": [
+      {
+        "tag": "A",
+        "text": "Gaius · Institutes 2.71",
+        "client": 0,
+        "scroll": 159
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · Institutes 2.71",
+        "client": 0,
+        "scroll": 50
+      },
+      {
+        "tag": "A",
+        "text": "Digest 41.1.7.2",
+        "client": 0,
+        "scroll": 108
+      },
+      {
+        "tag": "A",
+        "text": "Digest 41.1.7.2",
+        "client": 0,
+        "scroll": 108
+      },
+      {
+        "tag": "A",
+        "text": "Digest 41.1.7.2",
+        "client": 0,
+        "scroll": 108
+      },
+      {
+        "tag": "A",
+        "text": "Digest 41.1.7.2",
+        "client": 0,
+        "scroll": 108
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · p. 160",
+        "client": 0,
+        "scroll": 98
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · p. 161",
+        "client": 0,
+        "scroll": 42
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · p. 161",
+        "client": 0,
+        "scroll": 98
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · p. 161",
+        "client": 0,
+        "scroll": 98
+      },
+      {
+        "tag": "A",
+        "text": "Gaius · p. 161",
+        "client": 0,
+        "scroll": 98
+      },
+      {
+        "tag": "A",
+        "text": "Digest · p. 644",
+        "client": 0,
+        "scroll": 103
+      },
+      {
+        "tag": "A",
+        "text": "Digest · p. 644",
+        "client": 0,
+        "scroll": 103
+      },
+      {
+        "tag": "A",
+        "text": "Digest · p. 645",
+        "client": 0,
+        "scroll": 103
+      },
+      {
+        "tag": "A",
+        "text": "Digest · p. 644",
+        "client": 0,
+        "scroll": 103
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f.",
+        "client": 339,
+        "scroll": 459
+      },
+      {
+        "tag": "A",
+        "text": "Digitized volume, this page",
+        "client": 0,
+        "scroll": 162
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e.",
+        "client": 339,
+        "scroll": 453
+      },
+      {
+        "tag": "A",
+        "text": "Digitized volume, this page",
+        "client": 0,
+        "scroll": 162
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: 32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad.",
+        "client": 339,
+        "scroll": 457
+      },
+      {
+        "tag": "A",
+        "text": "Digitized volume, this page",
+        "client": 0,
+        "scroll": 162
+      },
+      {
+        "tag": "P",
+        "text": "Digitized volume, this page. Source identity: e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35.",
+        "client": 339,
+        "scroll": 456
+      },
+      {
+        "tag": "A",
+        "text": "Digitized volume, this page",
+        "client": 0,
+        "scroll": 162
+      }
+    ]
+  }
+]

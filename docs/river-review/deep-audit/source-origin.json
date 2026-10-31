@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-31T09:08:02.130Z",
+  "files": [
+    {
+      "path": "sources/poste-1904-p160.jpg",
+      "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n223.jpg",
+      "finalURL": "https://ia802804.us.archive.org/BookReader/BookReaderImages.php?id=gaiinstitutiones00gaiuuoft&itemPath=%2F0%2Fitems%2Fgaiinstitutiones00gaiuuoft&server=ia802804.us.archive.org&page=n223.jpg",
+      "status": 200,
+      "bytes": 761350,
+      "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f",
+      "matchesRetained": true
+    },
+    {
+      "path": "sources/poste-1904-p161.jpg",
+      "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n224.jpg",
+      "finalURL": "https://ia802804.us.archive.org/BookReader/BookReaderImages.php?id=gaiinstitutiones00gaiuuoft&itemPath=%2F0%2Fitems%2Fgaiinstitutiones00gaiuuoft&server=ia802804.us.archive.org&page=n224.jpg",
+      "status": 200,
+      "bytes": 659128,
+      "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e",
+      "matchesRetained": true
+    },
+    {
+      "path": "sources/mommsen-1893-p644.jpg",
+      "source": "https://archive.org/download/corpusiuriscivil00krueuoft/page/n759.jpg",
+      "finalURL": "https://ia800602.us.archive.org/BookReader/BookReaderImages.php?id=corpusiuriscivil00krueuoft&itemPath=%2F1%2Fitems%2Fcorpusiuriscivil00krueuoft&server=ia800602.us.archive.org&page=n759.jpg",
+      "status": 200,
+      "bytes": 1361386,
+      "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad",
+      "matchesRetained": true
+    },
+    {
+      "path": "sources/mommsen-1893-p645.jpg",
+      "source": "https://archive.org/download/corpusiuriscivil00krueuoft/page/n760.jpg",
+      "finalURL": "https://ia600602.us.archive.org/BookReader/BookReaderImages.php?id=corpusiuriscivil00krueuoft&itemPath=%2F1%2Fitems%2Fcorpusiuriscivil00krueuoft&server=ia600602.us.archive.org&page=n760.jpg",
+      "status": 200,
+      "bytes": 1475726,
+      "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
+      "matchesRetained": true
+    }
+  ]
+}
