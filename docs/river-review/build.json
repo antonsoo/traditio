@@ -1,5 +1,8 @@
 {
-  "edition": "078e4efae6893a8c2325",
+  "at": "2026-10-31T09:17:50.033Z",
+  "sourceCommit": "885ba4c0274cd09b4079012e060a079185ea4724",
+  "node": "v24.22.1",
+  "edition": "4306c92e70096d986156",
   "files": [
     {
       "path": "LICENSE.txt",
@@ -7,9 +10,9 @@
       "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
     },
     {
-      "path": "assets/ceremony-BShAXsge.js",
-      "bytes": 31136,
-      "sha256": "f5dbf5d00f3086d44ed69343fce62c946928e772e66bc15249c016155b9c8a29"
+      "path": "assets/ceremony-VpBg49cW.js",
+      "bytes": 31179,
+      "sha256": "fef9fa6db68b19a77639ce295ca5ab3d3df5aa7c8e766df51e60775ef0a93e9b"
     },
     {
       "path": "assets/ceremony-ydxke2BF.css",
@@ -17,39 +20,39 @@
       "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
     },
     {
-      "path": "assets/export-CH2HlBOj.js",
-      "bytes": 16312,
-      "sha256": "dcf8b4ea84f704640b81f6b71fef8391e2901a6dde0c7877c1cf4fedf2ede034"
+      "path": "assets/export-CEfCVFKl.js",
+      "bytes": 16335,
+      "sha256": "7783e4dcf8f9118d08a1eb11c97af5637abbbd6973f0ae8654da2e989edf0700"
     },
     {
-      "path": "assets/index-BuT3GiaU.js",
-      "bytes": 15776,
-      "sha256": "967b6779386c27982b06638134214b823cde3bed8881dba7ef41fcac55d3db61"
+      "path": "assets/index-BAqMizpR.js",
+      "bytes": 15791,
+      "sha256": "a5cf56c511f27df30d14e9736f0217160e69ed777cbab6327bb7c9542948be61"
     },
     {
-      "path": "assets/offline-DRTFYWQO.css",
-      "bytes": 16576,
-      "sha256": "16c89fca4345b9ce354f8444c3626e52753bb094336f4984680abf6a18e726e5"
+      "path": "assets/offline-CNlZnn8W.js",
+      "bytes": 39403,
+      "sha256": "57b162bb364ddc7ca3cd1936c44ede258a51027217c0e08c9ed72178f814199e"
     },
     {
-      "path": "assets/offline-DvCm0TwZ.js",
-      "bytes": 38221,
-      "sha256": "bc9155e6b14e136ddab9ee707cdf5de8416bc200ce09356d5b0cb3f2da0d4e9c"
+      "path": "assets/offline-DZQv702L.css",
+      "bytes": 16780,
+      "sha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548"
     },
     {
-      "path": "assets/river-DYp8An1n.css",
-      "bytes": 5155,
-      "sha256": "8005a655d563fcdeb944e218aac7f7402042fc28e53fd28b146231fdb833f33d"
+      "path": "assets/river-CfvLC7-9.js",
+      "bytes": 47918,
+      "sha256": "e770bfa1c75d44e2109ff6775a08c08a4815fc639f017b1a587ff0264e3dd1dc"
     },
     {
-      "path": "assets/river-DrgQywbN.js",
-      "bytes": 46694,
-      "sha256": "194b07f49966064d5d036aad2b8b363ad86524c63ce188d725fde0e3ac0728ec"
+      "path": "assets/river-D62mRMFH.css",
+      "bytes": 5236,
+      "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2"
     },
     {
       "path": "ceremony.html",
       "bytes": 8942,
-      "sha256": "598227fe1d7cbc7263b788f28518fbef553958a9ea34f0736c5896623ed1faff"
+      "sha256": "c33d60f22ac5f8c0d11a746f396255fde33b4fc9935cd8fa9e48bc0eb4aa022a"
     },
     {
       "path": "favicon.svg",
@@ -84,12 +87,12 @@
     {
       "path": "index.html",
       "bytes": 17357,
-      "sha256": "727ecfb2be19ff98045502db2db0cd317fb01f3894d740f9b69b5a0539a9d9cd"
+      "sha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b"
     },
     {
       "path": "river.html",
-      "bytes": 10378,
-      "sha256": "405be2717fe0a89712cd21b40fc5b15e074b375a55ede172f9dfbef1309c7e63"
+      "bytes": 10760,
+      "sha256": "5ebdce2abe283ad3a930778c9534284035a2980e463a0a5c27000b70305d053f"
     },
     {
       "path": "sources/NOTICE.txt",
@@ -169,11 +172,9 @@
     {
       "path": "sw.js",
       "bytes": 8496,
-      "sha256": "8bf4d9d6c85750bd65668fcc15c5900418cc713fe86cd0311ec7d8d852717d1d"
+      "sha256": "86354842bb472cade3ee6d1648ecaef854cbca49cbc802b96893f70e21ecae65"
     }
   ],
-  "base": "/traditio/",
-  "output": "dist/",
-  "inventoryFiles": 33,
-  "workerExcludedFromInventory": true
+  "cleanInstallCheckBuildPassed": true,
+  "byteIdenticalToOperatedBuild": true
 }
