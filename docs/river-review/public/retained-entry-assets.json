@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-31T09:22:36.527Z",
+  "previous": "c2a48813c345518d958846945bffb2ddd8deb141",
+  "files": [
+    {
+      "path": "assets/ceremony-D6aUH9Y-.js",
+      "bytes": 31102,
+      "sha256": "e0f2b156db0c4fda928c7f12cbd11757351e9f664e04754a8d68b213a55b0b55",
+      "matchesPreviousPublication": true
+    },
+    {
+      "path": "assets/ceremony-ydxke2BF.css",
+      "bytes": 3333,
+      "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d",
+      "matchesPreviousPublication": true
+    },
+    {
+      "path": "assets/index-BJMnLbUV.js",
+      "bytes": 15779,
+      "sha256": "230034ef0d73c090086b90c5d2a9514d639a4c2c29f2ddb60dabd2ef4348e23c",
+      "matchesPreviousPublication": true
+    },
+    {
+      "path": "assets/offline-B6D61xFC.css",
+      "bytes": 16505,
+      "sha256": "e0a45e9985c4dadf50d85e16a40e8db6988c4b2c3ce50b5db6e72c0f1b457aca",
+      "matchesPreviousPublication": true
+    },
+    {
+      "path": "assets/offline-B9xv_ZyR.js",
+      "bytes": 53107,
+      "sha256": "45d688ad131ccf0f851ba0117e8e01a75db6c41e93db609d242f6c6d5b125c15",
+      "matchesPreviousPublication": true
+    }
+  ]
+}

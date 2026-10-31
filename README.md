@@ -85,7 +85,7 @@ changing the arrangement starts a new sequence while preserving the explanation.
 
 ## The bank moved. Did the title?
 
-The local build also includes the **`river.html`** workshop.
+[Open the river workshop](https://antonsoo.github.io/traditio/river.html#river-bench).
 This companion follows land, a tree and ownership through a history. Pin the torn
 piece at arrival, add roots and long attachment, then return to arrival: later
 facts must not rewrite the earlier result. Keep the original ending and branch
@@ -109,7 +109,7 @@ Eight Latin readings, new close English, 23 contextual phrase notes and four
 complete printed pages support the histories. Brown roots remain in the carried
 piece; new green roots cross into the receiving soil. Long attachment is a distinct
 stipulated fact with no invented number of years. Rejected attempts remain visible.
-The new workshop is linked from both existing lessons in the local build.
+The river workshop is linked from both existing lessons.
 
 Editable JSON, explicit history links, an every-point comparison CSV, an accessible
 SVG and a script-free illustrated HTML reading preserve the work. The retained
@@ -118,9 +118,10 @@ Native downloads still work when the HTML is reopened with scripts disabled.
 
 ![The carried piece and its new roots, with the ownership result and source selection](docs/river-review/local/chromium-1440.png)
 
-See the [source mapping, limits and direct browser review](docs/river-audit.md).
-This addition is locally verified; its publication is not asserted. After starting
-the preview below, open `http://127.0.0.1:4367/traditio/river.html`.
+See the [source mapping, limits and direct browser review](docs/river-audit.md)
+and [public delivery audit](docs/river-publication.md).
+The same workshop is included in the local preview at
+`http://127.0.0.1:4367/traditio/river.html`.
 
 ## Run locally
 

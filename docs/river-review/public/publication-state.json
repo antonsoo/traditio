@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-31T10:29:04.616Z",
+  "refs": "6575bdad4919ec80c056361bec1eacedc063aa5d\trefs/heads/gh-pages\nec81539b6e3dbd6d8db4a58ac80d57f56b69b915\trefs/heads/main",
+  "pages": {
+    "url": "https://api.github.com/repos/antonsoo/traditio/pages",
+    "status": "built",
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://antonsoo.github.io/traditio/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "runs": [
+    {
+      "id": 41192345602,
+      "name": "Pages",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "ec81539b6e3dbd6d8db4a58ac80d57f56b69b915"
+    },
+    {
+      "id": 41192345565,
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "ec81539b6e3dbd6d8db4a58ac80d57f56b69b915"
+    },
+    {
+      "id": 41188213932,
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "6575bdad4919ec80c056361bec1eacedc063aa5d"
+    },
+    {
+      "id": 41188175372,
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "25fbef3208d1acd47491733ea196b69ec398d203"
+    },
+    {
+      "id": 41188175369,
+      "name": "Pages",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "25fbef3208d1acd47491733ea196b69ec398d203"
+    }
+  ],
+  "jobs": [
+    {
+      "run": 41192345565,
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": 0
+        }
+      ]
+    },
+    {
+      "run": 41192345602,
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": 0
+        }
+      ]
+    }
+  ],
+  "applicationBuildSource": "885ba4c0274cd09b4079012e060a079185ea4724",
+  "deployment": "6575bdad4919ec80c056361bec1eacedc063aa5d",
+  "previousDeployment": "c2a48813c345518d958846945bffb2ddd8deb141"
+}

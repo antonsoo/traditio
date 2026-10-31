@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 0,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/traditio/",
+  "state": "verified",
+  "attempts": 1,
+  "startedAtUtc": "2026-10-31T10:21:38.039Z",
+  "checkedAtUtc": "2026-10-31T10:21:42.880Z",
+  "buildManifestSha256": "96fea6fce98e6e0fcc39e24bdef520442c5941c048c28397e37b024e2a708c35",
+  "expectedFileCount": 34,
+  "checkedFileCount": 34,
+  "verifiedFileCount": 34,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 17357,
+    "sha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+    "url": "https://antonsoo.github.io/traditio/",
+    "httpStatus": 200,
+    "observedBytes": 17357,
+    "observedSha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 17357,
+    "sha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+    "url": "https://antonsoo.github.io/traditio/",
+    "httpStatus": 200,
+    "observedBytes": 17357,
+    "observedSha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "url": "https://antonsoo.github.io/traditio/LICENSE.txt",
+      "httpStatus": 200,
+      "observedBytes": 1071,
+      "observedSha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "state": "verified"
+    },
+    {
+      "path": "assets/ceremony-VpBg49cW.js",
+      "bytes": 31179,
+      "sha256": "fef9fa6db68b19a77639ce295ca5ab3d3df5aa7c8e766df51e60775ef0a93e9b",
+      "url": "https://antonsoo.github.io/traditio/assets/ceremony-VpBg49cW.js",
+      "httpStatus": 200,
+      "observedBytes": 31179,
+      "observedSha256": "fef9fa6db68b19a77639ce295ca5ab3d3df5aa7c8e766df51e60775ef0a93e9b",
+      "state": "verified"
+    },
+    {
+      "path": "assets/ceremony-ydxke2BF.css",
+      "bytes": 3333,
+      "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d",
+      "url": "https://antonsoo.github.io/traditio/assets/ceremony-ydxke2BF.css",
+      "httpStatus": 200,
+      "observedBytes": 3333,
+      "observedSha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d",
+      "state": "verified"
+    },
+    {
+      "path": "assets/export-CEfCVFKl.js",
+      "bytes": 16335,
+      "sha256": "7783e4dcf8f9118d08a1eb11c97af5637abbbd6973f0ae8654da2e989edf0700",
+      "url": "https://antonsoo.github.io/traditio/assets/export-CEfCVFKl.js",
+      "httpStatus": 200,
+      "observedBytes": 16335,
+      "observedSha256": "7783e4dcf8f9118d08a1eb11c97af5637abbbd6973f0ae8654da2e989edf0700",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-BAqMizpR.js",
+      "bytes": 15791,
+      "sha256": "a5cf56c511f27df30d14e9736f0217160e69ed777cbab6327bb7c9542948be61",
+      "url": "https://antonsoo.github.io/traditio/assets/index-BAqMizpR.js",
+      "httpStatus": 200,
+      "observedBytes": 15791,
+      "observedSha256": "a5cf56c511f27df30d14e9736f0217160e69ed777cbab6327bb7c9542948be61",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-CNlZnn8W.js",
+      "bytes": 39403,
+      "sha256": "57b162bb364ddc7ca3cd1936c44ede258a51027217c0e08c9ed72178f814199e",
+      "url": "https://antonsoo.github.io/traditio/assets/offline-CNlZnn8W.js",
+      "httpStatus": 200,
+      "observedBytes": 39403,
+      "observedSha256": "57b162bb364ddc7ca3cd1936c44ede258a51027217c0e08c9ed72178f814199e",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-DZQv702L.css",
+      "bytes": 16780,
+      "sha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548",
+      "url": "https://antonsoo.github.io/traditio/assets/offline-DZQv702L.css",
+      "httpStatus": 200,
+      "observedBytes": 16780,
+      "observedSha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548",
+      "state": "verified"
+    },
+    {
+      "path": "assets/river-CfvLC7-9.js",
+      "bytes": 47918,
+      "sha256": "e770bfa1c75d44e2109ff6775a08c08a4815fc639f017b1a587ff0264e3dd1dc",
+      "url": "https://antonsoo.github.io/traditio/assets/river-CfvLC7-9.js",
+      "httpStatus": 200,
+      "observedBytes": 47918,
+      "observedSha256": "e770bfa1c75d44e2109ff6775a08c08a4815fc639f017b1a587ff0264e3dd1dc",
+      "state": "verified"
+    },
+    {
+      "path": "assets/river-D62mRMFH.css",
+      "bytes": 5236,
+      "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2",
+      "url": "https://antonsoo.github.io/traditio/assets/river-D62mRMFH.css",
+      "httpStatus": 200,
+      "observedBytes": 5236,
+      "observedSha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2",
+      "state": "verified"
+    },
+    {
+      "path": "ceremony.html",
+      "bytes": 8942,
+      "sha256": "c33d60f22ac5f8c0d11a746f396255fde33b4fc9935cd8fa9e48bc0eb4aa022a",
+      "url": "https://antonsoo.github.io/traditio/ceremony.html",
+      "httpStatus": 200,
+      "observedBytes": 8942,
+      "observedSha256": "c33d60f22ac5f8c0d11a746f396255fde33b4fc9935cd8fa9e48bc0eb4aa022a",
+      "state": "verified"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 270,
+      "sha256": "576cf2ac3bede0e9ccfd21a4e08e59ce4850826239253d6a8eef8d2c4d466a00",
+      "url": "https://antonsoo.github.io/traditio/favicon.svg",
+      "httpStatus": 200,
+      "observedBytes": 270,
+      "observedSha256": "576cf2ac3bede0e9ccfd21a4e08e59ce4850826239253d6a8eef8d2c4d466a00",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "url": "https://antonsoo.github.io/traditio/fonts/literata-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4389,
+      "observedSha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "url": "https://antonsoo.github.io/traditio/fonts/literata.woff2",
+      "httpStatus": 200,
+      "observedBytes": 396664,
+      "observedSha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "url": "https://antonsoo.github.io/traditio/fonts/provenance.json",
+      "httpStatus": 200,
+      "observedBytes": 637,
+      "observedSha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "url": "https://antonsoo.github.io/traditio/fonts/sourcesans3-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4579,
+      "observedSha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "url": "https://antonsoo.github.io/traditio/fonts/sourcesans3.woff2",
+      "httpStatus": 200,
+      "observedBytes": 170188,
+      "observedSha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17357,
+      "sha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+      "url": "https://antonsoo.github.io/traditio/index.html",
+      "httpStatus": 200,
+      "observedBytes": 17357,
+      "observedSha256": "ab4d9c8f32ba796c757dad672274b1192e2753c119d25bb3943619658d9b7d3b",
+      "state": "verified"
+    },
+    {
+      "path": "river.html",
+      "bytes": 10760,
+      "sha256": "5ebdce2abe283ad3a930778c9534284035a2980e463a0a5c27000b70305d053f",
+      "url": "https://antonsoo.github.io/traditio/river.html",
+      "httpStatus": 200,
+      "observedBytes": 10760,
+      "observedSha256": "5ebdce2abe283ad3a930778c9534284035a2980e463a0a5c27000b70305d053f",
+      "state": "verified"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3668,
+      "sha256": "40052a21554333939aa9a1734244777801cf0d85b431e12ee90043d75d6a9237",
+      "url": "https://antonsoo.github.io/traditio/sources/NOTICE.txt",
+      "httpStatus": 200,
+      "observedBytes": 3668,
+      "observedSha256": "40052a21554333939aa9a1734244777801cf0d85b431e12ee90043d75d6a9237",
+      "state": "verified"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 5191,
+      "sha256": "327693bdfc21eb8be29c4eb807412c01ac3b2a1f7b6ba2710f3f675d5a6b08a4",
+      "url": "https://antonsoo.github.io/traditio/sources/manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 5191,
+      "observedSha256": "327693bdfc21eb8be29c4eb807412c01ac3b2a1f7b6ba2710f3f675d5a6b08a4",
+      "state": "verified"
+    },
+    {
+      "path": "sources/mommsen-1893-p644.jpg",
+      "bytes": 1361386,
+      "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad",
+      "url": "https://antonsoo.github.io/traditio/sources/mommsen-1893-p644.jpg",
+      "httpStatus": 200,
+      "observedBytes": 1361386,
+      "observedSha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad",
+      "state": "verified"
+    },
+    {
+      "path": "sources/mommsen-1893-p645.jpg",
+      "bytes": 1475726,
+      "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
+      "url": "https://antonsoo.github.io/traditio/sources/mommsen-1893-p645.jpg",
+      "httpStatus": 200,
+      "observedBytes": 1475726,
+      "observedSha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p133.jpg",
+      "bytes": 695670,
+      "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p133.jpg",
+      "httpStatus": 200,
+      "observedBytes": 695670,
+      "observedSha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p134.jpg",
+      "bytes": 766313,
+      "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p134.jpg",
+      "httpStatus": 200,
+      "observedBytes": 766313,
+      "observedSha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p135.jpg",
+      "bytes": 606314,
+      "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p135.jpg",
+      "httpStatus": 200,
+      "observedBytes": 606314,
+      "observedSha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p146.jpg",
+      "bytes": 714508,
+      "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p146.jpg",
+      "httpStatus": 200,
+      "observedBytes": 714508,
+      "observedSha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p147.jpg",
+      "bytes": 726668,
+      "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p147.jpg",
+      "httpStatus": 200,
+      "observedBytes": 726668,
+      "observedSha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p148.jpg",
+      "bytes": 739943,
+      "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p148.jpg",
+      "httpStatus": 200,
+      "observedBytes": 739943,
+      "observedSha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p149.jpg",
+      "bytes": 724335,
+      "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p149.jpg",
+      "httpStatus": 200,
+      "observedBytes": 724335,
+      "observedSha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p160.jpg",
+      "bytes": 761350,
+      "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p160.jpg",
+      "httpStatus": 200,
+      "observedBytes": 761350,
+      "observedSha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p161.jpg",
+      "bytes": 659128,
+      "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p161.jpg",
+      "httpStatus": 200,
+      "observedBytes": 659128,
+      "observedSha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p74.jpg",
+      "bytes": 702149,
+      "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p74.jpg",
+      "httpStatus": 200,
+      "observedBytes": 702149,
+      "observedSha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/poste-1904-p75.jpg",
+      "bytes": 761383,
+      "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+      "url": "https://antonsoo.github.io/traditio/sources/poste-1904-p75.jpg",
+      "httpStatus": 200,
+      "observedBytes": 761383,
+      "observedSha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 8496,
+      "sha256": "86354842bb472cade3ee6d1648ecaef854cbca49cbc802b96893f70e21ecae65",
+      "url": "https://antonsoo.github.io/traditio/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 8496,
+      "observedSha256": "86354842bb472cade3ee6d1648ecaef854cbca49cbc802b96893f70e21ecae65",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

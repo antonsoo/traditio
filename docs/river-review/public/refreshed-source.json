@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-31T10:23:51.112Z",
+  "commit": "ec81539b6e3dbd6d8db4a58ac80d57f56b69b915",
+  "files": [
+    {
+      "path": "docs/ceremony-audit.md",
+      "bytes": 12861,
+      "sha256": "eed856a6663d22fc6981e951c6d8a6f12cb6848eb3ca53ffc84385a3cc6ac64e",
+      "equalPinnedBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/rehearsal.html.gz",
+      "bytes": 3378652,
+      "sha256": "d266a83428e4a4e6a3b756ee2b42c3a253a45d7e19518ab731692d377217b6f3",
+      "equalPinnedBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/rehearsal.pdf",
+      "bytes": 3213116,
+      "sha256": "b99bd46f8dc8f13ab49c2f180074654b5faddfe62a67dc213ccad4a22f0dd6b0",
+      "equalPinnedBlob": true
+    },
+    {
+      "path": "docs/ceremony-review/local/review.json",
+      "bytes": 9601,
+      "sha256": "a6f6c8cd79c4eb20762f80a9a1333b0ae47e0f85c54b63dd030905b5f8486fe7",
+      "equalPinnedBlob": true
+    },
+    {
+      "path": "scripts/verify-sources.mjs",
+      "bytes": 3616,
+      "sha256": "d6b1058810327f4e42663ac48eb56d259032bd03500fc0b4fb320a4575568887",
+      "equalPinnedBlob": true
+    },
+    {
+      "path": "scripts/byte-identity.mjs",
+      "bytes": 693,
+      "sha256": "5957ef255172c5937b516067701a96e12a6d755422330fdf82d84bb99384f2a9",
+      "equalPinnedBlob": true
+    }
+  ]
+}

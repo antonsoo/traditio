@@ -175,8 +175,7 @@ No package or tag release was made.
 A later publication audit found that this lesson's retained illustrated reading
 had not been regenerated after the shared source notice and portable phone styles
 changed. Its editable rehearsal facts were identical; the saved HTML was stale.
-The current reading and PDF were regenerated through the full four-browser/width
-rehearsal journey. The same four source scans and both fonts remain embedded.
+The current reading and PDF were regenerated through the full rehearsal journey in both browsers at both widths. The same four source scans and both fonts remain embedded.
 
 | Retained HTML     | Uncompressed bytes | SHA-256                                                            |
 | ----------------- | ------------------ | ------------------------------------------------------------------ |
