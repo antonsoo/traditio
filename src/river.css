@@ -1,0 +1,357 @@
+.river-opening {
+  padding-bottom: 2rem;
+}
+.river-opening h1 {
+  font-size: clamp(2.6rem, 4.8vw, 4.5rem);
+}
+.river-bench {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.68fr) minmax(0, 1.7fr);
+  border-block: 1px solid var(--ink);
+}
+.river-controls {
+  padding: 1.3rem 1.6rem 1.4rem 0;
+}
+.river-controls > label,
+.river-reading-control > label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 650;
+  margin-bottom: 0.5rem;
+}
+.river-controls > select {
+  width: 100%;
+}
+.river-controls > p {
+  font-size: 0.94rem;
+}
+.river-controls h3 {
+  margin-top: 1.4rem;
+}
+.river-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.river-actions button {
+  text-align: left;
+  min-height: 3rem;
+  background: #fcfdff;
+}
+.river-actions button:hover {
+  background: var(--board);
+}
+.river-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+.river-tools button {
+  font-size: 0.82rem;
+  padding: 0.45rem 0.6rem;
+  font-weight: 450;
+}
+.river-stage {
+  background: var(--board);
+  padding: 1rem 1.5rem;
+}
+.river-stage-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.river-stage svg,
+.river-paired svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.river-ownership {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-block: 1px solid #b5c3d1;
+}
+.river-ownership span {
+  font-size: 0.9rem;
+}
+.river-ownership strong {
+  font-family: Literata, serif;
+  font-size: 1.5rem;
+  color: var(--violet);
+}
+.river-stage h3 {
+  margin-top: 1rem;
+}
+.river-stage > p {
+  font-size: 0.94rem;
+}
+.river-reading-control {
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.3rem 1rem;
+}
+.river-reading-control label {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.river-reading-control select {
+  width: 100%;
+}
+.river-feedback {
+  border-block: 1px solid var(--line);
+  padding: 0.8rem 0;
+  min-height: 3.5rem;
+}
+.river-history-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.3rem;
+}
+.river-history-heading button {
+  font-size: 0.85rem;
+}
+.river-timeline {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 0.6rem;
+}
+.river-timeline li {
+  flex: 1 1 140px;
+  max-width: 230px;
+}
+.river-timeline button {
+  width: 100%;
+  min-height: 4.7rem;
+  border-radius: 0;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 450;
+}
+.river-timeline button strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.river-timeline button[aria-current="step"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fcfdff;
+}
+.river-timeline .refused {
+  border-style: dashed;
+}
+.river #river-log-details {
+  margin: 1.5rem 0;
+}
+.river #river-log li {
+  margin: 0.8rem 0;
+}
+.river #river-log li p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+.river-compare {
+  margin: 3rem 0;
+}
+.river-compare .section-heading {
+  align-items: center;
+}
+.river-compare > p {
+  max-width: 75ch;
+}
+.river-paired {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.river-paired h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.river-table-wrap {
+  overflow-x: auto;
+}
+.river-table-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.river-table-wrap caption {
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-bottom: 0.8rem;
+}
+.river-table-wrap th,
+.river-table-wrap td {
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  width: 33.33%;
+}
+.river-table-wrap .changed {
+  background: #f0eadc;
+}
+.river .reader-grid > div {
+  min-width: 0;
+}
+.river #river-passage {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.river-phrases {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.river-phrases button {
+  font-family: Literata, serif;
+  font-size: 0.83rem;
+  font-weight: 450;
+  padding: 0.45rem 0.7rem;
+}
+.river-phrases button[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fcfdff;
+}
+.river-word {
+  margin: 1rem 0 1.4rem;
+  border-block: 1px solid var(--line);
+  padding: 0.8rem 0;
+  min-height: 5rem;
+  font-size: 0.94rem;
+}
+.river-word p {
+  margin: 0.3rem 0;
+}
+.river-viewport {
+  overflow: auto;
+  height: 650px;
+  background: #e3e9ee;
+  border: 1px solid var(--line);
+}
+.river-viewport img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.river-viewport.enlarged img {
+  width: 1300px;
+  max-width: none;
+}
+.river .scan-toolbar {
+  flex-wrap: wrap;
+}
+.river .scan-toolbar select {
+  max-width: 100%;
+}
+.river .scan-toolbar label {
+  flex-basis: 100%;
+}
+.river #river-related button {
+  margin-right: 1rem;
+}
+.river #river-keep textarea {
+  width: 100%;
+  min-height: 8rem;
+}
+.river #river-save-status {
+  overflow-wrap: anywhere;
+}
+.river #river-copy-url {
+  width: 100%;
+}
+@media (max-width: 760px) {
+  .river-opening {
+    gap: 1rem;
+  }
+  .river-opening h1 br {
+    display: initial;
+  }
+  .river-bench {
+    grid-template-columns: 1fr;
+  }
+  .river-controls {
+    padding: 1.2rem 0;
+  }
+  .river-controls h3 {
+    margin-top: 1rem;
+  }
+  .river-actions {
+    gap: 0.5rem;
+  }
+  .river-stage {
+    margin-inline: -1rem;
+    padding: 0.8rem 1rem;
+  }
+  .river-stage svg {
+    min-width: 0;
+  }
+  .river-stage svg text,
+  .river-paired svg text {
+    font-size: 26px;
+  }
+  .river-ownership {
+    align-items: flex-start;
+  }
+  .river-ownership strong {
+    font-size: 1.22rem;
+    text-align: right;
+  }
+  .river-reading-control {
+    grid-template-columns: 1fr;
+  }
+  .river-reading-control .text-button {
+    justify-self: start;
+  }
+  .river-history-heading {
+    align-items: flex-start;
+  }
+  .river-history-heading > div {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .river-timeline li {
+    flex-basis: 130px;
+    max-width: none;
+  }
+  .river-paired {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .river-compare .section-heading {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .river-table-wrap th,
+  .river-table-wrap td {
+    padding: 0.5rem 0.35rem;
+    overflow-wrap: anywhere;
+  }
+  .river-table-wrap table {
+    font-size: 0.8rem;
+  }
+  .river-viewport {
+    height: 520px;
+  }
+}
