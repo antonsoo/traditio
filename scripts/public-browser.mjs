@@ -14,6 +14,7 @@ const output = resolve(process.env.REVIEW_OUTPUT || "studies/publication");
 const scratch = resolve("test-results/public");
 await mkdir(output, { recursive: true });
 await mkdir(scratch, { recursive: true });
+const ownershipPaths = JSON.parse(await readFile("src/source-sets.json", "utf8")).ownership;
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 async function paths(root, prefix = "") {
   const result = [];
@@ -156,7 +157,7 @@ try {
         await says(page, "#word-note", "even though");
         const pages = [];
         for (const item of JSON.parse(await readFile("src/asset-manifest.json", "utf8")).filter(
-          (item) => item.printedPage !== null,
+          (item) => ownershipPaths.includes(item.path),
         )) {
           await page.locator("#page-select").selectOption(String(item.printedPage));
           await says(page, "#scan-status", `Printed page ${item.printedPage} · complete page`);

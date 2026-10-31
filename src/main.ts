@@ -1,5 +1,5 @@
 import "./style.css";
-import { asset, assets, verifiedBytes } from "./assets";
+import { asset, ownershipPages, verifiedBytes } from "./assets";
 import {
   type ArgumentDraft,
   assessCitations,
@@ -453,8 +453,7 @@ element<HTMLSelectElement>("reading-select").innerHTML = readings
 element("reading-select").addEventListener("change", () => {
   setReading(element<HTMLSelectElement>("reading-select").value as RuleId);
 });
-element<HTMLSelectElement>("page-select").innerHTML = assets
-  .filter((item) => item.printedPage !== null)
+element<HTMLSelectElement>("page-select").innerHTML = ownershipPages
   .sort((a, b) => (a.printedPage ?? 0) - (b.printedPage ?? 0))
   .map((item) => `<option value="${item.printedPage}">${item.printedPage}</option>`)
   .join("");

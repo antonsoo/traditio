@@ -1,4 +1,5 @@
 import manifest from "./asset-manifest.json";
+import sourceSets from "./source-sets.json";
 
 export const assets = manifest;
 export type Asset = (typeof assets)[number];
@@ -8,6 +9,9 @@ export function asset(path: string): Asset {
   if (!found) throw new Error(`Unknown retained file: ${path}`);
   return found;
 }
+
+// A new edition in another lesson must not be mislabeled as a Gaius casebook page.
+export const ownershipPages = sourceSets.ownership.map(asset);
 
 export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
   try {

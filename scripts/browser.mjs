@@ -14,6 +14,7 @@ await mkdir(output, { recursive: true });
 const scratch = resolve(process.env.REVIEW_SCRATCH || "test-results");
 await mkdir(scratch, { recursive: true });
 const manifest = JSON.parse(await readFile("src/asset-manifest.json", "utf8"));
+const ownershipPaths = JSON.parse(await readFile("src/source-sets.json", "utf8")).ownership;
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const types = {
   ".html": "text/html",
@@ -144,7 +145,7 @@ function checkSheet(bytes) {
   assert.deepEqual(
     embeddedImages.sort(),
     manifest
-      .filter((file) => file.printedPage !== null)
+      .filter((file) => ownershipPaths.includes(file.path))
       .map((file) => file.sha256)
       .sort(),
   );
@@ -289,7 +290,7 @@ try {
         await page.waitForFunction(() => document.querySelector("#scan-viewport").scrollLeft > 0);
         await page.locator("#zoom").click();
         const scannedPages = [];
-        for (const item of manifest.filter((item) => item.printedPage !== null)) {
+        for (const item of manifest.filter((item) => ownershipPaths.includes(item.path))) {
           await page.locator("#page-select").selectOption(String(item.printedPage));
           await content(page, "#scan-status", `Printed page ${item.printedPage} · complete page`);
           const actual = await scanHash(page);

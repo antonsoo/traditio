@@ -1,4 +1,4 @@
-import { asset, assets, dataUrl, verifiedBytes } from "./assets";
+import { asset, dataUrl, ownershipPages, verifiedBytes } from "./assets";
 import { type ArgumentDraft, assessCitations, assessClaim, claimFor } from "./core/argument";
 import { type Case, differences, evaluate, facts, lessonNames, story } from "./core/model";
 import { writeRecord } from "./core/record";
@@ -64,7 +64,7 @@ export async function studySheet(
   // The caller supplies captured cases. Fetches never read mutable UI state.
   const embedded = new Map<string, string>();
   const texts = new Map<string, string>();
-  const pages = assets.filter((item) => item.printedPage !== null);
+  const pages = ownershipPages;
   const files = [...pages, asset("fonts/literata.woff2"), asset("fonts/sourcesans3.woff2")];
   let done = 0;
   // Bounded batches keep the source download and base64 memory footprint modest.
@@ -103,6 +103,6 @@ export async function studySheet(
   ${readings.map((item) => `<section class="reading" id="reading-${item.id}"><p>Gaius ${escapeHtml(item.reference)}</p><h2>${escapeHtml(item.title)}</h2><p class="latin" lang="la">${escapeHtml(item.latin)}</p><h3>Close English translation</h3><p>${escapeHtml(item.english)}</p><p class="note">${escapeHtml(item.note)}</p><dl>${item.words.map((word) => `<dt lang="la">${escapeHtml(word.latin)}</dt><dd><strong>${escapeHtml(word.meaning)}.</strong> ${escapeHtml(word.job)}</dd>`).join("")}</dl><p>Printed ${item.pages.length === 1 ? "page" : "pages"}: ${item.pages.map((page) => `<a href="#page-${page}">${page}</a>`).join(", ")}.</p></section>`).join("")}
   ${pages.map((page) => `<figure class="page" id="page-${page.printedPage}"><figcaption>Poste–Whittuck, 1904. Complete printed page ${page.printedPage}.<br />The Latin and English on the page belong to that edition.</figcaption><img class="scan" alt="Complete printed page ${page.printedPage} of the 1904 Gaius edition" src="${embedded.get(page.path)}" /></figure>`).join("")}
   <section><h2>Editable case, in plain text</h2><p>Save the following text as a .json file, then use Reopen a saved case in Traditio.</p><pre>${escapeHtml(record)}</pre></section>
-  <section><h2>File identities</h2><pre>${escapeHtml(JSON.stringify(assets, null, 2))}</pre></section>
+  <section><h2>File identities</h2><pre>${escapeHtml(JSON.stringify([...files, ...[...texts.keys()].map(asset)], null, 2))}</pre></section>
   <section><h2>Licenses and source notice</h2>${[...texts].map(([path, text]) => `<h3>${escapeHtml(path)}</h3><pre>${escapeHtml(text)}</pre>`).join("")}</section></body></html>`;
 }
