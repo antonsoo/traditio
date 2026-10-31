@@ -5,10 +5,10 @@ cannot settle: a bank can gain land without the receiving landowner acquiring
 an identifiable piece carried there. The learner keeps the history and inspects
 the Latin condition, rather than inferring ownership from the object's location.
 
-This is a local addition. No push, deployment or remote-CI result is asserted.
 Build with `npm run build`; the complete static edition is `dist/`. With
 `npm run preview`, open `http://127.0.0.1:4367/traditio/river.html`.
-Both existing lessons link to it in this build.
+Both existing lessons link to it. This document retains the source mapping and
+local reproductions; public delivery is audited separately.
 
 ## Try the actual work
 
@@ -235,9 +235,9 @@ gzip -dc docs/river-review/local/reading.html.gz > /tmp/traditio-river-reading.h
 ```
 
 The complete production build uses base `/traditio/`; its offline inventory is
-generated from its output files. Hosted bytes, remote source synchronization,
-remote CI and public catalogue discovery have not been verified for this local
-addition. No external publication action was taken.
+generated from its output files. The local evidence above establishes the
+reviewed build and browser behavior. Hosted bytes, remote source synchronization,
+remote CI and public catalogue discovery are separate verification boundaries.
 
 Suggested repository description: **Read Roman ownership through changing facts,
 Latin sources and visual histories.** Topics: `roman-law`, `latin`, `gaius`,
