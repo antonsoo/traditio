@@ -23,3 +23,10 @@ for (const item of manifest) {
 console.log(
   `${manifest.length} source, font and license files match their retained SHA-256 identities.`,
 );
+const artifacts = JSON.parse(await readFile("docs/river-review/artifacts.json", "utf8")).artifacts;
+for (const item of artifacts) {
+  const bytes = await readFile(`docs/river-review/local/${item.path}`);
+  assert.equal(bytes.length, item.bytes, item.path);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), item.sha256, item.path);
+}
+console.log(`${artifacts.length} native river artifacts match their retained byte identities.`);

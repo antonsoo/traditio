@@ -4,3 +4,4 @@
 public/fonts/* -text
 public/fonts/*-OFL.txt -whitespace
 public/sources/*.jpg -text
+docs/river-review/local/*.csv -text -whitespace

@@ -121,6 +121,9 @@ actual source, font and licence bytes, supports cancellation, and uses the share
 asset request. Its native JSON, CSV and SVG anchors work without JavaScript.
 The every-point CSV includes whether each point is the inspected one and its
 source passage, including refused attempts and later facts still in the record.
+Its native CRLF bytes are preserved by Git. The browser review regenerates the
+artifact receipt and checks printed word margins; `verify:sources` also verifies
+all five retained native artifacts against that receipt.
 
 Adding the second edition exposed a shared-manifest integration hazard: the
 ownership reader and casebook used every file with a printed-page number, then

@@ -23,6 +23,7 @@ const sourcePaths = [
 ];
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const report = { at: new Date().toISOString(), origin: server.base, journeys: [], faults: [] };
+let retainedPdf;
 const says = (p, id, text) =>
   p.waitForFunction(
     ({ id, text }) => document.getElementById(id)?.textContent.includes(text),
@@ -256,6 +257,28 @@ try {
             "Copyright (c) 2026 Anthony Mercer",
           ])
             assert.ok(text.includes(phrase), `Missing PDF phrase: ${phrase}`);
+          const bbox = execFileSync("pdftotext", ["-bbox", pdf, "-"]).toString();
+          const pages = [
+            ...bbox.matchAll(/<page width="([^"]+)" height="([^"]+)">([\s\S]*?)<\/page>/g),
+          ];
+          let words = 0;
+          assert.ok(pages.length > 0);
+          for (const [, width, height, content] of pages) {
+            for (const word of content.matchAll(
+              /<word xMin="([^"]+)" yMin="([^"]+)" xMax="([^"]+)" yMax="([^"]+)">/g,
+            )) {
+              words++;
+              assert.ok(
+                Number(word[1]) >= 35 &&
+                  Number(word[2]) >= 35 &&
+                  Number(word[3]) <= Number(width) - 35 &&
+                  Number(word[4]) <= Number(height) - 35,
+                "PDF word exceeds the checked margin",
+              );
+            }
+          }
+          assert.match(execFileSync("pdfinfo", [pdf]).toString(), /Tagged:\s+yes/);
+          retainedPdf = { pages: pages.length, words, wordsOutside35PointMargins: 0, tagged: true };
           await standalone.screenshot({ path: resolve(output, "standalone.png") });
         }
         await nativeContext.close();
@@ -425,6 +448,23 @@ try {
     } finally {
       await browser.close();
     }
+  }
+  if (retainedPdf) {
+    const artifacts = [];
+    for (const path of [
+      "histories.json",
+      "histories.csv",
+      "history.svg",
+      "reading.html.gz",
+      "reading.pdf",
+    ]) {
+      const bytes = await readFile(resolve(output, path));
+      artifacts.push({ path, bytes: bytes.length, sha256: hash(bytes) });
+    }
+    await writeFile(
+      resolve(output, "../artifacts.json"),
+      `${JSON.stringify({ artifacts, pdf: retainedPdf }, null, 2)}\n`,
+    );
   }
   await writeFile(resolve(output, "report.json"), `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
