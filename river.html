@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#172b43"/>
+  <meta name="description" content="The river moves land. Does ownership move with it? Build and compare histories of alluvion, torn land, roots and flooding, then read Gaius’s Latin beside complete source pages."/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; worker-src 'self'"/>
+  <link rel="icon" type="image/svg+xml" href="/traditio/favicon.svg"/><title>Traditio — the bank moved. Did the title?</title>
+  <script type="module" crossorigin src="/traditio/assets/river-CfvLC7-9.js"></script>
+  <link rel="modulepreload" crossorigin href="/traditio/assets/offline-CNlZnn8W.js">
+  <link rel="stylesheet" crossorigin href="/traditio/assets/offline-DZQv702L.css">
+  <link rel="stylesheet" crossorigin href="/traditio/assets/river-D62mRMFH.css">
+<meta name="traditio-edition" content="4306c92e70096d986156"></head>
+<body class="river">
+<a class="skip" href="#river-bench">Skip to the river</a>
+<header class="masthead"><a class="wordmark" href="./"><span class="mark" aria-hidden="true">t</span>traditio</a><span class="masthead-note">Land, roots, and a river</span><nav aria-label="Page"><a href="./">Ownership cases</a><a href="./ceremony.html">Formal acts</a><a href="#river-reader">Read the Latin</a><a href="#river-keep">Keep a history</a></nav></header>
+<main>
+  <div class="opening river-opening"><h1>The bank moved.<br/>Did the title?</h1><div><p class="intro">A piece of Lucius’s estate reaches Aulus’s bank.<br/>It is still Lucius’s. The past matters.</p><p class="context">Build a history, keep a comparison, and ask which Latin sentence can decide it. Gaius’s second-century <i>Institutes</i> meet a fuller account preserved in the <i>Digest</i> of 533.</p></div></div>
+  <section id="river-bench" aria-labelledby="river-bench-title">
+    <h2 id="river-bench-title" class="visually-hidden">Follow the land and its ownership</h2>
+    <div class="river-bench">
+      <div class="river-controls">
+        <label for="river-route">What happens?</label><select id="river-route"><option value="parcel">A piece torn away</option><option value="silt">Imperceptible accretion</option><option value="plant">A transplanted tree</option><option value="flood">A flooded field</option></select>
+        <p id="river-story"></p>
+        <h3>Add a fact to the end.</h3><p class="small">The buttons supply facts. They do not measure a real river, grow real roots, or count years.</p><div id="river-actions" class="river-actions"></div>
+        <div class="river-tools"><button id="river-undo" type="button">Undo last attempt</button><button id="river-reset" type="button">Start this history again</button></div>
+      </div>
+      <div class="river-stage">
+        <div class="river-stage-heading"><span id="river-point">At arrival</span><button id="river-save-svg" class="text-button" type="button">Save this drawing</button></div>
+        <div id="river-scene"></div><p id="river-diagram-key" class="small">Brown roots stay within the carried piece. New green roots enter the receiving soil; brass marks show long attachment.</p>
+        <div class="river-ownership"><span id="river-focus-label">Ownership of the carried piece</span><strong id="river-owner">Lucius</strong></div>
+        <p id="river-last" class="small" hidden></p><h3 id="river-headline">The carried piece remains Lucius’s.</h3><p id="river-reason"></p>
+        <div class="river-reading-control"><label for="river-lens">Read this history with</label><select id="river-lens"><option value="institutes">Gaius · Institutes 2.70–74</option><option value="digest">Digest · excerpts attributed to Gaius</option></select><button id="river-read-condition" type="button" class="text-button">Read the condition</button></div>
+        <p class="small">The selector changes the available passages. It does not establish a date when the law changed.</p>
+      </div>
+    </div>
+    <p id="river-feedback" role="status" class="river-feedback">The piece is already at Aulus’s bank. Try adding roots, then inspect what the selected text actually says.</p>
+    <div class="river-history-heading"><h3>Return to an earlier point.</h3><div><button id="river-back" type="button">Previous</button><button id="river-next" type="button">Next</button></div></div>
+    <ol id="river-timeline" class="river-timeline" aria-label="Recorded history"></ol>
+    <p class="small">A point records an attempt, including refused attempts. Inspecting the past keeps later facts in the record; new facts are added at the end.</p>
+    <div class="river-branch"><button id="river-branch" type="button" aria-describedby="river-branch-help" disabled>Keep original ending and branch here</button><p id="river-branch-help" class="small">Inspect an earlier point to try a different continuation. Branching pins the original ending and starts a new history from that past. This replaces the pinned comparison.</p></div>
+    <details id="river-log-details"><summary>Reasons for every attempt <span id="river-count"></span></summary><ol id="river-log"></ol></details>
+  </section>
+  <section id="river-compare" class="river-compare" aria-labelledby="river-compare-title">
+    <div class="section-heading"><div><p class="source-ref">Keep the evidence while you change the question</p><h2 id="river-compare-title">Same bank. Different history.</h2></div><button id="river-pin" type="button">Pin this point for comparison</button></div>
+    <p id="river-pin-help">Pin the carried piece at arrival, then choose imperceptible accretion and establish the addition. The same drawn footprint can have a different owner because its material history differs.</p>
+    <div id="river-comparison" hidden><div class="river-paired"><div><h3>Pinned point</h3><div id="river-pinned-scene"></div></div><div><h3>Current point</h3><div id="river-current-small"></div></div></div><div class="river-table-wrap"><table id="river-table"></table></div><p id="river-comparison-note"></p><div class="button-row"><button id="river-restore" type="button">Restore pinned history</button><button id="river-unpin" type="button">Remove comparison</button><button id="river-csv" type="button">Save comparison CSV</button></div></div>
+  </section>
+  <section id="river-reader" class="reader" aria-labelledby="river-reader-title">
+    <div class="section-heading"><div><p class="source-ref">The small words do the legal work</p><h2 id="river-reader-title">Remains. Provided that. From that time.</h2></div></div>
+    <div class="reader-grid"><div>
+      <label for="river-passage">Passage</label><select id="river-passage"></select><h3 id="river-passage-title">This piece remains yours</h3><p id="river-latin" class="latin" lang="la"></p>
+      <fieldset id="river-phrases" class="river-phrases" aria-label="Explore a Latin phrase"></fieldset><div id="river-word" class="river-word" role="status"></div>
+      <details open><summary>Close English translation</summary><p id="river-english"></p></details><p id="river-editorial" class="editorial"></p><div id="river-related" class="small"></div>
+      <p class="small">New English and word notes. Latin joins line breaks and prints consonantal u as v. Printed spellings remain. The whole pages retain their context and editorial apparatus.</p>
+    </div><div>
+      <div class="scan-toolbar"><label for="river-page">Complete printed page</label><select id="river-page"></select><button id="river-zoom" type="button" aria-pressed="false">Enlarge page</button></div><p id="river-scan-status" class="small" role="status"></p>
+      <!-- biome-ignore lint/a11y/noNoninteractiveTabindex: enlarged source page needs keyboard panning -->
+      <section id="river-viewport" class="river-viewport" tabindex="0" aria-label="Complete printed page; use arrow keys to pan when enlarged"><img id="river-scan" alt="" hidden/></section>
+      <p class="small"><a id="river-page-link" href="https://archive.org/details/gaiinstitutiones00gaiuuoft">Open this page in the digitized volume</a> · <button id="river-retry" type="button" class="text-button">Reload page</button></p>
+    </div></div>
+  </section>
+  <section id="river-keep" class="keep" aria-labelledby="river-keep-title"><div><h2 id="river-keep-title">Keep the history, and the limit of its evidence.</h2><p>Save both timelines, their selected points, your explanation, all eight readings, word notes and the complete source pages. The illustrated reading opens on its own and can be printed.</p><label for="river-note">Your explanation (optional)</label><textarea id="river-note" maxlength="1500" rows="5" placeholder="Which fact makes the difference? Which passage supports it? What does the shorter text leave open?"></textarea><p class="small">Up to 1,500 characters. Retained as written, not graded. A copied link includes this explanation.</p></div><div><div class="button-row"><button id="river-save-reading" class="primary" type="button">Save illustrated reading</button><button id="river-save-record" type="button">Save editable histories</button><button id="river-copy" type="button">Copy history link</button></div><label class="file-label" for="river-open">Reopen saved histories<input id="river-open" type="file" accept=".json,application/json"/></label><button id="river-cancel" type="button" hidden>Cancel preparation</button><p id="river-save-status" class="small" role="status">Files stay in your browser. Nothing is uploaded. Save explicitly before leaving.</p><div id="river-copy-fallback" hidden><label for="river-copy-url">Copy this link</label><input id="river-copy-url" readonly/></div></div></section>
+  <section id="river-scope" class="scope"><h2>The boundary of the model.</h2><div id="river-scope-text"></div><p><a href="./sources/manifest.json">Retained-file provenance and checksums</a> · <a href="https://droitromain.univ-grenoble-alpes.fr/Corpus/d-41.htm">Compare the Digest transcription</a> · <a href="https://www.thelatinlibrary.com/gaius2.html">Compare the Institutes transcription</a></p></section>
+</main>
+<footer><p>Traditio · Anthony Mercer · <a href="./LICENSE.txt">MIT license</a></p><p id="offline-status" role="status">Checking offline availability…</p><p><a href="./fonts/literata-OFL.txt">Literata</a> / <a href="./fonts/sourcesans3-OFL.txt">Source Sans 3</a></p></footer>
+<noscript><p>This workshop needs JavaScript. Its <a href="./sources/manifest.json">retained source pages</a> remain available.</p></noscript>
+</body></html>
