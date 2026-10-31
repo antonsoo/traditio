@@ -83,6 +83,43 @@ changing the arrangement starts a new sequence while preserving the explanation.
 [Actual illustrated rehearsal, gzip](docs/ceremony-review/local/rehearsal.html.gz) ·
 [Tagged PDF](docs/ceremony-review/local/rehearsal.pdf)
 
+## The bank moved. Did the title?
+
+The local build also includes the **`river.html`** workshop.
+This companion follows land, a tree and ownership through a history. Pin the torn
+piece at arrival, add roots and long attachment, then return to arrival: later
+facts must not rewrite the earlier result. Compare that history with diffuse
+alluvion, a tree planted directly in another person's soil, or a flooded field.
+
+| Investigation | What the reader must distinguish                                     |
+| ------------- | -------------------------------------------------------------------- |
+| Torn piece    | Physical arrival from the later attachment and rooting conditions    |
+| Alluvion      | An imperceptible increment from an identifiable piece carried intact |
+| Planted tree  | Placement from roots taking hold in the receiving soil               |
+| Flooded field | Inundation from a permanent new river channel                        |
+
+The reading selector keeps Gaius's _Institutes_ separate from excerpts attributed
+to another Gaian work in the _Digest_ of 533. A short passage's silence is shown
+as **Not settled here**, with the last express or stipulated owner separately
+identified. It is not treated as a contrary rule or evidence of a dated legal change.
+
+Eight Latin readings, new close English, 23 contextual phrase notes and four
+complete printed pages support the histories. Brown roots remain in the carried
+piece; new green roots cross into the receiving soil. Long attachment is a distinct
+stipulated fact with no invented number of years. Rejected attempts remain visible.
+The new workshop is linked from both existing lessons in the local build.
+
+Editable JSON, explicit history links, an every-point comparison CSV, an accessible
+SVG and a script-free illustrated HTML reading preserve the work. The retained
+[26-page tagged PDF](docs/river-review/local/reading.pdf) was printed from that HTML.
+Native downloads still work when the HTML is reopened with scripts disabled.
+
+![The carried piece and its new roots, with the ownership result and source selection](docs/river-review/local/chromium-1440.png)
+
+See the [source mapping, limits and direct browser review](docs/river-audit.md).
+This addition is locally verified; its publication is not asserted. After starting
+the preview below, open `http://127.0.0.1:4367/traditio/river.html`.
+
 ## Run locally
 
 From this checkout, with Node **24 or later**:
@@ -184,7 +221,7 @@ Both failure and verified recovery update every controlled page. Run
 
 ## Verification and limits
 
-`npm run check` runs lint, strict type checking, sixteen tests, retained-file
+`npm run check` runs lint, strict type checking, twenty-two tests, retained-file
 verification and the production build. The tests include all 68 supported
 configurations against a manually transcribed source-concordance table, record
 round trips, counterexamples, invalid premises and distinct legal positions. This checks the code
@@ -196,6 +233,7 @@ With Playwright's Chromium and Firefox available:
 npm run test:browser
 npm run test:audit
 npm run test:ceremony
+npm run test:river
 ```
 
 The browser review operates the built site at desktop and 375px, including

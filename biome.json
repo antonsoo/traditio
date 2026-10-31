@@ -6,6 +6,7 @@
       "!dist",
       "!docs/assets",
       "!docs/ceremony-review",
+      "!docs/river-review",
       "!public",
       "!package-lock.json",
       "!examples",

@@ -1,0 +1,102 @@
+{
+  "at": "2026-10-31T08:38:17.062Z",
+  "origin": "http://127.0.0.1:41967/traditio/",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6490558,
+        "sha256": "a0bdab8c528c4a85fe1af366c1575d1be76236cf653c132587b345f522e6f1f0",
+        "pages": 4,
+        "fonts": 2
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6490558,
+        "sha256": "a0bdab8c528c4a85fe1af366c1575d1be76236cf653c132587b345f522e6f1f0",
+        "pages": 4,
+        "fonts": 2
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6490558,
+        "sha256": "a0bdab8c528c4a85fe1af366c1575d1be76236cf653c132587b345f522e6f1f0",
+        "pages": 4,
+        "fonts": 2
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6490558,
+        "sha256": "a0bdab8c528c4a85fe1af366c1575d1be76236cf653c132587b345f522e6f1f0",
+        "pages": 4,
+        "fonts": 2
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    }
+  ],
+  "faults": [
+    {
+      "browser": "chromium",
+      "substitutedSameLengthScanRefused": true,
+      "substitutedExportRefused": true,
+      "verifiedRetry": true,
+      "snapshotDuringEdits": true,
+      "cancellation": true,
+      "delayedImportPreservesNewerWork": true
+    },
+    {
+      "browser": "firefox",
+      "substitutedSameLengthScanRefused": true,
+      "substitutedExportRefused": true,
+      "verifiedRetry": true,
+      "snapshotDuringEdits": true,
+      "cancellation": true,
+      "delayedImportPreservesNewerWork": true
+    }
+  ]
+}

@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — 2026-10-31
+
+- Follow river deposits, a torn parcel, a transplanted tree and a flooded field
+  through replayable histories, with pinned comparisons and explicit source limits.
+- Read eight Latin passages beside four complete pages from the 1904 Gaius and
+  1893 Mommsen editions, with close English and 23 contextual phrase notes.
+- Keep both histories and selected points in JSON or an explicit link; save
+  every-point CSV, accessible SVG and a script-free illustrated reading with
+  native downloads and embedded source pages, fonts and licenses.
+- Give the ownership reader and casebook an explicit source set, so adding a
+  Digest edition cannot label it as a page from the Gaius edition.
+- Extend the real-outage, damaged-source and cross-page readiness audit to all
+  three lessons; retain direct browser and portable-document evidence locally.
+
 ## Unreleased — 2026-10-30
 
 - Withdraw offline readiness when sources or ordinary image requests discover

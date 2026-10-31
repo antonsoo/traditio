@@ -16,6 +16,16 @@ coverage are in `src/core/argument.ts`. Record validation is in
 its public copy must agree. A changed source needs a new provenance record,
 visual page-number check and explicit update to both manifests.
 
+The river companion uses `src/core/river.ts` for source-bounded history replay,
+`src/river-content.ts` for readings, and `src/river-pages.ts` for page identities.
+Its reading selector changes the available evidence; do not turn a missing clause
+into a contrary historical rule. `src/source-sets.json` keeps the ownership
+casebook's pages explicit when another lesson adds a different edition.
+Run `npm run test:river` for real controls, downloads, native script-disabled
+reopening, source substitution, export capture and import races in both browsers
+at desktop and 375px. Run `npm run test:readiness` for the three lessons' cache
+damage, real outages, automatic cross-page invalidation and edition transitions.
+
 For interface or artifact changes, build and run `npm run test:browser` with
 Playwright's Chromium and Firefox available. The script serves the build on an
 ephemeral loopback port, exercises the actual controls and downloads, and refuses

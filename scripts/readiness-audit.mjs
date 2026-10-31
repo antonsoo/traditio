@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, firefox } from "playwright";
 import { reviewServer } from "./review-server.mjs";
@@ -29,11 +29,25 @@ const views = [
     image: "#ceremony-scan",
     note: "#ceremony-note",
   },
+  {
+    id: "river",
+    route: "river.html",
+    select: "#river-page",
+    page: "d1",
+    path: "sources/mommsen-1893-p644.jpg",
+    retry: "#river-retry",
+    status: "#river-scan-status",
+    image: "#river-scan",
+    note: "#river-note",
+  },
 ];
 const out = resolve(process.argv[2] || "test-results/readiness");
 await mkdir(out, { recursive: true });
 const a = resolve(out, "a/dist"),
   b = resolve(out, "b/dist");
+// Repeated audits must not turn unused files from a previous build into edition B.
+await rm(resolve(out, "a"), { recursive: true, force: true });
+await rm(resolve(out, "b"), { recursive: true, force: true });
 await cp("dist", a, { recursive: true });
 await cp("dist", b, { recursive: true });
 const edition = (html) =>
@@ -44,7 +58,7 @@ await writeFile(
   `${await readFile(`${b}/favicon.svg`, "utf8")}\n<!-- Readiness audit B -->\n`,
 );
 // Strip a generated identity before asking the builder for a distinct edition.
-for (const file of ["index.html", "ceremony.html"]) {
+for (const file of ["index.html", "ceremony.html", "river.html"]) {
   const path = `${b}/${file}`;
   await writeFile(
     path,
@@ -274,7 +288,8 @@ try {
         date: new Date().toISOString(),
         editionA,
         editionB,
-        syntheticInventoryEvents: false,
+        failureRecoveryTriggeredByRealRequests: true,
+        syntheticForeignMessagesTestedAndIgnored: true,
         results,
       },
       null,

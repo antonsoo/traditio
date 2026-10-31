@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-31T08:39:21.530Z",
+  "editionA": "078e4efae6893a8c2325",
+  "editionB": "05dd1b47dc87e080df62",
+  "failureRecoveryTriggeredByRealRequests": true,
+  "syntheticForeignMessagesTestedAndIgnored": true,
+  "results": [
+    {
+      "browser": "chromium",
+      "page": "index.html",
+      "emulatedOfflineSourceStatus": "Could not load sources/poste-1904-p133.jpg (HTTP 503). Try again when the file is available.",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": null
+    },
+    {
+      "browser": "chromium",
+      "page": "ceremony.html",
+      "emulatedOfflineSourceStatus": "Could not load sources/poste-1904-p74.jpg (HTTP 503). Try again when the file is available.",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "chromium",
+      "page": "river.html",
+      "emulatedOfflineSourceStatus": "Could not load sources/mommsen-1893-p644.jpg (HTTP 503). Try again when the file is available.",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "chromium",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    },
+    {
+      "browser": "firefox",
+      "page": "index.html",
+      "emulatedOfflineSourceStatus": "Printed page 133 · complete page · source bytes checked",
+      "explicitFailureWithdrawsReadiness": null,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": null
+    },
+    {
+      "browser": "firefox",
+      "page": "ceremony.html",
+      "emulatedOfflineSourceStatus": "Printed page 74. Complete image checked against the retained edition.",
+      "explicitFailureWithdrawsReadiness": null,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "firefox",
+      "page": "river.html",
+      "emulatedOfflineSourceStatus": "Digest · p. 644. Complete image checked against the retained edition.",
+      "explicitFailureWithdrawsReadiness": null,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "firefox",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    }
+  ]
+}

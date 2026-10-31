@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "path": "histories.json",
+      "bytes": 475,
+      "sha256": "a9b724a6b80ccf9c8bfa859606b2c4f2a5112ae6145cd7e76d4009efc6d4fb84"
+    },
+    {
+      "path": "histories.csv",
+      "bytes": 1887,
+      "sha256": "1bbce190ae3bbcb847a2892c8cd8351577e6e992c5ba88f41afe80eeb7850e96"
+    },
+    {
+      "path": "history.svg",
+      "bytes": 2842,
+      "sha256": "1f3f24eff2684a053358d97680c390173a22abf94e22ef03fb373f929e71ad50"
+    },
+    {
+      "path": "reading.html.gz",
+      "bytes": 4829840,
+      "sha256": "89ab900a02b5d473e0d43b47f3aadcb3db4be2e55eb17c23a5d715d3f02dec5f"
+    },
+    {
+      "path": "reading.pdf",
+      "bytes": 4721020,
+      "sha256": "93861e75c0f08374b3d65462b1db74a9d67fc90a3fd5930c2eee61e228ec8395"
+    }
+  ],
+  "pdf": {
+    "pages": 26,
+    "words": 5112,
+    "wordsOutside35PointMargins": 0,
+    "tagged": true
+  }
+}

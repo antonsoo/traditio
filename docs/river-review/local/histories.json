@@ -1,0 +1,23 @@
+{
+  "format": "traditio-river",
+  "version": 1,
+  "current": {
+    "route": "parcel",
+    "lens": "digest",
+    "events": [
+      "carry",
+      "root",
+      "attach"
+    ],
+    "at": 3
+  },
+  "pinned": {
+    "route": "parcel",
+    "lens": "institutes",
+    "events": [
+      "carry"
+    ],
+    "at": 1
+  },
+  "note": "At arrival the piece remains Lucius’s. The Digest requires long attachment AND new roots; ex eo tempore does not backdate title. <b>This is text.</b>"
+}

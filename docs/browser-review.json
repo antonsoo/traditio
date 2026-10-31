@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T23:16:47.256Z",
+  "date": "2026-10-31T08:27:58.756Z",
   "runtime": {
     "node": "v26.7.0",
     "platform": "linux",
@@ -7,14 +7,49 @@
   },
   "productionFiles": [
     {
-      "path": "assets/index-5zBzINvE.js",
-      "bytes": 67393,
-      "sha256": "3f623041c5d900bd6de5b0d4bb09394c71619ff6d15e607c889414ba88dc8d3e"
+      "path": "assets/ceremony-BYl5fc2J.js",
+      "bytes": 31136,
+      "sha256": "25a9031aa30b5ad4cc19f8b365e702e8cfaa3bc78ef228078777ef3ddaee6581"
     },
     {
-      "path": "assets/index-B6D61xFC.css",
+      "path": "assets/ceremony-ydxke2BF.css",
+      "bytes": 3333,
+      "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
+    },
+    {
+      "path": "assets/export-NHiq__IW.js",
+      "bytes": 16312,
+      "sha256": "61e20e30a5167d82549078b6438191b3043eaf415389ac6f86419a4cd5c7bda3"
+    },
+    {
+      "path": "assets/index-BnXo4jKl.js",
+      "bytes": 15776,
+      "sha256": "03e08bd9ed700802b0be06cf13df37e31d23b3c9fadfbe9d36b1d54ff22676df"
+    },
+    {
+      "path": "assets/offline-B6D61xFC.css",
       "bytes": 16505,
       "sha256": "e0a45e9985c4dadf50d85e16a40e8db6988c4b2c3ce50b5db6e72c0f1b457aca"
+    },
+    {
+      "path": "assets/offline-CteyGpUp.js",
+      "bytes": 38221,
+      "sha256": "bc9155e6b14e136ddab9ee707cdf5de8416bc200ce09356d5b0cb3f2da0d4e9c"
+    },
+    {
+      "path": "assets/river-CldLPLoR.js",
+      "bytes": 46694,
+      "sha256": "de9ed1de3636f1bfb8c59d3ef89c2af5bc80d0ca61d938b66140d46678b1fdb7"
+    },
+    {
+      "path": "assets/river-DRLDCS3M.css",
+      "bytes": 5118,
+      "sha256": "bc5986c466363e17cfb86f9105551ef08ca9b7fe1a779dd475162b62948ecb4e"
+    },
+    {
+      "path": "ceremony.html",
+      "bytes": 8942,
+      "sha256": "7f4e374b861f2f6e40ff9b12263a5890961f23ee46a7f55110185d0121dde912"
     },
     {
       "path": "favicon.svg",
@@ -48,8 +83,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 16971,
-      "sha256": "975305ca2609b005eb4a7ac4586710dc7748ceb5513380215a8c42e22e2f0144"
+      "bytes": 17357,
+      "sha256": "4c3e09988d17b5e44e1735e02bc2c9092b6ab3f5c23fe1e5653e70120d937ac4"
     },
     {
       "path": "LICENSE.txt",
@@ -57,14 +92,29 @@
       "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
     },
     {
+      "path": "river.html",
+      "bytes": 10378,
+      "sha256": "59bb9eb6276fb481fac139f9a5660e142226a84e0187253071c26a682ee20683"
+    },
+    {
       "path": "sources/manifest.json",
-      "bytes": 4021,
-      "sha256": "b1c26edcf261120656ebb570764a74e87d1f5e602832ff5123138c73b89f5b77"
+      "bytes": 5191,
+      "sha256": "327693bdfc21eb8be29c4eb807412c01ac3b2a1f7b6ba2710f3f675d5a6b08a4"
+    },
+    {
+      "path": "sources/mommsen-1893-p644.jpg",
+      "bytes": 1361386,
+      "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+    },
+    {
+      "path": "sources/mommsen-1893-p645.jpg",
+      "bytes": 1475726,
+      "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
     },
     {
       "path": "sources/NOTICE.txt",
-      "bytes": 2156,
-      "sha256": "028ff49992051f00f2e1299035f155b5d19813a1cbf3f88bcfbf2a5560f43c19"
+      "bytes": 3668,
+      "sha256": "40052a21554333939aa9a1734244777801cf0d85b431e12ee90043d75d6a9237"
     },
     {
       "path": "sources/poste-1904-p133.jpg",
@@ -102,6 +152,16 @@
       "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
     },
     {
+      "path": "sources/poste-1904-p160.jpg",
+      "bytes": 761350,
+      "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+    },
+    {
+      "path": "sources/poste-1904-p161.jpg",
+      "bytes": 659128,
+      "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+    },
+    {
       "path": "sources/poste-1904-p74.jpg",
       "bytes": 702149,
       "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
@@ -113,8 +173,8 @@
     },
     {
       "path": "sw.js",
-      "bytes": 5956,
-      "sha256": "0b241769358207c0bbca2a5b454d157b473c7b07a269033c78a2332b2383a993"
+      "bytes": 8496,
+      "sha256": "6c721027cc2ea1235c644a732b6eacbba217ba2685a45f14d06021f2b5e52025"
     }
   ],
   "journeys": [
@@ -123,6 +183,12 @@
       "browserVersion": "153.0.8010.12",
       "width": 1440,
       "keyboard": true,
+      "expectedResourceErrors": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 503 ()",
+          "url": "http://127.0.0.1:43829/traditio/sources/poste-1904-p148.jpg"
+        }
+      ],
       "oneFactComparison": true,
       "latinPhrase": "quamquam",
       "scannedPages": [
@@ -194,16 +260,16 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
-        "bytes": 9397765
+        "sha256": "b635887ccb8ec780f4d71bc8254fa10f46bf7c1a147580df6adfa0baa4a955d6",
+        "bytes": 9399603
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-e9b21d2df854b7b3c9b4",
-        "files": 21,
+        "name": "traditio-52736badeff6a5a277fb",
+        "files": 33,
         "controlled": true
       },
       "axeViolations": 0,
@@ -225,8 +291,8 @@
         "axeViolations": 0,
         "errors": [],
         "book": {
-          "bytes": 9406290,
-          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+          "bytes": 9408128,
+          "sha256": "11ec19ef1fa922bed54c18003b0dc743b303a4043bb38bf655f2dd491ea6c819"
         },
         "offlineIdenticalBook": true
       }
@@ -236,6 +302,12 @@
       "browserVersion": "153.0.8010.12",
       "width": 375,
       "keyboard": true,
+      "expectedResourceErrors": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 503 ()",
+          "url": "http://127.0.0.1:43829/traditio/sources/poste-1904-p148.jpg"
+        }
+      ],
       "oneFactComparison": true,
       "latinPhrase": "quamquam",
       "scannedPages": [
@@ -307,16 +379,16 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
-        "bytes": 9397765
+        "sha256": "b635887ccb8ec780f4d71bc8254fa10f46bf7c1a147580df6adfa0baa4a955d6",
+        "bytes": 9399603
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-e9b21d2df854b7b3c9b4",
-        "files": 21,
+        "name": "traditio-52736badeff6a5a277fb",
+        "files": 33,
         "controlled": true
       },
       "axeViolations": 0,
@@ -338,8 +410,8 @@
         "axeViolations": 0,
         "errors": [],
         "book": {
-          "bytes": 9406290,
-          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+          "bytes": 9408128,
+          "sha256": "11ec19ef1fa922bed54c18003b0dc743b303a4043bb38bf655f2dd491ea6c819"
         },
         "offlineIdenticalBook": true
       }
@@ -349,6 +421,7 @@
       "browserVersion": "155.0",
       "width": 1440,
       "keyboard": true,
+      "expectedResourceErrors": [],
       "oneFactComparison": true,
       "latinPhrase": "quamquam",
       "scannedPages": [
@@ -420,16 +493,16 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
-        "bytes": 9397765
+        "sha256": "b635887ccb8ec780f4d71bc8254fa10f46bf7c1a147580df6adfa0baa4a955d6",
+        "bytes": 9399603
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-e9b21d2df854b7b3c9b4",
-        "files": 21,
+        "name": "traditio-52736badeff6a5a277fb",
+        "files": 33,
         "controlled": true
       },
       "axeViolations": 0,
@@ -451,8 +524,8 @@
         "axeViolations": 0,
         "errors": [],
         "book": {
-          "bytes": 9406290,
-          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+          "bytes": 9408128,
+          "sha256": "11ec19ef1fa922bed54c18003b0dc743b303a4043bb38bf655f2dd491ea6c819"
         },
         "offlineIdenticalBook": true
       }
@@ -462,6 +535,7 @@
       "browserVersion": "155.0",
       "width": 375,
       "keyboard": true,
+      "expectedResourceErrors": [],
       "oneFactComparison": true,
       "latinPhrase": "quamquam",
       "scannedPages": [
@@ -533,16 +607,16 @@
         },
         "pages": 9,
         "fonts": 2,
-        "sha256": "d563057b82c4f5e38deb56410dcbd01832a6a1101b738cb68973cfdabe86fab3",
-        "bytes": 9397765
+        "sha256": "b635887ccb8ec780f4d71bc8254fa10f46bf7c1a147580df6adfa0baa4a955d6",
+        "bytes": 9399603
       },
       "standaloneRequests": [],
       "offlineIdenticalSheet": true,
       "offlineTransport": "All origin TCP connections refused; actual document reload",
       "missingCacheReportedAndRepaired": true,
       "cacheState": {
-        "name": "traditio-e9b21d2df854b7b3c9b4",
-        "files": 21,
+        "name": "traditio-52736badeff6a5a277fb",
+        "files": 33,
         "controlled": true
       },
       "axeViolations": 0,
@@ -564,8 +638,8 @@
         "axeViolations": 0,
         "errors": [],
         "book": {
-          "bytes": 9406290,
-          "sha256": "861d1cc041fe0ad29aec0f706feb1a6e7a6581a12472e9d9305af73436a69355"
+          "bytes": 9408128,
+          "sha256": "11ec19ef1fa922bed54c18003b0dc743b303a4043bb38bf655f2dd491ea6c819"
         },
         "offlineIdenticalBook": true
       }
