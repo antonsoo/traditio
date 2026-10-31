@@ -169,3 +169,22 @@ No package or tag release was made.
 - [Public artifact identities](ceremony-review/public/artifact-identities.json)
 - [Actual public entry screenshot](ceremony-review/public/entry.png)
 - [Deployment and workflow state](ceremony-review/publication-state.json)
+
+## Retained reading refreshed on 31 October
+
+A later publication audit found that this lesson's retained illustrated reading
+had not been regenerated after the shared source notice and portable phone styles
+changed. Its editable rehearsal facts were identical; the saved HTML was stale.
+The current reading and PDF were regenerated through the full four-browser/width
+rehearsal journey. The same four source scans and both fonts remain embedded.
+
+| Retained HTML     | Uncompressed bytes | SHA-256                                                            |
+| ----------------- | ------------------ | ------------------------------------------------------------------ |
+| Earlier capture   | 4,571,494          | `d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440` |
+| Refreshed capture | 4,573,041          | `e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432` |
+
+`verify:sources` now checks the actual embedded source images, fonts, source
+notice and license text in all four retained readings, in addition to their
+artifact identities. A stale source notice fails before publication. Binary
+comparisons report compact lengths and hashes while still requiring exact bytes.
+The phone review also checks the script-disabled reading at 320 and 375 pixels.

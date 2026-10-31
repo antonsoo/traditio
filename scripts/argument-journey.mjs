@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { gzipSync } from "node:zlib";
 import AxeBuilder from "@axe-core/playwright";
+import { assertSameBytes } from "./byte-identity.mjs";
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 async function says(page, selector, expected) {
@@ -265,6 +266,6 @@ export async function offlineArgument(journey) {
   await journey.page.reload({ waitUntil: "domcontentloaded" });
   await says(journey.page, "#offline-status", "This edition is available offline");
   await kind(journey.page, "counterexample");
-  assert.deepEqual(await download(journey.page, "#save-sheet"), journey.book);
+  assertSameBytes(await download(journey.page, "#save-sheet"), journey.book, "Offline argument");
   await journey.page.close();
 }

@@ -2,21 +2,21 @@
   {
     "capture": "portable-chromium-1440.html",
     "identicalTo": "rehearsal.html.gz (decompressed)",
-    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+    "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
   },
   {
     "capture": "portable-chromium-375.html",
     "identicalTo": "rehearsal.html.gz (decompressed)",
-    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+    "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
   },
   {
     "capture": "portable-firefox-1440.html",
     "identicalTo": "rehearsal.html.gz (decompressed)",
-    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+    "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
   },
   {
     "capture": "portable-firefox-375.html",
     "identicalTo": "rehearsal.html.gz (decompressed)",
-    "sha256": "d577bba809b563973b93f2d3e4d61a67a8fa7971bb2f3a313b9f7dbb61b22440"
+    "sha256": "e9cd6f6fa877a115bea61a8f968ae2372534bad5f6462fa0cd8383a011d2c432"
   }
 ]

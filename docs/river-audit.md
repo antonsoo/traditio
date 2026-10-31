@@ -242,3 +242,10 @@ remote CI and public catalogue discovery are separate verification boundaries.
 Suggested repository description: **Read Roman ownership through changing facts,
 Latin sources and visual histories.** Topics: `roman-law`, `latin`, `gaius`,
 `legal-history`, `education`, `interactive-learning`, `offline-first`.
+
+The subsequent public audit also caught an older retained ceremony reading whose
+shared source notice had not followed this addition. The editable facts were
+unchanged. Its illustrated HTML and PDF were regenerated, and `verify:sources`
+now checks actual embedded images, fonts, current notices and licenses across
+all four retained readings. See the [ceremony refresh](ceremony-audit.md#retained-reading-refreshed-on-31-october)
+and [before identities](river-review/deep-audit/ceremony-artifact-before.json).

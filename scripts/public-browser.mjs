@@ -8,6 +8,7 @@ import { resolve } from "node:path";
 import { gunzipSync } from "node:zlib";
 import { chromium, firefox } from "playwright";
 import { argumentJourney, offlineArgument } from "./argument-journey.mjs";
+import { assertSameBytes } from "./byte-identity.mjs";
 
 const base = "https://antonsoo.github.io/traditio/";
 const output = resolve(process.env.REVIEW_OUTPUT || "studies/publication");
@@ -37,7 +38,7 @@ async function canonicalFiles() {
     });
     assert.equal(response.status, 200, path);
     const actual = Buffer.from(await response.arrayBuffer());
-    assert.deepEqual(actual, local, `Canonical hosted bytes: ${path}`);
+    assertSameBytes(actual, local, `Canonical hosted bytes: ${path}`);
     results.push({ path, bytes: actual.length, sha256: hash(actual) });
   }
   return results;
@@ -218,9 +219,10 @@ try {
         };
         await openRehearsal();
         const ceremonyHtml = await downloadRehearsal();
-        assert.deepEqual(
+        assertSameBytes(
           ceremonyHtml,
           gunzipSync(await readFile("docs/ceremony-review/local/rehearsal.html.gz")),
+          "Retained illustrated rehearsal",
         );
         unavailable = true;
         for (const socket of sockets) socket.destroy();
@@ -244,7 +246,7 @@ try {
         await says(ceremony, "#offline-status", "This edition is available offline");
         await says(ceremony, "#ceremony-scan-status", "Printed page 74.");
         await openRehearsal();
-        assert.deepEqual(await downloadRehearsal(), ceremonyHtml);
+        assertSameBytes(await downloadRehearsal(), ceremonyHtml, "Offline rehearsal");
         await ceremony.close();
         await offlineArgument(argument);
         await page.reload({ waitUntil: "domcontentloaded" });
