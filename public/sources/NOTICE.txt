@@ -18,7 +18,7 @@ in the item's OCR page-number metadata. The images have not been cropped,
 retouched, generated or relabelled as an ancient manuscript.
 
 The 1904 text and faithful page reproductions are public-domain material.
-The project's MIT license covers its own code, drawings, new translations
+The project's PolyForm Noncommercial license covers its own code, drawings, new translations
 and word notes; it does not replace third-party font licenses.
 
 Transcription policy: join printed line wraps; print consonantal u as v;

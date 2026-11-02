@@ -1,8 +1,8 @@
 [
   {
     "path": "LICENSE.txt",
-    "bytes": 1071,
-    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+    "bytes": 4654,
+    "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84",
     "mime": "text/plain",
     "printedPage": null,
     "source": "Traditio project"
@@ -41,8 +41,8 @@
   },
   {
     "path": "sources/NOTICE.txt",
-    "bytes": 3668,
-    "sha256": "40052a21554333939aa9a1734244777801cf0d85b431e12ee90043d75d6a9237",
+    "bytes": 3687,
+    "sha256": "efddb96eed0efa34db8c718f693e63d4b356deb05f6334288eb89bbca9fb2f23",
     "mime": "text/plain",
     "printedPage": null,
     "source": "Traditio project"

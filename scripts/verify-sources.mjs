@@ -83,11 +83,17 @@ for (const [path, pages] of bundles) {
     "sources/NOTICE.txt",
     "fonts/literata-OFL.txt",
     "fonts/sourcesans3-OFL.txt",
-  ])
+  ]) {
+    // Readings retained before the 2026-11-01 relicense carry the MIT license and
+    // notice they were saved under; docs/licensing keeps those exact texts.
+    const accepted = [await readFile(`public/${source}`, "utf8")];
+    if (source === "LICENSE.txt" || source === "sources/NOTICE.txt")
+      accepted.push(await readFile(`docs/licensing/before-2026-11-01/${source}`, "utf8"));
     assert.ok(
-      html.includes(escapeHtml(await readFile(`public/${source}`, "utf8"))),
+      accepted.some((text) => html.includes(escapeHtml(text))),
       `${path}: retained ${source} is stale or missing`,
     );
+  }
 }
 console.log(
   `${bundles.length} retained readings contain current source images, fonts, notices and licenses.`,

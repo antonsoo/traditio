@@ -2,7 +2,7 @@
 
 **Change a fact in a Roman ownership case. Follow the title, then read the Latin.**
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-172b43)](LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-172b43)](LICENSE)
 [![Live workshop](https://img.shields.io/badge/live-workshop-286491)](https://antonsoo.github.io/traditio/)
 
 ![A mule is in Aulus's possession and in bonis, while Lucius retains civil title](docs/assets/workshop-chromium-1440.png)
@@ -278,7 +278,9 @@ English is distinct from this workshop's translations. See the
 
 ## Contributing and license
 
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`f045dde`](https://github.com/antonsoo/traditio/tree/f045dde) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
 [Contributing](CONTRIBUTING.md) describes the source and browser review process.
-Code, original drawings and new translations are [MIT](LICENSE).
+Code, original drawings and new translations are [PolyForm Noncommercial 1.0.0](LICENSE).
 The historical text and page images are public domain. Literata and Source
 Sans 3 retain their SIL Open Font Licenses under `public/fonts/`.

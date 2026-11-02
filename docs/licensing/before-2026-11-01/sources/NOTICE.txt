@@ -1,0 +1,66 @@
+Traditio retained sources
+
+Gaius, Gai Institutiones, or Institutes of Roman Law. Latin text with a
+translation and commentary by Edward Poste (1823-1902). Fourth edition,
+revised and enlarged by E. A. Whittuck (1844-1924), with an introduction
+by A. H. J. Greenidge (1865-1906). Oxford: Clarendon Press, 1904.
+
+Digitized University of Toronto copy, Internet Archive identifier:
+gaiinstitutiones00gaiuuoft
+https://archive.org/details/gaiinstitutiones00gaiuuoft
+
+Retained complete printed pages: 74, 75, 133, 134, 135, 146, 147, 148, 149,
+160, 161. Pages 160-161 were added on 2026-10-31.
+Downloaded as JPEGs from the item's page-image endpoint on 2026-10-29.
+Printed page numbers were checked against the visible images. The endpoint
+uses n=(printed page + 63) for these pages; this is not the leafNum field
+in the item's OCR page-number metadata. The images have not been cropped,
+retouched, generated or relabelled as an ancient manuscript.
+
+The 1904 text and faithful page reproductions are public-domain material.
+The project's MIT license covers its own code, drawings, new translations
+and word notes; it does not replace third-party font licenses.
+
+Transcription policy: join printed line wraps; print consonantal u as v;
+retain spelling such as conpletur, inpleta, conpetit and adfectu; use angle
+brackets for editorially supplied words and [...] for omitted text. The
+project's readable English is a new close translation, distinct from the
+1904 English visible on each page. Textual restorations are evidence of an
+editor's reading, not silent claims about a complete ancient witness.
+
+Roman law treated enslaved people as property and distributed legal
+capacity unequally. That evidence and historical translations remain in
+the complete pages. The workshop's invented cases use objects and land.
+
+Independent comparison transcription:
+https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm
+Latin cross-check:
+https://www.thelatinlibrary.com/gaius1.html
+https://www.thelatinlibrary.com/gaius2.html
+
+Every retained source/font/license file is identified by byte length and
+SHA-256 in manifest.json. Browser display and illustrated exports check
+the actual file bytes before using them.
+
+River workshop, added 2026-10-31:
+Digest of Justinian, 41.1.7.1, .2, .6, and opening of .13, attributed by the
+compilation to Gaius, book two of Res cottidianae sive aurea. The Digest
+was compiled in 533 CE; these are not extra paragraphs of Gaius's Institutes.
+No date of legal change or resolution of attribution is inferred here.
+
+Latin page evidence: Corpus Iuris Civilis, volume I, Editio stereotypa sexta,
+Institutiones recognovit Paulus Krueger; Digesta recognovit Theodorus Mommsen.
+Berlin: Weidmann, 1893 (MDCCCXCIII on the scanned title page; the Archive
+catalogue field says 1892). Complete printed pages 644-645.
+University of Toronto copy, Internet Archive: corpusiuriscivil00krueuoft
+https://archive.org/details/corpusiuriscivil00krueuoft
+https://archive.org/download/corpusiuriscivil00krueuoft/page/n759.jpg
+https://archive.org/download/corpusiuriscivil00krueuoft/page/n760.jpg
+The page-number JSON uses leafNum 760/761; the image endpoint uses n759/760.
+Printed page numbers and the Latin passages were checked in the actual images.
+The page images are unchanged, including a reader's marks. This historical
+edition and its faithful reproductions are public domain. New English and
+phrase notes are original to this lesson, not Mommsen's or a modern published
+translation. Complete page 645 retains the continuation omitted after the
+opening of 41.1.7.13. Independent Latin comparison:
+https://droitromain.univ-grenoble-alpes.fr/Corpus/d-41.htm

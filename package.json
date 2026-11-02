@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Change a fact in Gaius's Roman ownership cases and trace possession, title, and the Latin that separates them.",
   "author": "Anthony Mercer <anthony@praviel.com>",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/antonsoo/traditio.git"
