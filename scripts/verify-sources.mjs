@@ -31,6 +31,18 @@ for (const item of artifacts) {
 }
 console.log(`${artifacts.length} native river artifacts match their retained byte identities.`);
 
+const craftArtifacts = JSON.parse(
+  await readFile("docs/craft-review/artifacts.json", "utf8"),
+).artifacts;
+for (const item of craftArtifacts) {
+  const bytes = await readFile(`docs/craft-review/${item.path}`);
+  assert.equal(bytes.length, item.bytes, item.path);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), item.sha256, item.path);
+}
+console.log(
+  `${craftArtifacts.length} native craft artifacts match their retained byte identities.`,
+);
+
 // A self-consistent artifact receipt can still describe a stale reading. Compare
 // its actual embedded files and source/license text with the current sources.
 const { gunzipSync } = await import("node:zlib");
@@ -40,6 +52,10 @@ const escapeHtml = (text) =>
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
   );
 const bundles = [
+  [
+    "docs/craft-review/notebook.html.gz",
+    ["sources/poste-1904-p162.jpg", "sources/poste-1904-p163.jpg"],
+  ],
   ["examples/mistaken-heir-comparison.html.gz", ownership],
   ["examples/knowing-seller-argument.html.gz", ownership],
   [
@@ -78,7 +94,17 @@ for (const [path, pages] of bundles) {
       .sort(),
     `${path}: embedded fonts`,
   );
+  if (path === "docs/craft-review/notebook.html.gz") {
+    const native = html.match(/href="data:application\/json;charset=utf-8,([^"]+)"/);
+    assert.ok(native, "Craft reading has a native editable download");
+    assert.deepEqual(
+      JSON.parse(decodeURIComponent(native[1])),
+      JSON.parse(await readFile("docs/craft-review/notebook.json", "utf8")),
+      "Retained craft reading and editable notebook describe the same work",
+    );
+  }
   for (const source of [
+    ...(path === "docs/craft-review/notebook.html.gz" ? ["sources/work-NOTICE.txt"] : []),
     "LICENSE.txt",
     "sources/NOTICE.txt",
     "fonts/literata-OFL.txt",
@@ -87,7 +113,10 @@ for (const [path, pages] of bundles) {
     // Readings retained before the 2026-11-01 relicense carry the MIT license and
     // notice they were saved under; docs/licensing keeps those exact texts.
     const accepted = [await readFile(`public/${source}`, "utf8")];
-    if (source === "LICENSE.txt" || source === "sources/NOTICE.txt")
+    if (
+      path !== "docs/craft-review/notebook.html.gz" &&
+      (source === "LICENSE.txt" || source === "sources/NOTICE.txt")
+    )
       accepted.push(await readFile(`docs/licensing/before-2026-11-01/${source}`, "utf8"));
     assert.ok(
       accepted.some((text) => html.includes(escapeHtml(text))),
