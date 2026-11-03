@@ -283,7 +283,11 @@ async function loadPage(page: string): Promise<void> {
   el("river-scan-status").textContent = `Loading ${p.label}…`;
   el<HTMLAnchorElement>("river-page-link").href = p.url;
   try {
-    const bytes = await verifiedBytes(asset(p.path), scanController.signal);
+    const bytes = await verifiedBytes(asset(p.path), scanController.signal, (received, total) => {
+      if (id === scanId)
+        el("river-scan-status").textContent =
+          `Loading ${p.label}: ${Math.round((received / total) * 100)}% received; checking the complete file before display.`;
+    });
     if (id !== scanId) return;
     scanUrl = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     img.src = scanUrl;

@@ -190,7 +190,11 @@ async function loadPage(page: number): Promise<void> {
   el<HTMLAnchorElement>("ceremony-archive").href =
     `https://archive.org/details/gaiinstitutiones00gaiuuoft/page/n${page + 63}/mode/1up`;
   try {
-    const bytes = await verifiedBytes(file, scanController.signal);
+    const bytes = await verifiedBytes(file, scanController.signal, (received, total) => {
+      if (id === scanId)
+        el("ceremony-scan-status").textContent =
+          `Loading printed page ${page}: ${Math.round((received / total) * 100)}% received; checking the complete file before display.`;
+    });
     if (id !== scanId) return;
     const url = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     scanUrl = url;

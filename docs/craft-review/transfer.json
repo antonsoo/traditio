@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-03T23:18:34.350Z",
+  "browsers": [
+    {
+      "browser": "chromium",
+      "activeRead": {
+        "bytesPerSecond": 65536,
+        "elapsedMs": 22573,
+        "sourceSha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
+        "progressBeyondOldDeadline": true
+      },
+      "stalledRead": {
+        "fifteenSecondInactivity": true,
+        "explanationRetained": true,
+        "exactRetry": true,
+        "supersededBodyCancelled": true
+      },
+      "repair": {
+        "elapsedMs": 22892,
+        "networkBodies": 1,
+        "bothPagesReadyAfterVerification": true,
+        "otherRoomExplanationRetained": true
+      },
+      "installFailure": {
+        "partialEditionRemoved": true,
+        "editableNotebookSaved": true,
+        "reconnectedInstallationAndRestore": true
+      },
+      "coldInstall": {
+        "globalBytesPerSecond": 128000,
+        "elapsedMs": 130792,
+        "completeFiles": 39,
+        "edition": "3722d2ca45fa90c946e1",
+        "progressObserved": true,
+        "realOutageAllFourRooms": true,
+        "gzipDecodedBeforeCacheAndOfflineRead": true
+      },
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "activeRead": {
+        "bytesPerSecond": 65536,
+        "elapsedMs": 22630,
+        "sourceSha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
+        "progressBeyondOldDeadline": true
+      },
+      "stalledRead": {
+        "fifteenSecondInactivity": true,
+        "explanationRetained": true,
+        "exactRetry": true,
+        "supersededBodyCancelled": true
+      },
+      "repair": {
+        "elapsedMs": 22849,
+        "networkBodies": 1,
+        "bothPagesReadyAfterVerification": true,
+        "otherRoomExplanationRetained": true
+      },
+      "installFailure": {
+        "partialEditionRemoved": true,
+        "editableNotebookSaved": true,
+        "reconnectedInstallationAndRestore": true
+      },
+      "coldInstall": {
+        "globalBytesPerSecond": 128000,
+        "elapsedMs": 119999,
+        "completeFiles": 39,
+        "edition": "3722d2ca45fa90c946e1",
+        "progressObserved": true,
+        "realOutageAllFourRooms": true,
+        "gzipDecodedBeforeCacheAndOfflineRead": true
+      },
+      "runtimeErrors": []
+    }
+  ]
+}

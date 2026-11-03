@@ -1,0 +1,81 @@
+{
+  "observations": [
+    {
+      "observation": "before-transfer",
+      "results": [
+        {
+          "browser": "chromium",
+          "rateBytesPerSecond": 65536,
+          "sourceBytes": 1475726,
+          "elapsedSeconds": 20.055,
+          "status": "Loading sources/mommsen-1893-p645.jpg took too long. Check the connection and try again; your case has been kept.",
+          "visible": false
+        },
+        {
+          "browser": "firefox",
+          "rateBytesPerSecond": 65536,
+          "sourceBytes": 1475726,
+          "elapsedSeconds": 20.102,
+          "status": "Loading sources/mommsen-1893-p645.jpg took too long. Check the connection and try again; your case has been kept.",
+          "visible": false
+        }
+      ]
+    },
+    {
+      "observation": "after-transfer",
+      "results": [
+        {
+          "browser": "chromium",
+          "rateBytesPerSecond": 65536,
+          "sourceBytes": 1475726,
+          "elapsedSeconds": 22.865,
+          "status": "Digest \u00b7 p. 645. Complete image checked against the retained edition.",
+          "visible": true
+        },
+        {
+          "browser": "firefox",
+          "rateBytesPerSecond": 65536,
+          "sourceBytes": 1475726,
+          "elapsedSeconds": 22.903,
+          "status": "Digest \u00b7 p. 645. Complete image checked against the retained edition.",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "observation": "before-repair",
+      "results": [
+        {
+          "browser": "chromium",
+          "requestsForOneMissingFile": 3,
+          "status": "Repairing lessons and sources: 18% received. Offline readiness still needs verification.",
+          "other": "Repairing lessons and sources: 18% received. Offline readiness still needs verification."
+        },
+        {
+          "browser": "firefox",
+          "requestsForOneMissingFile": 3,
+          "status": "Repairing lessons and sources: 18% received. Offline readiness still needs verification.",
+          "other": "Repairing lessons and sources: 18% received. Offline readiness still needs verification."
+        }
+      ]
+    },
+    {
+      "observation": "after-repair",
+      "results": [
+        {
+          "browser": "chromium",
+          "requestsForOneMissingFile": 1,
+          "status": "Repairing lessons and sources: 18% received. Offline readiness still needs verification.",
+          "other": "Repairing lessons and sources: 18% received. Offline readiness still needs verification."
+        },
+        {
+          "browser": "firefox",
+          "requestsForOneMissingFile": 1,
+          "status": "Repairing lessons and sources: 18% received. Offline readiness still needs verification.",
+          "other": "Repairing lessons and sources: 18% received. Offline readiness still needs verification."
+        }
+      ]
+    }
+  ],
+  "scope": "Scratch reproductions on the earlier and interim implementations; final complete journeys are in transfer.json"
+}

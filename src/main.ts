@@ -234,7 +234,11 @@ async function loadScan(page: number): Promise<void> {
   element<HTMLAnchorElement>("archive-page").href = `${edition.url}/page/${page}/mode/1up`;
   try {
     const item = asset(`sources/poste-1904-p${page}.jpg`);
-    const bytes = await verifiedBytes(item, scanController.signal);
+    const bytes = await verifiedBytes(item, scanController.signal, (received, total) => {
+      if (id === scanRequest)
+        element("scan-status").textContent =
+          `Loading printed page ${page}: ${Math.round((received / total) * 100)}% received; checking the complete file before display.`;
+    });
     if (id !== scanRequest) return;
     const url = URL.createObjectURL(new Blob([bytes], { type: item.mime }));
     imageUrl = url;

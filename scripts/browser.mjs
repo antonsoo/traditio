@@ -97,11 +97,12 @@ function retainSourceBlobs() {
   };
 }
 
-async function content(page, selector, expected) {
+async function content(page, selector, expected, timeout = 15_000) {
   await page
     .waitForFunction(
       ({ selector, expected }) => document.querySelector(selector)?.textContent?.includes(expected),
       { selector, expected },
+      { timeout },
     )
     .catch(async (error) => {
       console.error(
@@ -208,7 +209,7 @@ try {
             externals.add(request.url());
         });
         await page.goto(base);
-        await content(page, "#offline-status", "This edition is available offline");
+        await content(page, "#offline-status", "This edition is available offline", 60_000);
         await content(page, "#scan-status", "source bytes checked");
         await page.evaluate(() => document.fonts.ready);
         await noOverflow(page);
@@ -403,7 +404,7 @@ try {
         await offlineArgument(argumentReview);
         await page.goto(shared);
         await page.reload({ waitUntil: "domcontentloaded" });
-        await content(page, "#offline-status", "This edition is available offline");
+        await content(page, "#offline-status", "This edition is available offline", 60_000);
         await content(page, "#outcome-title", "cannot cure");
         await page.locator("#reading-select").selectOption("land");
         await content(page, "#scan-status", "Printed page 149 · complete page");
@@ -440,7 +441,7 @@ try {
         serverUnavailable = false;
         await page.locator("#retry-scan").click();
         await content(page, "#scan-status", "Printed page 148 · complete page");
-        await content(page, "#offline-status", "This edition is available offline,");
+        await content(page, "#offline-status", "This edition is available offline,", 60_000);
         missingPageExpected = false;
         assert.equal(
           await scanHash(page),

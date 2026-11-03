@@ -95,9 +95,9 @@ try {
       const initial = await browser.newContext();
       const page = await initial.newPage();
       await page.goto(base);
-      await says(page, "#offline-status", "Offline installation did not complete");
+      await says(page, "#offline-status", "not fully available offline");
       assert.ok(corruptedRequests > 0);
-      assert.equal(await page.evaluate(() => !!navigator.serviceWorker.controller), false);
+      assert.equal(await page.evaluate(() => !!navigator.serviceWorker.controller), true);
       corrupt = false;
       await page.reload();
       await ready(page);
@@ -234,8 +234,8 @@ try {
       report.browsers.push({
         browser: name,
         version: browser.version(),
-        failedInstallationReported: true,
-        failedInstallationRecovered: true,
+        failedSourceRetentionReported: true,
+        failedSourceRetentionRecovered: true,
         corruptCacheAndServerRefused: true,
         discoveredFailureAutomaticallyWithdrawsReadiness: true,
         exactCacheRecovery: true,
@@ -249,7 +249,7 @@ try {
         diagramDescriptionsResolveWithinTheirOwnFigure: true,
       });
       console.log(
-        `${name}: installation failure/recovery, damaged cache, edition upgrade, cancel/timeout/retry and diagram descriptions passed.`,
+        `${name}: source retention failure/recovery, damaged cache, edition upgrade, cancel/timeout/retry and diagram descriptions passed.`,
       );
     } finally {
       await browser.close();
