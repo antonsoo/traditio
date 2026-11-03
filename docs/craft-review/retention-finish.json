@@ -1,0 +1,97 @@
+{
+  "scope": "Three fresh profiles per browser; complete fast local edition, last retained file request and console events",
+  "before": [
+    {
+      "browser": "chromium",
+      "round": 1,
+      "lastRetainedFileFailures": [
+        {
+          "errorText": "net::ERR_ABORTED"
+        }
+      ],
+      "consoleErrors": []
+    },
+    {
+      "browser": "chromium",
+      "round": 2,
+      "lastRetainedFileFailures": [
+        {
+          "errorText": "net::ERR_ABORTED"
+        }
+      ],
+      "consoleErrors": []
+    },
+    {
+      "browser": "chromium",
+      "round": 3,
+      "lastRetainedFileFailures": [
+        {
+          "errorText": "net::ERR_ABORTED"
+        }
+      ],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 1,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 2,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 3,
+      "lastRetainedFileFailures": [
+        {
+          "errorText": "NS_BINDING_ABORTED"
+        }
+      ],
+      "consoleErrors": [
+        "[JavaScript Error: \"Failed to load \u2018\u2019. A ServiceWorker intercepted the request and encountered an unexpected error.\" {file: \"http://127.0.0.1:43751/traditio/sw.js\" line: 234}]"
+      ]
+    }
+  ],
+  "after": [
+    {
+      "browser": "chromium",
+      "round": 1,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "chromium",
+      "round": 2,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "chromium",
+      "round": 3,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 1,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 2,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    },
+    {
+      "browser": "firefox",
+      "round": 3,
+      "lastRetainedFileFailures": [],
+      "consoleErrors": []
+    }
+  ]
+}

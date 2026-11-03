@@ -251,6 +251,10 @@ try {
       const cold = await browser.newContext({ viewport: { width: 375, height: 1000 } });
       await cold.addInitScript(instrument);
       const coldPage = await cold.newPage();
+      const finalFileFailures = [];
+      coldPage.on("requestfailed", (r) => {
+        if (r.url().endsWith("/sources/work-NOTICE.txt")) finalFileFailures.push(r.failure());
+      });
       coldPage.on("pageerror", (e) => errors.push(String(e)));
       const coldStart = Date.now();
       await coldPage.goto(`${server.base}river.html`, {
@@ -261,6 +265,11 @@ try {
       await says(coldPage, "river-scan-status", "Complete image checked", 180000);
       await scan(coldPage, "river-scan", large);
       await ready(coldPage, 240000);
+      assert.deepEqual(
+        finalFileFailures,
+        [],
+        "Completing storage must not cancel its last returning read",
+      );
       const coldStatuses = await coldPage.evaluate(() => window.transferStatuses);
       assert.ok(coldStatuses.some((s) => /Saving lessons and sources:/.test(s.text)));
       const edition = await coldPage
@@ -296,6 +305,7 @@ try {
         completeFiles: cacheFiles,
         edition,
         progressObserved: true,
+        finalRetainedFileNotCanceled: true,
       };
       server.limit(Infinity);
       await server.stop();

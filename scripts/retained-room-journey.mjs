@@ -33,7 +33,17 @@ export function checkEmbeddedPages(html, paths, manifest) {
 
 // Operate the newly discovered rooms on either a production preview or the real
 // publication. Return a replay that must also work when the origin is refused.
-export async function retainedRoomJourney({ context, base, kind, name, width, output, scratch }) {
+export async function retainedRoomJourney({
+  context,
+  base,
+  kind,
+  name,
+  width,
+  output,
+  scratch,
+  page: existingPage,
+  projectRoot = process.cwd(),
+}) {
   const craft = kind === "craft";
   assert.ok(craft || kind === "river");
   const prefix = craft ? "craft" : "river";
@@ -41,9 +51,11 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
   const fixture = craft
     ? "docs/craft-review/notebook.json"
     : "docs/river-review/local/histories.json";
-  const source = await readFile(fixture);
+  const source = await readFile(resolve(projectRoot, fixture));
   const record = JSON.parse(source);
-  const manifest = JSON.parse(await readFile("src/asset-manifest.json", "utf8"));
+  const manifest = JSON.parse(
+    await readFile(resolve(projectRoot, "src/asset-manifest.json"), "utf8"),
+  );
   const pages = craft
     ? [162, 163].map((p) => `sources/poste-1904-p${p}.jpg`)
     : [
@@ -52,11 +64,16 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
         "sources/mommsen-1893-p644.jpg",
         "sources/mommsen-1893-p645.jpg",
       ];
-  const page = await context.newPage();
+  const page = existingPage || (await context.newPage());
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto(base);
-  await page.locator(`a[href="./${route}"]`).first().click();
+  page.on("console", (m) => {
+    if (m.type() === "error") errors.push(m.text());
+  });
+  if (!existingPage) {
+    await page.goto(base);
+    await page.locator(`a[href="./${route}"]`).first().click();
+  }
   assert.equal(new URL(page.url()).pathname, new URL(route, base).pathname);
   await says(page, "#offline-status", "This edition is available offline,");
   const reopen = async () => {
@@ -86,6 +103,7 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
     await page.locator('[data-word="5"]').click();
     await says(page, "#craft-word", "positive qualification");
   }
+  const displayedSources = [];
   const selectedPages = craft ? ["162", "163"] : ["g160", "g161", "d1", "d2"];
   for (const [i, selected] of selectedPages.entries()) {
     await page.locator(`#${prefix}-page`).selectOption(selected);
@@ -102,6 +120,7 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
         .join("");
     });
     assert.equal(actual, identity.sha256);
+    displayedSources.push({ path: identity.path, bytes: identity.bytes, sha256: actual });
   }
   const native = `#${prefix}-save-${craft ? "json" : "record"}`;
   assert.deepEqual(JSON.parse(await download(page, native)), record);
@@ -109,7 +128,7 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
   checkEmbeddedPages(html.toString(), pages, manifest);
   const readingPath = resolve(scratch, `${name}-${width}-${kind}-hosted.html`);
   await writeFile(readingPath, html);
-  await writeFile(resolve(output, `${name}-${width}-${kind}-hosted.html.gz`), gzipSync(html));
+  await writeFile(resolve(scratch, `${name}-${width}-${kind}-hosted.html.gz`), gzipSync(html));
   const standaloneContext = await context
     .browser()
     .newContext({ javaScriptEnabled: false, offline: true, viewport: { width, height: 1000 } });
@@ -150,7 +169,9 @@ export async function retainedRoomJourney({ context, base, kind, name, width, ou
   return {
     receipt: {
       kind,
+      edition: await page.locator('meta[name="traditio-edition"]').getAttribute("content"),
       sourcePages: pages.length,
+      displayedSources,
       nativeRoundTrip: true,
       noScriptOfflineReading: true,
       bytes: html.length,

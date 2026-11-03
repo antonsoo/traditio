@@ -67,3 +67,36 @@ promise that browsers keep background pages or workers alive indefinitely.
 Files still have a total deadline, browser storage may be evicted, and a closed
 page cannot continue the window-driven saving job. Explicit JSON and standalone
 HTML downloads are separate retained copies.
+
+## Finishing a save must not cancel its returning file
+
+A public Firefox phone run exposed one further race. The worker cached the last
+file and announced restored inventory before returning its verified Response.
+The page immediately inspected again and canceled its still-returning saving
+request. Chromium reported `ERR_ABORTED` for `work-NOTICE.txt`; Firefox sometimes
+also emitted the unexpected-worker console error. The footer could still be
+correct because the bytes were saved, but the canceled read was unnecessary.
+
+```text
+Worker                         Page
+cache final verified file ---> receives restored notice
+                               cancels returning read (earlier behavior)
+return Response -------------> canceled request
+
+cache final verified file ---> defers the notice during its saving job
+return Response -------------> completes that job
+                               checks full inventory -> ready
+```
+
+The page now defers a restored notice for its current saving job until that job
+settles. An invalidation still acts immediately. If a restored notice arrived
+before a failed job settled, the page checks the actual inventory rather than
+asserting incompleteness from that canceled or failed read alone.
+
+The [before/after receipt](craft-review/retention-finish.json) records three fresh
+profiles per browser. Before the fix, Chromium canceled the last read in all
+three and Firefox reproduced both the cancellation and console error once.
+After the fix, all six completed without that canceled read or console error.
+The slow-transfer browser driver additionally requires that the final retained
+file is not canceled during a cold throttled installation. This fixes the
+reproduced race; it does not suppress or whitelist browser console errors.

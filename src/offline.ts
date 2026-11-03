@@ -45,6 +45,7 @@ export function installOffline(status: HTMLElement, saveEditable: HTMLElement): 
   const watched = new WeakSet<ServiceWorker>();
   let request = 0;
   let hasBeenReady = false;
+  let retaining: { request: number; restored: boolean } | undefined;
   let pending: (() => void) | undefined;
   type Progress = {
     type?: unknown;
@@ -247,6 +248,8 @@ export function installOffline(status: HTMLElement, saveEditable: HTMLElement): 
         navigator.onLine
       ) {
         const job = new AbortController();
+        const saving = { request: id, restored: false };
+        retaining = saving;
         const timer = window.setTimeout(
           () => job.abort(new DOMException("Offline saving took too long", "TimeoutError")),
           300_000,
@@ -254,6 +257,7 @@ export function installOffline(status: HTMLElement, saveEditable: HTMLElement): 
         const stop = () => {
           clearTimeout(timer);
           job.abort();
+          if (retaining === saving) retaining = undefined;
           if (pending === stop) pending = undefined;
         };
         pending = stop;
@@ -264,12 +268,16 @@ export function installOffline(status: HTMLElement, saveEditable: HTMLElement): 
             if (id === request) void inspect();
           })
           .catch(() => {
-            if (id === request)
-              status.textContent =
-                "This edition is not fully available offline. Save editable work before reloading to continue saving its remaining files.";
+            if (id === request) {
+              if (saving.restored) void inspect();
+              else
+                status.textContent =
+                  "This edition is not fully available offline. Save editable work before reloading to continue saving its remaining files.";
+            }
           })
           .finally(() => {
             clearTimeout(timer);
+            if (retaining === saving) retaining = undefined;
             if (pending === stop) pending = undefined;
           });
         return;
@@ -319,8 +327,16 @@ export function installOffline(status: HTMLElement, saveEditable: HTMLElement): 
     if (
       (value?.type === "inventory-invalidated" || value?.type === "inventory-restored") &&
       value.edition === expected
-    )
+    ) {
+      // The worker caches the last file before returning its verified Response.
+      // Do not cancel that still-returning read merely because storage is complete.
+      // The saving job asks for an independent full check when it settles.
+      if (value.type === "inventory-restored" && retaining?.request === request) {
+        retaining.restored = true;
+        return;
+      }
       void inspect();
+    }
   });
   window.addEventListener("traditio:asset-failure", () => {
     void inspect();

@@ -110,12 +110,14 @@ try {
   for (const [name, engine] of [
     ["chromium", chromium],
     ["firefox", firefox],
-  ]) {
+  ].filter(([name]) => !process.env.REVIEW_BROWSER || name === process.env.REVIEW_BROWSER)) {
     const browser = await engine.launch({
       proxy: { server: `http://127.0.0.1:${proxy.address().port}` },
     });
     try {
-      for (const width of [1440, 375]) {
+      for (const width of [1440, 375].filter(
+        (width) => !process.env.REVIEW_WIDTH || width === Number(process.env.REVIEW_WIDTH),
+      )) {
         unavailable = false;
         const context = await browser.newContext({
           viewport: { width, height: 1000 },
@@ -134,6 +136,22 @@ try {
         const page = await context.newPage();
         const errors = [],
           requests = new Set();
+        let phase = "initial ownership";
+        if (process.env.REVIEW_DIAGNOSTICS) {
+          page.on("console", (m) =>
+            console.log(
+              "console",
+              name,
+              width,
+              phase,
+              page.url(),
+              m.type(),
+              m.text(),
+              m.location(),
+            ),
+          );
+          page.on("requestfailed", (r) => console.log("failed", phase, r.url(), r.failure()));
+        }
         page.on("pageerror", (error) => errors.push(error.message));
         page.on("console", (message) => {
           if (message.type() === "error") errors.push(message.text());
@@ -156,6 +174,7 @@ try {
         await page.locator("#focus-read").click();
         await page.getByRole("button", { name: "quamquam", exact: true }).click();
         await says(page, "#word-note", "even though");
+        phase = "ownership source pages";
         const pages = [];
         for (const item of JSON.parse(await readFile("src/asset-manifest.json", "utf8")).filter(
           (item) => ownershipPaths.includes(item.path),
@@ -175,6 +194,7 @@ try {
         await page.keyboard.press("ArrowRight");
         await page.waitForFunction(() => document.querySelector("#scan-viewport").scrollLeft > 0);
         await page.locator("#zoom").click();
+        phase = "argument";
         const argument = await argumentJourney({
           context,
           base,
@@ -224,11 +244,13 @@ try {
           [74, 75, 134, 135].map((p) => `sources/poste-1904-p${p}.jpg`),
           JSON.parse(await readFile("src/asset-manifest.json", "utf8")),
         );
+        phase = "companion rooms";
         const retainedRooms = [];
         for (const kind of ["craft", "river"])
           retainedRooms.push(
             await retainedRoomJourney({ context, base, kind, name, width, output, scratch }),
           );
+        phase = "origin refused";
         unavailable = true;
         for (const socket of sockets) socket.destroy();
         const before = refused;
@@ -255,6 +277,7 @@ try {
         await ceremony.close();
         for (const room of retainedRooms) await room.offline();
         await offlineArgument(argument);
+        phase = "ownership offline reload";
         await page.reload({ waitUntil: "domcontentloaded" });
         await says(page, "#offline-status", "This edition is available offline");
         await page.locator("#reading-select").selectOption("land");

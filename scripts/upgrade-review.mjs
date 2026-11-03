@@ -31,6 +31,10 @@ const previousHasRiver = await readFile(`${previous}/river.html`).then(
   () => true,
   () => false,
 );
+const previousHasCraft = await readFile(`${previous}/work.html`).then(
+  () => true,
+  () => false,
+);
 const nextEdition = (await readFile("dist/index.html", "utf8")).match(
   /name="traditio-edition" content="([a-f0-9]+)"/,
 )[1];
@@ -133,13 +137,20 @@ try {
       const rehearsal = await download(ceremony, "#save-rehearsal");
       const work = await context.newPage();
       await work.goto(`${server.base}work.html`);
-      await work.locator(".edition-notice").waitFor();
+      if (previousHasCraft) {
+        await ready(work);
+        assert.equal(await edition(work), oldEdition);
+        assert.equal(await work.locator(".edition-notice").count(), 0);
+      } else await work.locator(".edition-notice").waitFor();
       await work
         .locator("#craft-explanation")
         .fill("The material owner is one reported answer, not a settled verdict.");
       await work.locator("#craft-submit").click();
       await work.locator("#craft-note").fill("Keep this craft dispute through the edition change.");
-      const notebook = await download(work, ".edition-notice button");
+      const notebook = await download(
+        work,
+        previousHasCraft ? "#craft-save-json" : ".edition-notice button",
+      );
       assert.equal(JSON.parse(notebook).trials.length, 1);
       assert.equal(
         JSON.parse(notebook).note,
@@ -259,6 +270,7 @@ try {
         newEdition,
         controllerAtOpen,
         existingRiverKeptOlderEdition: previousHasRiver,
+        existingCraftKeptOlderEdition: previousHasCraft,
         recoveryDownloadUsesCurrentWork: true,
         allFourRecordsRestored: true,
         craftReadingBytes: craftReading.length,
