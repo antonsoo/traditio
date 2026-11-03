@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-03T23:29:19.886Z",
+  "previous": "Retained earlier public edition",
+  "previousWorker": "86354842bb472cade3ee6d1648ecaef854cbca49cbc802b96893f70e21ecae65",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 375,
+      "oldEdition": "4306c92e70096d986156",
+      "newEdition": "3722d2ca45fa90c946e1",
+      "controllerAtOpen": true,
+      "existingRiverKeptOlderEdition": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2848999,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "oldEdition": "4306c92e70096d986156",
+      "newEdition": "3722d2ca45fa90c946e1",
+      "controllerAtOpen": true,
+      "existingRiverKeptOlderEdition": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2848999,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    }
+  ]
+}

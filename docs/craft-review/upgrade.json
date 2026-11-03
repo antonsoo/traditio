@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T23:18:38.405Z",
+  "at": "2026-11-03T23:29:57.455Z",
   "previous": "Generated two-page fixture",
   "previousWorker": "d8517a07f0c3413bc3f36326a842e605b5a3cf5ec5c8809006d72e842343d3e7",
   "journeys": [
@@ -9,6 +9,7 @@
       "oldEdition": "e06c8203fb620543c2ee",
       "newEdition": "3722d2ca45fa90c946e1",
       "controllerAtOpen": true,
+      "existingRiverKeptOlderEdition": false,
       "recoveryDownloadUsesCurrentWork": true,
       "allFourRecordsRestored": true,
       "craftReadingBytes": 2848999,
@@ -23,6 +24,7 @@
       "oldEdition": "e06c8203fb620543c2ee",
       "newEdition": "3722d2ca45fa90c946e1",
       "controllerAtOpen": false,
+      "existingRiverKeptOlderEdition": false,
       "recoveryDownloadUsesCurrentWork": true,
       "allFourRecordsRestored": true,
       "craftReadingBytes": 2848999,

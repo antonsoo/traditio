@@ -27,6 +27,13 @@ if (!previous) {
   }
   execFileSync(process.execPath, [resolve("scripts/offline.mjs")], { cwd: fixture });
 }
+const previousHasRiver = await readFile(`${previous}/river.html`).then(
+  () => true,
+  () => false,
+);
+const nextEdition = (await readFile("dist/index.html", "utf8")).match(
+  /name="traditio-edition" content="([a-f0-9]+)"/,
+)[1];
 const server = reviewServer(previous);
 const ready = (p) =>
   p.locator("#offline-status").filter({ hasText: "This edition is available offline," }).waitFor();
@@ -76,17 +83,27 @@ try {
       const river = await context.newPage();
       await river.goto(`${server.base}river.html`);
       await river.locator("#river-owner").filter({ hasText: "Lucius" }).waitFor();
-      await river.locator(".edition-notice").waitFor();
-      await river
-        .locator("#offline-status")
-        .filter({ hasText: "This page and the saved edition differ." })
-        .waitFor();
-      const newEdition = await edition(river);
+      const newEdition = nextEdition;
       assert.notEqual(newEdition, oldEdition);
-      assert.match(
-        await river.locator(".edition-notice").textContent(),
-        /each open lesson.*close every Traditio tab/,
-      );
+      if (previousHasRiver) {
+        // A retained route stays coherent under its older controller. Only the
+        // newly introduced craft route should fetch the new HTML at this point.
+        await ready(river);
+        assert.equal(await edition(river), oldEdition);
+        assert.equal(await river.locator(".edition-notice").count(), 0);
+      } else {
+        await river.locator(".edition-notice").waitFor();
+        await river
+          .locator("#offline-status")
+          .filter({ hasText: "This page and the saved edition differ." })
+          .waitFor();
+        assert.equal(await edition(river), newEdition);
+        assert.match(
+          await river.locator(".edition-notice").textContent(),
+          /each open lesson.*close every Traditio tab/,
+        );
+      }
+      const riverSave = previousHasRiver ? "#river-save-record" : ".edition-notice button";
       await river
         .locator("#river-note")
         .fill("My explanation must survive the edition change: ex eo tempore.");
@@ -95,7 +112,7 @@ try {
       await river.locator('[data-river-event="root"]').click();
       await river.locator('[data-river-event="attach"]').click();
       assert.equal(await river.locator("#river-owner").textContent(), "Aulus");
-      const before = await download(river, ".edition-notice button");
+      const before = await download(river, riverSave);
       const record = JSON.parse(before);
       assert.match(record.note, /must survive/);
       assert.equal(record.pinned.at, 1);
@@ -104,7 +121,7 @@ try {
       await river
         .locator("#river-note")
         .fill("A newer explanation saved by the same recovery button.");
-      const saved = await download(river, ".edition-notice button");
+      const saved = await download(river, riverSave);
       assert.equal(
         JSON.parse(saved).note,
         "A newer explanation saved by the same recovery button.",
@@ -241,6 +258,7 @@ try {
         oldEdition,
         newEdition,
         controllerAtOpen,
+        existingRiverKeptOlderEdition: previousHasRiver,
         recoveryDownloadUsesCurrentWork: true,
         allFourRecordsRestored: true,
         craftReadingBytes: craftReading.length,
@@ -251,7 +269,7 @@ try {
       });
       await context.close();
       console.log(
-        `${name}: two-page upgrade, actionable recovery, four native records, and genuine offline reading passed`,
+        `${name}: edition upgrade, actionable recovery, four native records, and genuine offline reading passed`,
       );
     } finally {
       await browser.close();

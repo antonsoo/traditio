@@ -81,9 +81,13 @@ origin, withdrawal of stale readiness, repeated notifications and verified
 recovery without losing explanations. Emulated offline behavior and a stopped
 origin are recorded separately.
 
-The [upgrade receipt](craft-review/upgrade.json) uses a generated two-room fixture,
-not a claimed replay of exact earlier hosted bytes. New rooms offer editable-work
-downloads while older clients remain open. Releasing the old edition allows all
+The [upgrade fixture receipt](craft-review/upgrade.json) uses a generated two-room
+fixture. A separate [previous-publication replay](craft-review/public-baseline-upgrade.json)
+uses the retained `gh-pages` tree at `6575bdad4919ec80c056361bec1eacedc063aa5d`,
+which already has the river room. Existing routes stay coherent under their older
+controller; the new craft route offers an editable-work download while those
+readers remain open. These are distinct fixtures, with the previous worker's
+SHA-256 recorded in each receipt. Releasing the old edition allows all
 four native formats to restore and new readings to download with the origin
 stopped. The worker does not force unsaved readers to reload.
 
@@ -132,3 +136,18 @@ The [ownership](craft-review/ownership-regression.json),
 [failure/edition/export](craft-review/failure-regression.json) receipts cover the
 existing rooms separately. Build identity and publication checks are recorded
 with their own scope; local tests alone do not establish remote CI or hosted bytes.
+
+## Clean committed checkout
+
+A fresh local clone of `d3970470b3a68aa43c6a41a7dfc69fdf03eb47bc` was installed
+with Node 24.22.1. `npm ci`, `npm run check` and all four `test:craft` journeys
+passed, including the eight fault checks. The check includes all 44 tests and
+verification of current source text inside the retained notebook.
+
+The independent [build inventories](craft-review/build-inventory.json) match
+across all 40 files. The worker's 39-file inventory contains 13,101,476 bytes;
+its edition is `3722d2ca45fa90c946e1`. The clean native JSON and HTML downloads
+match the retained examples exactly; the retained PDF has its own print timestamp.
+The slow-transfer receipt uses the same exact build bytes. Local build identity,
+remote source, hosted files, operated public controls and remote CI remain
+separate claims.

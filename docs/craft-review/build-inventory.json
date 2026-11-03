@@ -1,4 +1,9 @@
 {
+  "sourceCommit": "d3970470b3a68aa43c6a41a7dfc69fdf03eb47bc",
+  "node": "24.22.1",
+  "edition": "3722d2ca45fa90c946e1",
+  "cleanInstallAndCheck": true,
+  "workingAndCleanMatch": true,
   "files": [
     {
       "path": "LICENSE.txt",
@@ -6,9 +11,9 @@
       "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84"
     },
     {
-      "path": "assets/ceremony-B73REbsy.js",
-      "bytes": 31179,
-      "sha256": "57dfaef9b2f720fa299dd0f0926a38172baf289b23857a3567ad4be0a100c18c"
+      "path": "assets/ceremony-BMUqzJQD.js",
+      "bytes": 31341,
+      "sha256": "89936569128e5fa0a657d78b84526c995694900277947e2727096c8a1496638a"
     },
     {
       "path": "assets/ceremony-ydxke2BF.css",
@@ -16,14 +21,19 @@
       "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
     },
     {
-      "path": "assets/export-CfWy4fsw.js",
+      "path": "assets/export-COWBoPeO.js",
       "bytes": 16335,
-      "sha256": "16b7c96c5c1e65881fac690e7881e89ef76f14ee906a03e9be049d8114284024"
+      "sha256": "4c9cba0331200300a08ab29b2fd2f6b13fdfbc8f57bca717a2c4a3ae87886348"
     },
     {
-      "path": "assets/index-CDm_ZQG8.js",
-      "bytes": 15791,
-      "sha256": "fc27e434cd853889a11492399af098b74884192725247e35f2f1ad89c24b3402"
+      "path": "assets/index-CmjF6pDk.js",
+      "bytes": 15944,
+      "sha256": "f78c9d5d0d6bb1ca5c03699f1854fa57a1f65064e9dc98f4e06f89f9a6706c89"
+    },
+    {
+      "path": "assets/offline-C8ss9rlx.js",
+      "bytes": 45538,
+      "sha256": "3c78ca888f373f611d9195a79f3294a285e001b8ee416605a0f72a77b8484b9e"
     },
     {
       "path": "assets/offline-DZQv702L.css",
@@ -31,34 +41,29 @@
       "sha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548"
     },
     {
-      "path": "assets/offline-EeSEEpI1.js",
-      "bytes": 40063,
-      "sha256": "22ae5ff7c9399f3a6cc838b855228de46b36aa83ae6a5db1b2b9e202bf41addc"
-    },
-    {
       "path": "assets/river-D62mRMFH.css",
       "bytes": 5236,
       "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2"
     },
     {
-      "path": "assets/river-lT6J6kGl.js",
-      "bytes": 47918,
-      "sha256": "e8413e16cef735a3ac019eb30f328281b2c079fed806af6683272b58d3a99c73"
+      "path": "assets/river-DQH4BNzo.js",
+      "bytes": 48070,
+      "sha256": "635fba2a6e8378c280e8dde70a8984233f4a296d75753c925a68151db29482cd"
     },
     {
-      "path": "assets/work-C8wdQ0YG.js",
-      "bytes": 38199,
-      "sha256": "66f00153de1a8cf2e43f2be9cdfc654564460fd5fda8fa22bc97b56bd3034c23"
+      "path": "assets/work-BN0RaNY5.js",
+      "bytes": 49309,
+      "sha256": "eea7032970473a2f3122b8cb06b0b93f2fcaf94be2e378bcac4f422b33eec5cd"
     },
     {
-      "path": "assets/work-CMtHRFwH.css",
-      "bytes": 4157,
-      "sha256": "1c28a37cad13ba0a21ef9fe9ccef70bb192b247d6eed650a35b63e884eeb1ab1"
+      "path": "assets/work-DhtpLDum.css",
+      "bytes": 5481,
+      "sha256": "35086d882114461533123f598c1c3d10b6c5da5af81ccf637f17cdc4a83e439e"
     },
     {
       "path": "ceremony.html",
       "bytes": 9000,
-      "sha256": "5044cb1c090ebd8c9bb6424390a49cd1fe47b3ba56e11d0ff257815701bc60f3"
+      "sha256": "41a14569fece6d02dc5babecaf4a5f4ae221087ef0347cebec35f42ae57b1d3c"
     },
     {
       "path": "favicon.svg",
@@ -93,12 +98,12 @@
     {
       "path": "index.html",
       "bytes": 17415,
-      "sha256": "7692ccb4dc2bf74c9197d99409586e568d1a3f171331728c5da5c7ad8c590156"
+      "sha256": "b6b10be14d1a9c2bb38b1b02eb3f02e0aa482bcd78ac367846c9c4285cf2844a"
     },
     {
       "path": "river.html",
       "bytes": 10818,
-      "sha256": "e8fca1ac2e1e906453d337b1cc1140c27aea846f5db1dc63ac6c3f64e6343ae6"
+      "sha256": "3c717563ee1c2f07e2151515208a199b5be9b56abe5d8b0ac398a0b6471a013b"
     },
     {
       "path": "sources/NOTICE.txt",
@@ -192,13 +197,14 @@
     },
     {
       "path": "sw.js",
-      "bytes": 9282,
-      "sha256": "68e927e9be9afaf757d2c86ec7463d54439fcf130d4c7e4970daa7f027746c8a"
+      "bytes": 16869,
+      "sha256": "3efcfc5b2f7cf9e09debceb1af99be2f69cb7e8e2fcc4435fce04d06ba787696"
     },
     {
       "path": "work.html",
-      "bytes": 9230,
-      "sha256": "e1f050f74ac1030afd262b60b0d7d6196726b357cf5e3fedbebb9a8708741ab8"
+      "bytes": 11642,
+      "sha256": "d638ab9cdafe1956356719c43cd080a47c217aa46c368607cfb54f9d429fdf6b"
     }
-  ]
+  ],
+  "nativeNotebookAndReadingMatchCleanDownloads": true
 }
