@@ -165,9 +165,61 @@ try {
         await p
           .locator("#craft-note")
           .fill("A compatible side of a dispute does not prove an always claim.");
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /non-owner has an adapted claim/,
+        );
+        await p.locator("#recovery-pin").click();
+        await p.locator("#recovery-fidei").uncheck();
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /does not decide the defense/,
+        );
+        await p.locator("#recovery-paid").check();
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /nonpayment ground is removed/,
+        );
+        await p.locator("#recovery-holder").selectOption("material");
+        await p.locator("#recovery-paid").uncheck();
+        assert.match(await p.locator("#recovery-reason").textContent(), /board’s value/);
+        await p.locator("#recovery-medium").selectOption("writing");
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /no recovery claim for the writer/,
+        );
+        await p.locator("#recovery-holder").selectOption("maker");
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /owner’s recovery claim can meet a defense/,
+        );
+        await p.locator("#recovery-medium").selectOption("painting");
+        assert.match(
+          await p.locator("#recovery-headline").textContent(),
+          /does not decide the defense/,
+        );
+        await p.locator("#recovery-read").click();
+        assert.equal(await p.locator("#craft-passage").inputValue(), "painting-remedy");
+        await p.locator('[data-word="5"]').click();
+        await says(p, "craft-word", "positive qualification");
+        assert.match(await p.locator("#recovery-positions tr").nth(1).textContent(), /Aulus/);
+        assert.match(await p.locator("#recovery-positions tr").nth(2).textContent(), /Lucius/);
         const json = await download(p, "craft-save-json");
         const record = JSON.parse(json);
         assert.equal(record.trials.length, 2);
+        assert.equal(record.version, 2);
+        assert.deepEqual(record.recovery, {
+          medium: "painting",
+          holder: "maker",
+          paid: false,
+          goodFaith: false,
+        });
+        assert.deepEqual(record.pinnedRecovery, {
+          medium: "painting",
+          holder: "maker",
+          paid: false,
+          goodFaith: true,
+        });
         assert.equal(record.trials[0].explanation, first);
         assert.deepEqual(record.trials[0].citations, ["schools"]);
         assert.equal(
@@ -190,6 +242,20 @@ try {
         });
         await says(p, "craft-save-status", "not a supported");
         assert.equal(await p.locator("#craft-note").inputValue(), record.note);
+        await p.locator("#craft-open").setInputFiles({
+          name: "earlier.json",
+          mimeType: "application/json",
+          buffer: await readFile("tests/fixtures/craft-v1.json"),
+        });
+        await says(p, "craft-save-status", "new recovery exercise starts at its default facts");
+        assert.equal(await p.locator("#recovery-fidei").isChecked(), true);
+        assert.match(await p.locator("#craft-note").inputValue(), /Synthetic version 1/);
+        await p
+          .locator("#craft-open")
+          .setInputFiles({ name: "current.json", mimeType: "application/json", buffer: json });
+        await says(p, "craft-save-status", "Notebook reopened");
+        assert.equal(await p.locator("#recovery-fidei").isChecked(), false);
+        assert.equal(await p.locator("#recovery-restore").isVisible(), true);
         await p.goto(link);
         await p.locator("#craft-case").waitFor();
         assert.equal(await p.locator("#craft-note").inputValue(), record.note);
@@ -252,6 +318,11 @@ try {
             .evaluateAll((imgs) => imgs.every((img) => img.complete && img.naturalWidth > 1000)),
         );
         assert.equal(await offlinePage.locator(".trial").count(), 2);
+        assert.equal(await offlinePage.locator(".recovery-sheet").count(), 1);
+        assert.match(
+          await offlinePage.locator(".recovery-sheet").textContent(),
+          /does not decide the defense/,
+        );
         assert.deepEqual(JSON.parse(await download(offlinePage, "craft-native-notebook")), record);
         await assertNoOverflow(offlinePage);
         assert.deepEqual(requests, []);
@@ -294,6 +365,10 @@ try {
           width,
           keptJudgments: 2,
           sourcePages: 2,
+          recoveryCustodyAndPaymentOperated: true,
+          goodFaithConverseLeftUnresolved: true,
+          pinnedRecoveryRoundTrip: true,
+          version1MigrationPreservesReasoning: true,
           standaloneNoScriptsNoNetwork: true,
           offlineAllFourRooms: true,
           axeViolations: axe.violations.length,
@@ -429,12 +504,13 @@ try {
       await p
         .locator("#craft-open")
         .setInputFiles({ name: "old.json", mimeType: "application/json", buffer: beforeImport });
+      await p.locator("#recovery-holder").selectOption("material");
+      await p.evaluate(() => window.releaseCraftImport());
+      await says(p, "craft-save-status", "newer work has been kept");
+      assert.equal(await p.locator("#recovery-holder").inputValue(), "material");
       await p
         .locator("#craft-explanation")
         .fill("Newer draft survives delayed import. <img src=x onerror=alert(1)>");
-      await p.evaluate(() => window.releaseCraftImport());
-      await says(p, "craft-save-status", "newer work has been kept");
-      assert.match(await p.locator("#craft-explanation").inputValue(), /Newer draft survives/);
       await p.locator("#craft-submit").click();
       assert.equal(await p.locator("#craft-trials img").count(), 0);
       const escapedReading = (await download(p, "craft-save-reading")).toString();

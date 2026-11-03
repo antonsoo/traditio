@@ -94,10 +94,10 @@ export const craftReadings: CraftReading[] = [
     ref: "2.78 · recovery and theft",
     title: "Holding, owning and recovering differ",
     latin:
-      "[…] certe secundum hanc regulam si me possidente petas imaginem tuam esse, nec solvas pretium tabulae, poteris per exceptionem doli mali summoveri; […] illud palam est, quod sive tu subripueris tabulam sive alius, conpetit mihi furti actio.",
+      "[…] certe secundum hanc regulam si me possidente petas imaginem tuam esse, nec solvas pretium tabulae, poteris per exceptionem doli mali summoveri; at si tu possideas, consequens est, ut utilis mihi actio adversum te dari debeat; quo casu nisi solvam inpensam picturae, poteris me per exceptionem doli mali repellere, utique si bonae fidei possessor fueris. Illud palam est, quod sive tu subripueris tabulam sive alius, conpetit mihi furti actio.",
     english:
-      "[…] At any rate, under this rule, if while I possess it you claim the image as yours and do not pay the value of the board, you can be defeated by a defense of fraud; […] this is clear: whether you or another stole the board, an action for theft is available to me.",
-    note: "Two selected clauses from 2.78. The omitted middle gives the board owner an actio utilis when the painter holds it and discusses painting expenses and good-faith possession. The full page retains it. These remedies do not assign a second physical object or fractional title.",
+      "[…] At any rate, under this rule, if while I possess it you claim the image as yours and do not pay the value of the board, you can be defeated by a defense of fraud. But if you possess it, it follows that an adapted action should be given to me against you. In that case, unless I pay the painting expense, you can repel me by a defense of fraud, at least if you have been a possessor in good faith. This is clear: whether you or another stole the board, an action for theft is available to me.",
+    note: "Remainder of 2.78 after the ownership discussion, retaining both custody branches and the final theft sentence. Me and mihi refer to the board owner; tu and te to the painter. Actio utilis is rendered adapted action, without importing a modern equity jurisdiction. Utique si expressly supplies the good-faith possessor’s case; this lesson does not infer a complete converse for bad faith. Payment removes the stated nonpayment ground, not every possible issue in litigation.",
     pages: [162],
     words: [
       [
@@ -114,6 +114,21 @@ export const craftReadings: CraftReading[] = [
         "sive tu … sive alius",
         "whether you … or another",
         "The theft clause distinguishes the thief from the possible maker.",
+      ],
+      [
+        "utilis mihi actio",
+        "an adapted action for me",
+        "The board owner receives a described claim even though the ownership rule favors the painter.",
+      ],
+      [
+        "nisi solvam inpensam picturae",
+        "unless I pay the painting expense",
+        "This branch concerns the board owner paying painting expenses; the earlier branch concerns the painter paying for the board.",
+      ],
+      [
+        "utique si bonae fidei possessor fueris",
+        "at least if you have been a possessor in good faith",
+        "The positive qualification is explicit. Removing it does not create an express denial for every bad-faith case.",
       ],
     ],
   },
@@ -216,7 +231,7 @@ export const craftScope = [
   "These invented cases isolate the tangible object. Lucius owns the entire input or support; Aulus does the work on his own account. No agreed transfer, manufacture contract, mixed ownership, buyer, succession or usucapion is modeled. An ownership answer does not decide physical possession, recovery or the amount payable.",
   "The two positions in 2.79 are competing legal answers applied to the same facts. They are not joint shares, two successive title holders, or two results for different amounts of labor. The writing and painting rules are reported separately in 2.77–78; the workshop does not assert that both schools expressly assented to them.",
   "No gold price, hours of work, market value or test of reversibility selects a winner in these chosen Institutes paragraphs. Later texts and compromises are outside this room. Repair is an expressly undecided analogy, not a claim that Roman law had no answer.",
-  "The source is Gaius’s second-century Institutes as edited in 1904, not an ancient manuscript photograph. Angle brackets retain supplied words; […] marks omitted clauses. Consonantal u is printed v and line breaks are joined. English and phrase notes are new and have not had independent philological review. The drawings are modern explanatory diagrams, not recovered artifacts or legal advice.",
+  "The source is Gaius’s second-century Institutes as edited in 1904, not an ancient manuscript photograph. Angle brackets retain supplied words; […] marks omitted clauses. Consonantal u is printed v, line breaks are joined, and sentence-initial capitals are normalized. English and phrase notes are new and have not had independent philological review. The drawings are modern explanatory diagrams, not recovered artifacts or legal advice.",
 ];
 export const craftPage = (page: number) => ({
   path: `sources/poste-1904-p${page}.jpg`,

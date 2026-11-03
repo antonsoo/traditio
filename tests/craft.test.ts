@@ -73,7 +73,7 @@ test("bounded record can retain every maximum-length multilingual draft and judg
 test("bad or newer records are rejected before replacement", () => {
   const record = makeCraftRecord();
   for (const patch of [
-    { version: 2 },
+    { version: 3 },
     { current: "clay" },
     { rule: "reversible" },
     { note: "x".repeat(1501) },
@@ -105,7 +105,7 @@ test("readings retain the source's direction, reservation and restored words", (
   assert.match(readings.get("theft")?.latin ?? "", /adversus eum qui subripuerit/);
   assert.equal(
     craftReadings.reduce((n, r) => n + r.words.length, 0),
-    21,
+    24,
   );
 });
 test("diagrams and analogy table distinguish physical work from legal answers", () => {
@@ -115,4 +115,25 @@ test("diagrams and analogy table distinguish physical work from legal answers", 
   }
   assert.equal((analogyTable("material").match(/class="counterexample"/g) ?? []).length, 1);
   assert.equal((analogyTable("maker").match(/class="counterexample"/g) ?? []).length, 1);
+});
+
+test("version 1 notebooks retain their work and explicitly initialize the new recovery exercise", () => {
+  const old = JSON.parse(writeCraft(makeCraftRecord()));
+  old.version = 1;
+  delete old.recovery;
+  delete old.pinnedRecovery;
+  old.note = "Earlier reasoning survives.";
+  const migrated = readCraft(JSON.stringify(old));
+  assert.equal(migrated.version, 2);
+  assert.equal(migrated.note, old.note);
+  assert.deepEqual(migrated.recovery, {
+    medium: "painting",
+    holder: "maker",
+    paid: false,
+    goodFaith: true,
+  });
+  assert.equal(migrated.pinnedRecovery, null);
+  assert.throws(() =>
+    readCraft(JSON.stringify({ ...migrated, recovery: { ...migrated.recovery, paid: "false" } })),
+  );
 });

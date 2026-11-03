@@ -302,3 +302,97 @@
     display: block !important;
   }
 }
+
+.craft-recovery {
+  margin: 2.8rem 0;
+  border-top: 3px solid var(--ink);
+  padding-top: 1.7rem;
+}
+.recovery-intro {
+  max-width: 72ch;
+}
+.recovery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 1.4rem 0;
+}
+.recovery-controls {
+  background: var(--board);
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.65rem;
+}
+.recovery-controls > label:not(.recovery-check) {
+  font-weight: 650;
+  margin-top: 0.35rem;
+}
+.recovery-controls select {
+  width: 100%;
+}
+.recovery-controls .small {
+  margin: 0;
+}
+.recovery-check {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+}
+.recovery-check input {
+  flex: none;
+}
+.recovery-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.recovery-table caption {
+  text-align: left;
+  font-weight: 650;
+  padding: 0.5rem 0;
+}
+.recovery-table th,
+.recovery-table td {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.recovery-table th {
+  font-weight: 600;
+  width: 43%;
+}
+.recovery-changed {
+  background: #e4ece8;
+}
+#recovery-comparison-table {
+  font-size: 0.9rem;
+}
+#recovery-comparison-table th {
+  width: 32%;
+}
+#recovery-account h3 {
+  font-family: Literata, serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+@media (max-width: 700px) {
+  .recovery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .recovery-controls {
+    padding: 1rem;
+  }
+  .recovery-table th,
+  .recovery-table td {
+    padding: 0.5rem 0.3rem;
+    overflow-wrap: anywhere;
+  }
+  #recovery-comparison-table {
+    font-size: 0.8rem;
+  }
+}

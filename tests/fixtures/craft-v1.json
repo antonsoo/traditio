@@ -1,0 +1,59 @@
+{
+  "format": "traditio-craft",
+  "version": 1,
+  "current": "vessel",
+  "rule": "maker",
+  "note": "Synthetic version 1 fixture: earlier reasoning must survive.",
+  "trials": [
+    {
+      "craft": "vessel",
+      "judgment": "material",
+      "explanation": "The gold belonged to Lucius before the work; I would let its ownership continue.",
+      "citations": ["schools"]
+    },
+    {
+      "craft": "vessel",
+      "judgment": "disputed",
+      "explanation": "The source gives two answers; a matching school is not a settled rule.",
+      "citations": ["schools"]
+    }
+  ],
+  "drafts": [
+    {
+      "craft": "vessel",
+      "judgment": "disputed",
+      "explanation": "The source gives two answers; a matching school is not a settled rule.",
+      "citations": ["schools"]
+    },
+    {
+      "craft": "wine",
+      "judgment": "material",
+      "explanation": "",
+      "citations": []
+    },
+    {
+      "craft": "chest",
+      "judgment": "material",
+      "explanation": "",
+      "citations": []
+    },
+    {
+      "craft": "writing",
+      "judgment": "material",
+      "explanation": "",
+      "citations": []
+    },
+    {
+      "craft": "painting",
+      "judgment": "material",
+      "explanation": "",
+      "citations": []
+    },
+    {
+      "craft": "repair",
+      "judgment": "material",
+      "explanation": "",
+      "citations": []
+    }
+  ]
+}

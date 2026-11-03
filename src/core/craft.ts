@@ -1,3 +1,5 @@
+import { makeRecovery, type RecoveryFacts, readRecovery } from "./recovery";
+
 export const craftIds = ["vessel", "wine", "chest", "writing", "painting", "repair"] as const;
 export type CraftId = (typeof craftIds)[number];
 export const rules = ["material", "maker"] as const;
@@ -164,19 +166,21 @@ export type Trial = {
 };
 export type CraftRecord = {
   format: "traditio-craft";
-  version: 1;
+  version: 2;
   current: CraftId;
   rule: Rule;
   trials: Trial[];
   drafts: Trial[];
   note: string;
+  recovery: RecoveryFacts;
+  pinnedRecovery: RecoveryFacts | null;
 };
 export const MAX_BYTES = 65_536;
 export const MAX_TRIALS = 12;
 export function makeCraftRecord(): CraftRecord {
   return {
     format: "traditio-craft",
-    version: 1,
+    version: 2,
     current: "vessel",
     rule: "material",
     trials: [],
@@ -187,6 +191,8 @@ export function makeCraftRecord(): CraftRecord {
       citations: [],
     })),
     note: "",
+    recovery: makeRecovery(),
+    pinnedRecovery: null,
   };
 }
 export const readingIds: ReadingId[] = [
@@ -218,7 +224,7 @@ export function readCraft(text: string): CraftRecord {
   if (new TextEncoder().encode(text).length > MAX_BYTES)
     throw new Error("The craft record exceeds 64 KiB.");
   const raw = object(JSON.parse(text));
-  if (raw.format !== "traditio-craft" || raw.version !== 1)
+  if (raw.format !== "traditio-craft" || (raw.version !== 1 && raw.version !== 2))
     throw new Error("This is not a supported Traditio craft record.");
   if (!Array.isArray(raw.trials) || raw.trials.length > MAX_TRIALS)
     throw new Error("A record can keep up to twelve judgments.");
@@ -242,12 +248,15 @@ export function readCraft(text: string): CraftRecord {
     throw new Error("Repeated craft draft.");
   return {
     format: "traditio-craft",
-    version: 1,
+    version: 2,
     current: member(raw.current, craftIds),
     rule: member(raw.rule, rules),
     note: boundedText(raw.note, 1500),
     trials: raw.trials.map(readTrial),
     drafts,
+    recovery: raw.version === 1 ? makeRecovery() : readRecovery(raw.recovery),
+    pinnedRecovery:
+      raw.version === 1 || raw.pinnedRecovery === null ? null : readRecovery(raw.pinnedRecovery),
   };
 }
 export function writeCraft(record: CraftRecord): string {

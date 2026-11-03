@@ -19,11 +19,13 @@ import {
   type Trial,
   writeCraft,
 } from "./core/craft";
+import { readRecovery, recovery } from "./core/recovery";
 import { craftPage, craftReading, craftReadings, craftScope } from "./craft-content";
 import { analogyTable, responsiveCraftSvg } from "./craft-drawing";
 import { craftSheet } from "./craft-export";
 import { escapeHtml as esc } from "./drawing";
 import { installOffline } from "./offline";
+import { recoveryComparison, recoveryPositions } from "./recovery-view";
 
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   const node = document.getElementById(id);
@@ -86,6 +88,7 @@ function update(): void {
     feedback.textContent =
       "Twelve judgments kept. Save this notebook; reopen a saved notebook or reload to begin another.";
   showResult();
+  updateRecovery();
 }
 function showResult(): void {
   el("craft-result").hidden = !revealed;
@@ -112,6 +115,66 @@ function showResult(): void {
         ? "<h3>Not decided in these passages</h3><p>The app supplies no owner for this analogy.</p>"
         : `<h3>${esc(person(c.owner as Rule))}</h3><p>A reported rule in ${c.id === "writing" ? "2.77" : "2.78"}, separate from the rival answers in 2.79.</p>`;
 }
+function updateRecovery(): void {
+  const f = record.recovery;
+  const r = recovery(f);
+  el<HTMLSelectElement>("recovery-medium").value = f.medium;
+  el<HTMLSelectElement>("recovery-holder").value = f.holder;
+  el<HTMLInputElement>("recovery-paid").checked = f.paid;
+  el<HTMLInputElement>("recovery-fidei").checked = f.goodFaith;
+  el("recovery-payment").hidden = r.claim === "not-supplied";
+  el("recovery-good-faith").hidden = f.medium !== "painting" || f.holder !== "maker" || f.paid;
+  el("recovery-paid-label").textContent =
+    f.medium === "writing"
+      ? "Lucius has paid the writing expense"
+      : f.holder === "material"
+        ? "Aulus has paid the value of the board"
+        : "Lucius has paid the painting expense";
+  el("recovery-positions").innerHTML = recoveryPositions(f);
+  el("recovery-headline").textContent = r.headline;
+  el("recovery-reason").textContent = r.reason;
+  el("recovery-comparison").hidden = record.pinnedRecovery === null;
+  el("recovery-restore").hidden = record.pinnedRecovery === null;
+  el("recovery-unpin").hidden = record.pinnedRecovery === null;
+  if (record.pinnedRecovery)
+    el("recovery-comparison-table").innerHTML = recoveryComparison(record.pinnedRecovery, f);
+}
+for (const id of ["recovery-medium", "recovery-holder", "recovery-paid", "recovery-fidei"])
+  el(id).addEventListener("change", () => {
+    record.recovery = readRecovery({
+      medium: el<HTMLSelectElement>("recovery-medium").value,
+      holder: el<HTMLSelectElement>("recovery-holder").value,
+      paid: el<HTMLInputElement>("recovery-paid").checked,
+      goodFaith: el<HTMLInputElement>("recovery-fidei").checked,
+    });
+    ++revision;
+    updateRecovery();
+    el("recovery-feedback").textContent =
+      "The recovery facts changed. The reported ownership rule and your kept judgments did not.";
+  });
+el("recovery-pin").addEventListener("click", () => {
+  record.pinnedRecovery = readRecovery(record.recovery);
+  ++revision;
+  updateRecovery();
+  el("recovery-feedback").textContent =
+    "Recovery facts pinned. Change the holder, payment or qualification to compare.";
+});
+el("recovery-unpin").addEventListener("click", () => {
+  record.pinnedRecovery = null;
+  ++revision;
+  updateRecovery();
+});
+el("recovery-restore").addEventListener("click", () => {
+  if (!record.pinnedRecovery) return;
+  record.recovery = readRecovery(record.pinnedRecovery);
+  ++revision;
+  updateRecovery();
+  el("recovery-feedback").textContent =
+    "Pinned recovery facts restored. Ownership judgments and other drafts have been kept.";
+});
+el("recovery-read").addEventListener("click", () =>
+  showReading(recovery(record.recovery).source, true),
+);
 el("craft-citations").innerHTML = craftReadings
   .map(
     (r) => `<label><input type="checkbox" value="${r.id}"/>${esc(r.ref)} · ${esc(r.title)}</label>`,
@@ -235,7 +298,11 @@ async function loadPage(page: number): Promise<void> {
   el("craft-scan-status").textContent = `Loading ${p.label}…`;
   el<HTMLAnchorElement>("craft-page-link").href = p.url;
   try {
-    const bytes = await verifiedBytes(asset(p.path), scanController.signal);
+    const bytes = await verifiedBytes(asset(p.path), scanController.signal, (received, total) => {
+      if (id === scanId)
+        el("craft-scan-status").textContent =
+          `Loading ${p.label}: ${Math.round((received / total) * 100)}% received; checking the complete file before display.`;
+    });
     if (id !== scanId) return;
     scanUrl = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     img.src = scanUrl;
@@ -267,7 +334,7 @@ el("craft-zoom").addEventListener("click", () => {
 el("craft-save-json").addEventListener("click", () => {
   saveFile("traditio-craft.json", writeCraft(record), "application/json");
   status.textContent =
-    "Editable notebook saved, including every kept judgment, unkept draft and your account of the analogy.";
+    "Editable notebook saved, including kept judgments, unkept drafts, recovery facts, the pinned comparison and your account.";
 });
 el("craft-open").addEventListener("change", async () => {
   const input = el<HTMLInputElement>("craft-open");
@@ -277,7 +344,9 @@ el("craft-open").addEventListener("change", async () => {
   if (!file) return;
   try {
     if (file.size > MAX_BYTES) throw new Error("The notebook exceeds 64 KiB.");
-    const restored = readCraft(await file.text());
+    const text = await file.text();
+    const restored = readCraft(text);
+    const legacy = JSON.parse(text).version === 1;
     if (id !== importId) return;
     if (revision !== capturedRevision) {
       status.textContent =
@@ -285,8 +354,9 @@ el("craft-open").addEventListener("change", async () => {
       return;
     }
     replaceRecord(restored);
-    status.textContent =
-      "Notebook reopened. Drafts and kept judgments are separate; source comparisons have been recomputed.";
+    status.textContent = legacy
+      ? "Notebook reopened. Earlier judgments and drafts are kept; the new recovery exercise starts at its default facts."
+      : "Notebook reopened. Drafts, kept judgments and recovery facts are separate; source comparisons have been recomputed.";
   } catch (error) {
     if (id === importId)
       status.textContent = `${error instanceof Error ? error.message : "The file could not be read."} Your notebook has been kept.`;
@@ -306,8 +376,12 @@ function restoreLink(): void {
   ++importId;
   try {
     if (location.hash.length > MAX_BYTES * 3) throw new Error("The shared notebook is too large.");
-    replaceRecord(readCraft(decodeURIComponent(location.hash.slice(7))));
-    status.textContent = "Shared notebook opened, including drafts and kept judgments.";
+    const text = decodeURIComponent(location.hash.slice(7));
+    const legacy = JSON.parse(text).version === 1;
+    replaceRecord(readCraft(text));
+    status.textContent = legacy
+      ? "Shared earlier notebook opened. Its judgments and drafts remain; the recovery exercise starts at its default facts."
+      : "Shared notebook opened, including drafts, kept judgments and recovery facts.";
   } catch (error) {
     status.textContent = `${error instanceof Error ? error.message : "The link is damaged."} Your notebook has been kept.`;
   }
