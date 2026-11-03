@@ -1,8 +1,8 @@
 [
   {
     "path": "LICENSE.txt",
-    "bytes": 1071,
-    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+    "bytes": 4654,
+    "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84",
     "mime": "text/plain",
     "printedPage": null,
     "source": "Traditio project"
@@ -41,8 +41,8 @@
   },
   {
     "path": "sources/NOTICE.txt",
-    "bytes": 3668,
-    "sha256": "40052a21554333939aa9a1734244777801cf0d85b431e12ee90043d75d6a9237",
+    "bytes": 3687,
+    "sha256": "efddb96eed0efa34db8c718f693e63d4b356deb05f6334288eb89bbca9fb2f23",
     "mime": "text/plain",
     "printedPage": null,
     "source": "Traditio project"
@@ -136,6 +136,22 @@
     "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n224.jpg"
   },
   {
+    "path": "sources/poste-1904-p162.jpg",
+    "bytes": 764906,
+    "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4",
+    "mime": "image/jpeg",
+    "printedPage": 162,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n225.jpg"
+  },
+  {
+    "path": "sources/poste-1904-p163.jpg",
+    "bytes": 761492,
+    "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf",
+    "mime": "image/jpeg",
+    "printedPage": 163,
+    "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n226.jpg"
+  },
+  {
     "path": "sources/poste-1904-p74.jpg",
     "bytes": 702149,
     "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd",
@@ -150,5 +166,13 @@
     "mime": "image/jpeg",
     "printedPage": 75,
     "source": "https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n138.jpg"
+  },
+  {
+    "path": "sources/work-NOTICE.txt",
+    "bytes": 2882,
+    "sha256": "6fd5be6a9f211be5f2a62aa3125ece13b5e7e35978da3dc865c7e29a80a60e02",
+    "mime": "text/plain",
+    "printedPage": null,
+    "source": "Traditio craft workshop"
   }
 ]

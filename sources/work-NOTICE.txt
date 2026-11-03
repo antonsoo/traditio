@@ -1,0 +1,47 @@
+Traditio craft dispute: added 2026-11-03
+
+Gaius, Gai Institutiones, or Institutes of Roman Law, Latin text with
+translation and commentary by Edward Poste, fourth edition revised and
+enlarged by E. A. Whittuck, introduction by A. H. J. Greenidge.
+Oxford: Clarendon Press, 1904. Printed pages 162-163, complete and unchanged.
+University of Toronto copy, Internet Archive: gaiinstitutiones00gaiuuoft.
+https://archive.org/details/gaiinstitutiones00gaiuuoft
+https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n225.jpg
+https://archive.org/download/gaiinstitutiones00gaiuuoft/page/n226.jpg
+Downloaded 2026-11-03; printed numbers, Latin and continuation independently
+inspected in the actual images. The page endpoint uses printed number + 63.
+
+These are photographs of a modern historical edition, not an ancient
+manuscript or newly recovered artifact. Both its text and faithful page
+reproductions are public domain. They are not relicensed under the project's
+PolyForm Noncommercial license. The new code, original schematic drawings,
+English and word notes are project work. Fonts retain their OFL licenses.
+
+Scope: selected clauses of Institutes 2.77-79. No later Digest or Justinian
+compromise is imported into this lesson. Page 162 retains writing, painting
+and the opening examples; page 163 retains the rival views and remedies.
+The lower part of page 163 begins an earlier-numbered section in this edition;
+it is surrounding editorial context, not a second part of 2.79.
+
+Transcription joins line wraps, prints consonantal u as v, retains spelling
+such as inpensam, conpetit and subripuerit, marks supplied words with angle
+brackets and omissions with [...], displayed as a bracketed ellipsis. It
+does not silently import later additions or a rule of reversibility.
+Latin cross-check: https://www.thelatinlibrary.com/gaius2.html
+Historical English cross-check:
+https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm
+Our close English and phrase notes are new, not a quotation of Poste's
+translation or an independently reviewed philological edition. In particular,
+tabula is rendered board/panel, not the historical translation's canvas.
+
+The schools in 2.79 offer rival answers, not shared ownership. Gaius names
+Sabinus and Cassius but calls their rivals the opposing school here. We do
+not claim a philosophical affiliation for either school. The writing and
+painting paragraphs separately report their rules and qualify recovery.
+Theft is an added premise in the remedy example; making does not prove theft.
+The repair example is an undecided modern analogy. No complete survey of
+Roman law or present-day legal advice is offered.
+
+The saved notebook embeds both source pages, provenance hashes, the new
+readings, original diagrams, fonts, their licenses and the project license.
+Checksums identify retained bytes; they do not certify historical claims.
