@@ -1,0 +1,138 @@
+{
+  "at": "2026-11-03T22:34:02.955Z",
+  "origin": "http://127.0.0.1:43389/traditio/",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6494124,
+        "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+        "pages": 4,
+        "fonts": 2,
+        "widths": [
+          {
+            "viewport": 1440,
+            "document": 1440
+          }
+        ]
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "differentContinuationPreservesOriginalEnding": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6494124,
+        "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+        "pages": 4,
+        "fonts": 2,
+        "widths": [
+          {
+            "viewport": 320,
+            "document": 320
+          },
+          {
+            "viewport": 375,
+            "document": 375
+          }
+        ]
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "differentContinuationPreservesOriginalEnding": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6494124,
+        "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+        "pages": 4,
+        "fonts": 2,
+        "widths": [
+          {
+            "viewport": 1440,
+            "document": 1440
+          }
+        ]
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "differentContinuationPreservesOriginalEnding": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "contextualPhrases": 23,
+      "verifiedPages": 4,
+      "reading": {
+        "bytes": 6494124,
+        "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+        "pages": 4,
+        "fonts": 2,
+        "widths": [
+          {
+            "viewport": 320,
+            "document": 320
+          },
+          {
+            "viewport": 375,
+            "document": 375
+          }
+        ]
+      },
+      "keyboard": true,
+      "reachedFromBothExistingLessons": true,
+      "originalAddressKept": true,
+      "nativeScriptFreeReopen": true,
+      "differentContinuationPreservesOriginalEnding": true,
+      "realOriginOfflineReloadAndExport": true,
+      "axeViolations": 0,
+      "runtimeErrors": []
+    }
+  ],
+  "faults": [
+    {
+      "browser": "chromium",
+      "substitutedSameLengthScanRefused": true,
+      "substitutedExportRefused": true,
+      "verifiedRetry": true,
+      "snapshotDuringEdits": true,
+      "cancellation": true,
+      "delayedImportPreservesNewerWork": true
+    },
+    {
+      "browser": "firefox",
+      "substitutedSameLengthScanRefused": true,
+      "substitutedExportRefused": true,
+      "verifiedRetry": true,
+      "snapshotDuringEdits": true,
+      "cancellation": true,
+      "delayedImportPreservesNewerWork": true
+    }
+  ]
+}

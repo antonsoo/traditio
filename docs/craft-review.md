@@ -115,5 +115,36 @@ adjudicate repair or calculate recovery expenses. It has explicit saves, with
 no background persistence; leaving the page requires saving the notebook first.
 The shared source loader retains the existing 20-second per-file deadline.
 
+## Clean committed checkout
+
+A fresh local clone of source commit `61305ac` was installed with Node 24.22.1.
+`npm ci` and `npm run check` passed: lint, strict types, all 30 tests, 22 retained
+source/font/license identities, three craft artifacts and five complete readings.
+The six-row hand-checked craft fixture preserves both reported schools and the
+separate writing/painting rules; it also checks the absence of a source decision
+for the repair analogy. No expert-review claim follows from that fixture.
+
+The clean build and working build matched byte-for-byte across all **40 files**
+(including the worker). The worker inventory contains 39 files and 13,080,688
+bytes; edition identity is `5e7a1caaaace00735204`. The
+[full output inventory](craft-review/build-inventory.json) retains every file's
+length and SHA-256. This is a local build comparison, not a hosted-byte check.
+
+The clean clone also passed `test:craft`, `test:browser`, `test:audit`,
+`test:readiness`, `test:upgrade` and `test:river`. Ceremony was operated with
+`node scripts/ceremony-review.mjs http://127.0.0.1:4488/traditio/ test-results/final-ceremony`
+against a production preview. Both documented development and preview commands
+served an operable wine example; development reported production-only offline
+installation. The ordinary ownership page was visually inspected at desktop and
+375px after adding the craft navigation link.
+
+The new craft receipts above come from that clean clone. Existing-room receipts:
+[ownership](craft-review/ownership-regression.json),
+[ceremony](craft-review/ceremony-regression.json),
+[river](craft-review/river-regression.json), and
+[installation, corruption, cancellation and timeout failures](craft-review/failure-regression.json).
+The retained notebook HTML matches the actual clean-checkout download exactly;
+its earlier retained PDF is the same reading, with its own print timestamp.
+
 Local source, build, downloads and browser behavior were checked separately.
 No new remote source head, hosted bytes, public route or CI run is claimed.
