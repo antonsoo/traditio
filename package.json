@@ -39,7 +39,8 @@
     "test:ceremony": "node scripts/ceremony-review.mjs",
     "test:readiness": "node scripts/readiness-audit.mjs",
     "test:river": "node scripts/river-review.mjs",
-    "test:upgrade": "node scripts/upgrade-review.mjs"
+    "test:upgrade": "node scripts/upgrade-review.mjs",
+    "test:craft": "node scripts/craft-review.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

@@ -8,6 +8,17 @@ import { reviewServer } from "./review-server.mjs";
 const project = "traditio";
 const views = [
   {
+    id: "craft",
+    route: "work.html",
+    select: "#craft-page",
+    page: "163",
+    path: "sources/poste-1904-p163.jpg",
+    retry: "#craft-retry",
+    status: "#craft-scan-status",
+    image: "#craft-scan",
+    note: "#craft-note",
+  },
+  {
     id: "ownership",
     route: "",
     select: "#page-select",
@@ -58,7 +69,7 @@ await writeFile(
   `${await readFile(`${b}/favicon.svg`, "utf8")}\n<!-- Readiness audit B -->\n`,
 );
 // Strip a generated identity before asking the builder for a distinct edition.
-for (const file of ["index.html", "ceremony.html", "river.html"]) {
+for (const file of ["index.html", "ceremony.html", "river.html", "work.html"]) {
   const path = `${b}/${file}`;
   await writeFile(
     path,

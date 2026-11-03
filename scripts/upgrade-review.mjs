@@ -17,11 +17,12 @@ if (!previous) {
   previous = resolve(fixture, "dist");
   await cp("dist", previous, { recursive: true });
   await rm(`${previous}/river.html`);
+  await rm(`${previous}/work.html`);
   for (const file of ["index.html", "ceremony.html"]) {
     const path = `${previous}/${file}`;
     await writeFile(
       path,
-      (await readFile(path, "utf8")).replace(/<a href="\.\/river\.html">[^<]+<\/a>/g, ""),
+      (await readFile(path, "utf8")).replace(/<a href="\.\/(river|work)\.html">[^<]+<\/a>/g, ""),
     );
   }
   execFileSync(process.execPath, [resolve("scripts/offline.mjs")], { cwd: fixture });
@@ -113,6 +114,22 @@ try {
       await ready(ceremony);
       const ownership = await download(old, "#save-case");
       const rehearsal = await download(ceremony, "#save-rehearsal");
+      const work = await context.newPage();
+      await work.goto(`${server.base}work.html`);
+      await work.locator(".edition-notice").waitFor();
+      await work
+        .locator("#craft-explanation")
+        .fill("The material owner is one reported answer, not a settled verdict.");
+      await work.locator("#craft-submit").click();
+      await work.locator("#craft-note").fill("Keep this craft dispute through the edition change.");
+      const notebook = await download(work, ".edition-notice button");
+      assert.equal(JSON.parse(notebook).trials.length, 1);
+      assert.equal(
+        JSON.parse(notebook).note,
+        "Keep this craft dispute through the edition change.",
+      );
+      await work.evaluate(() => scrollTo(0, 0));
+      await work.screenshot({ path: `${out}/${name}-craft-recovery.png` });
       const controllerAtOpen = await river.evaluate(() => !!navigator.serviceWorker.controller);
       const axe = await new AxeBuilder({ page: river }).analyze();
       assert.deepEqual(
@@ -123,7 +140,7 @@ try {
       await river.evaluate(() => scrollTo(0, 0));
       await river.screenshot({ path: `${out}/${name}-recovery.png` });
       // Keep the origin and profile; release the older clients without clearing storage.
-      await Promise.all([old.close(), ceremony.close(), river.close()]);
+      await Promise.all([old.close(), ceremony.close(), river.close(), work.close()]);
       const resumed = await context.newPage();
       await resumed.goto(`${server.base}river.html`);
       await ready(resumed);
@@ -169,7 +186,40 @@ try {
         JSON.parse(await download(restoredCeremony, "#save-rehearsal")),
         JSON.parse(rehearsal),
       );
+
+      const restoredCraft = await context.newPage();
+      await restoredCraft.goto(`${server.base}work.html`);
+      await ready(restoredCraft);
+      await restoredCraft
+        .locator("#craft-open")
+        .setInputFiles({ name: "notebook.json", mimeType: "application/json", buffer: notebook });
+      await restoredCraft
+        .locator("#craft-save-status")
+        .filter({ hasText: "Notebook reopened" })
+        .waitFor();
+      assert.deepEqual(
+        JSON.parse(await download(restoredCraft, "#craft-save-json")),
+        JSON.parse(notebook),
+      );
       await server.stop();
+      await restoredCraft.reload();
+      await ready(restoredCraft);
+      await restoredCraft
+        .locator("#craft-open")
+        .setInputFiles({ name: "notebook.json", mimeType: "application/json", buffer: notebook });
+      await restoredCraft
+        .locator("#craft-save-status")
+        .filter({ hasText: "Notebook reopened" })
+        .waitFor();
+      const craftReading = await download(restoredCraft, "#craft-save-reading");
+      assert.equal(
+        (craftReading.toString().match(/src="data:image\/jpeg;base64,/g) || []).length,
+        2,
+      );
+      const craftNative = /href="data:application\/json;charset=utf-8,([^"]+)"/.exec(
+        craftReading.toString(),
+      );
+      assert.deepEqual(JSON.parse(decodeURIComponent(craftNative[1])), JSON.parse(notebook));
       await resumed.reload();
       await ready(resumed);
       // Reimport is explicit after leaving a lesson; no local storage is claimed.
@@ -192,7 +242,8 @@ try {
         newEdition,
         controllerAtOpen,
         recoveryDownloadUsesCurrentWork: true,
-        allThreeRecordsRestored: true,
+        allFourRecordsRestored: true,
+        craftReadingBytes: craftReading.length,
         oldTabsStayedCoherent: true,
         originStoppedAndReadingDownloaded: true,
         axeViolations: 0,
@@ -200,7 +251,7 @@ try {
       });
       await context.close();
       console.log(
-        `${name}: two-page upgrade, actionable recovery, three native records, and genuine offline reading passed`,
+        `${name}: two-page upgrade, actionable recovery, four native records, and genuine offline reading passed`,
       );
     } finally {
       await browser.close();
