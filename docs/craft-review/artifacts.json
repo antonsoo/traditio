@@ -2,18 +2,18 @@
   "artifacts": [
     {
       "path": "notebook.html.gz",
-      "bytes": 2096162,
-      "sha256": "88d32fe89b006761136c2cfa79410d74f35b0f614ee3a8d7515a072c283a882e"
+      "bytes": 2097493,
+      "sha256": "bd483c31b2ba0d6e8365cc14e74fcbc0b7e8f34dcd02d44f5b2d22d416001f32"
     },
     {
       "path": "notebook.pdf",
-      "bytes": 1989822,
-      "sha256": "fd7a2d8033f7f61f55f4ad2afea8c8585ed9ce47250e8bf41863609bc28ad330"
+      "bytes": 2038831,
+      "sha256": "68596ddf012a99413df184dcf537c46ffc3bbc9685b2fd6d6b6ddfe0ac5eee1f"
     },
     {
       "path": "notebook.json",
-      "bytes": 1370,
-      "sha256": "59aeaacb77d27e9697183afc5ffa451e366a12dd7c6bff66d39134cfcfd7af36"
+      "bytes": 1646,
+      "sha256": "505c2f9f019c8429cbc2af467f8efd0eaa94ab84b55760a8bf3eede2c34c0df0"
     }
   ]
 }

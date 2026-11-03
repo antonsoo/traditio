@@ -19,9 +19,9 @@ numbered section in this edition; it is not a continuation of 2.79.
 - [Poste translation transcription](https://droitromain.univ-grenoble-alpes.fr/Anglica/gai2_Poste.htm)
 - [New source notice](../public/sources/work-NOTICE.txt)
 
-Latin joins printed line breaks and prints consonantal u as v. The opening
+Latin joins printed line breaks, prints consonantal u as v and normalizes sentence-initial capitals. The opening
 examples retain the supplied `⟨aut olivis aut spicis⟩`; omissions are explicit.
-English and 21 contextual phrase notes are new. They have not had independent
+English and 24 contextual phrase notes are new. They have not had independent
 philological review. _Tabula_ is rendered board/panel, rather than the
 historical translation's canvas. The gold letters do not turn parchment into
 a precious-metal manufacturing example: 2.77 still reports the support rule.
@@ -78,18 +78,52 @@ an added hypothetical premise: Aulus himself stole the material. The text target
 the thief, who need not always be the maker. Manufacture alone proves no theft.
 The app computes no damages, award, criminal penalty or litigation outcome.
 
+## A reported owner can differ from the recovery claimant
+
+The separate recovery experiment retains the rest of 2.78 rather than stopping
+at its first expense clause. This matters: when the painter holds the object,
+the board owner is given an _actio utilis_ even though the reported title rule
+favors the painter. The workshop renders this an adapted claim, without importing
+Poste's historical English phrase “equitable action” into a modern jurisdiction.
+
+| Work     | Physical holder | Reported owner | Person seeking the object       | Claim described here           | Expense relevant to the stated defense |
+| -------- | --------------- | -------------- | ------------------------------- | ------------------------------ | -------------------------------------- |
+| Writing  | Aulus, writer   | Lucius         | Lucius                          | Ownership-based recovery       | Writing expense                        |
+| Writing  | Lucius          | Lucius         | Aulus, proposed writer claimant | None supplied by these clauses | Not assigned here                      |
+| Painting | Lucius          | Aulus, painter | Aulus                           | Ownership-based recovery       | Board value                            |
+| Painting | Aulus, painter  | Aulus          | Lucius                          | Adapted claim, actio utilis    | Painting expense                       |
+
+These positions concern one physical object; they are not shares or successive
+owners. The second row leaves possible fee claims elsewhere open. It does not
+invent a remedy or assert that the writer could never have one.
+
+For the last row, _utique si bonae fidei possessor fueris_ expressly supplies the
+good-faith possessor's defense. With unpaid expenses and good faith stipulated,
+the workshop reports the stated defense. Turning off good faith leaves the
+converse unresolved by this qualification. It does not transform a positive
+qualification into a categorical rule against every bad-faith possessor. Payment
+removes the stated nonpayment ground only; the model never awards the object or
+predicts the complete judgment.
+
+A learner can pin and restore one recovery point, then compare exactly which
+facts and positions changed. The reported owner stays fixed while custody,
+claimant, expense and defense vary. The live point and pinned comparison travel
+in the native notebook, explicit link, script-free reading and printed copy.
+These controls supply hypothetical facts and do not grade historical evidence
+about a real transaction.
+
 ## Record and portable reading
 
 A versioned record retains the live case, selected proposed general rule, six
 independent drafts, up to twelve kept judgments, their chosen citations and a
-1,500-character account of the analogy. Each reason allows 800 characters.
+1,500-character account of the case, plus current and pinned recovery facts. Each reason allows 800 characters.
 The 64 KiB bound accommodates every maximum-length multilingual field.
 
 Keeping a judgment makes a validated deep copy. Later case selections and draft
 edits cannot mutate that entry or its citations. Unsupported versions and invalid
 cases, rules, citations or duplicate drafts fail before replacement. Outcomes are
 recomputed; the record stores proposals rather than an authoritative verdict.
-No prose or citation selection is graded. There is no automatic persistence:
+Version 2 adds the recovery exercise. Version-1 imports preserve the existing judgments, drafts and account, initialize the new experiment to its stated defaults and disclose that migration. No prose or citation selection is graded. There is no automatic persistence:
 explicit JSON, HTML and shared links retain the notebook. The UI says to save
 before leaving. Links contain the learner's writing, including unkept drafts.
 
@@ -99,7 +133,7 @@ import nor an intervening edit has superseded them. Source requests are canceled
 and numbered so a late response cannot replace a newer selected page.
 
 The script-free reading embeds the full two pages, fonts, seven readings, phrase
-notes, diagrams, both general-rule tables, learner work and complete licenses.
+notes, diagrams, both general-rule tables, the recovery experiment, learner work and complete licenses.
 Its native JSON download restores kept judgments and drafts. All binary and text
 assets are checked against the manifest before export. The saved file has a
 restrictive CSP and no scripts; learner markup is escaped. Printing includes a

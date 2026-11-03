@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { craftReadings, craftScope } from "../src/craft-content.ts";
 
 const manifest = JSON.parse(await readFile("src/asset-manifest.json", "utf8"));
 const ownership = JSON.parse(await readFile("src/source-sets.json", "utf8")).ownership;
@@ -95,6 +96,16 @@ for (const [path, pages] of bundles) {
     `${path}: embedded fonts`,
   );
   if (path === "docs/craft-review/notebook.html.gz") {
+    for (const reading of craftReadings) {
+      for (const text of [reading.latin, reading.english, reading.note, ...reading.words.flat()])
+        assert.ok(html.includes(escapeHtml(text)), `${path}: stale or missing ${reading.id} text`);
+    }
+    for (const paragraph of craftScope)
+      assert.ok(html.includes(escapeHtml(paragraph)), `${path}: stale scope`);
+    assert.ok(
+      html.includes('class="recovery-sheet"'),
+      "Current notebook retains the recovery exercise",
+    );
     const native = html.match(/href="data:application\/json;charset=utf-8,([^"]+)"/);
     assert.ok(native, "Craft reading has a native editable download");
     assert.deepEqual(

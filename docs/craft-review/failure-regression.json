@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-03T22:34:15.648Z",
+  "date": "2026-11-03T23:19:00.896Z",
   "build": {
-    "indexSha256": "7692ccb4dc2bf74c9197d99409586e568d1a3f171331728c5da5c7ad8c590156",
-    "workerSha256": "68e927e9be9afaf757d2c86ec7463d54439fcf130d4c7e4970daa7f027746c8a"
+    "indexSha256": "b6b10be14d1a9c2bb38b1b02eb3f02e0aa482bcd78ac367846c9c4285cf2844a",
+    "workerSha256": "3efcfc5b2f7cf9e09debceb1af99be2f69cb7e8e2fcc4435fce04d06ba787696"
   },
   "browsers": [
     {
       "browser": "chromium",
       "version": "153.0.8010.12",
-      "failedInstallationReported": true,
-      "failedInstallationRecovered": true,
+      "failedSourceRetentionReported": true,
+      "failedSourceRetentionRecovered": true,
       "corruptCacheAndServerRefused": true,
       "discoveredFailureAutomaticallyWithdrawsReadiness": true,
       "exactCacheRecovery": true,
@@ -25,8 +25,8 @@
     {
       "browser": "firefox",
       "version": "155.0",
-      "failedInstallationReported": true,
-      "failedInstallationRecovered": true,
+      "failedSourceRetentionReported": true,
+      "failedSourceRetentionRecovered": true,
       "corruptCacheAndServerRefused": true,
       "discoveredFailureAutomaticallyWithdrawsReadiness": true,
       "exactCacheRecovery": true,

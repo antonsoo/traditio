@@ -5,10 +5,10 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { connect } from "node:net";
 import { resolve } from "node:path";
-import { gunzipSync } from "node:zlib";
 import { chromium, firefox } from "playwright";
 import { argumentJourney, offlineArgument } from "./argument-journey.mjs";
 import { assertSameBytes } from "./byte-identity.mjs";
+import { checkEmbeddedPages, retainedRoomJourney } from "./retained-room-journey.mjs";
 
 const base = "https://antonsoo.github.io/traditio/";
 const output = resolve(process.env.REVIEW_OUTPUT || "studies/publication");
@@ -219,11 +219,16 @@ try {
         };
         await openRehearsal();
         const ceremonyHtml = await downloadRehearsal();
-        assertSameBytes(
-          ceremonyHtml,
-          gunzipSync(await readFile("docs/ceremony-review/local/rehearsal.html.gz")),
-          "Retained illustrated rehearsal",
+        checkEmbeddedPages(
+          ceremonyHtml.toString(),
+          [74, 75, 134, 135].map((p) => `sources/poste-1904-p${p}.jpg`),
+          JSON.parse(await readFile("src/asset-manifest.json", "utf8")),
         );
+        const retainedRooms = [];
+        for (const kind of ["craft", "river"])
+          retainedRooms.push(
+            await retainedRoomJourney({ context, base, kind, name, width, output, scratch }),
+          );
         unavailable = true;
         for (const socket of sockets) socket.destroy();
         const before = refused;
@@ -248,6 +253,7 @@ try {
         await openRehearsal();
         assertSameBytes(await downloadRehearsal(), ceremonyHtml, "Offline rehearsal");
         await ceremony.close();
+        for (const room of retainedRooms) await room.offline();
         await offlineArgument(argument);
         await page.reload({ waitUntil: "domcontentloaded" });
         await says(page, "#offline-status", "This edition is available offline");
@@ -260,6 +266,10 @@ try {
           browser: name,
           version: browser.version(),
           width,
+          retainedRooms: retainedRooms.map((r) => ({
+            ...r.receipt,
+            originRefusedIdenticalReading: true,
+          })),
           keyboardComparison: true,
           latinPhrase: "quamquam",
           pages,

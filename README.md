@@ -29,11 +29,18 @@ scarcely has an adequate explanation. A repaired vessel remains an explicitly
 undecided analogy. Separate remedy readings prevent an ownership answer from
 silently becoming permission to steal or recovery without paying expenses.
 
-Seven Latin readings, 21 contextual phrase notes and two complete printed pages
+Seven Latin readings, 24 contextual phrase notes and two complete printed pages
 support six investigations. Keep twelve fixed judgments with their reasons and
 citations; switching crafts preserves each unsubmitted draft. JSON, explicit
 links and a script-free illustrated notebook retain the work, sources and fonts.
 The phone drawing rearranges vertically to keep its labels readable.
+
+In “Owning the picture. Recovering it.”, change who holds the painting, who has
+paid the relevant expense, and whether good faith is stipulated. Aulus can own
+the painting while Lucius has the adapted recovery claim. Pin a point and compare
+the legal positions; the stated good-faith qualification does not become an
+invented categorical result for bad faith. The native notebook retains this
+separate experiment and migrates earlier craft records explicitly.
 
 After `npm run build` and `npm run preview`, open
 `http://127.0.0.1:4367/traditio/work.html`. This addition is locally reviewed and
@@ -42,7 +49,7 @@ has **not been published**; the live site above describes the earlier edition.
 [Source decisions and model](docs/craft-model.md) ·
 [Operated review and limitations](docs/craft-review.md) ·
 [Actual illustrated notebook, gzip](docs/craft-review/notebook.html.gz) ·
-[Tagged 26-page PDF](docs/craft-review/notebook.pdf) ·
+[Tagged 29-page PDF](docs/craft-review/notebook.pdf) ·
 [Editable notebook](docs/craft-review/notebook.json).
 Decompress the HTML before opening it; it embeds both full source pages and has
 its own native JSON download.
@@ -178,7 +185,8 @@ Open `http://127.0.0.1:4367/traditio/` for the production preview.
 
 `npm run build` produces the complete static site in **`dist/`**, with base
 `/traditio/`. There is no server application, account, analytics or upload.
-The production edition installs its files for offline reading; the footer
+The production edition installs a small shell; the open page then retains missing
+source files in bounded transfers. The footer
 reports readiness after the controlling worker and complete inventory match.
 Development mode does not install an offline edition.
 
@@ -202,7 +210,9 @@ source, font and license bytes before embedding them. A substituted image,
 even with the correct filename and HTTP status, prevents that export.
 The HTML contains no JavaScript and makes no asset request when opened.
 Preparation can be canceled without losing the work. A source request that
-stalls for 20 seconds stops with an error and leaves the case available to retry.
+receives no new data for 15 seconds stops with an error and leaves the case available
+to retry. Continuous progress can continue for up to 180 seconds per file. Concurrent
+repairs share one verified worker download. See the [slow-transfer audit](docs/transfer-audit.md).
 Version 1 case files still reopen; version 2 adds the optional argument. A delayed
 import cannot overwrite cases or notes changed while its file was being read.
 Ceremony records use their own format and are reopened on the ceremony page.
@@ -276,6 +286,7 @@ npm run test:audit
 npm run test:ceremony
 npm run test:river
 npm run test:craft
+npm run test:transfer
 ```
 
 The browser review operates the built site at desktop and 375px, including

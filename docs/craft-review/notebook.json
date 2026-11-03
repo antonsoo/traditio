@@ -1,6 +1,6 @@
 {
   "format": "traditio-craft",
-  "version": 1,
+  "version": 2,
   "current": "vessel",
   "rule": "maker",
   "note": "A compatible side of a dispute does not prove an always claim.",
@@ -9,13 +9,17 @@
       "craft": "vessel",
       "judgment": "material",
       "explanation": "The gold belonged to Lucius before the work; I would let its ownership continue.",
-      "citations": ["schools"]
+      "citations": [
+        "schools"
+      ]
     },
     {
       "craft": "vessel",
       "judgment": "disputed",
       "explanation": "The source gives two answers; a matching school is not a settled rule.",
-      "citations": ["schools"]
+      "citations": [
+        "schools"
+      ]
     }
   ],
   "drafts": [
@@ -23,7 +27,9 @@
       "craft": "vessel",
       "judgment": "disputed",
       "explanation": "The source gives two answers; a matching school is not a settled rule.",
-      "citations": ["schools"]
+      "citations": [
+        "schools"
+      ]
     },
     {
       "craft": "wine",
@@ -55,5 +61,17 @@
       "explanation": "",
       "citations": []
     }
-  ]
+  ],
+  "recovery": {
+    "medium": "painting",
+    "holder": "maker",
+    "paid": false,
+    "goodFaith": false
+  },
+  "pinnedRecovery": {
+    "medium": "painting",
+    "holder": "maker",
+    "paid": false,
+    "goodFaith": true
+  }
 }
