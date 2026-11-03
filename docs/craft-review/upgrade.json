@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-03T22:26:38.852Z",
+  "previous": "Generated two-page fixture",
+  "previousWorker": "578c37f092ade5b3e202590422cda655c6cad64ff4afde0a048d9d7b32d707db",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 375,
+      "oldEdition": "03097a7d8fcba9b50b91",
+      "newEdition": "37c964116c971a2f2437",
+      "controllerAtOpen": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2844835,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "oldEdition": "03097a7d8fcba9b50b91",
+      "newEdition": "37c964116c971a2f2437",
+      "controllerAtOpen": false,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2844835,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    }
+  ]
+}

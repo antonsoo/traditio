@@ -1,0 +1,19 @@
+{
+  "artifacts": [
+    {
+      "path": "notebook.html.gz",
+      "bytes": 2096162,
+      "sha256": "88d32fe89b006761136c2cfa79410d74f35b0f614ee3a8d7515a072c283a882e"
+    },
+    {
+      "path": "notebook.pdf",
+      "bytes": 1989822,
+      "sha256": "fd7a2d8033f7f61f55f4ad2afea8c8585ed9ce47250e8bf41863609bc28ad330"
+    },
+    {
+      "path": "notebook.json",
+      "bytes": 1417,
+      "sha256": "2db02d02a983e5854b2d78b3314813f56a948227b759e1adf9205ee04dff5573"
+    }
+  ]
+}

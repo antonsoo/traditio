@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-03T22:29:42.137Z",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "keptJudgments": 2,
+      "sourcePages": 2,
+      "standaloneNoScriptsNoNetwork": true,
+      "offlineAllFourRooms": true,
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "keptJudgments": 2,
+      "sourcePages": 2,
+      "standaloneNoScriptsNoNetwork": true,
+      "offlineAllFourRooms": true,
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "keptJudgments": 2,
+      "sourcePages": 2,
+      "standaloneNoScriptsNoNetwork": true,
+      "offlineAllFourRooms": true,
+      "axeViolations": 0,
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "keptJudgments": 2,
+      "sourcePages": 2,
+      "standaloneNoScriptsNoNetwork": true,
+      "offlineAllFourRooms": true,
+      "axeViolations": 0,
+      "errors": []
+    }
+  ],
+  "faults": [
+    "chromium: same-length source corruption rejected for display and export; editable work survives; retry succeeds",
+    "chromium: late source cannot replace current page",
+    "chromium: export uses the record captured at Save while newer edits survive",
+    "chromium: canceled export produces no download; delayed import preserves newer draft; learner markup is escaped in live and saved notebook",
+    "firefox: same-length source corruption rejected for display and export; editable work survives; retry succeeds",
+    "firefox: late source cannot replace current page",
+    "firefox: export uses the record captured at Save while newer edits survive",
+    "firefox: canceled export produces no download; delayed import preserves newer draft; learner markup is escaped in live and saved notebook"
+  ]
+}

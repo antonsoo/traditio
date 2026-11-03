@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 2026-11-03
+
+- Add a craft-dispute workshop for Gaius 2.77–79: six cases, rival ownership
+  positions, and a general-rule comparison that preserves disagreement and
+  undecided analogies.
+- Retain two complete source pages, seven Latin/English readings and 21 phrase
+  notes; distinguish title, possession, recovery expenses and theft remedies.
+- Keep fixed judgments, per-craft drafts, chosen citations and a written account
+  in editable JSON, explicit links and a script-free illustrated notebook.
+- Use readable vertical diagrams on phones; extend browser, damaged-cache,
+  cross-page readiness and edition-upgrade review to all four rooms.
+- Leave this edition local for review; no deployment is claimed.
+
 ## Unreleased — 2026-10-31
 
 - Keep an original ending while branching from an earlier point, and identify

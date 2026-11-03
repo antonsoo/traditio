@@ -14,6 +14,39 @@ history changes the result. Gaius makes that distinction in _Institutes_
 2.43–50. Traditio lets an English-speaking learner change one premise, see
 which legal position changes, and inspect the Latin that does the work.
 
+## Someone else’s gold. Your work.
+
+The new local room, **`work.html`**, asks what Gaius can establish when one person
+makes something from another’s material. Keep a proposed owner and reason, then
+compare Sabinus and Cassius with the opposing school. The same vessel receives
+two competing answers. A compatible answer is not a settled general rule.
+
+![A gold vessel and a proposed ownership judgment on the craft bench](docs/assets/craft-1440.png)
+
+Test “the material owner always wins” against painting, then “the maker always
+wins” against writing. Gaius reports opposite rules and says the difference
+scarcely has an adequate explanation. A repaired vessel remains an explicitly
+undecided analogy. Separate remedy readings prevent an ownership answer from
+silently becoming permission to steal or recovery without paying expenses.
+
+Seven Latin readings, 21 contextual phrase notes and two complete printed pages
+support six investigations. Keep twelve fixed judgments with their reasons and
+citations; switching crafts preserves each unsubmitted draft. JSON, explicit
+links and a script-free illustrated notebook retain the work, sources and fonts.
+The phone drawing rearranges vertically to keep its labels readable.
+
+After `npm run build` and `npm run preview`, open
+`http://127.0.0.1:4367/traditio/work.html`. This addition is locally reviewed and
+has **not been published**; the live site above describes the earlier edition.
+
+[Source decisions and model](docs/craft-model.md) ·
+[Operated review and limitations](docs/craft-review.md) ·
+[Actual illustrated notebook, gzip](docs/craft-review/notebook.html.gz) ·
+[Tagged 26-page PDF](docs/craft-review/notebook.pdf) ·
+[Editable notebook](docs/craft-review/notebook.json).
+Decompress the HTML before opening it; it embeds both full source pages and has
+its own native JSON download.
+
 ## Try three investigations
 
 | Investigation         | Change to make                                                                  | What to watch                                                                                             |
@@ -229,7 +262,7 @@ Both failure and verified recovery update every controlled page. Run
 
 ## Verification and limits
 
-`npm run check` runs lint, strict type checking, twenty-two tests, retained-file
+`npm run check` runs lint, strict type checking, thirty tests, retained-file
 verification and the production build. The tests include all 68 supported
 configurations against a manually transcribed source-concordance table, record
 round trips, counterexamples, invalid premises and distinct legal positions. This checks the code
@@ -242,6 +275,7 @@ npm run test:browser
 npm run test:audit
 npm run test:ceremony
 npm run test:river
+npm run test:craft
 ```
 
 The browser review operates the built site at desktop and 375px, including
