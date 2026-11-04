@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-03T23:18:34.350Z",
+  "at": "2026-11-03T23:42:11.710Z",
   "browsers": [
     {
       "browser": "chromium",
       "activeRead": {
         "bytesPerSecond": 65536,
-        "elapsedMs": 22573,
+        "elapsedMs": 22652,
         "sourceSha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
         "progressBeyondOldDeadline": true
       },
@@ -16,7 +16,7 @@
         "supersededBodyCancelled": true
       },
       "repair": {
-        "elapsedMs": 22892,
+        "elapsedMs": 23887,
         "networkBodies": 1,
         "bothPagesReadyAfterVerification": true,
         "otherRoomExplanationRetained": true
@@ -28,10 +28,11 @@
       },
       "coldInstall": {
         "globalBytesPerSecond": 128000,
-        "elapsedMs": 130792,
+        "elapsedMs": 120459,
         "completeFiles": 39,
-        "edition": "3722d2ca45fa90c946e1",
+        "edition": "a0da79a00a09748f2210",
         "progressObserved": true,
+        "finalRetainedFileNotCanceled": true,
         "realOutageAllFourRooms": true,
         "gzipDecodedBeforeCacheAndOfflineRead": true
       },
@@ -41,7 +42,7 @@
       "browser": "firefox",
       "activeRead": {
         "bytesPerSecond": 65536,
-        "elapsedMs": 22630,
+        "elapsedMs": 22586,
         "sourceSha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35",
         "progressBeyondOldDeadline": true
       },
@@ -52,7 +53,7 @@
         "supersededBodyCancelled": true
       },
       "repair": {
-        "elapsedMs": 22849,
+        "elapsedMs": 23136,
         "networkBodies": 1,
         "bothPagesReadyAfterVerification": true,
         "otherRoomExplanationRetained": true
@@ -64,10 +65,11 @@
       },
       "coldInstall": {
         "globalBytesPerSecond": 128000,
-        "elapsedMs": 119999,
+        "elapsedMs": 121085,
         "completeFiles": 39,
-        "edition": "3722d2ca45fa90c946e1",
+        "edition": "a0da79a00a09748f2210",
         "progressObserved": true,
+        "finalRetainedFileNotCanceled": true,
         "realOutageAllFourRooms": true,
         "gzipDecodedBeforeCacheAndOfflineRead": true
       },

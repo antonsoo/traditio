@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-03T23:43:33.706Z",
+  "previous": "Retained earlier public edition",
+  "previousWorker": "3efcfc5b2f7cf9e09debceb1af99be2f69cb7e8e2fcc4435fce04d06ba787696",
+  "journeys": [
+    {
+      "browser": "chromium",
+      "width": 375,
+      "oldEdition": "3722d2ca45fa90c946e1",
+      "newEdition": "a0da79a00a09748f2210",
+      "controllerAtOpen": true,
+      "existingRiverKeptOlderEdition": true,
+      "existingCraftKeptOlderEdition": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2848999,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "oldEdition": "3722d2ca45fa90c946e1",
+      "newEdition": "a0da79a00a09748f2210",
+      "controllerAtOpen": true,
+      "existingRiverKeptOlderEdition": true,
+      "existingCraftKeptOlderEdition": true,
+      "recoveryDownloadUsesCurrentWork": true,
+      "allFourRecordsRestored": true,
+      "craftReadingBytes": 2848999,
+      "oldTabsStayedCoherent": true,
+      "originStoppedAndReadingDownloaded": true,
+      "axeViolations": 0,
+      "readingBytes": 6493761
+    }
+  ]
+}

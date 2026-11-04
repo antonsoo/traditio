@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-03T23:19:00.896Z",
+  "date": "2026-11-03T23:51:03.485Z",
   "build": {
-    "indexSha256": "b6b10be14d1a9c2bb38b1b02eb3f02e0aa482bcd78ac367846c9c4285cf2844a",
-    "workerSha256": "3efcfc5b2f7cf9e09debceb1af99be2f69cb7e8e2fcc4435fce04d06ba787696"
+    "indexSha256": "9162eddd4f64c70275ae00e6fa252ba8731de8467697d3aa01ee0dc81287bff0",
+    "workerSha256": "b761cbb96c7ed963eaf93da389179c0f6f36ea9c81e531563cc4aa30a2b0c300"
   },
   "browsers": [
     {

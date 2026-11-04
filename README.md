@@ -42,9 +42,11 @@ the legal positions; the stated good-faith qualification does not become an
 invented categorical result for bad faith. The native notebook retains this
 separate experiment and migrates earlier craft records explicitly.
 
-After `npm run build` and `npm run preview`, open
-`http://127.0.0.1:4367/traditio/work.html`. This addition is locally reviewed and
-has **not been published**; the live site above describes the earlier edition.
+[Open the published craft room](https://antonsoo.github.io/traditio/work.html),
+or start with [the painted-board recovery experiment](https://antonsoo.github.io/traditio/work.html#craft-recovery).
+The [public delivery review](docs/craft-publication.md) records the complete
+40-file hosted comparison and all four-room browser journeys. For a local copy,
+build and preview, then open `http://127.0.0.1:4367/traditio/work.html`.
 
 [Source decisions and model](docs/craft-model.md) ·
 [Operated review and limitations](docs/craft-review.md) ·
@@ -302,7 +304,9 @@ are retained in [the review](docs/review.md).
 The [original publication review](docs/publication.md) records its historical
 22-file edition. The [ceremony audit](docs/ceremony-audit.md) records the current
 companion lesson, corrected reading, actual artifacts and publication checks. To repeat that
-comparison with a matching local build, run `npm run test:public`.
+comparison with a matching local build, run `npm run test:public`. The current
+[craft publication review](docs/craft-publication.md) covers all four rooms,
+complete hosted-file identity and the final retention-race fix.
 
 These are invented cases within Gaius's second-century account. They assume
 capable Roman citizens, valid transactions and uninterrupted possession.

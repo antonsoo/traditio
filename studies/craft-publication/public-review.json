@@ -1,0 +1,963 @@
+{
+  "date": "2026-11-03T23:52:17.247Z",
+  "base": "https://antonsoo.github.io/traditio/",
+  "applicationCommit": "a8b419dc89a6019c5076390606bdf41c4c499ade",
+  "canonicalBefore": [
+    {
+      "path": "assets/ceremony-BzIXlJUk.js",
+      "bytes": 31341,
+      "sha256": "489ef82d92a89409d53f2b52586bb9974f67b2e2818005db60daa46000a21747"
+    },
+    {
+      "path": "assets/ceremony-ydxke2BF.css",
+      "bytes": 3333,
+      "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
+    },
+    {
+      "path": "assets/export-BL8A-u_l.js",
+      "bytes": 16335,
+      "sha256": "0363b6636207dc65b83ab0aa301c7fa8914845b7bd070b0ba983e8f92938423f"
+    },
+    {
+      "path": "assets/index-CMxtgSYY.js",
+      "bytes": 15944,
+      "sha256": "5636971484b871aabd238854d08b0fab922dbf63dec6749b335b241035d72488"
+    },
+    {
+      "path": "assets/offline-DYp9CLTh.js",
+      "bytes": 45700,
+      "sha256": "153a4520f93074f4dd5d366a75dbb98021e999994b8c083ac3ca0c6f5aba7ba5"
+    },
+    {
+      "path": "assets/offline-DZQv702L.css",
+      "bytes": 16780,
+      "sha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548"
+    },
+    {
+      "path": "assets/river-D62mRMFH.css",
+      "bytes": 5236,
+      "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2"
+    },
+    {
+      "path": "assets/river-Dq_5z_M-.js",
+      "bytes": 48070,
+      "sha256": "0ad79b36e80ddb1d248633b5b2ba22a28c6a2ca048f21afe8669c7916b942b8e"
+    },
+    {
+      "path": "assets/work-D7RUNAO4.js",
+      "bytes": 49309,
+      "sha256": "e99bc750993015bbf2fdee4e1fbeec5706bf9d2752ffeb661ab0099de8100ce4"
+    },
+    {
+      "path": "assets/work-DhtpLDum.css",
+      "bytes": 5481,
+      "sha256": "35086d882114461533123f598c1c3d10b6c5da5af81ccf637f17cdc4a83e439e"
+    },
+    {
+      "path": "ceremony.html",
+      "bytes": 9000,
+      "sha256": "558315368bf28e0187a8bcd7ae0e9dd2899d0f6b5234f78a1c53f40ebdeb8fc2"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 270,
+      "sha256": "576cf2ac3bede0e9ccfd21a4e08e59ce4850826239253d6a8eef8d2c4d466a00"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17415,
+      "sha256": "9162eddd4f64c70275ae00e6fa252ba8731de8467697d3aa01ee0dc81287bff0"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 4654,
+      "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84"
+    },
+    {
+      "path": "river.html",
+      "bytes": 10818,
+      "sha256": "3a6089dd9e9e2a9622727437dff6e38b2489d91a976d282a4745b04e08dfb4bf"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 6013,
+      "sha256": "6db169f0097c2c45e2310a824eb7fd99366a8dd053073b22953163da7b7866f6"
+    },
+    {
+      "path": "sources/mommsen-1893-p644.jpg",
+      "bytes": 1361386,
+      "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+    },
+    {
+      "path": "sources/mommsen-1893-p645.jpg",
+      "bytes": 1475726,
+      "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3687,
+      "sha256": "efddb96eed0efa34db8c718f693e63d4b356deb05f6334288eb89bbca9fb2f23"
+    },
+    {
+      "path": "sources/poste-1904-p133.jpg",
+      "bytes": 695670,
+      "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+    },
+    {
+      "path": "sources/poste-1904-p134.jpg",
+      "bytes": 766313,
+      "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+    },
+    {
+      "path": "sources/poste-1904-p135.jpg",
+      "bytes": 606314,
+      "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+    },
+    {
+      "path": "sources/poste-1904-p146.jpg",
+      "bytes": 714508,
+      "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+    },
+    {
+      "path": "sources/poste-1904-p147.jpg",
+      "bytes": 726668,
+      "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+    },
+    {
+      "path": "sources/poste-1904-p148.jpg",
+      "bytes": 739943,
+      "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+    },
+    {
+      "path": "sources/poste-1904-p149.jpg",
+      "bytes": 724335,
+      "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+    },
+    {
+      "path": "sources/poste-1904-p160.jpg",
+      "bytes": 761350,
+      "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+    },
+    {
+      "path": "sources/poste-1904-p161.jpg",
+      "bytes": 659128,
+      "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+    },
+    {
+      "path": "sources/poste-1904-p162.jpg",
+      "bytes": 764906,
+      "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+    },
+    {
+      "path": "sources/poste-1904-p163.jpg",
+      "bytes": 761492,
+      "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+    },
+    {
+      "path": "sources/poste-1904-p74.jpg",
+      "bytes": 702149,
+      "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+    },
+    {
+      "path": "sources/poste-1904-p75.jpg",
+      "bytes": 761383,
+      "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+    },
+    {
+      "path": "sources/work-NOTICE.txt",
+      "bytes": 2882,
+      "sha256": "6fd5be6a9f211be5f2a62aa3125ece13b5e7e35978da3dc865c7e29a80a60e02"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 16869,
+      "sha256": "b761cbb96c7ed963eaf93da389179c0f6f36ea9c81e531563cc4aa30a2b0c300"
+    },
+    {
+      "path": "work.html",
+      "bytes": 11642,
+      "sha256": "b6253e5800eea60282a32a7d7126dfe03f71cca5d03f42c43b81419db5a34a01"
+    }
+  ],
+  "journeys": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "retainedRooms": [
+        {
+          "kind": "craft",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 2,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p162.jpg",
+              "bytes": 764906,
+              "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+            },
+            {
+              "path": "sources/poste-1904-p163.jpg",
+              "bytes": 761492,
+              "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 2854929,
+          "sha256": "7aa663d2c63a7f710006d5b22fd4f38d8ede5baa6815a7e4ddd3605b54fc4334",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        },
+        {
+          "kind": "river",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 4,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p160.jpg",
+              "bytes": 761350,
+              "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+            },
+            {
+              "path": "sources/poste-1904-p161.jpg",
+              "bytes": 659128,
+              "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+            },
+            {
+              "path": "sources/mommsen-1893-p644.jpg",
+              "bytes": 1361386,
+              "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+            },
+            {
+              "path": "sources/mommsen-1893-p645.jpg",
+              "bytes": 1475726,
+              "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 6494124,
+          "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        }
+      ],
+      "keyboardComparison": true,
+      "latinPhrase": "quamquam",
+      "pages": [
+        {
+          "page": 133,
+          "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        },
+        {
+          "page": 146,
+          "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+        },
+        {
+          "page": 147,
+          "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+        },
+        {
+          "page": 148,
+          "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+        },
+        {
+          "page": 149,
+          "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+        },
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        }
+      ],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9411756,
+          "sha256": "72e6a2580e1a769b3907950f1fd0db184e02d40e8e60a493af0510987a310190"
+        },
+        "offlineIdenticalBook": true
+      },
+      "offlineTransport": "Real origin through unchanged TLS CONNECT; existing tunnels closed and new connections refused; fresh worker-free context fails",
+      "cache": {
+        "name": "traditio-a0da79a00a09748f2210",
+        "controlled": true,
+        "files": 39
+      },
+      "ceremony": {
+        "offlineIdenticalDossier": true,
+        "bytes": 4576646,
+        "sha256": "8ba6239912478e0c5a014c1f586cf822096e3e789d4e4c34da4d9380dece1d20"
+      },
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "retainedRooms": [
+        {
+          "kind": "craft",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 2,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p162.jpg",
+              "bytes": 764906,
+              "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+            },
+            {
+              "path": "sources/poste-1904-p163.jpg",
+              "bytes": 761492,
+              "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 2854929,
+          "sha256": "7aa663d2c63a7f710006d5b22fd4f38d8ede5baa6815a7e4ddd3605b54fc4334",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        },
+        {
+          "kind": "river",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 4,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p160.jpg",
+              "bytes": 761350,
+              "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+            },
+            {
+              "path": "sources/poste-1904-p161.jpg",
+              "bytes": 659128,
+              "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+            },
+            {
+              "path": "sources/mommsen-1893-p644.jpg",
+              "bytes": 1361386,
+              "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+            },
+            {
+              "path": "sources/mommsen-1893-p645.jpg",
+              "bytes": 1475726,
+              "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 6494124,
+          "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        }
+      ],
+      "keyboardComparison": true,
+      "latinPhrase": "quamquam",
+      "pages": [
+        {
+          "page": 133,
+          "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        },
+        {
+          "page": 146,
+          "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+        },
+        {
+          "page": 147,
+          "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+        },
+        {
+          "page": 148,
+          "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+        },
+        {
+          "page": 149,
+          "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+        },
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        }
+      ],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9411756,
+          "sha256": "72e6a2580e1a769b3907950f1fd0db184e02d40e8e60a493af0510987a310190"
+        },
+        "offlineIdenticalBook": true
+      },
+      "offlineTransport": "Real origin through unchanged TLS CONNECT; existing tunnels closed and new connections refused; fresh worker-free context fails",
+      "cache": {
+        "name": "traditio-a0da79a00a09748f2210",
+        "controlled": true,
+        "files": 39
+      },
+      "ceremony": {
+        "offlineIdenticalDossier": true,
+        "bytes": 4576646,
+        "sha256": "8ba6239912478e0c5a014c1f586cf822096e3e789d4e4c34da4d9380dece1d20"
+      },
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "retainedRooms": [
+        {
+          "kind": "craft",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 2,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p162.jpg",
+              "bytes": 764906,
+              "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+            },
+            {
+              "path": "sources/poste-1904-p163.jpg",
+              "bytes": 761492,
+              "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 2854929,
+          "sha256": "7aa663d2c63a7f710006d5b22fd4f38d8ede5baa6815a7e4ddd3605b54fc4334",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        },
+        {
+          "kind": "river",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 4,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p160.jpg",
+              "bytes": 761350,
+              "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+            },
+            {
+              "path": "sources/poste-1904-p161.jpg",
+              "bytes": 659128,
+              "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+            },
+            {
+              "path": "sources/mommsen-1893-p644.jpg",
+              "bytes": 1361386,
+              "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+            },
+            {
+              "path": "sources/mommsen-1893-p645.jpg",
+              "bytes": 1475726,
+              "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 6494124,
+          "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        }
+      ],
+      "keyboardComparison": true,
+      "latinPhrase": "quamquam",
+      "pages": [
+        {
+          "page": 133,
+          "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        },
+        {
+          "page": 146,
+          "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+        },
+        {
+          "page": 147,
+          "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+        },
+        {
+          "page": 148,
+          "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+        },
+        {
+          "page": 149,
+          "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+        },
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        }
+      ],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9411756,
+          "sha256": "72e6a2580e1a769b3907950f1fd0db184e02d40e8e60a493af0510987a310190"
+        },
+        "offlineIdenticalBook": true
+      },
+      "offlineTransport": "Real origin through unchanged TLS CONNECT; existing tunnels closed and new connections refused; fresh worker-free context fails",
+      "cache": {
+        "name": "traditio-a0da79a00a09748f2210",
+        "controlled": true,
+        "files": 39
+      },
+      "ceremony": {
+        "offlineIdenticalDossier": true,
+        "bytes": 4576646,
+        "sha256": "8ba6239912478e0c5a014c1f586cf822096e3e789d4e4c34da4d9380dece1d20"
+      },
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "retainedRooms": [
+        {
+          "kind": "craft",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 2,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p162.jpg",
+              "bytes": 764906,
+              "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+            },
+            {
+              "path": "sources/poste-1904-p163.jpg",
+              "bytes": 761492,
+              "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 2854929,
+          "sha256": "7aa663d2c63a7f710006d5b22fd4f38d8ede5baa6815a7e4ddd3605b54fc4334",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        },
+        {
+          "kind": "river",
+          "edition": "a0da79a00a09748f2210",
+          "sourcePages": 4,
+          "displayedSources": [
+            {
+              "path": "sources/poste-1904-p160.jpg",
+              "bytes": 761350,
+              "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+            },
+            {
+              "path": "sources/poste-1904-p161.jpg",
+              "bytes": 659128,
+              "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+            },
+            {
+              "path": "sources/mommsen-1893-p644.jpg",
+              "bytes": 1361386,
+              "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+            },
+            {
+              "path": "sources/mommsen-1893-p645.jpg",
+              "bytes": 1475726,
+              "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+            }
+          ],
+          "nativeRoundTrip": true,
+          "noScriptOfflineReading": true,
+          "bytes": 6494124,
+          "sha256": "e208d14ec9b5de5e4ec636a11df58f5a207ea340edd227ae9e15a8c11e693b5e",
+          "errors": [],
+          "originRefusedIdenticalReading": true
+        }
+      ],
+      "keyboardComparison": true,
+      "latinPhrase": "quamquam",
+      "pages": [
+        {
+          "page": 133,
+          "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+        },
+        {
+          "page": 134,
+          "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+        },
+        {
+          "page": 135,
+          "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+        },
+        {
+          "page": 146,
+          "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+        },
+        {
+          "page": 147,
+          "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+        },
+        {
+          "page": 148,
+          "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+        },
+        {
+          "page": 149,
+          "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+        },
+        {
+          "page": 74,
+          "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+        },
+        {
+          "page": 75,
+          "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+        }
+      ],
+      "argument": {
+        "threeClaims": true,
+        "falsePremisesRejected": true,
+        "provincialBoundary": true,
+        "latinPhrase": "quamvis",
+        "separateCitationCoverage": true,
+        "fixedSubmission": true,
+        "notesRemainText": true,
+        "version1And2Reopened": true,
+        "malformedImportPreservesArgument": true,
+        "nativeDownloadMatches": true,
+        "sharedArgument": true,
+        "standaloneRequests": [],
+        "diagramDescriptionsUnique": true,
+        "axeViolations": 0,
+        "errors": [],
+        "book": {
+          "bytes": 9411756,
+          "sha256": "72e6a2580e1a769b3907950f1fd0db184e02d40e8e60a493af0510987a310190"
+        },
+        "offlineIdenticalBook": true
+      },
+      "offlineTransport": "Real origin through unchanged TLS CONNECT; existing tunnels closed and new connections refused; fresh worker-free context fails",
+      "cache": {
+        "name": "traditio-a0da79a00a09748f2210",
+        "controlled": true,
+        "files": 39
+      },
+      "ceremony": {
+        "offlineIdenticalDossier": true,
+        "bytes": 4576646,
+        "sha256": "8ba6239912478e0c5a014c1f586cf822096e3e789d4e4c34da4d9380dece1d20"
+      },
+      "errors": [],
+      "externalRequests": []
+    }
+  ],
+  "canonicalAfter": [
+    {
+      "path": "assets/ceremony-BzIXlJUk.js",
+      "bytes": 31341,
+      "sha256": "489ef82d92a89409d53f2b52586bb9974f67b2e2818005db60daa46000a21747"
+    },
+    {
+      "path": "assets/ceremony-ydxke2BF.css",
+      "bytes": 3333,
+      "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
+    },
+    {
+      "path": "assets/export-BL8A-u_l.js",
+      "bytes": 16335,
+      "sha256": "0363b6636207dc65b83ab0aa301c7fa8914845b7bd070b0ba983e8f92938423f"
+    },
+    {
+      "path": "assets/index-CMxtgSYY.js",
+      "bytes": 15944,
+      "sha256": "5636971484b871aabd238854d08b0fab922dbf63dec6749b335b241035d72488"
+    },
+    {
+      "path": "assets/offline-DYp9CLTh.js",
+      "bytes": 45700,
+      "sha256": "153a4520f93074f4dd5d366a75dbb98021e999994b8c083ac3ca0c6f5aba7ba5"
+    },
+    {
+      "path": "assets/offline-DZQv702L.css",
+      "bytes": 16780,
+      "sha256": "aefe02392389f5049cfb3adb4eb97ccdc5f53e8b9a9d23f73e906994e2739548"
+    },
+    {
+      "path": "assets/river-D62mRMFH.css",
+      "bytes": 5236,
+      "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2"
+    },
+    {
+      "path": "assets/river-Dq_5z_M-.js",
+      "bytes": 48070,
+      "sha256": "0ad79b36e80ddb1d248633b5b2ba22a28c6a2ca048f21afe8669c7916b942b8e"
+    },
+    {
+      "path": "assets/work-D7RUNAO4.js",
+      "bytes": 49309,
+      "sha256": "e99bc750993015bbf2fdee4e1fbeec5706bf9d2752ffeb661ab0099de8100ce4"
+    },
+    {
+      "path": "assets/work-DhtpLDum.css",
+      "bytes": 5481,
+      "sha256": "35086d882114461533123f598c1c3d10b6c5da5af81ccf637f17cdc4a83e439e"
+    },
+    {
+      "path": "ceremony.html",
+      "bytes": 9000,
+      "sha256": "558315368bf28e0187a8bcd7ae0e9dd2899d0f6b5234f78a1c53f40ebdeb8fc2"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 270,
+      "sha256": "576cf2ac3bede0e9ccfd21a4e08e59ce4850826239253d6a8eef8d2c4d466a00"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17415,
+      "sha256": "9162eddd4f64c70275ae00e6fa252ba8731de8467697d3aa01ee0dc81287bff0"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 4654,
+      "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84"
+    },
+    {
+      "path": "river.html",
+      "bytes": 10818,
+      "sha256": "3a6089dd9e9e2a9622727437dff6e38b2489d91a976d282a4745b04e08dfb4bf"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 6013,
+      "sha256": "6db169f0097c2c45e2310a824eb7fd99366a8dd053073b22953163da7b7866f6"
+    },
+    {
+      "path": "sources/mommsen-1893-p644.jpg",
+      "bytes": 1361386,
+      "sha256": "32b3308947bf4996ea237287abe4e6990f5ee306a0a94e13ee5e4e1530c9ccad"
+    },
+    {
+      "path": "sources/mommsen-1893-p645.jpg",
+      "bytes": 1475726,
+      "sha256": "e51075d0ebcc7171c5701e00a091d2d49630efe1a230343c2e6564db0f069f35"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3687,
+      "sha256": "efddb96eed0efa34db8c718f693e63d4b356deb05f6334288eb89bbca9fb2f23"
+    },
+    {
+      "path": "sources/poste-1904-p133.jpg",
+      "bytes": 695670,
+      "sha256": "05284e6270a8e6d5497eda2ab90257f953f63c267c46e127a609fb7992f6d281"
+    },
+    {
+      "path": "sources/poste-1904-p134.jpg",
+      "bytes": 766313,
+      "sha256": "56dcb4c7a8c036c7c6d4c7e22885918d529e33eca4bc8edbb1ed13ede0621c39"
+    },
+    {
+      "path": "sources/poste-1904-p135.jpg",
+      "bytes": 606314,
+      "sha256": "b0e7e397f3c26449a2a280ad249c18cceb2e136f2f1d0432bb568e88d7874cab"
+    },
+    {
+      "path": "sources/poste-1904-p146.jpg",
+      "bytes": 714508,
+      "sha256": "ed49a31407b9279aff8917b9f3118143cc3b21bb5c4d7568186fa850d09a60c4"
+    },
+    {
+      "path": "sources/poste-1904-p147.jpg",
+      "bytes": 726668,
+      "sha256": "05219d14f114f07e382879b8fd3359b4ee260e2932bdf67c9030a3f14689a8dd"
+    },
+    {
+      "path": "sources/poste-1904-p148.jpg",
+      "bytes": 739943,
+      "sha256": "56cbb59cde3185400e2d2d96355a9b0f636de679620395a9b24bbf8e301e0da0"
+    },
+    {
+      "path": "sources/poste-1904-p149.jpg",
+      "bytes": 724335,
+      "sha256": "6b55c1f4bb0be66b9245cb1f1d6094b2eaec7abe8c8aaa22f3b2a453fd0f3810"
+    },
+    {
+      "path": "sources/poste-1904-p160.jpg",
+      "bytes": 761350,
+      "sha256": "2e988deb4889c5e61b992d08e5cacbf5e1a14dde8752ef7db28c1a10deb0e59f"
+    },
+    {
+      "path": "sources/poste-1904-p161.jpg",
+      "bytes": 659128,
+      "sha256": "3609ae79dda249a5f6b8e641ce9fc91940898796a808734f0412b3e8fb185a5e"
+    },
+    {
+      "path": "sources/poste-1904-p162.jpg",
+      "bytes": 764906,
+      "sha256": "ad5c0888ef68476ac2149d91e672f99994e1204c3b740ab6779534fabfbc33a4"
+    },
+    {
+      "path": "sources/poste-1904-p163.jpg",
+      "bytes": 761492,
+      "sha256": "587c1415b2fd44d6f546e6819e6fd44e34e2fb6c40f1396d2318b8318bb23fcf"
+    },
+    {
+      "path": "sources/poste-1904-p74.jpg",
+      "bytes": 702149,
+      "sha256": "9f603fe446f1a2ff53ac2383faf1060ebda4fa7bf5aa66fc3a6a095347b53ecd"
+    },
+    {
+      "path": "sources/poste-1904-p75.jpg",
+      "bytes": 761383,
+      "sha256": "4c91e33c7da09741389249424a746d6bb72aa0097f232da4b268dc10b933e004"
+    },
+    {
+      "path": "sources/work-NOTICE.txt",
+      "bytes": 2882,
+      "sha256": "6fd5be6a9f211be5f2a62aa3125ece13b5e7e35978da3dc865c7e29a80a60e02"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 16869,
+      "sha256": "b761cbb96c7ed963eaf93da389179c0f6f36ea9c81e531563cc4aa30a2b0c300"
+    },
+    {
+      "path": "work.html",
+      "bytes": 11642,
+      "sha256": "b6253e5800eea60282a32a7d7126dfe03f71cca5d03f42c43b81419db5a34a01"
+    }
+  ]
+}

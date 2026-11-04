@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "a8b419dc89a6019c5076390606bdf41c4c499ade",
+  "pagesCommit": "98baa6099f66d7fd0590af15f9a2afe979ab4ce5",
+  "pagesBuild": "built",
+  "edition": "a0da79a00a09748f2210",
+  "sourceCI": {
+    "run": 41742233113,
+    "conclusion": "failure",
+    "startedSteps": 0
+  },
+  "sourcePagesWorkflow": {
+    "run": 41742233128,
+    "conclusion": "failure",
+    "startedSteps": 0
+  },
+  "legacyPagesDeployment": {
+    "run": 41742282336,
+    "conclusion": "success"
+  },
+  "canonicalFiles": 40,
+  "workerInventoryFiles": 39,
+  "workerInventoryBytes": 13101638
+}

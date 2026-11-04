@@ -89,7 +89,13 @@ controller; the new craft route offers an editable-work download while those
 readers remain open. These are distinct fixtures, with the previous worker's
 SHA-256 recorded in each receipt. Releasing the old edition allows all
 four native formats to restore and new readings to download with the origin
-stopped. The worker does not force unsaved readers to reload.
+stopped. The worker does not force unsaved readers to reload. A further
+[four-room patch replay](craft-review/four-room-upgrade.json) covers the already
+published craft edition moving to the final retention fix: all existing rooms
+stay coherent under their older controller and all four records restore after
+release. The [retention completion receipt](craft-review/retention-finish.json)
+reproduces and fixes a canceled final-file read and intermittent Firefox console
+error, separately from the legal model.
 
 ## Inspect actual artifacts
 
@@ -139,14 +145,16 @@ with their own scope; local tests alone do not establish remote CI or hosted byt
 
 ## Clean committed checkout
 
-A fresh local clone of `d3970470b3a68aa43c6a41a7dfc69fdf03eb47bc` was installed
-with Node 24.22.1. `npm ci`, `npm run check` and all four `test:craft` journeys
-passed, including the eight fault checks. The check includes all 44 tests and
+The clean checkout at `a8b419dc89a6019c5076390606bdf41c4c499ade` used Node
+24.22.1 and dependencies from `npm ci`. Its `npm run check` passed. All four
+`test:craft` journeys and eight fault checks passed against the matching final
+working build; the same native JSON and HTML had already matched the clean
+checkout downloads exactly. The check includes all 44 tests and
 verification of current source text inside the retained notebook.
 
 The independent [build inventories](craft-review/build-inventory.json) match
-across all 40 files. The worker's 39-file inventory contains 13,101,476 bytes;
-its edition is `3722d2ca45fa90c946e1`. The clean native JSON and HTML downloads
+across all 40 files. The worker's 39-file inventory contains 13,101,638 bytes;
+its edition is `a0da79a00a09748f2210`. The clean native JSON and HTML downloads
 match the retained examples exactly; the retained PDF has its own print timestamp.
 The slow-transfer receipt uses the same exact build bytes. Local build identity,
 remote source, hosted files, operated public controls and remote CI remain

@@ -1,9 +1,10 @@
 {
-  "sourceCommit": "d3970470b3a68aa43c6a41a7dfc69fdf03eb47bc",
+  "sourceCommit": "a8b419dc89a6019c5076390606bdf41c4c499ade",
   "node": "24.22.1",
-  "edition": "3722d2ca45fa90c946e1",
+  "edition": "a0da79a00a09748f2210",
   "cleanInstallAndCheck": true,
   "workingAndCleanMatch": true,
+  "nativeNotebookAndReadingMatchCleanDownloads": true,
   "files": [
     {
       "path": "LICENSE.txt",
@@ -11,9 +12,9 @@
       "sha256": "2e1394011800d3798d977f92030f9a8a36d507640858447b092122aa9e397e84"
     },
     {
-      "path": "assets/ceremony-BMUqzJQD.js",
+      "path": "assets/ceremony-BzIXlJUk.js",
       "bytes": 31341,
-      "sha256": "89936569128e5fa0a657d78b84526c995694900277947e2727096c8a1496638a"
+      "sha256": "489ef82d92a89409d53f2b52586bb9974f67b2e2818005db60daa46000a21747"
     },
     {
       "path": "assets/ceremony-ydxke2BF.css",
@@ -21,19 +22,19 @@
       "sha256": "37da630e4e842fa2f71e21488ccd53e0f688239a6922b9f55fe186b394f0374d"
     },
     {
-      "path": "assets/export-COWBoPeO.js",
+      "path": "assets/export-BL8A-u_l.js",
       "bytes": 16335,
-      "sha256": "4c9cba0331200300a08ab29b2fd2f6b13fdfbc8f57bca717a2c4a3ae87886348"
+      "sha256": "0363b6636207dc65b83ab0aa301c7fa8914845b7bd070b0ba983e8f92938423f"
     },
     {
-      "path": "assets/index-CmjF6pDk.js",
+      "path": "assets/index-CMxtgSYY.js",
       "bytes": 15944,
-      "sha256": "f78c9d5d0d6bb1ca5c03699f1854fa57a1f65064e9dc98f4e06f89f9a6706c89"
+      "sha256": "5636971484b871aabd238854d08b0fab922dbf63dec6749b335b241035d72488"
     },
     {
-      "path": "assets/offline-C8ss9rlx.js",
-      "bytes": 45538,
-      "sha256": "3c78ca888f373f611d9195a79f3294a285e001b8ee416605a0f72a77b8484b9e"
+      "path": "assets/offline-DYp9CLTh.js",
+      "bytes": 45700,
+      "sha256": "153a4520f93074f4dd5d366a75dbb98021e999994b8c083ac3ca0c6f5aba7ba5"
     },
     {
       "path": "assets/offline-DZQv702L.css",
@@ -46,14 +47,14 @@
       "sha256": "016e9ba745602ac635040468940ef79017e7bbcb45abd42464d3c4359e8cb2c2"
     },
     {
-      "path": "assets/river-DQH4BNzo.js",
+      "path": "assets/river-Dq_5z_M-.js",
       "bytes": 48070,
-      "sha256": "635fba2a6e8378c280e8dde70a8984233f4a296d75753c925a68151db29482cd"
+      "sha256": "0ad79b36e80ddb1d248633b5b2ba22a28c6a2ca048f21afe8669c7916b942b8e"
     },
     {
-      "path": "assets/work-BN0RaNY5.js",
+      "path": "assets/work-D7RUNAO4.js",
       "bytes": 49309,
-      "sha256": "eea7032970473a2f3122b8cb06b0b93f2fcaf94be2e378bcac4f422b33eec5cd"
+      "sha256": "e99bc750993015bbf2fdee4e1fbeec5706bf9d2752ffeb661ab0099de8100ce4"
     },
     {
       "path": "assets/work-DhtpLDum.css",
@@ -63,7 +64,7 @@
     {
       "path": "ceremony.html",
       "bytes": 9000,
-      "sha256": "41a14569fece6d02dc5babecaf4a5f4ae221087ef0347cebec35f42ae57b1d3c"
+      "sha256": "558315368bf28e0187a8bcd7ae0e9dd2899d0f6b5234f78a1c53f40ebdeb8fc2"
     },
     {
       "path": "favicon.svg",
@@ -98,12 +99,12 @@
     {
       "path": "index.html",
       "bytes": 17415,
-      "sha256": "b6b10be14d1a9c2bb38b1b02eb3f02e0aa482bcd78ac367846c9c4285cf2844a"
+      "sha256": "9162eddd4f64c70275ae00e6fa252ba8731de8467697d3aa01ee0dc81287bff0"
     },
     {
       "path": "river.html",
       "bytes": 10818,
-      "sha256": "3c717563ee1c2f07e2151515208a199b5be9b56abe5d8b0ac398a0b6471a013b"
+      "sha256": "3a6089dd9e9e2a9622727437dff6e38b2489d91a976d282a4745b04e08dfb4bf"
     },
     {
       "path": "sources/NOTICE.txt",
@@ -198,13 +199,12 @@
     {
       "path": "sw.js",
       "bytes": 16869,
-      "sha256": "3efcfc5b2f7cf9e09debceb1af99be2f69cb7e8e2fcc4435fce04d06ba787696"
+      "sha256": "b761cbb96c7ed963eaf93da389179c0f6f36ea9c81e531563cc4aa30a2b0c300"
     },
     {
       "path": "work.html",
       "bytes": 11642,
-      "sha256": "d638ab9cdafe1956356719c43cd080a47c217aa46c368607cfb54f9d429fdf6b"
+      "sha256": "b6253e5800eea60282a32a7d7126dfe03f71cca5d03f42c43b81419db5a34a01"
     }
-  ],
-  "nativeNotebookAndReadingMatchCleanDownloads": true
+  ]
 }
